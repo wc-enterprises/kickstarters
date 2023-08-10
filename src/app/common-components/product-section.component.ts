@@ -44,15 +44,16 @@ import { Card } from './utils/interface';
   }
   .card-container{
     display:flex;
-  
+gap:3vw;
+width:100vw;
   }
   .card{
-   
+    
  
   }
   .img{
-    height: 260px;
-align-self: stretch;
+    height: auto;
+
 border-radius: 12px;
   }
    #sub-title3{
@@ -67,15 +68,15 @@ border-radius: 12px;
   .total-cards{
     display: flex;
     flex-direction: row;
-    overflow-x: auto;
+   
    }
    ::-webkit-scrollbar{
     overflow: hidden;
       }
 .card-slider{
  display:flex;
-  gap:15vw;
- overflow:hidden;
+
+
 }
 .title{
   display: flex;
@@ -130,23 +131,24 @@ export class ProductSectionComponent {
       { imageUrl: './assets/washing2.svg', title:'', title1: 'Bedroom Essentials', title2:'Starting from $99', },
       { imageUrl: './assets/washing2.svg',title:'',  title1: 'Kitchenware', title2:'Starting from $212',  },
       { imageUrl: './assets/washing2.svg',title:'',  title1: 'Electronics', title2:'Starting from $64',  },
+      
      
     ]},
     {
       heading: 'Kitchen essentials',
     cards: [
       { imageUrl: './assets/washing2.svg',title:'',  title1: 'Laundry Essentials', title2:'Starting from $223',},
-      { imageUrl: './assets/bed.svg', title:'', title1: 'Bedroom Essentials', title2:'Starting from $99',},
-      { imageUrl: './assets/kitchen.svg',title:'',  title1: 'Kitchenware', title2:'Starting from $212',  },
-      { imageUrl: './assets/headset.svg',title:'',  title1: 'Electronics', title2:'Starting from $64', },
-      { imageUrl: './assets/washing.svg',title:'',  title1: 'Laundry Essentials', title2:'Starting from $223',},
-      { imageUrl: './assets/bed.svg',title:'',  title1: 'Bedroom Essentials', title2:'Starting from $99', },
-      { imageUrl: './assets/kitchen.svg', title:'', title1: 'Kitchenware', title2:'Starting from $212',  },
-      { imageUrl: './assets/headset.svg',title:'',  title1: 'Electronics', title2:'Starting from $64',  },
+      { imageUrl: './assets/washing2.svg', title:'', title1: 'Bedroom Essentials', title2:'Starting from $99',},
+      { imageUrl: './assets/washing2.svg',title:'',  title1: 'Kitchenware', title2:'Starting from $212',  },
+      { imageUrl: './assets/washing2.svg',title:'',  title1: 'Electronics', title2:'Starting from $64', },
+      { imageUrl: './assets/washing2.svg',title:'',  title1: 'Laundry Essentials', title2:'Starting from $223',},
+      { imageUrl: './assets/washing2.svg',title:'',  title1: 'Bedroom Essentials', title2:'Starting from $99', },
+      { imageUrl: './assets/washing2.svg', title:'', title1: 'Kitchenware', title2:'Starting from $212',  },
+      { imageUrl: './assets/washing2.svg',title:'',  title1: 'Electronics', title2:'Starting from $64',  },
     ] },
   ];
     @ViewChild('card') cardsElement!: ElementRef;
-    cardWidth = 300; // Adjust the width of each card including margin
+    cardWidth =1000; // Adjust the width of each card including margin
     currentIndex = 0;
   
     scrollCards(direction: 'left' | 'right') {
@@ -161,7 +163,7 @@ export class ProductSectionComponent {
       const scrollAmount = -this.currentIndex * this.cardWidth;
       
       // Apply smooth transition
-      cardsContainer.style.transition = 'transform 0.3s ease-in-out';
+      cardsContainer.style.transition = 'transform 0.8s ease-in-out';
       cardsContainer.style.transform = `translateX(${scrollAmount}px)`;
     
       // Listen for the transition end event to remove the transition after it's done

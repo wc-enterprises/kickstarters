@@ -19,7 +19,9 @@ import { Component } from '@angular/core';
   </div>
   <!-- content html -->
 
-  <div style="height: 39vh;"></div>
+  <div style="width:100vw; height:90vh;">
+
+  </div>
 
 
   <!-- footer html -->
@@ -92,7 +94,7 @@ styles: [
         display: flex;
         justify-content:space-between;
     align-items: flex-start;
-    
+    position:fixed;
     }
     .logo-title{
         display: flex;

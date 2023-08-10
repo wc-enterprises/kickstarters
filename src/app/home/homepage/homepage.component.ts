@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-homepage',
   template: `
   <app-headerandfooter></app-headerandfooter>
+  <app-qa></app-qa>
   <app-button></app-button>
   <div class="background">
   <div class="title">

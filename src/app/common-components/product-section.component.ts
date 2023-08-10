@@ -4,18 +4,18 @@ import { Card } from './utils/interface';
 @Component({
   selector: 'app-productsection',
   template: `<div class="list">
-  <div *ngFor="let cardSet of cardSets"  class="card-title">
+  <div *ngFor="let cardSet of cardSets" class="card-title">
   <div style="height: 10vh; display: flex; justify-content: space-between;">
       <p id="sub-title3">{{cardSet.heading}}</p>
       <div style="margin-right: 5vw; margin-top: 3.5vh;">
-          <img (click)="scrollCards('left')" src="./assets/arrowleft.svg">
-          <img (click)="scrollCards('right')" style="padding-left: 1vw;" src="./assets/arrowright.svg">
+          <img (click)="moveLeft(cardSet)"  src="./assets/arrowleft.svg">
+          <img (click)="moveRight(cardSet)" style="padding-left: 1vw;" src="./assets/arrowright.svg">
       </div>
   </div>
   <div class="total-cards">
       <div  class="card-slider">
       <div #card class="card-container">
-          <div  class="card"*ngFor="let card of cardSet.cards">
+          <div  class="card" *ngFor="let card of cardSet.cards.slice(cardSet.currentIndex, cardSet.currentIndex + 4)">
               <img  class="img" [src]="card.imageUrl" />
              
               <div class="title">
@@ -116,12 +116,18 @@ margin-top: -9vh;
 
 })
 export class ProductSectionComponent {
+   
 
-    constructor(private router: Router) {}
+    constructor(private router: Router) {
+      this.cardSets.forEach(cardSet => {
+        cardSet.currentIndex = 0;
+      });
+    }
  
-    cardSets: { heading: string; cards: Card[] }[] = [
+    cardSets: { heading: string; cards: Card[];currentIndex: number }[] = [
       {
         heading: 'Bedroom essentials',
+        currentIndex: 0,
         cards: [
       { imageUrl: './assets/washing2.svg',title:'', title1: 'Laundry Essentials', title2:'Starting from $223',},
       { imageUrl: './assets/washing2.svg',title:'',  title1: 'Bedroom Essentials', title2:'Starting from $99',},
@@ -136,6 +142,7 @@ export class ProductSectionComponent {
     ]},
     {
       heading: 'Kitchen essentials',
+      currentIndex: 0,
     cards: [
       { imageUrl: './assets/washing2.svg',title:'',  title1: 'Laundry Essentials', title2:'Starting from $223',},
       { imageUrl: './assets/washing2.svg', title:'', title1: 'Bedroom Essentials', title2:'Starting from $99',},
@@ -147,34 +154,51 @@ export class ProductSectionComponent {
       { imageUrl: './assets/washing2.svg',title:'',  title1: 'Electronics', title2:'Starting from $64',  },
     ] },
   ];
-    @ViewChild('card') cardsElement!: ElementRef;
-    cardWidth =1000; // Adjust the width of each card including margin
-    currentIndex = 0;
+    // @ViewChild('card') cardsElement!: ElementRef;
+    // cardWidth =1000; // Adjust the width of each card including margin
+    // currentIndex = 0;
   
-    scrollCards(direction: 'left' | 'right') {
-      const cardsContainer = this.cardsElement.nativeElement;
+    // scrollCards(direction: 'left' | 'right') {
+    //   const cardsContainer = this.cardsElement.nativeElement;
     
-      if (direction === 'left') {
-        this.currentIndex = Math.max(this.currentIndex - 1, 0);
-      } else {
-        this.currentIndex = Math.min(this.currentIndex + 1, this.cardSets.length - 1);
-      }
+    //   if (direction === 'left') {
+    //     this.currentIndex = Math.max(this.currentIndex - 1, 0);
+    //   } else {
+    //     this.currentIndex = Math.min(this.currentIndex + 1, this.cardSets.length - 1);
+    //   }
     
-      const scrollAmount = -this.currentIndex * this.cardWidth;
+    //   const scrollAmount = -this.currentIndex * this.cardWidth;
       
-      // Apply smooth transition
-      cardsContainer.style.transition = 'transform 0.8s ease-in-out';
-      cardsContainer.style.transform = `translateX(${scrollAmount}px)`;
+    //   // Apply smooth transition
+    //   cardsContainer.style.transition = 'transform 0.8s ease-in-out';
+    //   cardsContainer.style.transform = `translateX(${scrollAmount}px)`;
     
-      // Listen for the transition end event to remove the transition after it's done
-      const transitionEndHandler = () => {
-        cardsContainer.style.transition = '';
-        cardsContainer.removeEventListener('transitionend', transitionEndHandler);
-      };
+    //   // Listen for the transition end event to remove the transition after it's done
+    //   const transitionEndHandler = () => {
+    //     cardsContainer.style.transition = '';
+    //     cardsContainer.removeEventListener('transitionend', transitionEndHandler);
+    //   };
     
-      cardsContainer.addEventListener('transitionend', transitionEndHandler);
+    //   cardsContainer.addEventListener('transitionend', transitionEndHandler);
+    // }
+   
+    updateVisibleCards(cardSet: any): void {
+      cardSet.visibleCards = cardSet.cards.slice(cardSet.currentIndex, cardSet.currentIndex + 3);
     }
-    
+  
+    moveLeft(cardSet: any): void {
+      if (cardSet.currentIndex > 0) {
+        cardSet.currentIndex--;
+        this.updateVisibleCards(cardSet);
+      }
+    }
+  
+    moveRight(cardSet: any): void {
+      if (cardSet.currentIndex < cardSet.cards.length - 3) {
+        cardSet.currentIndex++;
+        this.updateVisibleCards(cardSet);
+      }
+    }
 }
 
 

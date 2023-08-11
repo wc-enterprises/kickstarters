@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   <app-headerandfooter></app-headerandfooter>
   <app-qa></app-qa>
   <app-button></app-button>
+  <app-cart></app-cart>
   <div class="background">
   <div class="title">
       <p id="sub-title">

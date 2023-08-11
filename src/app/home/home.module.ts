@@ -6,9 +6,10 @@ import { ButtonComponent } from '../common-components/button.component';
 import{HeaderAndFooterComponent} from '../common-components/header-and-footer.component'
 import{ProductSectionComponent} from'../common-components/product-section.component'
 import{QaComponent} from'../support/common/QA.component'
+import{CartComponent}from'../shop/cart/cart.component'
 
 @NgModule({
-  declarations: [HomepageComponent, ButtonComponent,HeaderAndFooterComponent,ProductSectionComponent,QaComponent],
+  declarations: [HomepageComponent, ButtonComponent,HeaderAndFooterComponent,ProductSectionComponent,QaComponent,CartComponent],
   imports: [CommonModule, HomepageRouting],
 })
 export class HomeModule {

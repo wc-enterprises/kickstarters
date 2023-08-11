@@ -201,7 +201,9 @@ styles: [
     `
   ]
 })
-export class HeaderAndFooterComponent {}
+export class HeaderAndFooterComponent {
+    
+}
 
 
 

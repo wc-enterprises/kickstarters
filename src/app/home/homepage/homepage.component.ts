@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
   <app-qa></app-qa>
   <app-button></app-button>
   <app-cart></app-cart>
+  <app-payments></app-payments>
   <div class="background">
   <div class="title">
       <p id="sub-title">

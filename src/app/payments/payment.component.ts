@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-payments',
-  template: '<p>payments</p>',
+  template: ``,
 })
-export class PaymentsComponent {}
+export class PaymentsComponent {
+  
+}

@@ -9,8 +9,9 @@ import { Component } from '@angular/core';
   <p>{{cart.title}}</p>
   <p>{{cart.rate}}<p>
   </div>
- 
+  <p>Quantity</p>
   <div class="quantity-selector">
+ 
   <button *ngIf="quantity > 1" style="border-radius: 3.333px 0px 0px 3.333px;" class="decrement-button" (click)="decrementQuantity()">-</button>
   <button *ngIf="quantity <= 1" style="border-radius: 3.333px 0px 0px 3.333px;" class="delete-basket-icon" (click)="deleteItem()">Delete</button>
   <div class="quantity-number">{{ quantity }}</div>
@@ -39,7 +40,7 @@ line-height: 21px; /* 140% */
     display: flex;
     width:10vw;
     align-items: center;
-    
+    margin:-2vh 0vw 0 -0.6vw;
     padding: 11px;
   
    
@@ -65,7 +66,7 @@ height:5vh;
 border: 0.833px solid var(--border-border-inactive, #8996A2);
 background: var(--background-background-primary, #FFF);
 padding: 8px 10px;
-height:2.5vh;
+height:2.6vh;
 
   }
   

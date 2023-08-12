@@ -8,10 +8,12 @@ import{ProductSectionComponent} from'../common-components/product-section.compon
 import{QaComponent} from'../support/common/QA.component';
 import{CartComponent}from'../shop/cart/cart.component';
 import{CartItemComponent}from'../shop/cart/cart-item.component';
+import{PaymentsComponent }from'../payments/payment.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [HomepageComponent, ButtonComponent,HeaderAndFooterComponent,ProductSectionComponent,QaComponent,CartComponent,CartItemComponent],
-  imports: [CommonModule, HomepageRouting],
+  declarations: [HomepageComponent, ButtonComponent,HeaderAndFooterComponent,ProductSectionComponent,QaComponent,CartComponent,CartItemComponent,PaymentsComponent],
+  imports: [CommonModule, HomepageRouting,FormsModule],
 })
 export class HomeModule {
   

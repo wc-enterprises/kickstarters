@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
   <p>{{cart.title}}</p>
   <p>{{cart.rate}}<p>
   </div>
-  <p>Quantity</p>
+  <p style="margin-top:-1vh;">Quantity</p>
   <div class="quantity-selector">
  
   <button *ngIf="quantity > 1" style="border-radius: 3.333px 0px 0px 3.333px;" class="decrement-button" (click)="decrementQuantity()">-</button>

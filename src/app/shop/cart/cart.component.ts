@@ -16,11 +16,21 @@ import { Component } from '@angular/core';
   </div>
   <img style="padding:2px 3vw 0 0;"src="./assets/xcircle.svg">
   </div>
-  <div style="height:60vh;"></div>
+  <div style="height:60vh;"><app-cartitem></app-cartitem></div>
   <div class="footer">
   <div style="display:flex; flex-direction:row;justify-content:space-between;"> 
-  <p style="padding-left:3vw;">Order Total</p>
-  <span style="padding-top:2.5vh; padding-right:4vw;">£44</span>
+  <p style="padding-left:3vw; color: var(--netural-grey-500, #667085);
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;">Order Total</p>
+  <span style="padding-top:2.5vh; padding-right:3.5vw;  color: #000;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 21px; ">£44</span>
   </div>
   <button>Proceed to Checkout</button>
   </div>

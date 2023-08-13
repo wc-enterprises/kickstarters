@@ -3,11 +3,13 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-homepage',
   template: `
-  <app-headerandfooter></app-headerandfooter>
+  <app-headerandfooter>
+  
+  </app-headerandfooter>
   <app-qa></app-qa>
   <app-button></app-button>
   <app-cart></app-cart>
-  <app-payments></app-payments>
+
   <div class="background">
   <div class="title">
       <p id="sub-title">
@@ -19,6 +21,7 @@ import { Component } from '@angular/core';
   </div>
 </div>
 <app-productsection></app-productsection>
+<app-payments></app-payments>
 `,
 
 styles:[`.background {

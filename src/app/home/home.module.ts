@@ -10,10 +10,11 @@ import{CartComponent}from'../shop/cart/cart.component';
 import{CartItemComponent}from'../shop/cart/cart-item.component';
 import{PaymentsComponent }from'../payments/payment.component';
 import { FormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [HomepageComponent, ButtonComponent,HeaderAndFooterComponent,ProductSectionComponent,QaComponent,CartComponent,CartItemComponent,PaymentsComponent],
-  imports: [CommonModule, HomepageRouting,FormsModule],
+  imports: [CommonModule, HomepageRouting,FormsModule,MatDialogModule],
 })
 export class HomeModule {
   

@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Card } from './utils/interface';
 @Component({
   selector: 'app-productsection',
-  template: `<div class="list">
+  template: `<div  class="list">
   <div *ngFor="let cardSet of cardSets" class="card-title">
   <div style="height: 10vh; display: flex; justify-content: space-between;">
       <p id="sub-title3">{{cardSet.heading}}</p>
@@ -22,7 +22,7 @@ import { Card } from './utils/interface';
                   <div class="title2">
                       <span class="span1">{{ card.title1 }}</span>
                       <span class="span2">{{ card.title2 }}</span>
-                     <span style="padding:3vh 2px 0 0;"> <app-button></app-button></span>
+                     <span style="padding:3vh 2px 0 0;"> <app-button  (click)="openCart()"></app-button> </span>
                   </div>
               </div>
           </div>
@@ -198,6 +198,12 @@ export class ProductSectionComponent {
         cardSet.currentIndex++;
         this.updateVisibleCards(cardSet);
       }
+    }
+
+    isCartOpen = false; 
+
+    openCart() {
+      this.isCartOpen = !this.isCartOpen; 
     }
 }
 

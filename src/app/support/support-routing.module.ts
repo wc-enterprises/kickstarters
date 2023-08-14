@@ -5,7 +5,7 @@ import { FAQComponent } from './faq.component';
 
 const routes: Routes = [
   {
-    path: 'faq',
+    path: '',
     component: FAQComponent,
   },
 ];

@@ -24,6 +24,7 @@ import { Component } from '@angular/core';
       display:flex;
       gap:1vw;
       padding:4vh 0 0 2vw;
+     
   }
   .box1{
       width:22vw;
@@ -35,6 +36,7 @@ font-size: 15px;
 font-style: normal;
 font-weight: 600;
 line-height: 21px; /* 140% */
+
   }
   .quantity-selector {
     display: flex;
@@ -78,7 +80,16 @@ export class CartItemComponent {
         imgUrl:'./assets/washingcart.svg',title:'Laundry Bag',rate:'£44',
         
     },
-{ imgUrl:'./assets/washingcart.svg',title:'Laundry Bag',rate:'£44',}]
+{ imgUrl:'./assets/washingcart.svg',title:'Laundry Bag',rate:'£44',},
+{
+    imgUrl:'./assets/washingcart.svg',title:'Laundry Bag',rate:'£44',
+    
+},
+{
+    imgUrl:'./assets/washingcart.svg',title:'Laundry Bag',rate:'£44',
+    
+},
+]
 
 quantity: number = 1;
 

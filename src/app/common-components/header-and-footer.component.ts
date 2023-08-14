@@ -1,28 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-headerandfooter',
-  template: `<div class="main-box">
+  template: `<div  [ngClass]="{ blur: isCartOpen }" class="main-box">
   <!-- header html -->
   <div class="header">
 
-      <span class="logo-title">
+      <span routerLink="/" class="logo-title">
           <img src="./assets/kicklogo.svg">
           <p id="p1">KICKSTARTERS</p>
       </span>
       <span class="right">
-          <a id="FAQs">FAQs</a>
-          <a id="contact">Contact Us</a>
-          <a class="bag"><img style="" src="./assets/bag.svg"></a>
+          <a routerLink="/support" id="FAQs">FAQs</a>
+          <a routerLink="" id="contact">Contact Us</a>
+          <a  (click)="openCart()" class="bag"><img  style="" src="./assets/bag.svg"></a>
+         
       </span>
+    
 
   </div>
+  <app-cart *ngIf="isCartOpen"></app-cart>
   <!-- content html -->
 
-  <div style="width:100vw; height:90vh;">
-
-
-  </div>
+ <ng-content></ng-content>
 
 
   <!-- footer html -->
@@ -84,8 +84,15 @@ import { Component } from '@angular/core';
 </div>`,
 styles: [
     `
+    
+    a {
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+        height: 20px;
+      }
     .main-box{
-        width: 100vw;
+        width: 100%;
         height:auto ;
     }
     .header{
@@ -96,11 +103,13 @@ styles: [
         justify-content:space-between;
     align-items: flex-start;
     position:fixed;
+    z-index:2;
     }
     .logo-title{
         display: flex;
         padding-left: 2vw;
-        gap:8px
+        gap:8px;
+        cursor: pointer;
     }
     #p1{
         color: #000;
@@ -150,7 +159,7 @@ styles: [
     width:100vw;
     height:50vh;
     border-top: 1px solid #E3E3E3;
-    
+    margin-top:5vh;
     }
     .mid-foot{
        
@@ -199,11 +208,18 @@ styles: [
         margin-left: 60vw;
         width: fit-content;
     }
+    
     `
   ]
 })
 export class HeaderAndFooterComponent {
-    
+ 
+    isCartOpen = false; 
+
+    openCart() {
+      this.isCartOpen = !this.isCartOpen; 
+    }
+  
 }
 
 

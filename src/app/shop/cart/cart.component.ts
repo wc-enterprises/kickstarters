@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-cart',
-  template: `<div class="cart">
+  template: `<div *ngIf="isCartOpen" class="cart">
   <div class="header">
  
  <div class="inner-head"> <img src="./assets/bag.svg">
@@ -14,9 +14,9 @@ import { Component } from '@angular/core';
   font-weight: 400;
 ">4items</div>
   </div>
-  <img style="padding:2px 3vw 0 0;"src="./assets/xcircle.svg">
+  <img (click)="closeCart()" style="padding:2px 3vw 0 0; cursor: pointer;"src="./assets/xcircle.svg">
   </div>
-  <div style="height:60vh;"><app-cartitem></app-cartitem></div>
+  <div style="height:70vh;  overflow-y: auto; overflow-x:hidden;"><app-cartitem></app-cartitem></div>
   <div class="footer">
   <div style="display:flex; flex-direction:row;justify-content:space-between;"> 
   <p style="padding-left:3vw; color: var(--netural-grey-500, #667085);
@@ -32,7 +32,7 @@ import { Component } from '@angular/core';
   font-weight: 600;
   line-height: 21px; ">£44</span>
   </div>
-  <button>Proceed to Checkout</button>
+  <button routerLink="payments">Proceed to Checkout</button>
   </div>
 </div>
 `,
@@ -40,14 +40,19 @@ styles:[`.cart {
    background-color: #FFFFFF;
   color: black;
   width:30vw;
-  height:auto;
-  border:1px solid black;
+  height:100vh;
+  position:fixed;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.5);
+ transition: right 0.3s ease-in-out;
+ right: -30px;
+ z-index: 20;
 }
 .header{
   display:flex;
   justify-content:space-between;
-  padding:2vh 0 0 2vw;
+  padding:5vh 0 0 2vw;
   align-items:center;
+  height:auto;
 }
 .inner-head{
   display:flex;
@@ -76,4 +81,10 @@ line-height: 21px; /* 140% */
 }
 `]
 })
-export class CartComponent {}
+export class CartComponent {
+  isCartOpen = true;
+
+  closeCart() {
+    this.isCartOpen = !this.isCartOpen;
+  }
+}

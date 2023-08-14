@@ -11,10 +11,14 @@ import{CartItemComponent}from'../shop/cart/cart-item.component';
 import{PaymentsComponent }from'../payments/payment.component';
 import { FormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
+import{ FAQComponent}from'../support/faq.component';
+
+
 
 @NgModule({
-  declarations: [HomepageComponent, ButtonComponent,HeaderAndFooterComponent,ProductSectionComponent,QaComponent,CartComponent,CartItemComponent,PaymentsComponent],
-  imports: [CommonModule, HomepageRouting,FormsModule,MatDialogModule],
+  declarations: [HomepageComponent, ButtonComponent,HeaderAndFooterComponent,ProductSectionComponent,QaComponent,CartComponent,CartItemComponent,PaymentsComponent,FAQComponent],
+  imports: [CommonModule, HomepageRouting,FormsModule,MatDialogModule,],
+
 })
 export class HomeModule {
   

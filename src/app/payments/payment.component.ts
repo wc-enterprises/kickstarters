@@ -2,17 +2,19 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-payments',
-  template: `
-  <div class="main-container">
-  <p class="heading">{{ heading }}</p>
+  template: `<app-headerandfooter>
+   <div class="main-container">
+   <p class="heading">{{ heading }}</p>
+
   <div class="sub-container">
 <form class="form">
+
 <p class="title">{{ title }}</p>
 <div class="name">
  <div class="input-group">
  
  <input style="width:17vw;" type="text" class="input">
- <label class="placeholder" for="firstname">first Name</label>
+ <label class="placeholder" for="firstname">First Name</label>
  </div>
  <div class="input-group">
  <input  style="width:17vw;" type="text" class="input">
@@ -84,10 +86,18 @@ import { Component, Input } from '@angular/core';
 </div>
 
   </div>
-  </div>`,
+  </div>
+  
+  </app-headerandfooter>
+ `,
   styles:[`
   .main-container{
-   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Adjust this as needed */
+    padding: 80px;
   
    
     
@@ -95,13 +105,14 @@ import { Component, Input } from '@angular/core';
   .heading{
     color: #000;
 font-family: 'Open Sans';
-font-size: 32px;
+font-size: 25px;
 font-style: normal;
 font-weight: 700;
-height:2vh;
-padding-left:17vw;
+height:1vh;
+padding-right:60vw;
 display:flex;
 align-items:center;
+
 
   }
   .title,.title1{

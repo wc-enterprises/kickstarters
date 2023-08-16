@@ -40,16 +40,17 @@ import { Card } from './utils/interface';
     .card-title{
       padding-left: 2vw;
       margin-top: 8vh;
-      
+   
   }
   .card-container{
     display:flex;
 gap:3.1vw;
 width:100%;
 
+
   }
   .card{
-    
+  
  padding-left:0.5vw;
   }
   .img{

@@ -4,8 +4,10 @@ import { Component, Input } from '@angular/core';
   selector: 'app-payments',
   template: `<app-headerandfooter>
    <div class="main-container">
-  
-   <p class="heading">{{ heading }}</p>
+  <div style="display:flex;">
+  <p style=""></p>
+   <p style="" class="heading">{{ heading }}</p>
+   </div>
   <div class="sub-container">
  
 <form class="form">

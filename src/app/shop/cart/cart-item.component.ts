@@ -52,7 +52,7 @@ line-height: 21px; /* 140% */
   .increment-button,
  
   {
- 
+     cursor:pointer;
     display: flex;
     height: 40px;
     padding: 11.667px;
@@ -64,6 +64,7 @@ opacity: 0.38;
 background: var(--background-background-primary, #FFF);
   }
   .delete-basket-icon{
+    cursor:pointer;
     display: flex;
     height: 15px;
     padding: 11.667px;

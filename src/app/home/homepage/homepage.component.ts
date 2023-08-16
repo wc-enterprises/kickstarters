@@ -43,7 +43,7 @@ styles:[`.background {
    display: flex;
    flex-direction: column;
    color:white;
-   padding-left:30spx;
+   padding-left:30px;
    padding-top:200px ;
     z-index: 1;
     
@@ -54,7 +54,7 @@ styles:[`.background {
  font-style: normal;
  font-weight: 400;
  line-height: 25.6px; 
- margin-top:-2vh;
+ margin-top:-5vh;
 
 }`],
 })

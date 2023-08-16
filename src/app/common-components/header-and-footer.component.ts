@@ -200,7 +200,7 @@ styles: [
     .payment{
         width: 25%; 
         height: 24px;
-        margin-top: 7vh;
+        margin-top: 3vh;
         gap:1vw;
         display: flex;
      

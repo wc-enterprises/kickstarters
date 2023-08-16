@@ -13,7 +13,7 @@ import { Component } from '@angular/core';
   <div class="quantity-selector">
  
   <button *ngIf="quantity > 1" style="border-radius: 3.333px 0px 0px 3.333px;" class="decrement-button" (click)="decrementQuantity()">-</button>
-  <button *ngIf="quantity <= 1" style="border-radius: 3.333px 0px 0px 3.333px;" class="delete-basket-icon" (click)="deleteItem()">Delete</button>
+  <img *ngIf="quantity <= 1" style="width:15px;" class="delete-basket-icon" (click)="deleteItem()" src="./assets/delete1.svg">
   <div class="quantity-number">{{ quantity }}</div>
   <button class="increment-button" style="border-radius: 0px 3.333px 3.333px 0px;" (click)="incrementQuantity()">+</button>
 </div>
@@ -50,25 +50,43 @@ line-height: 21px; /* 140% */
   
   .decrement-button,
   .increment-button,
-  .delete-basket-icon {
-    padding: 5px 10px;
-    border: 1px solid ;
-    background-color: #ff0000;
-    color: black;
-    cursor: pointer;
-   
+ 
+  {
+     cursor:pointer;
+    display: flex;
+    height: 40px;
+    padding: 11.667px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3.333px 0px 0px 3.333px;
 border: 0.833px solid var(--border-border-inactive, #8996A2);
+opacity: 0.38;
 background: var(--background-background-primary, #FFF);
-height:5vh;
+  }
+  .delete-basket-icon{
+    cursor:pointer;
+    display: flex;
+    height: 15px;
+    padding: 11.667px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3.333px 0px 0px 3.333px;
+border: 0.833px solid var(--border-border-inactive, #8996A2);
+opacity: 0.38;
+background: var(--background-background-primary, #FFF);
   }
   
   .quantity-number {
-    font-size: 18px;
-   
-border: 0.833px solid var(--border-border-inactive, #8996A2);
-background: var(--background-background-primary, #FFF);
-padding: 8px 10px;
-height:2.6vh;
+    
+    display: flex;
+    width: 50px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border: 0.833px solid var(--border-border-inactive, #8996A2);
+    background: var(--background-background-primary, #FFF);
+
 
   }
   

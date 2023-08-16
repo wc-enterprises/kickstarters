@@ -25,11 +25,11 @@ styles:[`.background {
  background-size: cover;
  background-repeat: no-repeat;
  background-position: center center;
- width: 100vw;
- height: 100vh;
+ width:auto;
+ height:100vh ;
  opacity:1;
 
- overflow-x: hidden;
+
 }
 #sub-title{
  font-family: 'Inter';
@@ -43,9 +43,10 @@ styles:[`.background {
    display: flex;
    flex-direction: column;
    color:white;
-   padding-left: 3vw;
-   padding-top:20vh ;
+   padding-left:30px;
+   padding-top:200px ;
     z-index: 1;
+   
     
 }
 

@@ -75,6 +75,7 @@ font-size: 15px;
 font-style: normal;
 font-weight: 600;
 line-height: 21px; /* 140% */
+cursor:pointer;
 }
 .footer{
   padding-bottom:3vh;

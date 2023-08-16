@@ -5,9 +5,9 @@ import { Card } from './utils/interface';
   selector: 'app-productsection',
   template: `<div  class="list">
   <div *ngFor="let cardSet of cardSets" class="card-title">
-  <div style="height: 10vh; display: flex; justify-content: space-between;">
-      <p id="sub-title3">{{cardSet.heading}}</p>
-      <div style="margin-right: 5vw; margin-top: 3.5vh;">
+  <div style=" width:auto;height: 10vh; display: flex; justify-content: space-between;">
+      <p sytle="width:90%" id="sub-title3">{{cardSet.heading}}</p>
+      <div style="width:10%; margin-top: 3.5vh;">
           <img (click)="moveLeft(cardSet)"  src="./assets/arrowleft.svg">
           <img (click)="moveRight(cardSet)" style="padding-left: 1vw;" src="./assets/arrowright.svg">
       </div>
@@ -15,14 +15,14 @@ import { Card } from './utils/interface';
   <div class="total-cards">
       <div  class="card-slider">
       <div #card class="card-container">
-          <div  class="card" *ngFor="let card of cardSet.cards.slice(cardSet.currentIndex, cardSet.currentIndex + 4)">
+          <div  class="card" *ngFor="let card of cardSet.cards.slice(cardSet.currentIndex, cardSet.currentIndex +5 )">
               <img  class="img" [src]="card.imageUrl" />
              
               <div class="title">
                   <div class="title2">
                       <span class="span1">{{ card.title1 }}</span>
                       <span class="span2">{{ card.title2 }}</span>
-                     <span style="padding:3vh 2px 0 0;"> <app-button  (click)="openCart()"></app-button> </span>
+                     <span  (click)="openCart()" style="padding:3vh 2px 0 0;"> <app-button ></app-button> </span>
                   </div>
               </div>
           </div>
@@ -33,23 +33,25 @@ import { Card } from './utils/interface';
   </div>`,
   styles:[` .list{
     height: auto;
-   
+   width:100%;
     background-color: white;
     }
 
     .card-title{
       padding-left: 2vw;
       margin-top: 8vh;
-      
+   
   }
   .card-container{
     display:flex;
-gap:3vw;
-width:100vw;
+gap:3.1vw;
+width:100%;
+
+
   }
   .card{
-    
- 
+  
+ padding-left:0.5vw;
   }
   .img{
     height: auto;

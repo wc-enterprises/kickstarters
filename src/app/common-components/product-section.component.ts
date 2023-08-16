@@ -15,14 +15,14 @@ import { Card } from './utils/interface';
   <div class="total-cards">
       <div  class="card-slider">
       <div #card class="card-container">
-          <div  class="card" *ngFor="let card of cardSet.cards.slice(cardSet.currentIndex, cardSet.currentIndex + 4)">
+          <div  class="card" *ngFor="let card of cardSet.cards.slice(cardSet.currentIndex, cardSet.currentIndex +6 )">
               <img  class="img" [src]="card.imageUrl" />
              
               <div class="title">
                   <div class="title2">
                       <span class="span1">{{ card.title1 }}</span>
                       <span class="span2">{{ card.title2 }}</span>
-                     <span style="padding:3vh 2px 0 0;"> <app-button  (click)="openCart()"></app-button> </span>
+                     <span  (click)="openCart()" style="padding:3vh 2px 0 0;"> <app-button ></app-button> </span>
                   </div>
               </div>
           </div>
@@ -33,7 +33,7 @@ import { Card } from './utils/interface';
   </div>`,
   styles:[` .list{
     height: auto;
-   
+   width:100%;
     background-color: white;
     }
 
@@ -44,12 +44,12 @@ import { Card } from './utils/interface';
   }
   .card-container{
     display:flex;
-gap:3vw;
-width:100vw;
+gap:3.5vw;
+width:100%;
   }
   .card{
     
- 
+ padding-left:0.5vw;
   }
   .img{
     height: auto;

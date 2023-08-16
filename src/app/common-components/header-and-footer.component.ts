@@ -53,7 +53,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
           </div>
       </div>
       <div class="end-foot">
-          <div>
+          <div style="width:75%">
               <p style="color: #000;
               font-family: Inter;
               font-size: 14px;
@@ -69,7 +69,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
               text-decoration-line: underline;">Privacy Policy, Terms of Service.</p>
 
           </div>
-          <div class="payment">
+          <div  class="payment">
               <img src="./assets/Visa.svg">
               <img src="./assets/Mastercard.svg">
               <img src="./assets/Discover.svg">
@@ -96,7 +96,7 @@ styles: [
         height:auto ;
     }
     .header{
-        width: 100vw;
+        width: 100%;
         height: 10vh;
         background-color: #FFFFFF;
         display: flex;
@@ -123,13 +123,10 @@ styles: [
     }
     .bag{
        
-       margin-top: -1.5vh;
+       
        border-radius: 99px;
-       background: #F5F5F5;
-       display: inline-flex;
-    padding: 12px;
-    justify-content: center;
-    align-items: flex-start;
+     
+      
     
     }
     .right{
@@ -156,8 +153,8 @@ styles: [
         padding-right: 2vh;
     }
     .footer{
-    width:100vw;
-    height:50vh;
+    width:100%;
+    height:auto;
     border-top: 1px solid #E3E3E3;
     margin-top:5vh;
     }
@@ -168,8 +165,9 @@ styles: [
        
       
     }
+    
     .mid-left{
-        width:70vw;
+        width:75%;
         display: flex;
         gap:5vw;
         color: #000;
@@ -182,7 +180,7 @@ styles: [
     padding-left: 2vw;
     }
     .mid-right{
-        width:30vw;
+        width:25%;
         color: #000;
     font-family: 'Inter';
     font-size: 14px;
@@ -200,15 +198,21 @@ styles: [
       
     }
     .payment{
-        width: 35px;
+        width: 25%; 
         height: 24px;
         margin-top: 7vh;
         gap:1vw;
         display: flex;
-        margin-left: 60vw;
-        width: fit-content;
+     
+     
     }
-    
+//    Mobile screen css 
+@media (max-width: 640px) {
+    .header{
+        border:1px solid black;
+        width:400vw;
+    }
+}
     `
   ]
 })

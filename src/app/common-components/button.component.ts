@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 
 
 border: none;
-width:316px;
+width:100%;
 color: #FFF;
 font-family: 'Inter';
 font-size: 15px;

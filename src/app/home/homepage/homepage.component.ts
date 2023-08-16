@@ -25,8 +25,8 @@ styles:[`.background {
  background-size: cover;
  background-repeat: no-repeat;
  background-position: center center;
- width: 100vw;
- height: 100vh;
+ width: 100%;
+ height:100vh ;
  opacity:1;
 
  overflow-x: hidden;
@@ -43,8 +43,8 @@ styles:[`.background {
    display: flex;
    flex-direction: column;
    color:white;
-   padding-left: 3vw;
-   padding-top:20vh ;
+   padding-left:30spx;
+   padding-top:200px ;
     z-index: 1;
     
 }
@@ -54,7 +54,7 @@ styles:[`.background {
  font-style: normal;
  font-weight: 400;
  line-height: 25.6px; 
- margin-top:-5vh;
+ margin-top:-2vh;
 
 }`],
 })

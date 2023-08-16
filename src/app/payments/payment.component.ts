@@ -4,42 +4,43 @@ import { Component, Input } from '@angular/core';
   selector: 'app-payments',
   template: `<app-headerandfooter>
    <div class="main-container">
+  
    <p class="heading">{{ heading }}</p>
-
   <div class="sub-container">
+ 
 <form class="form">
 
 <p class="title">{{ title }}</p>
 <div class="name">
  <div class="input-group">
  
- <input style="width:17vw;" type="text" class="input">
+ <input style="width:100%;" type="text" class="input">
  <label class="placeholder" for="firstname">First Name</label>
  </div>
  <div class="input-group">
- <input  style="width:17vw;" type="text" class="input">
+ <input  style="width:100%;" type="text" class="input">
  <label class="placeholder" for="Lasttname">Last Name</label>
  </div>
  </div>
  <div class="input-group">
- <input  style="width:35vw;" type="text" class="input">
+ <input  style="width:100%;" type="text" class="input">
  <label class="placeholder" for="Email">Email Address</label>
 
  </div>
  <div class="input-group">
- <input  style="width:35vw;" type="text" class="input">
+ <input  style="width:100%;" type="text" class="input">
  <label class="placeholder" for="Street Address">Street Address</label>
- <input  style="width:35vw;" id="streetaddress2" type="text" class="input">
+ <input  style="width:100%;" id="streetaddress2" type="text" class="input">
  </div>
 
  <div class="name">
  <div class="input-group">
  
- <input style="width:17vw;" type="text" class="input">
+ <input style="width:100%;" type="text" class="input">
  <label class="placeholder" for="State">State/Province</label>
  </div>
  <div class="input-group">
- <input  style="width:17vw;" type="text" class="input">
+ <input  style="width:100%;" type="text" class="input">
  <label class="placeholder" for="city">City</label>
  </div>
  </div>
@@ -47,11 +48,11 @@ import { Component, Input } from '@angular/core';
  <div class="name">
  <div class="input-group">
  
- <input style="width:17vw;" type="text" class="input">
+ <input style="width:100%;" type="text" class="input">
  <label class="placeholder" for="zipcode">Zip/Postal Code</label>
  </div>
  <div class="input-group">
- <input  style="width:17vw;" type="text" class="input">
+ <input  style="width:100%;" type="text" class="input">
  <label class="placeholder" for="Phone">Phone</label>
  </div>
  </div>
@@ -59,8 +60,6 @@ import { Component, Input } from '@angular/core';
  <input   type="checkbox">
  <label class="billing" for="billing">My billing and shipping address are the same</label>
  </div>
-
-
 </form>
 
 <div class="billing-summary">
@@ -94,10 +93,9 @@ import { Component, Input } from '@angular/core';
   .main-container{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    
     height: 100vh; /* Adjust this as needed */
-    padding: 80px;
+    
   
    
     
@@ -109,9 +107,11 @@ font-size: 25px;
 font-style: normal;
 font-weight: 700;
 height:1vh;
-padding-right:60vw;
+margin-top:15vh;
 display:flex;
 align-items:center;
+padding-left:21vw;
+
 
 
   }
@@ -132,32 +132,34 @@ height:1vh;
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:3vw;
-    margin-top:-10vh;
-    padding:0px;
-    width:100vw;
-    height:100vh;
+margin-top:3vh;
+    display: inline-flex;
+align-items: flex-start;
+gap: 55px;
+    width:100%;
+    height:auto;
   }
   .name{
     display:flex;
     gap:1vw;
-    margin:0vh 0 0 0;
+   
   }
   #streetaddress2{
     margin-top:2vh;
   }
   .form{
-    width: 570px;
-height: 542px;
+    width:auto;
+height:auto;
 display:flex;
 flex-direction:column;
     border-radius: 4px;
 background: #FFF;
-padding-left:2vw;
+padding:8px 50px 25px 50px;
 
 gap:4vh;
 /* Shadow 1 */
 box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.14);
+
   }
   .input-group{
     position:relative;
@@ -165,8 +167,8 @@ box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.14);
   }
   .input{
     padding:10px;
-    width:100%;
-    max-width:100vw;
+    width:auto;
+    
     box-sizing:border-box;
     outline:none;
     border-radius: 4px;
@@ -204,15 +206,15 @@ line-height: 20px; /* 166.667% */
     background-color:#FFF;
   }
   .billing-summary{
-    width: 370px;
-height: 320px;
+    width: auto;
+height: auto;
 gap:2vh;
 display:flex;
 flex-direction:column;
-  padding: 15px;
+  padding:8px 50px 15px 50px;
 border-radius: 4px;
 background: #FFF;
-margin-top:-25vh;
+
 color: var(--dark-dark-3, #4F4F4F);
 
 /* Regular 14px */
@@ -241,6 +243,7 @@ line-height: 20px; /* 142.857% */
     justify-content: space-between;
     margin-bottom: 5px;
     padding-top:1vh;
+    gap:8vw;
   }
   
   .total {
@@ -260,10 +263,11 @@ line-height: 20px; /* 142.857% */
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    width:24.5vw;
+    width:100%;
   }
-  
-  `]
+ 
+  `
+ ]
 })
 export class PaymentsComponent {
   @Input() heading: string = 'Payments';

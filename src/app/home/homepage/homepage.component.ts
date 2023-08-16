@@ -25,11 +25,11 @@ styles:[`.background {
  background-size: cover;
  background-repeat: no-repeat;
  background-position: center center;
- width: 100%;
+ width:auto;
  height:100vh ;
  opacity:1;
 
- overflow-x: hidden;
+
 }
 #sub-title{
  font-family: 'Inter';
@@ -46,6 +46,7 @@ styles:[`.background {
    padding-left:30px;
    padding-top:200px ;
     z-index: 1;
+   
     
 }
 

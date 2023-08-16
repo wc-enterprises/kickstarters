@@ -5,9 +5,9 @@ import { Card } from './utils/interface';
   selector: 'app-productsection',
   template: `<div  class="list">
   <div *ngFor="let cardSet of cardSets" class="card-title">
-  <div style="height: 10vh; display: flex; justify-content: space-between;">
-      <p id="sub-title3">{{cardSet.heading}}</p>
-      <div style="margin-right: 5vw; margin-top: 3.5vh;">
+  <div style=" width:auto;height: 10vh; display: flex; justify-content: space-between;">
+      <p sytle="width:92%" id="sub-title3">{{cardSet.heading}}</p>
+      <div style="width:8%; margin-top: 3.5vh;">
           <img (click)="moveLeft(cardSet)"  src="./assets/arrowleft.svg">
           <img (click)="moveRight(cardSet)" style="padding-left: 1vw;" src="./assets/arrowright.svg">
       </div>
@@ -15,7 +15,7 @@ import { Card } from './utils/interface';
   <div class="total-cards">
       <div  class="card-slider">
       <div #card class="card-container">
-          <div  class="card" *ngFor="let card of cardSet.cards.slice(cardSet.currentIndex, cardSet.currentIndex +6 )">
+          <div  class="card" *ngFor="let card of cardSet.cards.slice(cardSet.currentIndex, cardSet.currentIndex +4 )">
               <img  class="img" [src]="card.imageUrl" />
              
               <div class="title">

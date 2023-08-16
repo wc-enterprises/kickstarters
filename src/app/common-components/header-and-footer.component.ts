@@ -92,7 +92,7 @@ styles: [
         height: 20px;
       }
     .main-box{
-        width: 100%;
+        width: auto;
         height:auto ;
     }
     .header{

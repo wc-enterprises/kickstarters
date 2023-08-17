@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-button',
-  template: `<button >Add to cart</button>`,
+  template: `<button (click)="openCart()">Add to cart</button>
+  <app-cart *ngIf="isCartOpen"></app-cart>`,
   styles:[`button{
 
 

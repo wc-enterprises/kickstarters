@@ -3,7 +3,9 @@ import { Router } from '@angular/router';
 import { Card } from './utils/interface';
 @Component({
   selector: 'app-productsection',
-  template: `<div  class="list">
+  template: `<html>
+  <body>
+  <div  class="list">
   <div *ngFor="let cardSet of cardSets" class="card-title">
   <div style=" width:auto;height: 10vh; display: flex; justify-content: space-between;">
       <p sytle="width:90%" id="sub-title3">{{cardSet.heading}}</p>
@@ -30,7 +32,9 @@ import { Card } from './utils/interface';
       </div>
   </div>
   </div>
-  </div>`,
+  </div>
+  </body>
+  </html>`,
   styles:[` .list{
     height: auto;
    width:100%;

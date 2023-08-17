@@ -2,20 +2,27 @@ import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-headerandfooter',
-  template: `<div  [ngClass]="{ blur: isCartOpen }" class="main-box">
+  template: `<html>
+  <body>
+  <div  [ngClass]="{ blur: isCartOpen }" class="main-box">
   <!-- header html -->
   <div class="header">
 
       <span routerLink="/" class="logo-title">
-          <img src="./assets/kicklogo.svg">
+          <img id="logo" src="./assets/kicklogo.svg">
+          
           <p id="p1">KICKSTARTERS</p>
+          <p id="p1-mobile">KICKSTARTERS</p>
       </span>
       <span class="right">
           <a routerLink="/support" id="FAQs">FAQs</a>
+          <img  class="FAQs-mobile" src="./assets/call1.svg">
           <a routerLink="" id="contact">Contact Us</a>
+          <img class="contact-mobile" src="./assets/mobile.svg">
           <a  (click)="openCart()" class="bag"><img  style="" src="./assets/bag.svg"></a>
          
       </span>
+    
     
 
   </div>
@@ -81,7 +88,9 @@ import { Component, EventEmitter, Output } from '@angular/core';
           </div>
       </div>
   </div>
-</div>`,
+</div>
+</body>
+</html>`,
 styles: [
     `
     
@@ -92,7 +101,7 @@ styles: [
         height: 20px;
       }
     .main-box{
-        width: auto;
+        width: 100%;
         height:auto ;
     }
     .header{
@@ -104,6 +113,7 @@ styles: [
     align-items: flex-start;
     position:fixed;
     z-index:2;
+   
     }
     .logo-title{
         display: flex;
@@ -126,9 +136,11 @@ styles: [
        
        border-radius: 99px;
      
-      
-    
-    }
+}
+.FAQs-mobile,.contact-mobile,#p1-mobile,#logo-mobile{
+    display:none;
+}
+
     .right{
       display: flex;
       
@@ -200,7 +212,7 @@ styles: [
     .payment{
         width: 25%; 
         height: 24px;
-        margin-top: 3vh;
+        margin-top: 7vh;
         gap:1vw;
         display: flex;
      
@@ -208,11 +220,45 @@ styles: [
     }
 //    Mobile screen css 
 @media (max-width: 640px) {
+
     .header{
-        border:1px solid black;
-        width:400vw;
+        align-items:center;
+    }
+    .logo-title{
+        width:65%;
+       
+    }
+    .right{ width:35%;
+       
+    align-items:center;
+
+padding:0;
+padding-top:5px;
+
+gap:15px;}
+    
+  
+    #FAQs,#contact,#p1,{
+        display:none;
+    }
+    .FAQs-mobile,.contact-mobile,#p1-mobile,#logo-mobile{
+        display:block;
+       font-weight:100;
+    }
+    #p1-mobile{
+        
+            color: #000;
+        font-family: 'Average Sans';
+        font-size: 14x;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 100% */
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        
     }
 }
+
     `
   ]
 })

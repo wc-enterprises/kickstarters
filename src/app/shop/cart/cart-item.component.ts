@@ -2,7 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-cartitem',
-  template: `<div *ngFor=" let cart of cartItems" class="cartitem">
+  template: `<html>
+  <body>
+  <div *ngFor=" let cart of cartItems" class="cartitem">
   <img [src]="cart.imgUrl" >
   <div class="box">
   <div class="box1">
@@ -19,7 +21,9 @@ import { Component } from '@angular/core';
 </div>
 
   </div>
-  </div>`,
+  </div>
+  </body>
+  </html>`,
   styles:[`.cartitem{
       display:flex;
       gap:1vw;

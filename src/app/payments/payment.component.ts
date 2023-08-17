@@ -2,7 +2,9 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-payments',
-  template: `<app-headerandfooter>
+  template: `<html>
+  <body>
+  <app-headerandfooter>
    <div class="main-container">
   <div style="display:flex;">
   <p style=""></p>
@@ -90,6 +92,8 @@ import { Component, Input } from '@angular/core';
   </div>
   
   </app-headerandfooter>
+  </body>
+  </html>
  `,
   styles:[`
   .main-container{

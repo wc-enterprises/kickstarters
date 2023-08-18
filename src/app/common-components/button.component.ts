@@ -4,8 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-button',
   template: `<html>
   <body>
-  <button (click)="openCart()">Add to cart</button>
-  <app-cart *ngIf="isCartOpen"></app-cart>
+  <button>Add to cart</button>
+ 
   </body>
   </html>`,
   styles:[`button{
@@ -28,7 +28,15 @@ gap: 10px;
 align-self: stretch;
 border-radius: 99px;
 background: #000;
- }`]
+ }
+//  mobile screen
+@media (max-width:640px){
+button{
+  border-radius: 12px;
+  padding: 5px;
+  font-size: 12px;
+}
+}`]
 })
 export class ButtonComponent {
   

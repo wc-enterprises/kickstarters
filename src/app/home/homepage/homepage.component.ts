@@ -28,7 +28,7 @@ import { Component } from '@angular/core';
    
 </div>
 </div>
-<app-productsection></app-productsection>
+<app-productsection ></app-productsection>
  </app-headerandfooter>
   
   </body>

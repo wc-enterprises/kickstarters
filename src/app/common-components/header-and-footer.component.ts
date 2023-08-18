@@ -38,21 +38,21 @@ import { Component, EventEmitter, Output } from '@angular/core';
           <div class="mid-left">
               <div style="display:flex;flex-direction: column;gap:3vh;">
                   <a style="font-weight: 600;font-size: 16px;">Shop</a>
-                  <a>Items</a>
-                  <a>Kits</a>
-                  <a>Accessories</a>
+                  <a id ="list-features" >Items</a>
+                  <a id ="list-features" >Kits</a>
+                  <a id ="list-features" >Accessories</a>
               </div>
               <div style="display:flex;flex-direction: column;gap:3vh;">
-                  <a style="font-weight: 600;font-size: 16px;">Help</a>
-                  <a>About</a>
-                  <a>FAQ</a>
-                  <a>Returns policy</a>
+                  <a  style="font-weight: 600;font-size: 16px;">Help</a>
+                  <a id ="list-features">About</a>
+                  <a id ="list-features">FAQ</a>
+                  <a id ="list-features">Returns policy</a>
               </div>
               <div style="display:flex;flex-direction: column;gap:3vh;">
                   <a style="font-weight: 600;font-size: 16px;">Follow</a>
-                  <a>Twitter</a>
-                  <a>Instagram</a>
-                  <a>Facebook</a>
+                  <a  id ="list-features">Twitter</a>
+                  <a  id ="list-features">Instagram</a>
+                  <a  id ="list-features">Facebook</a>
               </div>
           </div>
           <div class="mid-right">
@@ -254,6 +254,39 @@ gap:15px;}
         letter-spacing: 3px;
         text-transform: uppercase;
         
+    }
+    .mid-foot{
+       display: flex;
+       flex-direction:column;
+       padding-left:25px;
+       }
+       .end-foot{
+        flex-direction: column-reverse;
+        padding-left:25px;
+        margin-top:0px;
+       }
+       .mid-right{
+        width:auto;
+        white-space: nowrap; /* Prevents line breaks */
+        overflow: hidden; /* Hide overflowing text */
+        text-overflow: ellipsis; 
+        font-size:10px;
+        font-weight:600;
+        margin-top:0px;
+     
+       }
+       .mid-left{
+           gap:15px;
+           width:100%
+       }
+       .payment{
+        margin-top:0px;
+       }
+    #list-features{
+        font-size:14px;
+    }
+    .footer{
+        background-color:#E5E5E5;
     }
 }
 

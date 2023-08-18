@@ -5,16 +5,19 @@ import { Card } from './utils/interface';
   selector: 'app-productsection',
   template: `<html>
   <body>
+ 
+ 
   <div class="list">
   <div   *ngFor="let cardSet of cardSets" class="card-title ">
   <div style=" width:auto;height: 10vh; display: flex; justify-content: space-between;">
-      <p sytle="width:90%" id="sub-title3">{{cardSet.heading}}</p>
-      <div style="width:10%; margin-top: 3.5vh;">
-          <img (click)="scrollCards(cardSet, 'left')"  src="./assets/arrowleft.svg">
-          <img (click)="scrollCards(cardSet, 'right')" style="padding-left: 1vw;" src="./assets/arrowright.svg">
+      <p id="sub-title3">{{cardSet.heading}}</p>
+      <div id="arrow-button"  >
+          <img id="left-arrow" (click)="scrollCards(cardSet, 'left')"  src="./assets/arrowleft.svg">
+          <img id="right-arrow" (click)="scrollCards(cardSet, 'right')" style="padding-left: 1vw;" src="./assets/arrowright.svg">
       </div>
   </div>
   <div   #card  class="total-cards">
+  
       <div  class="card-slider">
       <div class="card-container">
           <div    class="card" *ngFor="let card of cardSet.cards.slice(cardSet.currentIndex ); let i = index">
@@ -22,9 +25,11 @@ import { Card } from './utils/interface';
              
               <div class="title">
                   <div class="title2">
+                  
                       <span class="span1">{{ card.title1 }}</span>
                       <span class="span2">{{ card.title2 }}</span>
                      <span  (click)="openCart()" style="padding:3vh 2px 0 0;"> <app-button ></app-button> </span>
+                     
                   </div>
               </div>
           </div>
@@ -54,16 +59,22 @@ width:100%;
 transition: transform 0.3s ease-in-out; /* Add smooth transition */
 transform: translateX(0);
   }
+
+  #arrow-button{
+    width:10%;
+    margin-top: 3.5vh;
+  }
   .card{
-  
+
  padding-left:0.5vw;
   }
   .card-slider{
     overflow-x:scroll;
+  
   }
   .img{
     height: auto;
-
+    width:316px;
 border-radius: 12px;
   }
    #sub-title3{
@@ -74,6 +85,7 @@ border-radius: 12px;
     font-weight: 700;
     line-height: 33.6px; /* 140% */
     letter-spacing: -0.5px;
+    width:90%
   }
   .total-cards{
     display: flex;
@@ -121,7 +133,43 @@ margin-top: -9vh;
   font-weight: 400;
   line-height: 18.2px; /* 130% */
 }
-    `]
+  //  mobile screen 
+  @media (max-width: 640px) {
+  
+    .img{
+      height: auto;
+      width:148px;
+    }
+    #sub-title3{
+      width:78%;
+      font-size:16px;
+    }
+    #arrow-button{
+      width:22%;
+      margin-top: 3.5vh;
+      display:flex;
+      gap:5px;
+    }
+    #left-arrow{
+   width:20px;
+   height:20px;
+    }
+  
+     #right-arrow{
+        width:20px;
+        height:20px;
+    
+      }
+      .span1{
+  font-size:12px;
+  padding-left:5px;
+      }
+      .span2{
+        font-size:12px;
+        padding-left:5px;
+      }
+    
+  }`]
  
 
 })

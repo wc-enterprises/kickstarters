@@ -15,7 +15,7 @@ import { Component } from '@angular/core';
   <div class="quantity-selector">
  
   <button *ngIf="quantity > 1" style="border-radius: 3.333px 0px 0px 3.333px;" class="decrement-button" (click)="decrementQuantity()">-</button>
-  <img *ngIf="quantity <= 1" style="width:15px;" class="delete-basket-icon" (click)="deleteItem()" src="./assets/delete1.svg">
+  <img *ngIf="quantity <= 1" style="width:10px;" class="delete-basket-icon" (click)="deleteItem()" src="./assets/delete1.svg">
   <div class="quantity-number">{{ quantity }}</div>
   <button class="increment-button" style="border-radius: 0px 3.333px 3.333px 0px;" (click)="incrementQuantity()">+</button>
 </div>

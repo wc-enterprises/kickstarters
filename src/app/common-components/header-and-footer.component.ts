@@ -212,11 +212,9 @@ styles: [
     .payment{
         width: 25%; 
         height: 24px;
-        margin-top: 7vh;
+        padding-top:10px;
         gap:1vw;
         display: flex;
-     
-     
     }
 //    Mobile screen css 
 @media (max-width: 640px) {

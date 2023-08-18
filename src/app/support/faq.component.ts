@@ -2,7 +2,9 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-faq',
-  template: `<app-headerandfooter>
+  template: `<html>
+  <body>
+  <app-headerandfooter>
   
   <div class="faq-accordion">
   <p class="accordion-heading">{{ heading }}</p>
@@ -14,7 +16,9 @@ import { Component, Input } from '@angular/core';
     <div class="answer" [hidden]="!faq.open">{{ faq.answer }}</div>
   </div>
 </div>
-  </app-headerandfooter>`,
+  </app-headerandfooter>
+  </body>
+  </html>`,
 styles:[`.faq-accordion {
   font-family: Arial, sans-serif;
   width:50vw;

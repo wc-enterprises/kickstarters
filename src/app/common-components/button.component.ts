@@ -2,7 +2,12 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-button',
-  template: `<button >Add to cart</button>`,
+  template: `<html>
+  <body>
+  <button>Add to cart</button>
+ 
+  </body>
+  </html>`,
   styles:[`button{
 
 
@@ -21,9 +26,17 @@ justify-content: center;
 align-items: center;
 gap: 10px;
 align-self: stretch;
-border-radius: 99px;
+border-radius: 12px;
 background: #000;
- }`]
+ }
+//  mobile screen
+@media (max-width:640px){
+button{
+  border-radius: 12px;
+  padding: 5px;
+  font-size: 12px;
+}
+}`]
 })
 export class ButtonComponent {
   

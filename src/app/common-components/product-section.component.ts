@@ -3,26 +3,33 @@ import { Router } from '@angular/router';
 import { Card } from './utils/interface';
 @Component({
   selector: 'app-productsection',
-  template: `<div  class="list">
-  <div *ngFor="let cardSet of cardSets" class="card-title">
+  template: `<html>
+  <body>
+ 
+ 
+  <div class="list">
+  <div   *ngFor="let cardSet of cardSets" class="card-title ">
   <div style=" width:auto;height: 10vh; display: flex; justify-content: space-between;">
-      <p sytle="width:90%" id="sub-title3">{{cardSet.heading}}</p>
-      <div style="width:10%; margin-top: 3.5vh;">
-          <img (click)="moveLeft(cardSet)"  src="./assets/arrowleft.svg">
-          <img (click)="moveRight(cardSet)" style="padding-left: 1vw;" src="./assets/arrowright.svg">
+      <p id="sub-title3">{{cardSet.heading}}</p>
+      <div id="arrow-button"  >
+          <img id="left-arrow" (click)="scrollCards(cardSet, 'left')"  src="./assets/arrowleft.svg">
+          <img id="right-arrow" (click)="scrollCards(cardSet, 'right')" style="padding-left: 1vw;" src="./assets/arrowright.svg">
       </div>
   </div>
-  <div class="total-cards">
+  <div   #card  class="total-cards">
+  
       <div  class="card-slider">
-      <div #card class="card-container">
-          <div  class="card" *ngFor="let card of cardSet.cards.slice(cardSet.currentIndex, cardSet.currentIndex +5 )">
+      <div class="card-container">
+          <div    class="card" *ngFor="let card of cardSet.cards.slice(cardSet.currentIndex ); let i = index">
               <img  class="img" [src]="card.imageUrl" />
              
               <div class="title">
                   <div class="title2">
+                  
                       <span class="span1">{{ card.title1 }}</span>
                       <span class="span2">{{ card.title2 }}</span>
                      <span  (click)="openCart()" style="padding:3vh 2px 0 0;"> <app-button ></app-button> </span>
+                     
                   </div>
               </div>
           </div>
@@ -30,7 +37,9 @@ import { Card } from './utils/interface';
       </div>
   </div>
   </div>
-  </div>`,
+  </div>
+  </body>
+  </html>`,
   styles:[` .list{
     height: auto;
    width:100%;
@@ -47,15 +56,25 @@ import { Card } from './utils/interface';
 gap:3.1vw;
 width:100%;
 
+transition: transform 0.3s ease-in-out; /* Add smooth transition */
+transform: translateX(0);
+  }
 
+  #arrow-button{
+    width:10%;
+    margin-top: 3.5vh;
   }
   .card{
-  
+
  padding-left:0.5vw;
+  }
+  .card-slider{
+    overflow-x:scroll;
+  
   }
   .img{
     height: auto;
-
+    width:316px;
 border-radius: 12px;
   }
    #sub-title3{
@@ -66,6 +85,7 @@ border-radius: 12px;
     font-weight: 700;
     line-height: 33.6px; /* 140% */
     letter-spacing: -0.5px;
+    width:90%
   }
   .total-cards{
     display: flex;
@@ -113,7 +133,43 @@ margin-top: -9vh;
   font-weight: 400;
   line-height: 18.2px; /* 130% */
 }
-    `]
+  //  mobile screen 
+  @media (max-width: 640px) {
+  
+    .img{
+      height: auto;
+      width:148px;
+    }
+    #sub-title3{
+      width:78%;
+      font-size:16px;
+    }
+    #arrow-button{
+      width:22%;
+      margin-top: 3.5vh;
+      display:flex;
+      gap:5px;
+    }
+    #left-arrow{
+   width:20px;
+   height:20px;
+    }
+  
+     #right-arrow{
+        width:20px;
+        height:20px;
+    
+      }
+      .span1{
+  font-size:12px;
+  padding-left:5px;
+      }
+      .span2{
+        font-size:12px;
+        padding-left:5px;
+      }
+    
+  }`]
  
 
 })
@@ -156,51 +212,39 @@ export class ProductSectionComponent {
       { imageUrl: './assets/washing2.svg',title:'',  title1: 'Electronics', title2:'Starting from $64',  },
     ] },
   ];
-    // @ViewChild('card') cardsElement!: ElementRef;
-    // cardWidth =1000; // Adjust the width of each card including margin
-    // currentIndex = 0;
+    @ViewChild('card') cardsElement!: ElementRef;
+    cardWidth =1000; // Adjust the width of each card including margin
+    currentIndex = 0;
   
-    // scrollCards(direction: 'left' | 'right') {
-    //   const cardsContainer = this.cardsElement.nativeElement;
-    
-    //   if (direction === 'left') {
-    //     this.currentIndex = Math.max(this.currentIndex - 1, 0);
-    //   } else {
-    //     this.currentIndex = Math.min(this.currentIndex + 1, this.cardSets.length - 1);
-    //   }
-    
-    //   const scrollAmount = -this.currentIndex * this.cardWidth;
-      
-    //   // Apply smooth transition
-    //   cardsContainer.style.transition = 'transform 0.8s ease-in-out';
-    //   cardsContainer.style.transform = `translateX(${scrollAmount}px)`;
-    
-    //   // Listen for the transition end event to remove the transition after it's done
-    //   const transitionEndHandler = () => {
-    //     cardsContainer.style.transition = '';
-    //     cardsContainer.removeEventListener('transitionend', transitionEndHandler);
-    //   };
-    
-    //   cardsContainer.addEventListener('transitionend', transitionEndHandler);
+    scrollCards(cardSet: any, direction: 'left' | 'right'): void {
+      if (direction === 'left') {
+        if (cardSet.currentIndex > 0) {
+          cardSet.currentIndex--;
+        }
+      } else if (direction === 'right') {
+        if (cardSet.currentIndex < cardSet.cards.length - 1) {
+          cardSet.currentIndex++;
+        }
+      }
+    }
+  
+    // updateVisibleCards(cardSet: any): void {
+    //   cardSet.visibleCards = cardSet.cards.slice(cardSet.currentIndex, cardSet.currentIndex + 3);
     // }
-   
-    updateVisibleCards(cardSet: any): void {
-      cardSet.visibleCards = cardSet.cards.slice(cardSet.currentIndex, cardSet.currentIndex + 3);
-    }
   
-    moveLeft(cardSet: any): void {
-      if (cardSet.currentIndex > 0) {
-        cardSet.currentIndex--;
-        this.updateVisibleCards(cardSet);
-      }
-    }
+    // moveLeft(cardSet: any): void {
+    //   if (cardSet.currentIndex > 0) {
+    //     cardSet.currentIndex--;
+    //     this.updateVisibleCards(cardSet);
+    //   }
+    // }
   
-    moveRight(cardSet: any): void {
-      if (cardSet.currentIndex < cardSet.cards.length - 3) {
-        cardSet.currentIndex++;
-        this.updateVisibleCards(cardSet);
-      }
-    }
+    // moveRight(cardSet: any): void {
+    //   if (cardSet.currentIndex < cardSet.cards.length - 3) {
+    //     cardSet.currentIndex++;
+    //     this.updateVisibleCards(cardSet);
+    //   }
+    // }
 
     isCartOpen = false; 
 

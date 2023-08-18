@@ -2,20 +2,27 @@ import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-headerandfooter',
-  template: `<div  [ngClass]="{ blur: isCartOpen }" class="main-box">
+  template: `<html>
+  <body>
+  <div  [ngClass]="{ blur: isCartOpen }" class="main-box">
   <!-- header html -->
   <div class="header">
 
       <span routerLink="/" class="logo-title">
-          <img src="./assets/kicklogo.svg">
+          <img id="logo" src="./assets/kicklogo.svg">
+          
           <p id="p1">KICKSTARTERS</p>
+          <p id="p1-mobile">KICKSTARTERS</p>
       </span>
       <span class="right">
           <a routerLink="/support" id="FAQs">FAQs</a>
+          <img  class="FAQs-mobile" src="./assets/call1.svg">
           <a routerLink="" id="contact">Contact Us</a>
+          <img class="contact-mobile" src="./assets/mobile.svg">
           <a  (click)="openCart()" class="bag"><img  style="" src="./assets/bag.svg"></a>
          
       </span>
+    
     
 
   </div>
@@ -31,21 +38,21 @@ import { Component, EventEmitter, Output } from '@angular/core';
           <div class="mid-left">
               <div style="display:flex;flex-direction: column;gap:3vh;">
                   <a style="font-weight: 600;font-size: 16px;">Shop</a>
-                  <a>Items</a>
-                  <a>Kits</a>
-                  <a>Accessories</a>
+                  <a id ="list-features" >Items</a>
+                  <a id ="list-features" >Kits</a>
+                  <a id ="list-features" >Accessories</a>
               </div>
               <div style="display:flex;flex-direction: column;gap:3vh;">
-                  <a style="font-weight: 600;font-size: 16px;">Help</a>
-                  <a>About</a>
-                  <a>FAQ</a>
-                  <a>Returns policy</a>
+                  <a  style="font-weight: 600;font-size: 16px;">Help</a>
+                  <a id ="list-features">About</a>
+                  <a id ="list-features">FAQ</a>
+                  <a id ="list-features">Returns policy</a>
               </div>
               <div style="display:flex;flex-direction: column;gap:3vh;">
                   <a style="font-weight: 600;font-size: 16px;">Follow</a>
-                  <a>Twitter</a>
-                  <a>Instagram</a>
-                  <a>Facebook</a>
+                  <a  id ="list-features">Twitter</a>
+                  <a  id ="list-features">Instagram</a>
+                  <a  id ="list-features">Facebook</a>
               </div>
           </div>
           <div class="mid-right">
@@ -81,7 +88,9 @@ import { Component, EventEmitter, Output } from '@angular/core';
           </div>
       </div>
   </div>
-</div>`,
+</div>
+</body>
+</html>`,
 styles: [
     `
     
@@ -92,18 +101,19 @@ styles: [
         height: 20px;
       }
     .main-box{
-        width: auto;
+        width: 100%;
         height:auto ;
     }
     .header{
         width: 100%;
-        height: 10vh;
+        height: auto;
         background-color: #FFFFFF;
         display: flex;
         justify-content:space-between;
     align-items: flex-start;
     position:fixed;
     z-index:2;
+   
     }
     .logo-title{
         display: flex;
@@ -126,9 +136,11 @@ styles: [
        
        border-radius: 99px;
      
-      
-    
-    }
+}
+.FAQs-mobile,.contact-mobile,#p1-mobile,#logo-mobile{
+    display:none;
+}
+
     .right{
       display: flex;
       
@@ -200,19 +212,86 @@ styles: [
     .payment{
         width: 25%; 
         height: 24px;
-        margin-top: 3vh;
+        padding-top:10px;
         gap:1vw;
         display: flex;
-     
-     
     }
 //    Mobile screen css 
 @media (max-width: 640px) {
+
     .header{
-        border:1px solid black;
-        width:400vw;
+        align-items:center;
+    }
+    .logo-title{
+        width:65%;
+       
+    }
+    .right{ width:35%;
+       
+    align-items:center;
+
+padding:0;
+padding-top:5px;
+
+gap:15px;}
+    
+  
+    #FAQs,#contact,#p1,{
+        display:none;
+    }
+    .FAQs-mobile,.contact-mobile,#p1-mobile,#logo-mobile{
+        display:block;
+       font-weight:100;
+    }
+    #p1-mobile{
+        
+            color: #000;
+        font-family: 'Average Sans';
+        font-size: 14x;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 100% */
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        
+    }
+    .mid-foot{
+       display: flex;
+       flex-direction:column;
+       padding-left:15px;
+       }
+       .end-foot{
+        flex-direction: column-reverse;
+        padding-left:25px;
+        margin-top:0px;
+       }
+       .mid-right{
+        width:auto;
+        white-space: nowrap; /* Prevents line breaks */
+        overflow: hidden; /* Hide overflowing text */
+        text-overflow: ellipsis; 
+        font-size:10px;
+        font-weight:600;
+        margin-top:0px;
+       padding-left:16px;
+       }
+       .mid-left{
+           gap:15px;
+           width:100%;
+           
+         
+       }
+       .payment{
+        margin-top:0px;
+       }
+    #list-features{
+        font-size:14px;
+    }
+    .footer{
+        background-color:#E9ECEF;
     }
 }
+
     `
   ]
 })

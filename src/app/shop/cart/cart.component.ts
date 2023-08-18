@@ -2,7 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-cart',
-  template: `<div *ngIf="isCartOpen" class="cart">
+  template: `<html>
+  <body>
+  <div *ngIf="isCartOpen" class="cart">
   <div class="header">
  
  <div class="inner-head"> <img src="./assets/bag.svg">
@@ -35,7 +37,8 @@ import { Component } from '@angular/core';
   <button routerLink="payments">Proceed to Checkout</button>
   </div>
 </div>
-`,
+</body>
+</html>`,
 styles:[`.cart {
    background-color: #FFFFFF;
   color: black;
@@ -79,6 +82,11 @@ cursor:pointer;
 }
 .footer{
   padding-bottom:3vh;
+}
+// mobile screen
+@media (max-width:640px){
+  .cart{right:-25px;
+  width:100%;}
 }
 `]
 })

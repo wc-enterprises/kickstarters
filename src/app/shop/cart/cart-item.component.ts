@@ -2,7 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-cartitem',
-  template: `<div *ngFor=" let cart of cartItems" class="cartitem">
+  template: `<html>
+  <body>
+  <div *ngFor=" let cart of cartItems" class="cartitem">
   <img [src]="cart.imgUrl" >
   <div class="box">
   <div class="box1">
@@ -13,13 +15,15 @@ import { Component } from '@angular/core';
   <div class="quantity-selector">
  
   <button *ngIf="quantity > 1" style="border-radius: 3.333px 0px 0px 3.333px;" class="decrement-button" (click)="decrementQuantity()">-</button>
-  <img *ngIf="quantity <= 1" style="width:15px;" class="delete-basket-icon" (click)="deleteItem()" src="./assets/delete1.svg">
+  <img *ngIf="quantity <= 1" style="width:10px;" class="delete-basket-icon" (click)="deleteItem()" src="./assets/delete1.svg">
   <div class="quantity-number">{{ quantity }}</div>
   <button class="increment-button" style="border-radius: 0px 3.333px 3.333px 0px;" (click)="incrementQuantity()">+</button>
 </div>
 
   </div>
-  </div>`,
+  </div>
+  </body>
+  </html>`,
   styles:[`.cartitem{
       display:flex;
       gap:1vw;

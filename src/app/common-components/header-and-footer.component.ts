@@ -258,7 +258,7 @@ gap:15px;}
     .mid-foot{
        display: flex;
        flex-direction:column;
-       padding-left:25px;
+       padding-left:15px;
        }
        .end-foot{
         flex-direction: column-reverse;
@@ -273,11 +273,13 @@ gap:15px;}
         font-size:10px;
         font-weight:600;
         margin-top:0px;
-     
+       padding-left:16px;
        }
        .mid-left{
            gap:15px;
-           width:100%
+           width:100%;
+           
+         
        }
        .payment{
         margin-top:0px;
@@ -286,7 +288,7 @@ gap:15px;}
         font-size:14px;
     }
     .footer{
-        background-color:#E5E5E5;
+        background-color:#E9ECEF;
     }
 }
 

@@ -61,7 +61,7 @@ import { Component, Input } from '@angular/core';
  </div>
  </div>
  <div class="input-group">
- <input   type="checkbox">
+ <input   id="check"  type="checkbox">
  <label class="billing" for="billing">My billing and shipping address are the same</label>
  </div>
 </form>
@@ -100,7 +100,7 @@ import { Component, Input } from '@angular/core';
     display: flex;
     flex-direction: column;
     
-    height: 100vh; /* Adjust this as needed */
+    height: auto; /* Adjust this as needed */
     
   
    
@@ -271,7 +271,38 @@ line-height: 20px; /* 142.857% */
     cursor: pointer;
     width:100%;
   }
- 
+//  mobile screen 
+@media (max-width:640px){
+  .sub-container{
+    flex-direction:column;
+    width:100%;
+    height:auto;
+  }
+  .placeholder{
+    font-size:12px;
+  }
+  .billing{
+   width:auto;
+  
+   font-size:12px;
+  }
+.billing-summary{
+
+margin-left:20px;
+padding-left:25px;
+
+}
+.heading{
+padding-left:25px;
+font-size:16px
+}
+.title,title1{
+  font-size:14px;
+}
+.summary-row{
+  gap:80px;
+}
+ }
   `
  ]
 })

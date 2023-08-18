@@ -83,6 +83,11 @@ cursor:pointer;
 .footer{
   padding-bottom:3vh;
 }
+// mobile screen
+@media (max-width:640px){
+  .cart{right:-25px;
+  width:100%;}
+}
 `]
 })
 export class CartComponent {

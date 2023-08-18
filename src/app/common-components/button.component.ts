@@ -26,7 +26,7 @@ justify-content: center;
 align-items: center;
 gap: 10px;
 align-self: stretch;
-border-radius: 99px;
+border-radius: 12px;
 background: #000;
  }
 //  mobile screen

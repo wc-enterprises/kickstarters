@@ -14,11 +14,11 @@ import { Component, EventEmitter, Output } from '@angular/core';
           <p id="p1">KICKSTARTERS</p>
           <p id="p1-mobile">KICKSTARTERS</p>
       </span>
-      <span class="right">
+      <span class="right"> 
           <a routerLink="/support" id="FAQs">FAQs</a>
-          <img  class="FAQs-mobile" src="./assets/call1.svg">
+         
           <a routerLink="" id="contact">Contact Us</a>
-          <img class="contact-mobile" src="./assets/mobile.svg">
+         
           <a  (click)="openCart()" class="bag"><img  style="" src="./assets/bag.svg"></a>
          
       </span>
@@ -45,7 +45,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
               <div style="display:flex;flex-direction: column;gap:3vh;">
                   <a  style="font-weight: 600;font-size: 16px;">Help</a>
                   <a id ="list-features">About</a>
-                  <a id ="list-features">FAQ</a>
+                  <a  routerLink="/support" id ="list-features">FAQ</a>
                   <a id ="list-features">Returns policy</a>
               </div>
               <div style="display:flex;flex-direction: column;gap:3vh;">
@@ -113,6 +113,7 @@ styles: [
     align-items: flex-start;
     position:fixed;
     z-index:2;
+
    
     }
     .logo-title{
@@ -133,8 +134,8 @@ styles: [
     }
     .bag{
        
-       
-       border-radius: 99px;
+      
+     
      
 }
 .FAQs-mobile,.contact-mobile,#p1-mobile,#logo-mobile{
@@ -225,6 +226,9 @@ styles: [
     .logo-title{
         width:65%;
        
+    }
+    .bag{
+        padding-left:65px;
     }
     .right{ width:35%;
        

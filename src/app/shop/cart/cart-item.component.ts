@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
   <div class="box">
   <div class="box1">
   <p>{{cart.title}}</p>
-  <p>{{cart.rate}}<p>
+  <p style="">{{cart.rate}}<p>
   </div>
   <p style="margin-top:-1vh;">Quantity</p>
   <div class="quantity-selector">
@@ -31,15 +31,17 @@ import { Component } from '@angular/core';
      
   }
   .box1{
-      width:22vw;
+      width:auto;
       display:flex;
-      justify-content:space-between;
+     gap:50px;
       color: #000;
 font-family: Inter;
 font-size: 15px;
 font-style: normal;
 font-weight: 600;
 line-height: 21px; /* 140% */
+
+
 
   }
   .quantity-selector {

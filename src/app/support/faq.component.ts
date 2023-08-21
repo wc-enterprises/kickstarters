@@ -73,7 +73,23 @@ line-height: 120%;
   font-weight: 400;
   line-height: 140%;
 }
+// mobile screen
 
+@media (max-width: 640px) {
+  .accordion-heading{
+    font-size:20px;
+   
+  }
+  .question {
+    font-size:14px;
+  
+  }
+  .faq-item {
+    width:auto;
+    height:auto;
+  }
+
+}
 `]
 })
 export class FAQComponent {

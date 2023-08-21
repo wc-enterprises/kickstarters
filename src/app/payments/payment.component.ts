@@ -63,7 +63,7 @@ import { Component, Input } from '@angular/core';
  <div class="input-group">
  <input   id="check"  type="checkbox">
  <label class="billing" for="billing">My billing and shipping address are the same</label>
- </div>
+ </div>  
 </form>
 
 <div class="billing-summary">
@@ -289,7 +289,7 @@ line-height: 20px; /* 142.857% */
 .billing-summary{
 
 margin-left:20px;
-padding-left:25px;
+padding-left:30px;
 
 }
 .heading{

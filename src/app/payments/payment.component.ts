@@ -290,7 +290,6 @@ line-height: 20px; /* 142.857% */
 
 margin-left:20px;
 padding-left:30px;
-
 }
 .heading{
 padding-left:25px;

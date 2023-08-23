@@ -5,10 +5,10 @@ import { Component } from '@angular/core';
   template: `<html>
   <body>
   <div *ngFor=" let cart of cartItems" class="cartitem">
-  <img [src]="cart.imgUrl" >
+  <img id="img" [src]="cart.imgUrl" >
   <div class="box">
   <div class="box1">
-  <p>{{cart.title}}</p>
+  <p id="title">{{cart.title}}</p>
   <p style="">{{cart.rate}}<p>
   </div>
   <p style="margin-top:-1vh;">Quantity</p>
@@ -27,14 +27,15 @@ import { Component } from '@angular/core';
   styles:[`.cartitem{
       display:flex;
       gap:1vw;
-      padding:4vh 0 0 2vw;
-     
+      padding:4vh 0 0 3vw;
+      
   }
   .box1{
       width:auto;
       display:flex;
      gap:50px;
-      color: #000;
+   
+       color: #000;
 font-family: Inter;
 font-size: 15px;
 font-style: normal;
@@ -85,15 +86,25 @@ background: var(--background-background-primary, #FFF);
   .quantity-number {
     
     display: flex;
-    width: 50px;
-    height: 40px;
+    width: 39px;
+    height: 39px;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
     border: 0.833px solid var(--border-border-inactive, #8996A2);
     background: var(--background-background-primary, #FFF);
+    opacity: 0.38;
 
-
+  }
+//   mobile screen
+@media (max-width:640px){
+      #img{
+           width:120px;
+           height:120px;
+      }
+      #title{
+          font-size:13px;
+      }
   }
   
   `]

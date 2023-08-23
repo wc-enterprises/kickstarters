@@ -49,14 +49,17 @@ styles:[`.cart {
  transition: right 0.3s ease-in-out;
  right: -30px;
  z-index: 20;
+ 
 }
 .header{
   width:auto;
+  height:8vh;
   display:flex;
   justify-content:space-between;
-  padding:5vh 0 0 2vw;
+  padding:8px 0 0 5px;
   align-items:center;
-  height:auto;
+
+  border-bottom: 1px solid #E3E3E3;
 }
 .inner-head{
   display:flex;

@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
   <div class="box">
   <div class="box1">
   <p id="title">{{cart.title}}</p>
-  <p style="">{{cart.rate}}<p>
+  <p id="rate">{{cart.rate}}<p>
   </div>
   <p style="margin-top:-1vh;">Quantity</p>
   <div class="quantity-selector">
@@ -27,8 +27,11 @@ import { Component } from '@angular/core';
   styles:[`.cartitem{
       display:flex;
       gap:1vw;
-      padding:4vh 0 0 3vw;
+      padding:4vh 0 0 4vw;
       
+  }
+  #rate{
+    margin-left:3.5vw;
   }
   .box1{
       width:auto;

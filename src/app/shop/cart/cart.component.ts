@@ -32,7 +32,9 @@ import { Component } from '@angular/core';
   font-size: 15px;
   font-style: normal;
   font-weight: 600;
-  line-height: 21px; ">£44</span>
+  line-height: 21px; 
+  ">£44</span>
+  
   </div>
   <button routerLink="payments">Proceed to Checkout</button>
   </div>

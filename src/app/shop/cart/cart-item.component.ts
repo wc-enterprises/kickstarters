@@ -25,13 +25,14 @@ import { Component } from '@angular/core';
   </body>
   </html>`,
   styles:[`.cartitem{
+      width:100%;
       display:flex;
       gap:1vw;
-      padding:4vh 0 0 4vw;
+      padding:4vh 0 0 3vw;
       
   }
   #rate{
-    margin-left:3.5vw;
+    margin-left:2.5vw;
   }
   .box1{
       width:auto;

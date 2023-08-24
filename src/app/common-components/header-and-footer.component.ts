@@ -21,6 +21,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
          
           <a  (click)="openCart()" class="bag"><img  style="" src="./assets/bag.svg"></a>
          
+         
       </span>
     
     

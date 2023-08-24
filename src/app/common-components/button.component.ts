@@ -1,10 +1,15 @@
-import { Component } from '@angular/core';
-
+import { Component, EventEmitter, Output } from '@angular/core';
+import { CartService } from '../common-components/utils/cart.service';
 @Component({
   selector: 'app-button',
   template: `<html>
   <body>
-  <button>Add to cart</button>
+  <!-- <button>Add to cart</button> -->
+  <div>
+  <button (click)="addToCart()" [disabled]="isAddedToCart">
+    {{ isAddedToCart ? 'Added to Cart!' : 'Add to Cart' }}
+  </button>
+</div>
  
   </body>
   </html>`,
@@ -29,6 +34,15 @@ align-self: stretch;
 border-radius: 12px;
 background: #000;
  }
+ .added-message {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: green;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
 //  mobile screen
 @media (max-width:640px){
 button{
@@ -39,10 +53,25 @@ button{
 }`]
 })
 export class ButtonComponent {
-  
+  constructor(private cartService: CartService) {}
   isCartOpen = false; 
 
   openCart() {
     this.isCartOpen = !this.isCartOpen; 
   }
+  isAddedToCart: boolean = false;
+  displayDuration: number = 2000;
+
+  addToCart() {
+    this.isAddedToCart = true;
+    this.cartService.increaseCartQuantity();
+    setTimeout(() => {
+      this.isAddedToCart = false;
+    }, this.displayDuration);
+  }
+  @Output() addToCartClicked = new EventEmitter<void>();
+
+ 
+    
+
 }

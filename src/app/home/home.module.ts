@@ -16,7 +16,7 @@ import{ FAQComponent}from'../support/faq.component';
 
 
 @NgModule({
-  declarations: [HomepageComponent, ButtonComponent,HeaderAndFooterComponent,ProductSectionComponent,QaComponent,CartComponent,CartItemComponent,PaymentsComponent,FAQComponent],
+  declarations: [HomepageComponent, ButtonComponent,HeaderAndFooterComponent,ProductSectionComponent,QaComponent,CartComponent,CartItemComponent,PaymentsComponent,FAQComponent,],
   imports: [CommonModule, HomepageRouting,FormsModule,MatDialogModule,],
 
 })

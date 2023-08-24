@@ -1,14 +1,15 @@
+// cart.service.ts
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class CartService {
-  private cartQuantitySubject = new BehaviorSubject<number>(0);
-  cartQuantity$ = this.cartQuantitySubject.asObservable();
+  private cartCountSubject = new BehaviorSubject<number>(0);
+  cartCount$ = this.cartCountSubject.asObservable();
 
-  increaseCartQuantity() {
-    this.cartQuantitySubject.next(this.cartQuantitySubject.value + 1);
+  addToCart() {
+    this.cartCountSubject.next(this.cartCountSubject.value + 1);
   }
 }

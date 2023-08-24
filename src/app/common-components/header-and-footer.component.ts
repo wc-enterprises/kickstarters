@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-
+import { CartService } from './utils/cart.service';
 @Component({
   selector: 'app-headerandfooter',
   template: `<html>
@@ -20,7 +20,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
           <a routerLink="" id="contact">Contact Us</a>
          
           <a  (click)="openCart()" class="bag"><img  style="" src="./assets/bag.svg"></a>
-         
+          <a class="cart-count">{{ cartCount }}</a>
          
       </span>
     
@@ -95,6 +95,20 @@ import { Component, EventEmitter, Output } from '@angular/core';
 styles: [
     `
     
+.cart-count {
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 18px;
+  margin:-15px -8px 23px;
+  
+  border:1px solid black;
+  
+}
     a {
         text-decoration: none;
         color: inherit;
@@ -228,6 +242,13 @@ styles: [
         width:65%;
        
     }
+    .cart-count {
+    border:1px solid black;
+    margin:0px -20px 23px;
+    width:15px;
+    height:15px;
+    line-height:15px;
+    }
     .bag{
         padding-left:65px;
     }
@@ -301,7 +322,15 @@ gap:15px;}
   ]
 })
 export class HeaderAndFooterComponent {
- 
+    cartCount: number = 0;
+
+    constructor(private cartService: CartService) {}
+  
+    ngOnInit() {
+      this.cartService.cartCount$.subscribe(count => {
+        this.cartCount = count;
+      });
+    }
     isCartOpen = false; 
 
     openCart() {

@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { CartService } from '../common-components/utils/cart.service';
+import { CartService } from './utils/cart.service';
 @Component({
   selector: 'app-button',
   template: `<html>
@@ -64,7 +64,7 @@ export class ButtonComponent {
 
   addToCart() {
     this.isAddedToCart = true;
-    this.cartService.increaseCartQuantity();
+    this.cartService.addToCart();
     setTimeout(() => {
       this.isAddedToCart = false;
     }, this.displayDuration);

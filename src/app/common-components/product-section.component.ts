@@ -31,7 +31,7 @@ import { Card } from './utils/interface';
                   
                       <span class="span1">{{ card.title1 }}</span>
                       <span class="span2">{{ card.title2 }}</span>
-                     <span  style="padding:3vh 2px 0 0;"> <app-button ></app-button> </span>
+                     <span  style="padding:3vh 2px 0 0;"> <app-button></app-button> </span>
                     
                   </div>
               </div>

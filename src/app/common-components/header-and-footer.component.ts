@@ -19,7 +19,7 @@ import { CartService } from './utils/cart.service';
          
           <a routerLink="" id="contact">Contact Us</a>
          
-          <a  (click)="openCart()" class="bag"><img  style="" src="./assets/bag.svg"></a>
+          <a   class="bag"><img (click)="openCart()" style="" src="./assets/bag.svg"></a>
           <a class="cart-count">{{ cartCount }}</a>
          
       </span>

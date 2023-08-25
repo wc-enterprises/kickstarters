@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
   <div class="header">
  
  <div class="inner-head"> <img src="./assets/bag.svg">
-  <div style="color: #444;
+  <div id ="items" style="color: #444;
   padding-top:2px;
   font-family: Inter;
   font-size: 16px;
@@ -106,6 +106,9 @@ border:none;
   }
   button{
     width:90vw;
+  }
+  #items{
+    padding-left:8px;
   }
 }
 `]

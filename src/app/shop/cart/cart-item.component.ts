@@ -53,7 +53,7 @@ line-height: 21px; /* 140% */
     display: flex;
     width:10vw;
     align-items: center;
-    margin:-2vh 0vw 0 -0.6vw;
+    margin:-2vh 0 0 -0.6vw;
     padding: 11px;
   
    
@@ -103,12 +103,43 @@ background: var(--background-background-primary, #FFF);
 //   mobile screen
 @media (max-width:640px){
       #img{
-           width:120px;
-           height:120px;
+           width:100px;
+           height:100px;
       }
       #title{
-          font-size:13px;
+          font-size:12px;
+        
       }
+      #rate{
+        font-size:12px;
+        
+      }
+      
+  .increment-button,
+  .decrement-button
+ {
+   height:25.5px;
+   opacity: 1;
+   
+ }
+
+ .quantity-number{
+  width: 24px;
+  height: 24px;
+  opacity: 1;
+ }
+ .delete-basket-icon{
+  height:14px;
+  padding:5px;
+  opacity: 1;
+ }
+ .quantity-selector{
+   margin:-18px 0 0 -10px;
+ }
+.cart-items{
+  padding:4vh 0 0 5vw;
+  border:1px solid black;
+}
   }
   
   `]

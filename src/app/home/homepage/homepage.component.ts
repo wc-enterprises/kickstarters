@@ -70,7 +70,7 @@ styles:[`
    padding-left:30px;
    padding-top:200px ;
     z-index: 1;
-   
+
     
 }
 

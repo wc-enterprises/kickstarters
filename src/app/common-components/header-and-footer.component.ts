@@ -26,7 +26,7 @@ import{CartComponent}from'../shop/cart/cart.component';
           </div>
        </ng-container>
       
-          <a class="cart-count">{{ cartCount }}</a>
+        <a  *ngIf="cartCount > 0" class="cart-count">{{ cartCount }}</a>
          
       </span>
     
@@ -327,14 +327,13 @@ export class HeaderAndFooterComponent {
     isCartOpen = false;
  
     cartCount: number = 0;
-  
-    constructor(private cartService: CartService) {}
-  
-    ngOnInit() {
-      this.cartService.cartCount$.subscribe(count => {
-        this.cartCount = count;
-   
-      });
+
+  constructor(private cartService: CartService) {}
+
+  ngOnInit() {
+    this.cartService.cartCount$.subscribe(count => {
+      this.cartCount = count;
+    });
     }
   
     

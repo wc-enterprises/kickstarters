@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-cart',
   template: `<html>
   <body>
-  <div *ngIf="isCartOpen" class="cart">
+  <div *ngIf="!isCartOpen" class="cart">
   <div class="header">
  
  <div class="inner-head"> <img src="./assets/bag.svg">
@@ -16,7 +16,9 @@ import { Component } from '@angular/core';
   font-weight: 400;
 ">4items</div>
   </div>
+  <ng-container  *ngIf="!isCartOpen">
   <img (click)="closeCart()" id="cancel" style="padding:2px 3vw 0 0; cursor: pointer;"src="./assets/xcircle.svg">
+  </ng-container>
   </div>
   <div style="height:70vh;  overflow-y: auto; overflow-x:hidden;"><app-cartitem></app-cartitem></div>
   <div class="footer">
@@ -114,9 +116,8 @@ border:none;
 `]
 })
 export class CartComponent {
-  isCartOpen = true;
-
+  @Input() isCartOpen: boolean = false;
   closeCart() {
-    this.isCartOpen = !this.isCartOpen;
-  }
+    this.isCartOpen =!this.isCartOpen;
+ }
 }

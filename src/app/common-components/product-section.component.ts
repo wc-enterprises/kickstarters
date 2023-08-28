@@ -16,7 +16,7 @@ import { Card } from './utils/interface';
       <p id="sub-title3">{{cardSet.heading}}</p>
       <div id="arrow-button"  >
           <img id="left-arrow" (click)="scrollCards(cardSet, 'left')"  src="./assets/arrowleft.svg">
-          <img id="right-arrow" (click)="scrollCards(cardSet, 'right')" style="padding-left: 1vw;" src="./assets/arrowright.svg">
+          <img id="right-arrow" (click)="scrollCards(cardSet, 'right')"  src="./assets/arrowright.svg">
       </div>
   </div>
   <div   #card  class="total-cards">
@@ -79,13 +79,13 @@ background: #000;
  }
 
     .card-title{
-      padding-left: 2vw;
-      margin-top: 8vh;
+      padding-left: 30px;
+      margin-top:50px;
    
   }
   .card-container{
     display:flex;
-gap:3.1vw;
+gap:50px;
 width:100%;
 
 transition: transform 0.3s ease-in-out; /* Add smooth transition */
@@ -94,11 +94,14 @@ transform: translateX(0);
 
   #arrow-button{
     width:10%;
-    margin-top: 3.5vh;
+    margin-top:28px;
+  }
+  #right-arrow{
+padding-left:10px;
   }
   .card{
 
- padding-left:0.5vw;
+ padding-left:5px;
   }
   .card-slider{
     overflow-x:scroll;
@@ -136,8 +139,8 @@ border-radius: 12px;
   display: flex;
   flex-direction: column;
   color:white;
-  padding-left: 3vw;
-  padding-top:10vh ;
+  padding-left:50px;
+  padding-top:70px ;
    z-index: 1;
    
 }
@@ -146,8 +149,8 @@ border-radius: 12px;
  flex-direction: column;
  display: flex;
 
-margin-left: -3vw;
-margin-top: -9vh;
+margin-left: -45px;
+margin-top: -65px;
 }
 .span1{
   color: #000;
@@ -183,7 +186,9 @@ margin-top: -9vh;
 
   //  mobile screen 
   @media (max-width: 640px) {
-  
+    .card-title{
+      padding-left:5px;
+    }
     .img{
       height: auto;
       width:148px;
@@ -194,7 +199,7 @@ margin-top: -9vh;
     }
     #arrow-button{
       width:22%;
-      margin-top: 3.5vh;
+      margin-top:23px;
       display:flex;
       gap:5px;
     }
@@ -206,7 +211,7 @@ margin-top: -9vh;
      #right-arrow{
         width:20px;
         height:20px;
-    
+        padding-left:0px;
       }
       .span1{
   font-size:12px;
@@ -216,7 +221,19 @@ margin-top: -9vh;
         font-size:12px;
         padding-left:5px;
       }
-    
+      .card-container{
+gap:8px;
+      }
+      .card{
+
+        padding-left:2px;
+         }
+         .title{padding-left:8px;
+        padding-top:60px;}
+    .title2{
+      margin-left: -5px;
+margin-top: -50px;
+    }
   }`]
  
 

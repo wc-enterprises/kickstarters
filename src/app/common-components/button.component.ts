@@ -58,6 +58,7 @@ export class ButtonComponent {
 
   openCart() {
     this.isCartOpen = !this.isCartOpen; 
+    
   }
   isAddedToCart: boolean = false;
   displayDuration: number = 2000;

@@ -19,15 +19,20 @@ import { CartService } from './utils/cart.service';
          
           <a routerLink="" id="contact">Contact Us</a>
          
-          <a   class="bag"><img (click)="openCart()" style="" src="./assets/bag.svg"></a>
+          <ng-container>
+          <div class="bag" (click)="openCart()">
+             <img src="./assets/bag.svg">
+          </div>
+       </ng-container>
+      
           <a class="cart-count">{{ cartCount }}</a>
          
       </span>
     
     
-
+ 
   </div>
-  <app-cart *ngIf="isCartOpen"></app-cart>
+  <app-cart  [isCartOpen]="isCartOpen"></app-cart>
   <!-- content html -->
 
  <ng-content></ng-content>
@@ -109,6 +114,7 @@ styles: [
   border:1px solid black;
   
 }
+
     a {
         text-decoration: none;
         color: inherit;
@@ -133,7 +139,7 @@ styles: [
     }
     .logo-title{
         display: flex;
-        padding-left: 2vw;
+        padding-left: 25px;
         gap:8px;
         cursor: pointer;
     }
@@ -147,12 +153,7 @@ styles: [
     letter-spacing: 7px;
     text-transform: uppercase;
     }
-    .bag{
-       
-      
-     
-     
-}
+  
 .FAQs-mobile,.contact-mobile,#p1-mobile,#logo-mobile{
     display:none;
 }
@@ -169,7 +170,7 @@ styles: [
     font-style: normal;
     font-weight: 600;
     line-height: 21px;
-    padding-right: 4vh;
+    padding-right:20px;
     }
     #contact{
         color: #000;
@@ -178,13 +179,13 @@ styles: [
         font-style: normal;
         font-weight: 600;
         line-height: 21px;
-        padding-right: 2vh;
+        padding-right:20px;
     }
     .footer{
     width:100%;
     height:auto;
     border-top: 1px solid #E3E3E3;
-    margin-top:5vh;
+    margin-top:50px;
     }
     .mid-foot{
        
@@ -197,15 +198,15 @@ styles: [
     .mid-left{
         width:75%;
         display: flex;
-        gap:5vw;
+        gap:50px;
         color: #000;
         font-family: 'Inter';
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 16.8px;
-    padding-top: 10vh;
-    padding-left: 2vw;
+    padding-top:75px;
+    padding-left: 35px;
     }
     .mid-right{
         width:25%;
@@ -216,20 +217,20 @@ styles: [
     font-weight: 400;
     line-height: 25.2px; 
     
-    padding-top: 7vh;
+    padding-top: 75px;
     
     }
     .end-foot{
-          padding-left: 2vw;
+          padding-left: 35px;
         display: flex;
-        padding-top: 8vh;
+        padding-top:75px;
       
     }
     .payment{
         width: 25%; 
         height: 24px;
         padding-top:10px;
-        gap:1vw;
+        gap:15px;
         display: flex;
     }
 //    Mobile screen css 
@@ -240,7 +241,7 @@ styles: [
     }
     .logo-title{
         width:65%;
-       
+       padding-left:10px;
     }
     .cart-count {
     border:1px solid black;
@@ -302,9 +303,9 @@ gap:15px;}
        padding-left:16px;
        }
        .mid-left{
-           gap:15px;
+           gap:18px;
            width:100%;
-           
+           padding-left:5px;
          
        }
        .payment{
@@ -323,19 +324,26 @@ gap:15px;}
 })
 export class HeaderAndFooterComponent {
     cartCount: number = 0;
-
+  
     constructor(private cartService: CartService) {}
   
     ngOnInit() {
       this.cartService.cartCount$.subscribe(count => {
         this.cartCount = count;
+        this.isCartOpen = false;
       });
     }
-    isCartOpen = false; 
+  
+    
+
+
+    isCartOpen: boolean = false;
 
     openCart() {
-      this.isCartOpen = !this.isCartOpen; 
+       this.isCartOpen = false;
     }
+ 
+  
   
 }
 

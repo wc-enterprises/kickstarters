@@ -1,10 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-cart',
   template: `<html>
   <body>
-  <div *ngIf="!isCartOpen" class="cart">
+  <div *ngIf="isCartOpen" class="cart">
   <div class="header">
  
  <div class="inner-head"> <img src="./assets/bag.svg">
@@ -16,8 +16,8 @@ import { Component, Input } from '@angular/core';
   font-weight: 400;
 ">4items</div>
   </div>
-  <ng-container  *ngIf="!isCartOpen">
-  <img (click)="closeCart()" id="cancel" style="padding:2px 3vw 0 0; cursor: pointer;"src="./assets/xcircle.svg">
+  <ng-container>
+  <img (click)="closeCart.emit()" id="cancel" style="padding:2px 3vw 0 0; cursor: pointer;"src="./assets/xcircle.svg">
   </ng-container>
   </div>
   <div style="height:70vh;  overflow-y: auto; overflow-x:hidden;"><app-cartitem></app-cartitem></div>
@@ -117,7 +117,5 @@ border:none;
 })
 export class CartComponent {
   @Input() isCartOpen: boolean = false;
-  closeCart() {
-    this.isCartOpen =!this.isCartOpen;
- }
+  @Output() closeCart: EventEmitter<void> = new EventEmitter<void>();
 }

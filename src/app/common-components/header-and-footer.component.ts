@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
 import { CartService } from './utils/cart.service';
+import{CartComponent}from'../shop/cart/cart.component';
 @Component({
   selector: 'app-headerandfooter',
   template: `<html>
@@ -19,7 +20,7 @@ import { CartService } from './utils/cart.service';
          
           <a routerLink="" id="contact">Contact Us</a>
          
-          <ng-container>
+          <ng-container *ngIf="!isCartOpen">
           <div class="bag" (click)="openCart()">
              <img src="./assets/bag.svg">
           </div>
@@ -32,7 +33,7 @@ import { CartService } from './utils/cart.service';
     
  
   </div>
-  <app-cart  [isCartOpen]="isCartOpen"></app-cart>
+  <app-cart  [isCartOpen]="isCartOpen"  (closeCart)="closeCart()"></app-cart>
   <!-- content html -->
 
  <ng-content></ng-content>
@@ -323,6 +324,8 @@ gap:15px;}
   ]
 })
 export class HeaderAndFooterComponent {
+    isCartOpen = false;
+ 
     cartCount: number = 0;
   
     constructor(private cartService: CartService) {}
@@ -330,18 +333,22 @@ export class HeaderAndFooterComponent {
     ngOnInit() {
       this.cartService.cartCount$.subscribe(count => {
         this.cartCount = count;
-        this.isCartOpen = false;
+   
       });
     }
   
     
-
-
-    isCartOpen: boolean = false;
+    
 
     openCart() {
+       this.isCartOpen = true;
+    }
+ 
+    closeCart() {
        this.isCartOpen = false;
     }
+ 
+   
  
   
   

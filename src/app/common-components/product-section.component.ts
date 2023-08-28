@@ -5,15 +5,18 @@ import { Card } from './utils/interface';
   selector: 'app-productsection',
   template: `<html>
   <body>
- 
- 
+  
+  
+  
+  
   <div class="list">
+ 
   <div   *ngFor="let cardSet of cardSets" class="card-title ">
   <div style=" width:auto;height: 10vh; display: flex; justify-content: space-between;">
       <p id="sub-title3">{{cardSet.heading}}</p>
       <div id="arrow-button"  >
           <img id="left-arrow" (click)="scrollCards(cardSet, 'left')"  src="./assets/arrowleft.svg">
-          <img id="right-arrow" (click)="scrollCards(cardSet, 'right')" style="padding-left: 1vw;" src="./assets/arrowright.svg">
+          <img id="right-arrow" (click)="scrollCards(cardSet, 'right')"  src="./assets/arrowright.svg">
       </div>
   </div>
   <div   #card  class="total-cards">
@@ -28,13 +31,21 @@ import { Card } from './utils/interface';
                   
                       <span class="span1">{{ card.title1 }}</span>
                       <span class="span2">{{ card.title2 }}</span>
-                     <span  (click)="openCart()" style="padding:3vh 2px 0 0;"> <app-button ></app-button> </span>
-                     
+                     <span  style="padding:3vh 2px 0 0;"> <app-button></app-button> </span>
+                    
                   </div>
               </div>
           </div>
           </div>
       </div>
+      <!-- <div *ngIf="showSuccessMessage" class="success-message">
+  <div style="display:flex;gap:10px;">
+  <img style="width:150px;height:200px;"[src]="selectedProduct?.imageUrl" class="product-image" alt="Product Image" /><br><br>
+  {{ selectedProduct?.title1 }} <br><br>{{ selectedProduct?.title2 }}<br><br>
+</div>
+<h3 style="margin:auto;">Added to cart successfully</h3>
+
+</div> -->
   </div>
   </div>
   </div>
@@ -45,15 +56,36 @@ import { Card } from './utils/interface';
    width:100%;
     background-color: white;
     }
+    button{
+
+
+border: none;
+width:100%;
+color: #FFF;
+font-family: 'Inter';
+font-size: 15px;
+font-style: normal;
+font-weight: 600;
+line-height: 21px;
+display: flex;
+cursor:pointer;
+padding: 10px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+align-self: stretch;
+border-radius: 12px;
+background: #000;
+ }
 
     .card-title{
-      padding-left: 2vw;
-      margin-top: 8vh;
+      padding-left: 30px;
+      margin-top:50px;
    
   }
   .card-container{
     display:flex;
-gap:3.1vw;
+gap:50px;
 width:100%;
 
 transition: transform 0.3s ease-in-out; /* Add smooth transition */
@@ -62,11 +94,14 @@ transform: translateX(0);
 
   #arrow-button{
     width:10%;
-    margin-top: 3.5vh;
+    margin-top:28px;
+  }
+  #right-arrow{
+padding-left:10px;
   }
   .card{
 
- padding-left:0.5vw;
+ padding-left:5px;
   }
   .card-slider{
     overflow-x:scroll;
@@ -104,8 +139,8 @@ border-radius: 12px;
   display: flex;
   flex-direction: column;
   color:white;
-  padding-left: 3vw;
-  padding-top:10vh ;
+  padding-left:50px;
+  padding-top:70px ;
    z-index: 1;
    
 }
@@ -114,8 +149,8 @@ border-radius: 12px;
  flex-direction: column;
  display: flex;
 
-margin-left: -3vw;
-margin-top: -9vh;
+margin-left: -45px;
+margin-top: -65px;
 }
 .span1{
   color: #000;
@@ -133,9 +168,27 @@ margin-top: -9vh;
   font-weight: 400;
   line-height: 18.2px; /* 130% */
 }
+.success-message {
+  background-color:white;
+  justify-content:center;
+  display:flex;
+  flex-direction:column;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.14);
+  font-weight:700;
+}
+
   //  mobile screen 
   @media (max-width: 640px) {
-  
+    .card-title{
+      padding-left:5px;
+    }
     .img{
       height: auto;
       width:148px;
@@ -146,7 +199,7 @@ margin-top: -9vh;
     }
     #arrow-button{
       width:22%;
-      margin-top: 3.5vh;
+      margin-top:23px;
       display:flex;
       gap:5px;
     }
@@ -158,7 +211,7 @@ margin-top: -9vh;
      #right-arrow{
         width:20px;
         height:20px;
-    
+        padding-left:0px;
       }
       .span1{
   font-size:12px;
@@ -168,13 +221,25 @@ margin-top: -9vh;
         font-size:12px;
         padding-left:5px;
       }
-    
+      .card-container{
+gap:8px;
+      }
+      .card{
+
+        padding-left:2px;
+         }
+         .title{padding-left:8px;
+        padding-top:60px;}
+    .title2{
+      margin-left: -5px;
+margin-top: -50px;
+    }
   }`]
  
 
 })
 export class ProductSectionComponent {
-   
+
 
     constructor(private router: Router) {
       this.cardSets.forEach(cardSet => {
@@ -226,7 +291,21 @@ export class ProductSectionComponent {
           cardSet.currentIndex++;
         }
       }
+
     }
+    // showSuccessMessage: boolean = false;
+
+    
+    // selectedProduct: any; // Store the selected product information here
+  
+    // openCarts(product: any) {
+    //   this.selectedProduct = product;
+    //   this.showSuccessMessage = true;
+    //   setTimeout(() => {
+    //     this.showSuccessMessage = false;
+    //     this.selectedProduct = null; // Reset selected product
+    //   }, 2000);
+    // }
   
     // updateVisibleCards(cardSet: any): void {
     //   cardSet.visibleCards = cardSet.cards.slice(cardSet.currentIndex, cardSet.currentIndex + 3);
@@ -245,11 +324,12 @@ export class ProductSectionComponent {
     //     this.updateVisibleCards(cardSet);
     //   }
     // }
-
+    
     isCartOpen = false; 
 
     openCart() {
       this.isCartOpen = !this.isCartOpen; 
+   
     }
 }
 

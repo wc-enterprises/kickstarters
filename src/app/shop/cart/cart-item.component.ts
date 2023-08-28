@@ -5,11 +5,11 @@ import { Component } from '@angular/core';
   template: `<html>
   <body>
   <div *ngFor=" let cart of cartItems" class="cartitem">
-  <img [src]="cart.imgUrl" >
+  <img id="img" [src]="cart.imgUrl" >
   <div class="box">
   <div class="box1">
-  <p>{{cart.title}}</p>
-  <p>{{cart.rate}}<p>
+  <p id="title">{{cart.title}}</p>
+  <p id="rate">{{cart.rate}}<p>
   </div>
   <p style="margin-top:-1vh;">Quantity</p>
   <div class="quantity-selector">
@@ -25,28 +25,35 @@ import { Component } from '@angular/core';
   </body>
   </html>`,
   styles:[`.cartitem{
+      width:100%;
       display:flex;
       gap:1vw;
-      padding:4vh 0 0 2vw;
-     
+      padding:4vh 0 0 3vw;
+      
+  }
+  #rate{
+    margin-left:2.5vw;
   }
   .box1{
-      width:22vw;
+      width:auto;
       display:flex;
-      justify-content:space-between;
-      color: #000;
+     gap:50px;
+   
+       color: #000;
 font-family: Inter;
 font-size: 15px;
 font-style: normal;
 font-weight: 600;
 line-height: 21px; /* 140% */
 
+
+
   }
   .quantity-selector {
     display: flex;
     width:10vw;
     align-items: center;
-    margin:-2vh 0vw 0 -0.6vw;
+    margin:-2vh 0 0 -0.6vw;
     padding: 11px;
   
    
@@ -83,15 +90,56 @@ background: var(--background-background-primary, #FFF);
   .quantity-number {
     
     display: flex;
-    width: 50px;
-    height: 40px;
+    width: 39px;
+    height: 39px;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
     border: 0.833px solid var(--border-border-inactive, #8996A2);
     background: var(--background-background-primary, #FFF);
+    opacity: 0.38;
 
+  }
+//   mobile screen
+@media (max-width:640px){
+      #img{
+           width:100px;
+           height:100px;
+      }
+      #title{
+          font-size:12px;
+        
+      }
+      #rate{
+        font-size:12px;
+        
+      }
+      
+  .increment-button,
+  .decrement-button
+ {
+   height:25.5px;
+   opacity: 1;
+   
+ }
 
+ .quantity-number{
+  width: 24px;
+  height: 24px;
+  opacity: 1;
+ }
+ .delete-basket-icon{
+  height:14px;
+  padding:5px;
+  opacity: 1;
+ }
+ .quantity-selector{
+   margin:-18px 0 0 -10px;
+ }
+.cart-items{
+  padding:4vh 0 0 5vw;
+  border:1px solid black;
+}
   }
   
   `]

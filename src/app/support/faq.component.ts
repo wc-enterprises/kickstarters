@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
   
   <div class="faq-accordion">
   <p class="accordion-heading">{{ heading }}</p>
+  <hr>
   <div class="faq-item" *ngFor="let faq of faqs">
     <div class="question" (click)="toggleAnswer(faq)">
       {{ faq.question }}
@@ -37,11 +38,18 @@ p {
   line-height: 20px;
 }
 .faq-item {
-  border-top: 1px solid #cdd6da;
+ 
   border-bottom: 1px solid #cdd6da;
   margin: 10px 0;
   padding: 10px;
   cursor: pointer;
+ 
+
+}
+hr {
+  border-bottom: 1px solid #cdd6da;
+  margin: 10px 0;
+ 
 
 }
 
@@ -59,9 +67,12 @@ font-size: 18px;
 font-style: normal;
 font-weight: 700;
 line-height: 120%;
+padding:0 0 15px 0;
+
 }
 
 .answer {
+  border-top: 1px solid #cdd6da;
   color: #555;
   padding-top:3vh;
   padding-left:2vh;
@@ -73,7 +84,23 @@ line-height: 120%;
   font-weight: 400;
   line-height: 140%;
 }
+// mobile screen
 
+@media (max-width: 640px) {
+  .accordion-heading{
+    font-size:20px;
+   
+  }
+  .question {
+    font-size:14px;
+  
+  }
+  .faq-item {
+    width:auto;
+    height:auto;
+  }
+
+}
 `]
 })
 export class FAQComponent {

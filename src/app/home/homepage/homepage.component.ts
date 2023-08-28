@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   <head></head>
   <body>
   <app-headerandfooter>
-  
+ 
   <div class="background">
   <div class="title">
       <p id="sub-title">
@@ -29,6 +29,7 @@ import { Component } from '@angular/core';
 </div>
 </div>
 <app-productsection ></app-productsection>
+
  </app-headerandfooter>
   
   </body>
@@ -69,7 +70,7 @@ styles:[`
    padding-left:30px;
    padding-top:200px ;
     z-index: 1;
-   
+
     
 }
 

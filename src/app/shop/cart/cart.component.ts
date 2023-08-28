@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-cart',
@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
   <div class="header">
  
  <div class="inner-head"> <img src="./assets/bag.svg">
-  <div style="color: #444;
+  <div id ="items" style="color: #444;
   padding-top:2px;
   font-family: Inter;
   font-size: 16px;
@@ -16,7 +16,9 @@ import { Component } from '@angular/core';
   font-weight: 400;
 ">4items</div>
   </div>
-  <img (click)="closeCart()" style="padding:2px 3vw 0 0; cursor: pointer;"src="./assets/xcircle.svg">
+  <ng-container>
+  <img (click)="closeCart.emit()" id="cancel" style="padding:2px 3vw 0 0; cursor: pointer;"src="./assets/xcircle.svg">
+  </ng-container>
   </div>
   <div style="height:70vh;  overflow-y: auto; overflow-x:hidden;"><app-cartitem></app-cartitem></div>
   <div class="footer">
@@ -27,12 +29,14 @@ import { Component } from '@angular/core';
   font-style: normal;
   font-weight: 500;
   line-height: normal;">Order Total</p>
-  <span style="padding-top:2.5vh; padding-right:3.5vw;  color: #000;
+  <span id="total-rate" style="padding-top:2.5vh; padding-right:3.5vw;  color: #000;
   font-family: Inter;
   font-size: 15px;
   font-style: normal;
   font-weight: 600;
-  line-height: 21px; ">£44</span>
+  line-height: 21px; 
+  ">£44</span>
+  
   </div>
   <button routerLink="payments">Proceed to Checkout</button>
   </div>
@@ -49,13 +53,17 @@ styles:[`.cart {
  transition: right 0.3s ease-in-out;
  right: -30px;
  z-index: 20;
+ 
 }
 .header{
+  width:auto;
+  height:8vh;
   display:flex;
   justify-content:space-between;
-  padding:5vh 0 0 2vw;
+  padding:8px 0 0 5px;
   align-items:center;
-  height:auto;
+
+  border-bottom: 1px solid #E3E3E3;
 }
 .inner-head{
   display:flex;
@@ -69,7 +77,7 @@ padding: 16px 10px;
 justify-content: center;
 align-items: center;
 gap: 10px;
-border-radius: 99px;
+border-radius: 12px;
 background: #000;
 margin-left:2vw;
 color: #FFF;
@@ -79,21 +87,35 @@ font-style: normal;
 font-weight: 600;
 line-height: 21px; /* 140% */
 cursor:pointer;
+border:none;
 }
 .footer{
+  width:auto;
   padding-bottom:3vh;
 }
 // mobile screen
 @media (max-width:640px){
   .cart{right:-25px;
   width:100%;}
+  #cancel{
+ margin-right:15px;
+  }
+  #total-rate{
+    margin-right:18px;
+  }
+  .header{
+    padding-left:5px;
+  }
+  button{
+    width:90vw;
+  }
+  #items{
+    padding-left:8px;
+  }
 }
 `]
 })
 export class CartComponent {
-  isCartOpen = true;
-
-  closeCart() {
-    this.isCartOpen = !this.isCartOpen;
-  }
+  @Input() isCartOpen: boolean = false;
+  @Output() closeCart: EventEmitter<void> = new EventEmitter<void>();
 }

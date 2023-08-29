@@ -15,8 +15,8 @@ import { Component } from '@angular/core';
   <div class="quantity-selector">
  
   <button *ngIf="quantity > 1" style="border-radius: 3.333px 0px 0px 3.333px;" class="decrement-button" (click)="decrementQuantity()">-</button>
-  <img *ngIf="quantity <= 1" style="width:10px;" class="delete-basket-icon" (click)="deleteItem()" src="./assets/delete1.svg">
-  <div class="quantity-number">{{ quantity }}</div>
+  <button *ngIf="quantity <= 1"  class="delete-basket-icon"><img style="opacity: 0.5;" (click)="deleteItem()" src="./assets/delete1.svg"></button>
+  <button class="quantity-number">{{ quantity }}</button>
   <button class="increment-button" style="border-radius: 0px 3.333px 3.333px 0px;" (click)="incrementQuantity()">+</button>
 </div>
 
@@ -27,12 +27,12 @@ import { Component } from '@angular/core';
   styles:[`.cartitem{
       width:100%;
       display:flex;
-      gap:1vw;
-      padding:4vh 0 0 3vw;
+      gap:15px;
+      padding:40px 0 0 45px;
       
   }
   #rate{
-    margin-left:2.5vw;
+    margin-left:40px;
   }
   .box1{
       width:auto;
@@ -51,56 +51,24 @@ line-height: 21px; /* 140% */
   }
   .quantity-selector {
     display: flex;
-    width:10vw;
-    align-items: center;
-    margin:-2vh 0 0 -0.6vw;
-    padding: 11px;
+  align-items: center;
+  margin:-8px -5px 0 0;
   
    
   }
+  .increment-button,.decrement-button, .delete-basket-icon,.quantity-number {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  cursor: pointer;
   
-  .decrement-button,
-  .increment-button,
- 
-  {
-     cursor:pointer;
-    display: flex;
-    height: 40px;
-    padding: 11.667px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 3.333px 0px 0px 3.333px;
-border: 0.833px solid var(--border-border-inactive, #8996A2);
-opacity: 0.38;
-background: var(--background-background-primary, #FFF);
   }
-  .delete-basket-icon{
-    cursor:pointer;
-    display: flex;
-    height: 15px;
-    padding: 11.667px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 3.333px 0px 0px 3.333px;
-border: 0.833px solid var(--border-border-inactive, #8996A2);
-opacity: 0.38;
-background: var(--background-background-primary, #FFF);
-  }
-  
-  .quantity-number {
-    
-    display: flex;
-    width: 39px;
-    height: 39px;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    border: 0.833px solid var(--border-border-inactive, #8996A2);
-    background: var(--background-background-primary, #FFF);
-    opacity: 0.38;
 
-  }
-//   mobile screen
+
+//   mobile screen media query
 @media (max-width:640px){
       #img{
            width:100px;
@@ -112,33 +80,27 @@ background: var(--background-background-primary, #FFF);
       }
       #rate{
         font-size:12px;
+        margin-left:5px;
         
       }
-      
-  .increment-button,
-  .decrement-button
- {
-   height:25.5px;
-   opacity: 1;
-   
- }
+      .quantity-selector {
+        display: flex;
+      align-items: center;
+     margin:-10px -5px 0 0;
+      }
+      .increment-button,.decrement-button, .delete-basket-icon,.quantity-number {
+        width: 28px;
+        height: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #ccc;
+        cursor: pointer;
+        }
 
- .quantity-number{
-  width: 24px;
-  height: 24px;
-  opacity: 1;
- }
- .delete-basket-icon{
-  height:14px;
-  padding:5px;
-  opacity: 1;
- }
- .quantity-selector{
-   margin:-18px 0 0 -10px;
- }
-.cart-items{
-  padding:40px 0 0 50px;
-  border:1px solid black;
+.cartitem{
+  padding:40px 0 0 15px;
+ 
 }
   }
   
@@ -158,6 +120,14 @@ export class CartItemComponent {
 {
     imgUrl:'./assets/washingcart.svg',title:'Laundry Bag',rate:'£44',
     
+},
+{
+  imgUrl:'./assets/washingcart.svg',title:'Laundry Bag',rate:'£44',
+  
+},
+{
+  imgUrl:'./assets/washingcart.svg',title:'Laundry Bag',rate:'£44',
+  
 },
 ]
 

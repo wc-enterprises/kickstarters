@@ -1,6 +1,7 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { Card } from './utils/interface';
+import { getCategorizedProduct } from'../api-calls/api-calls.service'
 @Component({
   selector: 'app-productsection',
   template: `<html>
@@ -11,26 +12,26 @@ import { Card } from './utils/interface';
   
   <div class="list">
  
-  <div   *ngFor="let cardSet of cardSets" class="card-title ">
+  <div  *ngFor="let category of categorizedProducts" class="card-title ">
   <div style=" width:auto;height: 10vh; display: flex; justify-content: space-between;">
-      <p id="sub-title3">{{cardSet.heading}}</p>
+      <p id="sub-title3">{{category.categoryName}}</p>
       <div id="arrow-button"  >
-          <img id="left-arrow" (click)="scrollCards(cardSet, 'left')"  src="./assets/arrowleft.svg">
-          <img id="right-arrow" (click)="scrollCards(cardSet, 'right')"  src="./assets/arrowright.svg">
+          <img id="left-arrow" (click)="scrollCards(category, 'left')"  src="./assets/arrowleft.svg">
+          <img id="right-arrow" (click)="scrollCards(category, 'right')"  src="./assets/arrowright.svg">
       </div>
   </div>
   <div   #card  class="total-cards">
   
       <div  class="card-slider">
       <div class="card-container">
-          <div    class="card" *ngFor="let card of cardSet.cards.slice(cardSet.currentIndex ); let i = index">
-              <img  class="img" [src]="card.imageUrl" />
+          <div    class="card" *ngFor="let product of category.products.slice(category.currentIndex ); let i = index">
+              <img  class="img" [src]="product.imagePath" />
              
               <div class="title">
                   <div class="title2">
                   
-                      <span class="span1">{{ card.title1 }}</span>
-                      <span class="span2">{{ card.title2 }}</span>
+                      <span class="span1">{{product.name }}</span>
+                      <span class="span2">{{ product.description }}</span>
                      <span  style="padding:3vh 2px 0 0;"> <app-button></app-button> </span>
                     
                   </div>
@@ -108,8 +109,10 @@ padding-left:10px;
   
   }
   .img{
-    height: auto;
+  
     width:316px;
+ 
+height:260px;
 border-radius: 12px;
   }
    #sub-title3{
@@ -190,7 +193,7 @@ margin-top: -65px;
       padding-left:5px;
     }
     .img{
-      height: auto;
+      height:120px;
       width:148px;
     }
     #sub-title3{
@@ -240,55 +243,62 @@ margin-top: -50px;
 })
 export class ProductSectionComponent {
 
+  categorizedProducts: any[] = []; // Array to store the categorized product data
 
+ 
+
+  ngOnInit() {
+    this.categorizedProducts = getCategorizedProduct();
+    console.log(this.categorizedProducts); // Check if the data is loaded
+  }
     constructor(private router: Router) {
-      this.cardSets.forEach(cardSet => {
-        cardSet.currentIndex = 0;
+      this.categorizedProducts.forEach(Products => {
+        Products.currentIndex = 0;
       });
     }
  
-    cardSets: { heading: string; cards: Card[];currentIndex: number }[] = [
-      {
-        heading: 'Bedroom essentials',
-        currentIndex: 0,
-        cards: [
-      { imageUrl: './assets/washing2.svg',title:'', title1: 'Laundry Essentials', title2:'Starting from $223',},
-      { imageUrl: './assets/washing2.svg',title:'',  title1: 'Bedroom Essentials', title2:'Starting from $99',},
-      { imageUrl: './assets/washing2.svg',title:'',  title1: 'Kitchenware', title2:'Starting from $212',  },
-      { imageUrl: './assets/washing2.svg',title:'',  title1: 'Electronics', title2:'Starting from $64', },
-      { imageUrl: './assets/washing2.svg',title:'',  title1: 'Laundry Essentials', title2:'Starting from $223',},
-      { imageUrl: './assets/washing2.svg', title:'', title1: 'Bedroom Essentials', title2:'Starting from $99', },
-      { imageUrl: './assets/washing2.svg',title:'',  title1: 'Kitchenware', title2:'Starting from $212',  },
-      { imageUrl: './assets/washing2.svg',title:'',  title1: 'Electronics', title2:'Starting from $64',  },
+  //   cardSets: { heading: string; cards: Card[];currentIndex: number }[] = [
+  //     { 
+  //       heading: 'Bedroom essentials',
+  //       currentIndex: 0,
+  //       cards: [
+  //     { imageUrl: './assets/washing2.svg',title:'', title1: 'Laundry Essentials', title2:'Starting from $223',},
+  //     { imageUrl: './assets/washing2.svg',title:'',  title1: 'Bedroom Essentials', title2:'Starting from $99',},
+  //     { imageUrl: './assets/washing2.svg',title:'',  title1: 'Kitchenware', title2:'Starting from $212',  },
+  //     { imageUrl: './assets/washing2.svg',title:'',  title1: 'Electronics', title2:'Starting from $64', },
+  //     { imageUrl: './assets/washing2.svg',title:'',  title1: 'Laundry Essentials', title2:'Starting from $223',},
+  //     { imageUrl: './assets/washing2.svg', title:'', title1: 'Bedroom Essentials', title2:'Starting from $99', },
+  //     { imageUrl: './assets/washing2.svg',title:'',  title1: 'Kitchenware', title2:'Starting from $212',  },
+  //     { imageUrl: './assets/washing2.svg',title:'',  title1: 'Electronics', title2:'Starting from $64',  },
       
      
-    ]},
-    {
-      heading: 'Kitchen essentials',
-      currentIndex: 0,
-    cards: [
-      { imageUrl: './assets/washing2.svg',title:'',  title1: 'Laundry Essentials', title2:'Starting from $223',},
-      { imageUrl: './assets/washing2.svg', title:'', title1: 'Bedroom Essentials', title2:'Starting from $99',},
-      { imageUrl: './assets/washing2.svg',title:'',  title1: 'Kitchenware', title2:'Starting from $212',  },
-      { imageUrl: './assets/washing2.svg',title:'',  title1: 'Electronics', title2:'Starting from $64', },
-      { imageUrl: './assets/washing2.svg',title:'',  title1: 'Laundry Essentials', title2:'Starting from $223',},
-      { imageUrl: './assets/washing2.svg',title:'',  title1: 'Bedroom Essentials', title2:'Starting from $99', },
-      { imageUrl: './assets/washing2.svg', title:'', title1: 'Kitchenware', title2:'Starting from $212',  },
-      { imageUrl: './assets/washing2.svg',title:'',  title1: 'Electronics', title2:'Starting from $64',  },
-    ] },
-  ];
+  //   ]},
+  //   {
+  //     heading: 'Kitchen essentials',
+  //     currentIndex: 0,
+  //   cards: [
+  //     { imageUrl: './assets/washing2.svg',title:'',  title1: 'Laundry Essentials', title2:'Starting from $223',},
+  //     { imageUrl: './assets/washing2.svg', title:'', title1: 'Bedroom Essentials', title2:'Starting from $99',},
+  //     { imageUrl: './assets/washing2.svg',title:'',  title1: 'Kitchenware', title2:'Starting from $212',  },
+  //     { imageUrl: './assets/washing2.svg',title:'',  title1: 'Electronics', title2:'Starting from $64', },
+  //     { imageUrl: './assets/washing2.svg',title:'',  title1: 'Laundry Essentials', title2:'Starting from $223',},
+  //     { imageUrl: './assets/washing2.svg',title:'',  title1: 'Bedroom Essentials', title2:'Starting from $99', },
+  //     { imageUrl: './assets/washing2.svg', title:'', title1: 'Kitchenware', title2:'Starting from $212',  },
+  //     { imageUrl: './assets/washing2.svg',title:'',  title1: 'Electronics', title2:'Starting from $64',  },
+  //   ] },
+  // ];
     @ViewChild('card') cardsElement!: ElementRef;
     cardWidth =1000; // Adjust the width of each card including margin
     currentIndex = 0;
   
-    scrollCards(cardSet: any, direction: 'left' | 'right'): void {
+    scrollCards(products: { currentIndex: number; categorizedProducts: string | any[]; }, direction: 'left' | 'right'): void {
       if (direction === 'left') {
-        if (cardSet.currentIndex > 0) {
-          cardSet.currentIndex--;
+        if (products.currentIndex > 0) {
+          products.currentIndex--;
         }
       } else if (direction === 'right') {
-        if (cardSet.currentIndex < cardSet.cards.length - 1) {
-          cardSet.currentIndex++;
+        if (products.currentIndex < products.categorizedProducts.length - 1) {
+          products.currentIndex++;
         }
       }
 

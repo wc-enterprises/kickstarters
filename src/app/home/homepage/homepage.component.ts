@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { getCategorizedProduct } from'../../api-calls/api-calls.service'
 @Component({
   selector: 'app-homepage',
   template: `<html>
@@ -131,4 +131,5 @@ styles:[`
 })
 export class HomepageComponent {
 
+  
 }

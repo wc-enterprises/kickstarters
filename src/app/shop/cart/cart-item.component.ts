@@ -177,4 +177,5 @@ deleteItem() {
   // Implement your delete logic here
   console.log('Item deleted');
 }
+
 }

@@ -17,7 +17,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 ">4items</div>
   </div>
   <ng-container>
-  <img (click)="closeCart.emit()" id="cancel" style="padding:2px 3vw 0 0; cursor: pointer;"src="./assets/xcircle.svg">
+  <img (click)="closeCart.emit()" id="cancel" style="padding:2px 45px 0 0; cursor: pointer;"src="./assets/xcircle.svg">
   </ng-container>
   </div>
   <div style="height:70vh;  overflow-y: auto; overflow-x:hidden;"><app-cartitem></app-cartitem></div>
@@ -29,7 +29,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   font-style: normal;
   font-weight: 500;
   line-height: normal;">Order Total</p>
-  <span id="total-rate" style="padding-top:2.5vh; padding-right:3.5vw;  color: #000;
+  <span id="total-rate" style="padding-top:25px; padding-right:55px;  color: #000;
   font-family: Inter;
   font-size: 15px;
   font-style: normal;
@@ -68,7 +68,7 @@ styles:[`.cart {
 .inner-head{
   display:flex;
   width:5vw;
-  gap:1vw;
+  gap:10px;
 }
 button{
   display: flex;
@@ -91,17 +91,17 @@ border:none;
 }
 .footer{
   width:auto;
-  padding-bottom:3vh;
+  padding-bottom:30px;
 }
 // mobile screen
 @media (max-width:640px){
   .cart{right:-25px;
   width:100%;}
   #cancel{
- margin-right:15px;
+margin-right:-10px;
   }
   #total-rate{
-    margin-right:18px;
+    margin-right:-18px;
   }
   .header{
     padding-left:5px;

@@ -112,11 +112,11 @@ font-family: 'Open Sans';
 font-size: 25px;
 font-style: normal;
 font-weight: 700;
-height:1vh;
-margin-top:15vh;
+height:10px;
+margin-top:110px;
 display:flex;
 align-items:center;
-padding-left:21vw;
+padding-left:330px;
 
 
 
@@ -130,7 +130,7 @@ font-size: 16px;
 font-style: normal;
 font-weight: 800;
 line-height: 20px; /* 125% */
-height:1vh;
+height:10px;
 
   }
   
@@ -138,7 +138,7 @@ height:1vh;
     display:flex;
     align-items:center;
     justify-content:center;
-margin-top:3vh;
+margin-top:20px;
     display: inline-flex;
 align-items: flex-start;
 gap: 55px;
@@ -147,11 +147,11 @@ gap: 55px;
   }
   .name{
     display:flex;
-    gap:1vw;
+    gap:5px;
    
   }
   #streetaddress2{
-    margin-top:2vh;
+    margin-top:20px;
   }
   .form{
     width:auto;
@@ -162,7 +162,7 @@ flex-direction:column;
 background: #FFF;
 padding:8px 50px 25px 50px;
 
-gap:4vh;
+gap:30px;
 /* Shadow 1 */
 box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.14);
 
@@ -214,7 +214,7 @@ line-height: 20px; /* 166.667% */
   .billing-summary{
     width: auto;
 height: auto;
-gap:2vh;
+gap:20px;
 display:flex;
 flex-direction:column;
   padding:8px 50px 15px 50px;
@@ -248,8 +248,8 @@ line-height: 20px; /* 142.857% */
     display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
-    padding-top:1vh;
-    gap:8vw;
+    padding-top:10px;
+    gap:80px;
   }
   
   .total {

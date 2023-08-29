@@ -14,11 +14,10 @@ import { MatDialogModule } from '@angular/material/dialog';
 import{ FAQComponent}from'../support/faq.component';
 import { CartService } from '../common-components/utils/cart.service';
 
-
 @NgModule({
   declarations: [HomepageComponent, ButtonComponent,HeaderAndFooterComponent,ProductSectionComponent,QaComponent,CartComponent,CartItemComponent,PaymentsComponent,FAQComponent,],
   imports: [CommonModule, HomepageRouting,FormsModule,MatDialogModule,],
-  providers: [CartService],
+  providers: [CartService,],
 })
 export class HomeModule {
   

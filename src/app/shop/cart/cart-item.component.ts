@@ -137,7 +137,7 @@ background: var(--background-background-primary, #FFF);
    margin:-18px 0 0 -10px;
  }
 .cart-items{
-  padding:4vh 0 0 5vw;
+  padding:40px 0 0 50px;
   border:1px solid black;
 }
   }
@@ -177,4 +177,5 @@ deleteItem() {
   // Implement your delete logic here
   console.log('Item deleted');
 }
+
 }

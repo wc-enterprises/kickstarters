@@ -8,11 +8,10 @@ import { Component } from '@angular/core';
       <app-headerandfooter>
         <div class="background">
           <div class="title">
-            <p id="sub-title">The main <br />page with<br />heading</p>
-            <p id="sub-title2">
-              Inspiring gym apparel for athletes and fitness enthusiasts.<br />
-              Push your limits, surpass your goals, move forward.
+            <p id="sub-title">
+              Kickstart Your<br />UK Journey<br />with Kickstarters.
             </p>
+            <p id="sub-title2">Your Ultimate Student Kit Destination</p>
           </div>
         </div>
 
@@ -63,7 +62,7 @@ import { Component } from '@angular/core';
       }
 
       #sub-title2 {
-        font-size: 16px;
+        font-size: 30px;
         font-style: normal;
         font-weight: 400;
         line-height: 25.6px;

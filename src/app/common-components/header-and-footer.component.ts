@@ -321,12 +321,12 @@ gap:15px;}
 }
 @media (max-width:425px) {
     .bag{
-        padding-left:85px;
+        padding-left:80px;
     }
 }
 @media (max-width:375px) {
     .bag{
-        padding-left:65px;
+        padding-left:60px;
     }
 }
 `

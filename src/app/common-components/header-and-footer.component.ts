@@ -252,7 +252,7 @@ styles: [
     line-height:15px;
     }
     .bag{
-        padding-left:65px;
+        padding-left:100px;
     }
     .right{ width:35%;
        
@@ -319,6 +319,18 @@ gap:15px;}
         background-color:#E9ECEF;
     }
 }
+@media (max-width:425px) {
+    .bag{
+        padding-left:85px;
+    }
+}
+@media (max-width:375px) {
+    .bag{
+        padding-left:65px;
+    }
+}
+
+
 
     `
   ]

@@ -6,7 +6,7 @@ import { CartService } from './utils/cart.service';
   <body>
   <!-- <button>Add to cart</button> -->
   <div>
-  <button (click)="addToCart()" [disabled]="isAddedToCart">
+  <button (click)="addToCart()" [disabled]="isAddedToCart" [ngClass]="{ 'added-to-cart': isAddedToCart }">
     {{ isAddedToCart ? 'Added to Cart!' : 'Add to Cart' }}
   </button>
 </div>
@@ -34,6 +34,10 @@ align-self: stretch;
 border-radius: 12px;
 background: #000;
  }
+ button.added-to-cart {
+  background-color:#ffffff; /* Changed button color */
+  color: #000000; /* Changed font color */
+}
  .added-message {
   position: absolute;
   top: 0;

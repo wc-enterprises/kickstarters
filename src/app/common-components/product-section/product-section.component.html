@@ -1,0 +1,60 @@
+<html>
+  <body>
+    <div class="list">
+      <div
+        *ngFor="let category of categorizedProducts; let j = index"
+        class="card-title"
+      >
+        <div
+          style="
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+          "
+        >
+          <p id="sub-title3">{{ category.categoryName }}</p>
+          <div id="arrow-button">
+            <img
+              id="left-arrow"
+              (click)="scrollLeft(j)"
+              src="./assets/arrowleft.svg"
+            />
+            <img
+              id="right-arrow"
+              (click)="scrollRight(j)"
+              src="./assets/arrowright.svg"
+            />
+          </div>
+        </div>
+
+        <div class="total-cards" #cardColumn>
+          <div
+            class="product-card"
+            *ngFor="let product of category.products; let i = index"
+          >
+            <div>
+              <div class="product-image-container">
+                <img
+                  class="product-image"
+                  [src]="product.imagePath"
+                  alt="Product Image"
+                  (error)="handleImageError($event)"
+                />
+              </div>
+              <h3 class="product-name">{{ product.name }}</h3>
+              <p class="product-description">
+                {{ product.description }}
+              </p>
+            </div>
+
+            <div>
+              <p class="product-rate">£ {{ product.sellingPrice }}</p>
+              <app-button></app-button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

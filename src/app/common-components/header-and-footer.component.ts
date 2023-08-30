@@ -329,10 +329,7 @@ gap:15px;}
         padding-left:65px;
     }
 }
-
-
-
-    `
+`
   ]
 })
 export class HeaderAndFooterComponent {

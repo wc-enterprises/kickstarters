@@ -35,8 +35,9 @@ border-radius: 12px;
 background: #000;
  }
  button.added-to-cart {
-  background-color:#ffffff; /* Changed button color */
-  color: #000000; /* Changed font color */
+  background-color:#E2E2E2; 
+  border: 3px solid var(--dark-dark-1, #B2BCCA);
+  color: #000000; 
 }
  .added-message {
   position: absolute;

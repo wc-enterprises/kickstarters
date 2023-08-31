@@ -212,7 +212,7 @@ line-height: 20px; /* 166.667% */
   .input:not(:focus):not(:placeholder-shown) + .placeholder
   {
     top:-10px;
-    color:#1660CF;
+    color:#000000;
     background-color:#FFF;
   }
  

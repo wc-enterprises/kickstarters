@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-payments',
@@ -11,10 +12,63 @@ import { Component, Input } from '@angular/core';
    <p style="" class="heading">{{ heading }}</p>
    </div>
   <div class="sub-container">
- 
-<form class="form">
+ <div style="display:flex;flex-direction:column;">
+<form [formGroup]="billingForm" class="form">
 
 <p class="title">{{ title }}</p>
+<div class="name">
+ <div class="input-group">
+ 
+ <input style="width:100%;" type="text" formControlName="firstname" class="input">
+ <label class="placeholder" for="firstname">First Name</label>
+ </div>
+ <div class="input-group">
+ <input  style="width:100%;" type="text" class="input">
+ <label class="placeholder" for="Lasttname">Last Name</label>
+ </div>
+ </div>
+ <div class="input-group">
+ <input  style="width:100%;" type="text" class="input">
+ <label class="placeholder" for="Email">Email Address</label>
+
+ </div>
+ <div class="input-group">
+ <input  style="width:100%;" type="text" class="input">
+ <label class="placeholder" for="Street Address">Street Address</label>
+ <input  style="width:100%;" id="streetaddress2" type="text" class="input">
+ </div>
+
+ <div class="name">
+ <div class="input-group">
+ 
+ <input style="width:100%;" type="text" class="input">
+ <label class="placeholder" for="State">State/Province</label>
+ </div>
+ <div class="input-group">
+ <input  style="width:100%;" type="text" class="input">
+ <label class="placeholder" for="city">City</label>
+ </div>
+ </div>
+
+ <div class="name">
+ <div class="input-group">
+ 
+ <input style="width:100%;" type="text" class="input">
+ <label class="placeholder" for="zipcode">Zip/Postal Code</label>
+ </div>
+ <div class="input-group">
+ <input  style="width:100%;" type="text" class="input">
+ <label class="placeholder" for="Phone">Phone</label>
+ </div>
+ </div>
+ <div class="input-group">
+ <input   id="check" [(ngModel)]="billingAndShippingSame" (change)="toggleShippingForm()" type="checkbox">
+ <label class="billing" for="billing">My billing and shipping address are the same</label>
+ </div>  
+</form>
+<form *ngIf="showShippingForm" [formGroup]="shippingForm" class="form">
+
+<p class="title">{{ title3 }}</p>
 <div class="name">
  <div class="input-group">
  
@@ -65,7 +119,7 @@ import { Component, Input } from '@angular/core';
  <label class="billing" for="billing">My billing and shipping address are the same</label>
  </div>  
 </form>
-
+</div>
 
 
 <div class="billing-summary">
@@ -212,7 +266,7 @@ line-height: 20px; /* 166.667% */
   .input:not(:focus):not(:placeholder-shown) + .placeholder
   {
     top:-10px;
-    color:#1660CF;
+    color:#000000;
     background-color:#FFF;
   }
  
@@ -315,6 +369,7 @@ export class PaymentsComponent {
   @Input() heading: string = 'Payments';
   @Input() title: string = 'Billing Address';
   @Input() title1: string = 'Billing Summary';
+  @Input()title3:string='Shipping Address';
   firstName: string = '';
   lastName: string = '';
   email: string = '';
@@ -334,6 +389,29 @@ export class PaymentsComponent {
   pay() {
     // Handle payment logic here
     console.log('Payment completed');
+  }
+  billingForm: FormGroup;
+  shippingForm: FormGroup;
+  showShippingForm: boolean = false;
+  billingAndShippingSame: boolean = false;
+  constructor(private fb: FormBuilder) {
+    this.billingForm = this.fb.group({
+      firstname: [''],
+      lastname: [''],
+    });
+    this.shippingForm = this.fb.group({
+      firstname: [''], 
+      lastname: [''],
+    });
+    console.log(this.billingForm);
+  }
+  toggleShippingForm() {
+    this.showShippingForm = !this.showShippingForm;
+    if (this.showShippingForm) {
+      this.shippingForm.setValue(this.billingForm.value);
+    } else {
+      this.shippingForm.reset();
+    }
   }
   
 }

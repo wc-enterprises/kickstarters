@@ -14,6 +14,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { FAQComponent } from '../support/faq.component';
 import { CartService } from '../common-components/utils/cart.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     MatDialogModule,
     HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [CartService],
 })

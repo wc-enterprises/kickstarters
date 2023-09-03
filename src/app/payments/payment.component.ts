@@ -66,6 +66,8 @@ import { Component, Input } from '@angular/core';
  </div>  
 </form>
 
+
+
 <div class="billing-summary">
 <p style="" class="title">{{ title1 }}</p>
   <div class="summary-row">
@@ -206,11 +208,14 @@ font-style: normal;
 font-weight: 400;
 line-height: 20px; /* 166.667% */
   }
-  .input:focus + .placeholder{
+  .input:focus + .placeholder,
+  .input:not(:focus):not(:placeholder-shown) + .placeholder
+  {
     top:-10px;
-    color:#1660CF;
+    color:#000000;
     background-color:#FFF;
   }
+ 
   .billing-summary{
     width: auto;
 height: auto;
@@ -222,6 +227,7 @@ border-radius: 4px;
 background: #FFF;
 
 color: var(--dark-dark-3, #4F4F4F);
+
 
 /* Regular 14px */
 font-family: Open Sans;

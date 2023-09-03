@@ -1,7 +1,8 @@
 import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { ApiCallsService } from '../../api-calls/api-calls.service';
+import { ApiCallsService } from '../../services/api-calls.service';
+import { CartService } from '../../services/cart.service';
 @Component({
   selector: 'app-productsection',
   templateUrl: './product-section.component.html',
@@ -14,7 +15,8 @@ export class ProductSectionComponent {
 
   constructor(
     private router: Router,
-    private apiCallsService: ApiCallsService
+    private apiCallsService: ApiCallsService,
+    private cartService: CartService
   ) {}
 
   async ngOnInit() {
@@ -65,5 +67,9 @@ export class ProductSectionComponent {
 
   openCart() {
     this.isCartOpen = !this.isCartOpen;
+  }
+
+  addProductToCart(product: any) {
+    console.log('product', product);
   }
 }

@@ -12,7 +12,7 @@ import { PaymentsComponent } from '../payments/payment.component';
 import { FormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FAQComponent } from '../support/faq.component';
-import { CartService } from '../common-components/utils/cart.service';
+import { CartService } from '../services/cart.service';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({

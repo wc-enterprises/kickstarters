@@ -1,9 +1,3 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
-import { BASE_URL } from 'src/environments/environment';
-
 export const UNITS = ['unit', 'kg', 'packet'] as const;
 export type TUnits = (typeof UNITS)[number];
 
@@ -40,21 +34,9 @@ export interface StandardResponse<T> {
   data: T;
 }
 
-@Injectable({
-  providedIn: 'root',
-})
-export class ApiCallsService {
-  constructor(private http: HttpClient) {}
-
-  getCategorizedProducts(): Observable<
-    StandardResponse<ICategorizedProducts[]>
-  > {
-    const url = `${BASE_URL}/get-categoried-products`;
-    return this.http.get<StandardResponse<ICategorizedProducts[]>>(url).pipe(
-      catchError((error) => {
-        console.error('Error fetching categorized products:', error);
-        return throwError(error);
-      })
-    );
-  }
+export interface Card {
+  imageUrl: string;
+  title: string;
+  title1: string;
+  title2: string;
 }

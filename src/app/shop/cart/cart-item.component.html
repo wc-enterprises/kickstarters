@@ -1,0 +1,41 @@
+<html>
+  <body>
+    <div *ngFor="let cart of cartItems | async" class="cartitem">
+      <img id="img" [src]="cart.imagePath" />
+      <div class="box">
+        <div class="box1">
+          <p id="title">{{ cart.name }}</p>
+          <p id="rate">{{ cart.sellingPrice }}</p>
+          <p></p>
+        </div>
+
+        <p style="margin-top: -1vh">Quantity</p>
+        <div class="quantity-selector">
+          <button
+            *ngIf="quantity > 1"
+            style="border-radius: 3.333px 0px 0px 3.333px"
+            class="decrement-button"
+            (click)="decrementQuantity()"
+          >
+            -
+          </button>
+          <button *ngIf="quantity <= 1" class="delete-basket-icon">
+            <img
+              style="opacity: 0.5"
+              (click)="deleteItem()"
+              src="./assets/delete1.svg"
+            />
+          </button>
+          <button class="quantity-number">{{ quantity }}</button>
+          <button
+            class="increment-button"
+            style="border-radius: 0px 3.333px 3.333px 0px"
+            (click)="incrementQuantity()"
+          >
+            +
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

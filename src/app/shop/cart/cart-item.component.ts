@@ -10,13 +10,16 @@ import { IProduct } from 'src/app/utils/interface';
     `
       #img {
         width: 100px;
-        height: 100px;
+        height: auto;
+      }
+      #title{
+        width:120px;
       }
       .cartitem {
-        width: 100%;
+        width:auto;
         display: flex;
         gap: 15px;
-        padding: 40px 0 0 45px;
+        padding: 40px 0 0 55px;
       }
       #rate {
         margin-left: 40px;
@@ -25,7 +28,6 @@ import { IProduct } from 'src/app/utils/interface';
         width: auto;
         display: flex;
         gap: 50px;
-
         color: #000;
         font-family: Inter;
         font-size: 15px;
@@ -55,10 +57,13 @@ import { IProduct } from 'src/app/utils/interface';
       @media (max-width: 640px) {
         #img {
           width: 100px;
-          height: 100px;
+          height: auto;
         }
         #title {
           font-size: 12px;
+         
+            width:70px;
+          
         }
         #rate {
           font-size: 12px;
@@ -85,6 +90,13 @@ import { IProduct } from 'src/app/utils/interface';
         .cartitem {
           padding: 40px 0 0 15px;
         }
+      }
+      @media (max-width: 426px) {
+        .cartitem{padding: 40px 0 0 50px;
+      }
+      }
+      @media (max-width: 375px){
+        .cartitem{padding: 40px 0 0 15px;}
       }
     `,
   ],

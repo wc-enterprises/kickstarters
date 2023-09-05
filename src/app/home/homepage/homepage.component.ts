@@ -17,12 +17,10 @@ import { Component } from '@angular/core';
 
         <div class="background-mobile">
           <div class="title-mobile">
-            <p id="sub-title-mobile">The main page with<br />heading</p>
-            <p id="sub-title2-mobile">
-              Inspiring gym apparel for athletes and fitness <br />enthusiasts.
-              Push your limits, surpass your <br />
-              goals, move forward.
+            <p id="sub-title-mobile">
+              Kickstart Your<br />UK Journey<br />with Kickstarters.
             </p>
+            <p id="sub-title2-mobile">Your Ultimate Student Kit Destination</p>
           </div>
         </div>
         <app-productsection></app-productsection>
@@ -82,31 +80,34 @@ import { Component } from '@angular/core';
           width: auto;
           height: 100vh;
           opacity: 1;
-          display: block;
+          display: flex;
+          align-items: center;
+          justify-contents: center;
         }
         .title-mobile {
           display: inline-flex;
           flex-direction: column;
           align-items: flex-start;
           padding-left: 30px;
-          padding-top: 450px;
+
           z-index: 1;
         }
         #sub-title-mobile {
           color: #fff;
           font-family: 'Inter';
-          font-size: 24px;
+          font-size: 30px;
           font-style: normal;
           font-weight: 600;
-          line-height: 25px;
+          line-height: 35px;
         }
         #sub-title2-mobile {
           color: #fff;
           font-family: 'Inter';
-          font-size: 12px;
+          font-size: 20px;
           font-style: normal;
           font-weight: 400;
-          line-height: 25.6px;
+          position: relative;
+          bottom: 25px;
         }
       }
     `,

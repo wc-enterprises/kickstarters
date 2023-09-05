@@ -16,10 +16,9 @@ import { CartService } from 'src/app/services/cart.service';
   font-family: Inter;
   font-size: 16px;
   font-style: normal;
-  font-weight: 400;
-"
+  font-weight: 400;"
             >
-              {{ cartCount }} items
+              {{ cartCount }}&nbsp;items
             </div>
           </div>
           <ng-container>

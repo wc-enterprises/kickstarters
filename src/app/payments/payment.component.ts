@@ -12,7 +12,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
    <p style="" class="heading">{{ heading }}</p>
    </div>
   <div class="sub-container">
- <div style="display:flex;flex-direction:column;">
+ <div style="display:flex;flex-direction:column;gap:8px;">
 <form [formGroup]="billingForm" class="form">
 
 <p class="title">{{ title }}</p>
@@ -63,7 +63,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
  </div>
  <div class="input-group">
  <input   id="check" [(ngModel)]="billingAndShippingSame" (change)="toggleShippingForm()" type="checkbox">
- <label class="billing" for="billing">My billing and shipping address are the same</label>
+ <label class="billing" for="billing">My billing and shipping address are the different</label>
  </div>  
 </form>
 <form *ngIf="showShippingForm" [formGroup]="shippingForm" class="form">
@@ -114,10 +114,6 @@ import { FormBuilder, FormGroup } from '@angular/forms';
  <label class="placeholder" for="Phone">Phone</label>
  </div>
  </div>
- <div class="input-group">
- <input   id="check"  type="checkbox">
- <label class="billing" for="billing">My billing and shipping address are the same</label>
- </div>  
 </form>
 </div>
 

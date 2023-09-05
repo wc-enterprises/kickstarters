@@ -80,14 +80,16 @@ import { Component } from '@angular/core';
           width: auto;
           height: 100vh;
           opacity: 1;
-          display: block;
+          display: flex;
+          align-items: center;
+          justify-contents: center;
         }
         .title-mobile {
           display: inline-flex;
           flex-direction: column;
           align-items: flex-start;
           padding-left: 30px;
-          padding-top: 450px;
+
           z-index: 1;
         }
         #sub-title-mobile {

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
+import { ProductSectionComponent } from 'src/app/common-components/product-section/product-section.component';
 import { CartService } from 'src/app/services/cart.service';
 import { IProduct } from 'src/app/utils/interface';
 
@@ -104,27 +105,39 @@ import { IProduct } from 'src/app/utils/interface';
 export class CartItemComponent {
   cartItems: Observable<any> | undefined;
 
-  quantity: number = 1;
+
 
   constructor(private cartService: CartService) {}
 
   ngOnInit() {
     this.cartItems = this.cartService.getCartItems();
+    
     console.log('received products to cartUI from cartSERVICE', this.cartItems);
+    
   }
 
-  decrementQuantity() {
-    if (this.quantity > 1) {
-      this.quantity--;
-    }
+  // decrementQuantity() {
+  //   if (this.quantity > 1) {
+  //     this.quantity--;
+  //   }
+  // }
+
+  // incrementQuantity() {
+  //   this.quantity++;
+  // }
+  incrementQuantity(product: IProduct) {
+    this.cartService.incrementQuantityBy1(product.id);
+  console.log(this.incrementQuantity);
   }
 
-  incrementQuantity() {
-    this.quantity++;
-  }
+  decrementQuantity(product: IProduct) {
+    this.cartService.decrementQuantityOrDeleteProductFromCart(product.id);
+    console.log(this.decrementQuantity);
+   }
 
-  deleteItem() {
-    // Implement your delete logic here
-    console.log('Item deleted');
-  }
+  // deleteItem() { 
+  //   // Implement your delete logic here
+  //   console.log('Item deleted');
+  // } 
 }
+   

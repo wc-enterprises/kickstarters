@@ -116,8 +116,6 @@ import { FormBuilder, FormGroup } from '@angular/forms';
  </div>
 </form>
 </div>
-
-
 <div class="billing-summary">
 <p style="" class="title">{{ title1 }}</p>
   <div class="summary-row">

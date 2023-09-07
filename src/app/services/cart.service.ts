@@ -17,11 +17,37 @@ export class CartService {
 
   addToCart(product: IProduct) {
     this.cartCountSubject.next(this.cartCountSubject.value + 1);
+    product.quantity = 1;
     this.cartItems?.push(product);
     console.log('item added to cart. Total cart: ', this.cartItems);
   }
 
-  updateProductsInCart(product: any) {}
+  incrementQuantityBy1(productId: string ){
+    const productIndex = this.cartItems.findIndex((cart) => cart.id === productId);
+
+    if (productIndex !== -1) {
+      this.cartItems[productIndex].quantity += 1;
+    }
+    
+  }
+
+  decrementQuantityOrDeleteProductFromCart(productId: string){
+    const productIndex = this.cartItems.findIndex((cart) => cart.id === productId);
+
+    if (productIndex !== -1) {
+      if (this.cartItems[productIndex].quantity > 1) {
+        
+        this.cartItems[productIndex].quantity -= 1;
+      } else {
+        
+        this.cartItems.splice(productIndex, 1);
+      }
+    }
+  }
+
+  updateProductsInCart(product: any) {
+    
+  }
 
   getCartItems(): Observable<IProduct[]> {
     return of(this.cartItems);
@@ -35,6 +61,7 @@ export class CartService {
     });
     return of(finalPrice);
   }
+  
 
   openCart() {
     this.cartSubject.next(true);

@@ -16,6 +16,8 @@ export interface ICategorizedProducts {
 }
 
 export interface IProduct {
+  productId: string;
+  quantity: number;
   id: string;
   name: string;
   description: string;

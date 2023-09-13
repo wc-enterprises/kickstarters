@@ -36,12 +36,12 @@ export class CartService {
     this.cartItems.push(product);
   }
 
-  this.cartCountSubject.next(this.cartCountSubject.value + 1);
+ 
+
+ this.cartCountSubject.next(this.cartCountSubject.value + 1);
   console.log('Item added to cart. Total cart: ', this.cartItems);
   }
 
-
-  
   incrementQuantityBy1(productId: string ){
     const productIndex = this.cartItems.findIndex((cart) => cart.id === productId);
 
@@ -52,9 +52,9 @@ export class CartService {
   }
 
   decrementQuantityOrDeleteProductFromCart(productId: string){
-    const productIndex = this.cartItems.findIndex((cart) => cart.id === productId);
+     const productIndex = this.cartItems.findIndex((cart) => cart.id === productId);
 
-   if (productIndex !== -1) {
+  if (productIndex !== -1) {
     if (this.cartItems[productIndex].quantity > 1) {
       // If the quantity is greater than 1, just decrement the quantity
       this.cartItems[productIndex].quantity -= 1;
@@ -64,10 +64,14 @@ export class CartService {
       // Subtract the selling price of the deleted product from the final price
       this.defaultFinalPrice -= parseInt(deletedProduct.sellingPrice);
     }
-    // Recalculate the final price and update it in the BehaviorSubject
-    this.calculateFinalPrice().subscribe((finalPrice) => {
-      this.cartCountSubject.next(finalPrice);
-    });
+
+    // Calculate the total price of the remaining items
+    const newFinalPrice = this.cartItems.reduce((total, item) => {
+      return total + parseInt(item.sellingPrice) * item.quantity;
+    }, 0);
+
+    // Update the total price in the BehaviorSubject
+    this.cartCountSubject.next(newFinalPrice);
   }
   }
 
@@ -83,7 +87,7 @@ export class CartService {
     let finalPrice = this.defaultFinalPrice;
 
     this.cartItems.forEach((cart) => {
-      finalPrice +=parseInt(cart.sellingPrice);
+      finalPrice +=parseInt(cart.sellingPrice)*cart.quantity;
     });
   
     return of(finalPrice);

@@ -6,6 +6,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   template: `<html>
   <body>
   <app-headerandfooter>
+  <div class="banner">Website is a proof of concept. We will be live soon</div>
    <div class="main-container">
   <div style="display:flex;">
   <p style=""></p>
@@ -151,11 +152,18 @@ import { FormBuilder, FormGroup } from '@angular/forms';
     flex-direction: column;
     
     height: auto; /* Adjust this as needed */
-    
-  
-   
-    
-  }
+    }
+    .banner{
+      margin-top:10vh;
+      height:50px;
+      display:flex;
+      background: linear-gradient(270deg, rgba(221, 45, 74, 0.80) 0.62%, rgba(221, 45, 74, 0.60) 96.69%);
+      align-items:center;
+      justify-content:center;
+      font-size:20px;
+      color:#000000;
+     
+    }
   .heading{
     color: #000;
 font-family: 'Open Sans';
@@ -163,7 +171,7 @@ font-size: 25px;
 font-style: normal;
 font-weight: 700;
 height:10px;
-margin-top:110px;
+margin-top:50px;
 display:flex;
 align-items:center;
 padding-left:330px;

@@ -6,14 +6,20 @@ import { Component } from '@angular/core';
     <head></head>
     <body>
       <app-headerandfooter>
-        <div class="background">
-          <div class="title">
-            <p id="sub-title">
-              Kickstart Your<br />UK Journey<br />with Kickstarters.
-            </p>
-            <p id="sub-title2">Your Ultimate Student Kit Destination</p>
-          </div>
-        </div>
+      <div class="background">
+  <div class="title">
+    <p id="sub-title">
+      Kickstart Your<br />UK Journey<br />with Kickstarters.
+    </p>
+    <p id="sub-title2">Your Ultimate Student Kit Destination</p>
+  </div>
+  <div class="video-container">
+    <video class="video" width="100%" height="100%" controls autoplay>
+      <source src="./assets/backgrondvideo.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+
 
         <div class="background-mobile">
           <div class="title-mobile">
@@ -30,16 +36,27 @@ import { Component } from '@angular/core';
 
   styles: [
     `
-      .background {
-        background-image: url('./image.svg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        width: auto;
-        height: 100vh;
-        opacity: 1;
-        display: block;
+     .background {
+        display: flex;
+         
+  
+       
       }
+      .video-container {
+
+  max-height:100vh;
+  overflow: hidden;
+}
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  
+}
+      video::-webkit-media-controls {
+            display: none !important;
+        }
+
       .background-mobile {
         display: none;
       }
@@ -49,6 +66,7 @@ import { Component } from '@angular/core';
         font-style: normal;
         font-weight: 600;
         line-height: 79.2px;
+        color:black;
       }
       .title {
         display: flex;

@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CartService } from 'src/app/services/cart.service';
-
+import { Observable } from 'rxjs';
 @Component({
   selector: 'app-cart',
   template: `<html>
@@ -56,7 +56,7 @@ import { CartService } from 'src/app/services/cart.service';
   font-weight: 600;
   line-height: 21px;
   "
-              >£44</span
+              >£{{ finalPrice$ | async }}</span
             >
           </div>
           <button routerLink="payments">Proceed to Checkout</button>
@@ -144,12 +144,21 @@ export class CartComponent {
   @Input() isCartOpen: boolean = false;
   @Output() closeCart: EventEmitter<void> = new EventEmitter<void>();
   cartCount!: number;
+  finalPrice$: any;
 
   constructor(private cartService: CartService) {}
 
   ngOnInit() {
+    
     this.cartService.cartCount$.subscribe((count) => {
       this.cartCount = count;
+      this.calculateFinalPrice();
     });
+    
   }
+  calculateFinalPrice() {
+    this.finalPrice$ = this.cartService.calculateFinalPrice();
+  }
+  
+  
 }

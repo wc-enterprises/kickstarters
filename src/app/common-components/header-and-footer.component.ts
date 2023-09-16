@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
 import { CartService } from '../services/cart.service';
-import { CartComponent } from '../shop/cart/cart.component';
+import { CartComponent } from '../shop/cart/cart/cart.component';
 @Component({
   selector: 'app-headerandfooter',
   template: `<html>

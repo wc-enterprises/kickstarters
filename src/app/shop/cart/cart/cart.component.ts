@@ -3,67 +3,7 @@ import { CartService } from 'src/app/services/cart.service';
 import { Observable } from 'rxjs';
 @Component({
   selector: 'app-cart',
-  template: `<html>
-    <body>
-      <div *ngIf="isCartOpen" class="cart">
-        <div class="header">
-          <div class="inner-head">
-            <img src="./assets/bag.svg" />
-            <div
-              id="items"
-              style="color: #444;
-  padding-top:2px;
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;"
-            >
-              {{ cartCount }}&nbsp;items
-            </div>
-          </div>
-          <ng-container>
-            <img
-              (click)="closeCart.emit()"
-              id="cancel"
-              style="padding:2px 45px 0 0; cursor: pointer;"
-              src="./assets/xcircle.svg"
-            />
-          </ng-container>
-        </div>
-        <div style="height:70vh;  overflow-y: auto; overflow-x:hidden;">
-          <app-cartitem></app-cartitem>
-        </div>
-        <div class="footer">
-          <div
-            style="display:flex; flex-direction:row;justify-content:space-between;"
-          >
-            <p
-              style="padding-left:3vw; color: var(--netural-grey-500, #667085);
-  font-family: Inter;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;"
-            >
-              Order Total
-            </p>
-            <span
-              id="total-rate"
-              style="padding-top:25px; padding-right:55px;  color: #000;
-  font-family: Inter;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 21px;
-  "
-              >£{{ finalPrice$ | async }}</span
-            >
-          </div>
-          <button routerLink="payments">Proceed to Checkout</button>
-        </div>
-      </div>
-    </body>
-  </html>`,
+  templateUrl: './cart.component.html',
   styles: [
     `
       .cart {
@@ -149,16 +89,12 @@ export class CartComponent {
   constructor(private cartService: CartService) {}
 
   ngOnInit() {
-    
     this.cartService.cartCount$.subscribe((count) => {
       this.cartCount = count;
-      this.calculateFinalPrice();
     });
-    
+
+    this.cartService.finalPrice$.subscribe((price) => {
+      this.finalPrice$ = price;
+    });
   }
-  calculateFinalPrice() {
-    this.finalPrice$ = this.cartService.calculateFinalPrice();
-  }
-  
-  
 }

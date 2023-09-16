@@ -6,8 +6,8 @@ import { ButtonComponent } from '../common-components/button.component';
 import { HeaderAndFooterComponent } from '../common-components/header-and-footer.component';
 import { ProductSectionComponent } from '../common-components/product-section/product-section.component';
 import { QaComponent } from '../support/common/QA.component';
-import { CartComponent } from '../shop/cart/cart.component';
-import { CartItemComponent } from '../shop/cart/cart-item.component';
+import { CartComponent } from '../shop/cart/cart/cart.component';
+import { CartItemComponent } from '../shop/cart/cart-item/cart-item.component';
 import { PaymentsComponent } from '../payments/payment.component';
 import { FormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -29,7 +29,6 @@ import { AppComponent } from '../app.component';
     CartItemComponent,
     PaymentsComponent,
     FAQComponent,
-    
   ],
   imports: [
     BrowserModule,
@@ -38,9 +37,9 @@ import { AppComponent } from '../app.component';
     FormsModule,
     MatDialogModule,
     HttpClientModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule,
   ],
   providers: [CartService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class HomeModule {}

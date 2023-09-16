@@ -42,3 +42,50 @@ export interface Card {
   title1: string;
   title2: string;
 }
+
+export interface ICategorizedProductsWithAttributesAndVariants {
+  categoryId: string;
+  categoryName: string;
+  categoryDescription: string;
+  products: IProductWithPriceVariantsAndAttributes[];
+}
+
+export interface IProductWithPriceVariantsAndAttributes {
+  id: string;
+  name: string;
+  description: string;
+  imagePath: string;
+  unit: TUnits;
+  unitsInStock: number;
+  pricingId: string;
+  sellingPrice: string;
+  discount: string;
+  discountUnit: TDiscountUnits;
+
+  attributes: IAttribute[] | null;
+
+  variants: IVariantWithPriceAndAttribute[] | null;
+}
+
+export interface IVariantWithPriceAndAttribute {
+  id: string;
+  productId: string;
+  name: string;
+  description: string;
+  imagePath: string;
+  unit: TUnits;
+  unitsInStock: number;
+  pricingId: string;
+  sellingPrice: string;
+  discount: string;
+  discountUnit: TDiscountUnits;
+
+  attributes: IAttribute[] | null;
+}
+
+export interface ICreateAttribute {
+  key: string;
+  value: string;
+  asset: string;
+}
+export interface IAttribute extends ICreateAttribute {}

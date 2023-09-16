@@ -21,12 +21,10 @@ const routes: Routes = [
     loadChildren: () =>
       import('../support/support.module').then((m) => m.SupportModule),
   },
-
-
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
 export class HomepageRouting {}

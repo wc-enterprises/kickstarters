@@ -15,8 +15,6 @@ import { FAQComponent } from '../support/faq.component';
 import { CartService } from '../services/cart.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
-import { AppComponent } from '../app.component';
 
 @NgModule({
   declarations: [
@@ -29,18 +27,15 @@ import { AppComponent } from '../app.component';
     CartItemComponent,
     PaymentsComponent,
     FAQComponent,
-    
   ],
   imports: [
-    BrowserModule,
     CommonModule,
     HomepageRouting,
     FormsModule,
     MatDialogModule,
     HttpClientModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule
   ],
   providers: [CartService],
-  bootstrap: [AppComponent]
 })
 export class HomeModule {}

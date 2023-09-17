@@ -314,6 +314,22 @@ const catP = {
         'Kits that make you feel home the moment you arrive UK.',
       products: [
         {
+          id: '-Ne_8Ak_4hqV2PnTBpzk',
+          name: 'Premium Kit',
+          description:
+            'Give your student life a glow-up with our Deluxe Kit. We’ve packed all the cooking, bed and living essentials into one box to make sure you survive (and thrive) the next few years.',
+          imagePath:
+            'https://www.unikitout.com/cdn/shop/files/MicrosoftTeams-image_21_32598250-834e-4f6c-bdd2-0fc26b3757eb_1836x1836.jpg?v=1694175395',
+          unit: 'unit',
+          unitsInStock: 100,
+          pricingId: '-Ne_8Arwx0kZ6XZLJUsi',
+          sellingPrice: '29',
+          discount: '10',
+          discountUnit: 'percentage',
+          attributes: [],
+          variants: [],
+        },
+        {
           id: '-Ne_6O7n_O8NXVisSOUn',
           name: 'Bedding Kit - Deluxe (Linen, Duvet & Pillow)',
           description: 'Ultimate bedding kit.',
@@ -328,6 +344,7 @@ const catP = {
           attributes: [],
           variants: [],
         },
+
         {
           id: '-Ne_6sClKDX9Op5IirIG',
           name: 'Standard Kitchen Kit',

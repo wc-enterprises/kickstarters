@@ -1,0 +1,170 @@
+<app-headerandfooter>
+  <div class="main-container">
+    <div
+      style="
+        width: 100vw;
+        height: 130px;
+        background-color: rgb(241, 161, 161);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        box-sizing: border-box;
+        padding-bottom: 20px;
+        font-family: Open Sans;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+      "
+    >
+      Website is a proof of concept. We will be live soon!!
+    </div>
+    <div style="display: flex">
+      <p style=""></p>
+      <p style="" class="heading">{{ heading }}</p>
+    </div>
+    <div class="sub-container">
+      <div style="display: flex; flex-direction: column; gap: 8px">
+        <form [formGroup]="billingForm" class="form">
+          <p class="title">{{ title }}</p>
+          <div class="name">
+            <div class="input-group">
+              <input
+                style="width: 100%"
+                type="text"
+                formControlName="firstname"
+                class="input"
+              />
+              <label class="placeholder" for="firstname">First Name</label>
+            </div>
+            <div class="input-group">
+              <input style="width: 100%" type="text" class="input" />
+              <label class="placeholder" for="Lasttname">Last Name</label>
+            </div>
+          </div>
+          <div class="input-group">
+            <input style="width: 100%" type="text" class="input" />
+            <label class="placeholder" for="Email">Email Address</label>
+          </div>
+          <div class="input-group">
+            <input style="width: 100%" type="text" class="input" />
+            <label class="placeholder" for="Street Address"
+              >Street Address</label
+            >
+            <input
+              style="width: 100%"
+              id="streetaddress2"
+              type="text"
+              class="input"
+            />
+          </div>
+
+          <div class="name">
+            <div class="input-group">
+              <input style="width: 100%" type="text" class="input" />
+              <label class="placeholder" for="State">State/Province</label>
+            </div>
+            <div class="input-group">
+              <input style="width: 100%" type="text" class="input" />
+              <label class="placeholder" for="city">City</label>
+            </div>
+          </div>
+
+          <div class="name">
+            <div class="input-group">
+              <input style="width: 100%" type="text" class="input" />
+              <label class="placeholder" for="zipcode">Zip/Postal Code</label>
+            </div>
+            <div class="input-group">
+              <input style="width: 100%" type="text" class="input" />
+              <label class="placeholder" for="Phone">Phone</label>
+            </div>
+          </div>
+          <div class="input-group">
+            <input
+              id="check"
+              [(ngModel)]="billingAndShippingSame"
+              (change)="toggleShippingForm()"
+              type="checkbox"
+            />
+            <label class="billing" for="billing"
+              >My billing and shipping address are the different</label
+            >
+          </div>
+        </form>
+        <form *ngIf="showShippingForm" [formGroup]="shippingForm" class="form">
+          <p class="title">{{ title3 }}</p>
+          <div class="name">
+            <div class="input-group">
+              <input style="width: 100%" type="text" class="input" />
+              <label class="placeholder" for="firstname">First Name</label>
+            </div>
+            <div class="input-group">
+              <input style="width: 100%" type="text" class="input" />
+              <label class="placeholder" for="Lasttname">Last Name</label>
+            </div>
+          </div>
+          <div class="input-group">
+            <input style="width: 100%" type="text" class="input" />
+            <label class="placeholder" for="Email">Email Address</label>
+          </div>
+          <div class="input-group">
+            <input style="width: 100%" type="text" class="input" />
+            <label class="placeholder" for="Street Address"
+              >Street Address</label
+            >
+            <input
+              style="width: 100%"
+              id="streetaddress2"
+              type="text"
+              class="input"
+            />
+          </div>
+
+          <div class="name">
+            <div class="input-group">
+              <input style="width: 100%" type="text" class="input" />
+              <label class="placeholder" for="State">State/Province</label>
+            </div>
+            <div class="input-group">
+              <input style="width: 100%" type="text" class="input" />
+              <label class="placeholder" for="city">City</label>
+            </div>
+          </div>
+
+          <div class="name">
+            <div class="input-group">
+              <input style="width: 100%" type="text" class="input" />
+              <label class="placeholder" for="zipcode">Zip/Postal Code</label>
+            </div>
+            <div class="input-group">
+              <input style="width: 100%" type="text" class="input" />
+              <label class="placeholder" for="Phone">Phone</label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="billing-summary">
+        <p style="" class="title">{{ title1 }}</p>
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span>{{ subtotal | currency }}</span>
+        </div>
+        <div class="summary-row">
+          <span>Shipping</span>
+          <span>{{ shipping | currency }}</span>
+        </div>
+        <div class="summary-row">
+          <span>Tax</span>
+          <span>{{ tax | currency }}</span>
+        </div>
+        <hr />
+        <div class="summary-row total">
+          <span>Grand Total</span>
+          <span>{{ grandTotal | currency }}</span>
+        </div>
+        <button (click)="pay()">Pay Now {{ grandTotal | currency }}</button>
+      </div>
+    </div>
+  </div>
+</app-headerandfooter>

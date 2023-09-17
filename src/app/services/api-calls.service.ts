@@ -130,16 +130,15 @@ const catP = {
     },
     {
       categoryId: '-NePIWSPV0mz0QxXYOrW',
-      categoryName: "Abin's Fashion",
-      categoryDescription: 'Vroom vroom fashion!!',
+      categoryName: 'New Arrivals',
+      categoryDescription: 'Best in class new winter clothes',
       products: [
         {
           id: '-NePNTDjKHLlxYZK2fnU',
-          name: 'Mandhana',
-          description:
-            'Keep your head warm and cozy with this soft mandhana. Perfect for a comfortable day.',
+          name: '\t Off-Shoulder One-Neck Knitted Sweater White / One Size by CJ',
+          description: 'Sweater to keep you warm and stylish.',
           imagePath:
-            'https://i.pinimg.com/736x/a2/b6/94/a2b694a52d159db266d2021343514d1e.jpg',
+            'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRqotKrT7rd2Axxi9mcr_17EAtsalQZG5O_LbLZrnIiLBPMOFt5EVTft0svhxK1BscMy9Q_nQJF0OzVWtK34jqN2v_0AA2K5Y-o2GDh0THJ&usqp=CAE',
           unit: 'unit',
           unitsInStock: 100,
           pricingId: '-NePNTOXHv8MM4_dESLV',
@@ -150,7 +149,7 @@ const catP = {
             {
               key: 'color',
               value: 'red',
-              asset: '#FF0000',
+              asset: '#C1423F',
             },
             {
               key: 'size',
@@ -158,15 +157,71 @@ const catP = {
               asset: 'L',
             },
           ],
-          variants: [],
+          variants: [
+            {
+              unitsInStock: 100,
+              unit: 'unit',
+              productId: '-NePNTDjKHLlxYZK2fnU',
+              imagePath:
+                'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRqotKrT7rd2Axxi9mcr_17EAtsalQZG5O_LbLZrnIiLBPMOFt5EVTft0svhxK1BscMy9Q_nQJF0OzVWtK34jqN2v_0AA2K5Y-o2GDh0THJ&usqp=CAE',
+              name: '\t Off-Shoulder One-Neck Knitted Sweater White / One Size by CJ',
+              description: 'Sweater to keep you warm and stylish.',
+              id: '-NeZoKuf5X9m-EyvtJsS',
+              categoryId: '-NePIWSPV0mz0QxXYOrW',
+              status: 'ACTIVE',
+              pricingId: '-NePNTOXHv8MM4_dESLV',
+              sellingPrice: '100',
+              discount: '10',
+              discountUnit: 'percentage',
+              attributes: [
+                {
+                  key: 'color',
+                  value: 'green',
+                  asset: '#DAF7A6',
+                },
+                {
+                  key: 'size',
+                  value: 'medium',
+                  asset: 'M',
+                },
+              ],
+            },
+            {
+              unitsInStock: 100,
+              unit: 'unit',
+              productId: '-NePNTDjKHLlxYZK2fnU',
+              imagePath:
+                'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRqotKrT7rd2Axxi9mcr_17EAtsalQZG5O_LbLZrnIiLBPMOFt5EVTft0svhxK1BscMy9Q_nQJF0OzVWtK34jqN2v_0AA2K5Y-o2GDh0THJ&usqp=CAE',
+              name: '\t Off-Shoulder One-Neck Knitted Sweater White / One Size by CJ',
+              description: 'Sweater to keep you warm and stylish.',
+              id: '-NeZoYH_R2MozCd32q3G',
+              categoryId: '-NePIWSPV0mz0QxXYOrW',
+              status: 'ACTIVE',
+              pricingId: '-NePNTOXHv8MM4_dESLV',
+              sellingPrice: '100',
+              discount: '10',
+              discountUnit: 'percentage',
+              attributes: [
+                {
+                  key: 'color',
+                  value: 'pink',
+                  asset: '#C53199',
+                },
+                {
+                  key: 'size',
+                  value: 'small',
+                  asset: 'S',
+                },
+              ],
+            },
+          ],
         },
         {
           id: '-NePeIs7IU7lj9jDly4S',
-          name: 'Belt',
-          description:
-            'Keep your hip warm and cozy with this soft mandhana. Perfect for a comfortable day.',
+          name: 'Woollen cap',
+          description: 'Woollen cap for winter',
           imagePath:
-            'https://i.etsystatic.com/13182073/r/il/352778/1894961562/il_fullxfull.1894961562_c6hq.jpg',
+            'https://m.media-amazon.com/images/I/71YN5XFWdVL._AC_UL640_FMwebp_QL65_.jpg',
           unit: 'unit',
           unitsInStock: 100,
           pricingId: '-NePeJ2U-GlJeOv7U9lv',
@@ -199,7 +254,7 @@ const catP = {
             {
               key: 'color',
               value: 'brown',
-              asset: '#111111',
+              asset: '#5C4033',
             },
           ],
           variants: [
@@ -222,8 +277,8 @@ const catP = {
               attributes: [
                 {
                   key: 'color',
-                  value: 'blue',
-                  asset: '#666666',
+                  value: 'black',
+                  asset: '#000000',
                 },
               ],
             },
@@ -231,11 +286,10 @@ const catP = {
         },
         {
           id: '-NePfhYFgpHseGdF8vEP',
-          name: 'Watermelon shirt',
-          description:
-            'Keep your torso handsome with this soft shirt. Perfect for a comfortable day.',
+          name: "DIAZ Men's Cotton Crew Neck Sweatshirt/Sweater",
+          description: 'Best Tshirt for the cold weather',
           imagePath:
-            'https://img.tatacliq.com/images/i6/1348Wx2000H/MP000000006583365_1348Wx2000H_20200226025005.jpeg',
+            'https://m.media-amazon.com/images/I/61sFyENZJ6L._UX679_.jpg',
           unit: 'unit',
           unitsInStock: 100,
           pricingId: '-NePfhfjmwwH6IZlALDI',

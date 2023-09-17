@@ -29,4 +29,18 @@ export class CartItemComponent {
     this.cartService.decrementQuantityOrDeleteProductFromCart(product.id);
     console.log(this.decrementQuantity);
   }
+
+  selectColor(color: string) {
+    // Remove the selected class from all color divs
+    const colorDivs: any = document.querySelectorAll('.color');
+    for (const colorDiv of colorDivs) {
+      colorDiv.classList.remove('selected');
+    }
+
+    // Add the selected class to the clicked color div
+    const clickedColorDiv = document.querySelector(
+      '.color[style*="background-color: ' + color + '"]'
+    );
+    clickedColorDiv?.classList.add('selected');
+  }
 }

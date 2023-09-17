@@ -13,9 +13,16 @@
       <div class="color-container">
         <div class="common-text">Color</div>
         <div class="colors">
-          <div class="color"></div>
-          <div class="color"></div>
-          <div class="color"></div>
+          <div
+            *ngFor="let color of cart.colorsAvailable; let j = index"
+            class="color"
+          >
+            <div
+              [style]="{ 'background-color': color }"
+              style="width: 100%; height: 100%"
+              (click)="selectColor(color)"
+            ></div>
+          </div>
         </div>
       </div>
 
@@ -48,12 +55,13 @@
             </button>
           </div>
         </div>
-        <div class="size">
+
+        <div class="size" *ngIf="cart.sizesAvailable.length">
           <div class="common-text">Size</div>
           <select class="size-drop-down">
-            <option value="M">M</option>
-            <option value="L">L</option>
-            <option value="XL">XL</option>
+            <option *ngFor="let size of cart.sizesAvailable" [value]="size">
+              {{ size }}
+            </option>
           </select>
         </div>
       </div>

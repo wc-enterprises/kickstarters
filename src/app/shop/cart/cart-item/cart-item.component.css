@@ -78,10 +78,15 @@
 .color {
   height: 50px;
   width: 50px;
-  background-color: gold;
   box-sizing: border-box;
+  padding: 2px;
   margin-right: 10px;
   margin-top: 5px;
+  cursor: pointer;
+}
+
+.highlighted-color {
+  border: 1px solid #000;
 }
 
 .quantity-and-size {

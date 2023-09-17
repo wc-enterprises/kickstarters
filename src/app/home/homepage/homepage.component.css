@@ -46,7 +46,7 @@
   }
 
   .background-mobile {
-    background-image: url("./image-mobile.svg");
+    background-image: url("./hero-image.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;

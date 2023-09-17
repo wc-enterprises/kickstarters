@@ -1,0 +1,85 @@
+.background {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero-image {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./hero-image.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.background-mobile {
+  display: none;
+}
+#sub-title {
+  font-family: "Inter";
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 79.2px;
+  color: black;
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding-left: 30px;
+  padding-top: 200px;
+  z-index: 1;
+}
+
+#sub-title2 {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25.6px;
+  margin-top: -5vh;
+}
+
+@media (max-width: 640px) {
+  .background {
+    display: none;
+  }
+
+  .background-mobile {
+    background-image: url("./image-mobile.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: auto;
+    height: 100vh;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-contents: center;
+  }
+  .title-mobile {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 30px;
+
+    z-index: 1;
+  }
+  #sub-title-mobile {
+    color: #fff;
+    font-family: "Inter";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 35px;
+  }
+  #sub-title2-mobile {
+    color: #fff;
+    font-family: "Inter";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    position: relative;
+    bottom: 25px;
+  }
+}

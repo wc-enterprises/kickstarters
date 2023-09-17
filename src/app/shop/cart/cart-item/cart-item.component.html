@@ -1,34 +1,71 @@
-<html>
-
-<body>
-
-  <div *ngFor="let cart of cartItems | async" class="cartitem">
+<div *ngFor="let cart of cartItems | async" class="cartitem-d">
+  <div class="item-image">
     <img id="img" [src]="cart.imagePath" />
-    <div class="box">
-      <div class="box1">
-        <p id="title">{{ cart.name }}</p>
-        <p id="rate">£{{ cart.sellingPrice }}</p>
-        <p></p>
+  </div>
+  <div class="item-details">
+    <div class="item-details-actual-area">
+      <div class="name">
+        <div class="name-container">
+          {{ cart.name }}
+        </div>
       </div>
 
-      <p style="margin-top: -1vh">Quantity</p>
-      <div class="quantity-selector">
-        <button *ngIf="cart.quantity > 1" style="border-radius: 3.333px 0px 0px 3.333px" class="decrement-button"
-          (click)="decrementQuantity(cart)">
-          -
-        </button>
-        <button *ngIf="cart.quantity <= 1" class="delete-basket-icon">
-          <img style="opacity: 0.5" (click)="decrementQuantity(cart)" src="./assets/delete1.svg" />
-        </button>
-        <button class="quantity-number">{{cart.quantity }}</button>
-        <button class="increment-button" style="border-radius: 0px 3.333px 3.333px 0px"
-          (click)="incrementQuantity(cart)">
-          +
-        </button>
+      <div class="color-container">
+        <div class="common-text">Color</div>
+        <div class="colors">
+          <div
+            *ngFor="let color of cart.colorsAvailable; let j = index"
+            class="color"
+          >
+            <div
+              [style]="{ 'background-color': color }"
+              style="width: 100%; height: 100%"
+              (click)="selectColor(color)"
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="quantity-and-size">
+        <div class="quantity">
+          <div class="common-text">Quantity</div>
+          <div class="quantity-selector">
+            <button
+              *ngIf="cart.quantity > 1"
+              style="border-radius: 3.333px 0px 0px 3.333px"
+              class="decrement-button"
+              (click)="decrementQuantity(cart)"
+            >
+              -
+            </button>
+            <button *ngIf="cart.quantity <= 1" class="delete-basket-icon">
+              <img
+                style="opacity: 0.5"
+                (click)="decrementQuantity(cart)"
+                src="./assets/delete1.svg"
+              />
+            </button>
+            <button class="quantity-number">{{ cart.quantity }}</button>
+            <button
+              class="increment-button"
+              style="border-radius: 0px 3.333px 3.333px 0px"
+              (click)="incrementQuantity(cart)"
+            >
+              +
+            </button>
+          </div>
+        </div>
+
+        <div class="size" *ngIf="cart.sizesAvailable.length">
+          <div class="common-text">Size</div>
+          <select class="size-drop-down">
+            <option *ngFor="let size of cart.sizesAvailable" [value]="size">
+              {{ size }}
+            </option>
+          </select>
+        </div>
       </div>
     </div>
   </div>
-
-</body>
-
-</html>
+  <div class="item-price-box">£{{ cart.sellingPrice * cart.quantity }}</div>
+</div>

@@ -15,6 +15,16 @@ export interface ICategorizedProducts {
   products: IProduct[];
 }
 
+export interface IProductForCart {
+  id: string;
+  name: string;
+  quantity: number;
+  imagePath: string;
+  sellingPrice: string;
+  colorsAvailable: string[];
+  sizesAvailable: string[];
+}
+
 export interface IProduct {
   productId: string;
   quantity: number;

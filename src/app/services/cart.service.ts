@@ -1,7 +1,7 @@
 // cart.service.ts
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, from, of } from 'rxjs';
-import { IProduct } from '../utils/interface';
+import { IProduct, IProductForCart } from '../utils/interface';
 
 @Injectable({
   providedIn: 'root',
@@ -13,13 +13,13 @@ export class CartService {
   private finalPriceSubject = new BehaviorSubject<number>(0);
   finalPrice$ = this.finalPriceSubject.asObservable();
 
-  cartItems: IProduct[] = [];
+  cartItems: IProductForCart[] = [];
 
   private cartSubject = new BehaviorSubject<boolean>(false);
   cartState = this.cartSubject.asObservable();
   defaultFinalPrice: number = 0;
 
-  addToCart(product: IProduct) {
+  addToCart(product: IProductForCart) {
     const existingProduct = this.cartItems.find(
       (cart) => cart.id === product.id
     );
@@ -74,7 +74,7 @@ export class CartService {
 
   updateProductsInCart(product: any) {}
 
-  getCartItems(): Observable<IProduct[]> {
+  getCartItems(): Observable<IProductForCart[]> {
     return of(this.cartItems);
   }
 

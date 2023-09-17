@@ -9,39 +9,85 @@ import { Observable } from 'rxjs';
       .cart {
         background-color: #ffffff;
         color: black;
-        width: 30vw;
+        width: 700px;
         height: 100vh;
         position: fixed;
         box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.5);
         transition: right 0.3s ease-in-out;
-        right: -30px;
+        right: -1px;
         z-index: 20;
+        padding: 30px;
+        box-sizing: border-box;
       }
+
+      .fill-base {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
       .header {
-        width: auto;
-        height: 8vh;
+        width: 100%;
+        height: 30px;
         display: flex;
         justify-content: space-between;
-        padding: 8px 0 0 5px;
-        align-items: center;
-
-        border-bottom: 1px solid #e3e3e3;
+        padding-bottom: 20px;
       }
+
+      .header::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 80px;
+        width: 100%; /* Extend the width to 100% */
+        height: 1px; /* Adjust the border thickness as needed */
+        background-color: #e3e3e3;
+      }
+
       .inner-head {
         display: flex;
-        width: 5vw;
-        gap: 10px;
       }
+
+      .scrollable-container {
+        height: 75%;
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+
+      .footer {
+        width: 100%;
+        height: auto;
+      }
+
+      .footer::before {
+        content: '';
+        position: absolute;
+        right: 0;
+
+        width: 100%; /* Extend the width to 100% */
+        height: 1px; /* Adjust the border thickness as needed */
+        background-color: #e3e3e3;
+      }
+
+      .btn-box {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
       button {
         display: flex;
-        width: 25vw;
+        width: 100%;
         padding: 16px 10px;
         justify-content: center;
         align-items: center;
         gap: 10px;
         border-radius: 12px;
         background: #000;
-        margin-left: 2vw;
         color: #fff;
         font-family: Inter;
         font-size: 15px;
@@ -51,11 +97,7 @@ import { Observable } from 'rxjs';
         cursor: pointer;
         border: none;
       }
-      .footer {
-        width: auto;
-        padding-bottom: 30px;
-      }
-      // mobile screen
+
       @media (max-width: 640px) {
         .cart {
           right: -25px;

@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CartService } from '../services/cart.service';
+import { parseProductForCart } from '../utils/util';
 @Component({
   selector: 'app-button',
   template: `<html>
@@ -76,14 +77,10 @@ export class ButtonComponent {
 
   addToCart() {
     this.isAddedToCart = true;
-    this.cartService.addToCart(this.product);
+    this.cartService.addToCart(parseProductForCart(this.product));
     setTimeout(() => {
       this.isAddedToCart = false;
     }, this.displayDuration);
   }
   @Output() addToCartClicked = new EventEmitter<void>();
-
-  addProductToCart(product: any) {
-    console.log('product', product);
-  }
 }

@@ -308,6 +308,61 @@ const catP = {
       ],
     },
     {
+      categoryId: '-Ne_5wXnjBDXRcx5ysyw',
+      categoryName: 'Student Kits',
+      categoryDescription:
+        'Kits that make you feel home the moment you arrive UK.',
+      products: [
+        {
+          id: '-Ne_6O7n_O8NXVisSOUn',
+          name: 'Bedding Kit - Deluxe (Linen, Duvet & Pillow)',
+          description: 'Ultimate bedding kit.',
+          imagePath:
+            'https://www.unikitout.com/cdn/shop/files/COZE_Double_200tc_White_a_37d91818-2e0c-488c-bc9d-45535555a0f2_1836x1836.jpg?v=1691766403',
+          unit: 'unit',
+          unitsInStock: 100,
+          pricingId: '-Ne_6OE1D9R1ZbgS7H9M',
+          sellingPrice: '25',
+          discount: '10',
+          discountUnit: 'percentage',
+          attributes: [],
+          variants: [],
+        },
+        {
+          id: '-Ne_6sClKDX9Op5IirIG',
+          name: 'Standard Kitchen Kit',
+          description:
+            'Don’t know your spatula from your spoon? We have you covered with kitchen essentials, perfect for beginner chefs who need the basics.1. Cooking Set 2. Person Porcelain dinner set 3. 12pc Utensils set 4. Knives set',
+          imagePath:
+            'https://cdn.shopify.com/s/files/1/1233/0208/files/UKO_Kitchen-Kit_Gold_Salmon-Back_WEB_4623f84c-ba16-440c-a149-5552ca753a50.jpg?v=1691499187',
+          unit: 'unit',
+          unitsInStock: 100,
+          pricingId: '-Ne_6sHeFjOTARt1k26w',
+          sellingPrice: '25',
+          discount: '10',
+          discountUnit: 'percentage',
+          attributes: [],
+          variants: [],
+        },
+        {
+          id: '-Ne_77ue1suDC4LrNMxe',
+          name: 'Bathroom Kit',
+          description:
+            'Level up your loo with our Student Bathroom Kit. 🛀 This essential Starter Kit will leave you feeling fresh and ready to tackle a long day at Uni sat in lectures. All of our towels are Hotel grade, upgrade to our iconic Coze Towels for a luxury 5* Hotel experience.',
+          imagePath:
+            'https://www.unikitout.com/cdn/shop/files/UKO-BATHROOM-Kit-SILVER-PINK-TOWELS_SALMON-BACK_a3fe3d79-a668-4f23-b749-a79dfc692413_1836x1836.jpg?v=1691628441',
+          unit: 'unit',
+          unitsInStock: 100,
+          pricingId: '-Ne_7837RSmvCrQVMpZg',
+          sellingPrice: '18',
+          discount: '10',
+          discountUnit: 'percentage',
+          attributes: [],
+          variants: [],
+        },
+      ],
+    },
+    {
       categoryId: '3XqbFjbiY2xl0f9Dsijb',
       categoryName: 'Electronics',
       categoryDescription:

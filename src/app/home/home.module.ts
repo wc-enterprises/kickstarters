@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from '../app.component';
+import { blogsection } from '../common-components/blog-section/blog-section.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { AppComponent } from '../app.component';
     CartItemComponent,
     PaymentsComponent,
     FAQComponent,
+    blogsection
   ],
   imports: [
     BrowserModule,

@@ -26,14 +26,16 @@ import { Observable } from 'rxjs';
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+       
       }
 
       .header {
         width: 100%;
-        height: 30px;
+        height:auto;
         display: flex;
         justify-content: space-between;
         padding-bottom: 20px;
+       
       }
 
       .header::after {
@@ -44,6 +46,7 @@ import { Observable } from 'rxjs';
         width: 100%; /* Extend the width to 100% */
         height: 1px; /* Adjust the border thickness as needed */
         background-color: #e3e3e3;
+
       }
 
       .inner-head {
@@ -99,12 +102,18 @@ import { Observable } from 'rxjs';
       }
 
       @media (max-width: 640px) {
+        .header{
+          
+          padding-top:15px;
+
+        }
         .cart {
           right: -25px;
           width: 100%;
+          padding:5px;
         }
         #cancel {
-          margin-right: -10px;
+          margin-right:30px;
         }
         #total-rate {
           margin-right: -18px;

@@ -10,9 +10,10 @@ import { CartService } from '../../services/cart.service';
 })
 export class ProductSectionComponent {
   @ViewChildren('cardColumn') cardColumn!: QueryList<ElementRef>;
+  @ViewChildren('cardColumnKits') cardColumnKits!: QueryList<ElementRef>;
 
   categorizedProducts: any[] = []; // Array to store the categorized product data
-
+  studentKits:any[]=[];
   constructor(
     private router: Router,
     private apiCallsService: ApiCallsService,
@@ -34,9 +35,25 @@ export class ProductSectionComponent {
         console.error('Error fetching categorized products:', error);
       }
     );
+
+
+    this.apiCallsService.getStudentKits().subscribe( 
+      (data:any) =>{
+        data.data.forEach((item:any,index:number)=>{
+          if(item.products.length === 0)data.data.splice(index, 1);
+        });
+        this.studentKits=data.data;
+        console.log('student kits:', this.studentKits);
+      },
+      (error)=>{
+        console.log('Error fetching student Kits:',error);
+      }
+    );
   }
 
-  scrollLeft(catIndex: number) {
+  scrollLeft(catIndex: number, context: 'cardColumn' | 'cardColumnKits') {
+
+if(context === 'cardColumn')
     this.cardColumn.forEach((item, index) => {
       if (index === catIndex) {
         item.nativeElement.scrollBy({
@@ -45,10 +62,35 @@ export class ProductSectionComponent {
         });
       }
     });
+
+  else if(context === 'cardColumnKits')
+  this.cardColumnKits.forEach((item, index) => {
+    if (index === catIndex) {
+      item.nativeElement.scrollBy({
+        left: -item.nativeElement.offsetWidth / 2,
+        behavior: 'smooth',
+      });
+    }
+  });
+
   }
 
-  scrollRight(catIndex: number) {
+  scrollRight(catIndex: number, context: 'cardColumn' | 'cardColumnKits') {
+
+    if(context === 'cardColumn')
     this.cardColumn.forEach((item, index) => {
+      if (index === catIndex) {
+        item.nativeElement.scrollBy({
+          left: item.nativeElement.offsetWidth / 2,
+          behavior: 'smooth',
+        });
+      }
+    });
+
+    else if 
+    (context === 'cardColumnKits'
+    )
+    this.cardColumnKits.forEach((item, index) => {
       if (index === catIndex) {
         item.nativeElement.scrollBy({
           left: item.nativeElement.offsetWidth / 2,

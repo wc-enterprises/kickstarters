@@ -18,6 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from '../app.component';
 import { blogsection } from '../common-components/blog-section/blog-section.component';
+import { blogpage } from '../blog-page/blog-page.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { blogsection } from '../common-components/blog-section/blog-section.comp
     CartItemComponent,
     PaymentsComponent,
     FAQComponent,
-    blogsection
+    blogsection,
+    blogpage
   ],
   imports: [
     BrowserModule,

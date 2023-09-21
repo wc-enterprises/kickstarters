@@ -13,12 +13,13 @@ import { Observable } from 'rxjs';
         height: 100vh;
         position: fixed;
         box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.5);
-        transition: right 0.3s ease-in-out;
+        transition: right 0.5s ease-in-out;
         right: -1px;
         z-index: 20;
         padding: 30px;
         box-sizing: border-box;
       }
+
 
       .fill-base {
         width: 100%;
@@ -136,7 +137,7 @@ import { Observable } from 'rxjs';
 })
 export class CartComponent {
   @Input() isCartOpen: boolean = false;
-  @Output() closeCart: EventEmitter<void> = new EventEmitter<void>();
+   @Output() closeCart: EventEmitter<void> = new EventEmitter<void>();
   cartCount!: number;
   finalPrice$: any;
 

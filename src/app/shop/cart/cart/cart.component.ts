@@ -34,8 +34,8 @@ import { Observable } from 'rxjs';
         height:auto;
         display: flex;
         justify-content: space-between;
-        padding-bottom: 20px;
-       
+        padding-bottom: 15px;
+     
       }
 
       .header::after {
@@ -104,25 +104,28 @@ import { Observable } from 'rxjs';
       @media (max-width: 640px) {
         .header{
           
-          padding-top:15px;
+          padding-top:10px;
 
         }
+        .header::after {top:60px;}
         .cart {
           right: -25px;
           width: 100%;
           padding:5px;
         }
         #cancel {
-          margin-right:30px;
+          margin-right:32px;
+          width:28px;
+          height:28px;
         }
         #total-rate {
-          margin-right: -18px;
+          margin-right: 25px;
         }
         .header {
           padding-left: 5px;
         }
         button {
-          width: 90vw;
+          width: 85%;
         }
         #items {
           padding-left: 8px;

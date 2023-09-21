@@ -1,6 +1,35 @@
 <html>
   <body>
     <div class="list">
+      <!-- StudentKits section -->
+      <div *ngFor="let student of studentKits; let j= index" class="studentkits-section">
+        <div style=" width: 100; height: auto;display: flex;justify-content: space-between;">
+          <p id="sub-title3">{{ student.categoryName }}</p>
+          <div id="arrow-button">
+            <img id="left-arrow" (click)="scrollLeft(j, 'cardColumnKits')" src="./assets/arrowleft.svg" />
+            <img id="right-arrow" (click)="scrollRight(j, 'cardColumnKits')" src="./assets/arrowright.svg" />
+          </div>
+        </div>
+        <div class="total-cards" #cardColumnKits>
+          <div class="studentkits-container" *ngFor="let product of student.products; let i = index">
+            <div class="studentkits-image">
+              <img id="img" [src]="product.imagePath">
+            </div>
+            <div class="studentkits-name">{{product.name}}</div>
+            <div class="studentkits-description">{{product.description}}
+              <ul>
+                <li *ngFor="let item of product.productList; let j=index">{{product.productList[j]}}</li>
+              </ul>
+            </div>
+      
+            <div class="studentkits-price">£ {{product.sellingPrice}}</div>
+            <div class="studentkits-button"> <app-button [product]="product"></app-button></div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <!-- productcategory section -->
       <div
         *ngFor="let category of categorizedProducts; let j = index"
         class="card-title"
@@ -17,41 +46,38 @@
           <div id="arrow-button">
             <img
               id="left-arrow"
-              (click)="scrollLeft(j)"
+              (click)="scrollLeft(j, 'cardColumn')"
               src="./assets/arrowleft.svg"
             />
             <img
               id="right-arrow"
-              (click)="scrollRight(j)"
+              (click)="scrollRight(j, 'cardColumn')"
               src="./assets/arrowright.svg"
             />
           </div>
         </div>
 
         <div class="total-cards" #cardColumn>
-          <div
-            class="product-card"
-            *ngFor="let product of category.products; let i = index"
-          >
-            <div>
-              <div class="product-image-container">
-                <img
-                  class="product-image"
-                  [src]="product.imagePath"
-                  alt="Product Image"
-                  (error)="handleImageError($event)"
-                />
+        <div class="productcard-container" *ngFor="let product of category.products; let i = index">
+          <div class="image-container">
+            <img id="img" [src]="product.imagePath">
               </div>
-              <h3 class="product-name">{{ product.name }}</h3>
-            </div>
-
-            <div>
-              <p class="product-rate">£ {{ product.sellingPrice }}</p>
-              <app-button [product]="product"></app-button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+              <div class="product-name">
+                {{product.name}}
+              </div>
+              <div class="description">
+                {{product.description}}
+              </div>
+              <div class="price">
+                £ {{product.sellingPrice}}
+              </div>
+              <div class="cartbutton">
+                <app-button [product]="product"></app-button>
+              </div>
+              </div>
+              </div>
+              </div>
+              </div>
+              
   </body>
 </html>

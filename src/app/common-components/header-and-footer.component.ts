@@ -250,7 +250,8 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
           line-height: 15px;
         }
         .bag {
-          padding-left: 100px;
+          margin-left: 15px;
+         
         }
         .right {
           width: 35%;
@@ -320,16 +321,23 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
           background-color: #e9ecef;
         }
       }
+      @media (max-width: 580px) {
+        .bag {
+         padding-left:90px;
+        }
+      }
       @media (max-width: 425px) {
         .bag {
-          padding-left: 80px;
+          padding-left:80px;
         }
       }
       @media (max-width: 375px) {
         .bag {
-          padding-left: 60px;
+          padding-left:60px;
         }
       }
+    
+      
     `,
   ],
 })

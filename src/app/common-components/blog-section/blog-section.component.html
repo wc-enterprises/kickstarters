@@ -6,17 +6,17 @@
         <div class="card-container">
             <div class="blogsection-cards" *ngFor="let blog of blogs">
                 <div class="image">
-                    <img id="img" [src]="blog.imageUrl" alt="Blog Image">
+                    <img id="img" [src]="blog.Image" alt="Blog Image">
                 </div>
                 <div class="blogdateandtime">
-                    <span class="date">{{ blog.date }} | </span>
-                    <span class="time">{{ blog.time }}</span>
+                    <span class="date">{{ blog.Date }} | </span>
+                    <span class="time">{{ blog.Author }}</span>
                 </div>
                 <div class="blog-name">
-                    {{ blog.name }}
+                    {{ blog.Title }}
                 </div>
                 <div class="blog-description">
-                    {{ blog.description }}
+                    {{ blog.Description }}
                 </div>
             </div>
         </div>

@@ -1,42 +1,15 @@
-/* Style for the detailed blog page container */
-.detailed-blog {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background-color: #f9f9f9; /* Background color for the blog page */
-  }
-  
-  /* Style for the enlarged blog image */
-  .detailed-blog-image {
+.blog-container{
+    width:100%;
+    height:auto;
+}
+
+.blog-image{
+    width: 100%;
+    height: 600px;
+    overflow: hidden; 
+}
+#img{
     max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow to the image */
-  }
-  
-  /* Style for the blog content */
-  .detailed-blog-content {
-    text-align: left;
-    max-width: 800px; /* Adjust the maximum width as needed */
-    padding: 20px;
-    background-color: #fff; /* Background color for the blog content */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow to the content box */
-  }
-  
-  /* Style for blog title */
-  .detailed-blog-content h2 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  /* Style for blog description or content text */
-  .detailed-blog-content p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 15px;
-  }
-  
-  /* Add more styles as needed for your specific blog content */
-  
+    height: auto; /* Automatically adjust the height based on the aspect ratio */
+    object-fit: cover;
+}

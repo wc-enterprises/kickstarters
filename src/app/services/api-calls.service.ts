@@ -145,102 +145,6 @@ const catP = {
   message: 'Categorized products fetched successfully',
   data: [
     {
-      categoryId: '-NcmH6GJuuOkLIlXHT8s',
-      categoryName: 'Bathroom Essentials',
-      categoryDescription:
-        'Transform your bathroom into a sanctuary of comfort and functionality with our curated Bathroom Essentials Collection. From daily necessities to luxurious additions, this collection ensures every moment in your bathroom is both practical and pampering.',
-      products: [
-        {
-          id: '-NcmHS0KT4EdAidl0WuV',
-          name: 'Bath Towel',
-          description:
-            "Drape yourself in the opulence of our Blue Luxury Bath Towel. Crafted with meticulous care, this towel not only offers exceptional absorbency but also elevates your bathroom's aesthetic with its rich blue hue.",
-          imagePath:
-            'https://firebasestorage.googleapis.com/v0/b/kickstarters-5a5d4.appspot.com/o/bath-towel.png.jpeg?alt=media&token=9b2489bd-148a-4607-b5f3-3ba44ee8bc98',
-          unit: 'unit',
-          unitsInStock: 5,
-          pricingId: '-NcmHSCtSt9zXg6NVsvr',
-          sellingPrice: '11',
-          discount: '3',
-          discountUnit: 'percentage',
-          attributes: [],
-          variants: [],
-        },
-        {
-          id: '-NcmIf0UUrfdaFuiOJD4',
-          name: 'Home Collections 100% Cotton Terry Bath Mat',
-          description:
-            'Step onto the plush comfort of our Home Collections 100% Cotton Terry Bath Mat. Expertly crafted to provide a soft landing for your feet, this bath mat combines the best of luxury and functionality for your bathroom.',
-          imagePath:
-            'https://firebasestorage.googleapis.com/v0/b/kickstarters-5a5d4.appspot.com/o/bath-mat.png.jpeg?alt=media&token=133043c6-9159-4309-b0d9-2115d999084e',
-          unit: 'unit',
-          unitsInStock: 5,
-          pricingId: '-NcmIfeHS0KqPJsusdIB',
-          sellingPrice: '7',
-          discount: '3',
-          discountUnit: 'percentage',
-          attributes: [],
-          variants: [],
-        },
-      ],
-    },
-    {
-      categoryId: '-NcmJy2eHFPikd7qla83',
-      categoryName: 'Food Essentials',
-      categoryDescription:
-        'Embarking on a new academic journey in the UK? Our curated collection of Food Essentials ensures that students from around the globe feel right at home. From familiar flavors to must-try British staples, this range is designed to cater to the diverse palates of international students.',
-      products: [
-        {
-          id: '-NcmKP8D1egM8G2wlAFc',
-          name: 'Pot Noodle Bombay Bad Boy 90g x12',
-          description:
-            "Spice up your quick meal game with our pack of 12 Pot Noodle Bombay Bad Boy. Infused with the fiery flavors of the East, this instant noodle pot offers a tantalizing taste adventure that's both convenient and delicious.",
-          imagePath:
-            'https://firebasestorage.googleapis.com/v0/b/kickstarters-5a5d4.appspot.com/o/noodles.png.jpeg?alt=media&token=6d2cc651-8f1f-4349-82cd-2e434e9311ee',
-          unit: 'packet',
-          unitsInStock: 5,
-          pricingId: '-NcmKPK-5mkrQfNmiJ6_',
-          sellingPrice: '16',
-          discount: '8',
-          discountUnit: 'percentage',
-          attributes: [],
-          variants: [],
-        },
-        {
-          id: '-NcmLUDLofenOMulkErm',
-          name: 'Oat Burst Instant Porridge Snack Original Oats 57g x8 packets',
-          description:
-            'Embrace the wholesome goodness of oats with our Oat Burst Instant Porridge Snack in Original Oats flavor. Packed in convenient portions, this porridge offers a heartwarming and nutritious start to your day, no matter how busy your morning might be.',
-          imagePath:
-            'https://firebasestorage.googleapis.com/v0/b/kickstarters-5a5d4.appspot.com/o/oats.png.jpeg?alt=media&token=484b59f6-32a1-433c-bc40-89e08ecb1dc6',
-          unit: 'packet',
-          unitsInStock: 5,
-          pricingId: '-NcmLUkgVBJ4n2HxuNET',
-          sellingPrice: '6',
-          discount: '8',
-          discountUnit: 'percentage',
-          attributes: [],
-          variants: [],
-        },
-        {
-          id: '-NcmMXTMpHOo7zbLjbzM',
-          name: 'Basmati Rice Microwavable Packet 250g x12',
-          description:
-            'Discover the unparalleled convenience and authentic taste with our ce Basmati Rice Microwavable Packets. Each box contains 12 individual packets, ensuring you have a ready-to-go, aromatic serving of Basmati rice at your fingertips.',
-          imagePath:
-            'https://firebasestorage.googleapis.com/v0/b/kickstarters-5a5d4.appspot.com/o/basmati-rice.png.jpeg?alt=media&token=08658df0-9a9c-44fc-80d8-f2d6fd691bcf',
-          unit: 'packet',
-          unitsInStock: 5,
-          pricingId: '-NcmMY8Fm7Bbcx8T_bZq',
-          sellingPrice: '11',
-          discount: '3',
-          discountUnit: 'percentage',
-          attributes: [],
-          variants: [],
-        },
-      ],
-    },
-    {
       categoryId: '-NePIWSPV0mz0QxXYOrW',
       categoryName: 'New Arrivals',
       categoryDescription: 'Best in class new winter clothes',
@@ -420,61 +324,6 @@ const catP = {
       ],
     },
 
-    {
-      categoryId: '3XqbFjbiY2xl0f9Dsijb',
-      categoryName: 'Electronics',
-      categoryDescription:
-        "Experience the future with our curated range of cutting-edge electronics. Whether you're in search of the latest smartphones that seamlessly integrate technology, or innovative gadgets that simplify your life, our collection offers you a glimpse into the forefront of innovation. Explore the fusion of modern technology and convenience in every device.",
-      products: [],
-    },
-    {
-      categoryId: 'JoPQ3AF7DVojkJBGweV9',
-      categoryName: 'Kitchen Essentials',
-      categoryDescription:
-        'Enhance your culinary skills with our array of kitchen essentials, designed to make your cooking journey delightful and efficient. From classic utensils that stand the test of time to modern cookware that caters to contemporary needs, our collection celebrates the art of cooking. Discover a world of flavors and cultures through carefully chosen kitchen tools.',
-      products: [
-        {
-          id: '-NcmAz4ETUcP0oQnNWkX',
-          name: '2pk Printed Lunchboxes',
-          description:
-            'Add a touch of style to your lunchtime routine with our 2pk Printed Lunchboxes. Designed with vibrant prints and crafted for functionality, these lunchboxes are perfect for school, work, or any on-the-go meal.',
-          imagePath:
-            'https://cdn.media.amplience.net/i/primark/991067396980_01?w=2048&fmt=auto',
-          unit: 'unit',
-          unitsInStock: 5,
-          pricingId: '-NcmAzGmI1EObftPhKTp',
-          sellingPrice: '6',
-          discount: '2',
-          discountUnit: 'percentage',
-          attributes: [],
-          variants: [],
-        },
-      ],
-    },
-    {
-      categoryId: 'afhQQvcmarAem9K1FYya',
-      categoryName: 'Stationery',
-      categoryDescription:
-        'Elevate your writing experience with our assortment of stationery that blends functionality with artistic expression. From handcrafted journals with intricate details to sustainable writing instruments, our stationery collection encourages you to embark on a journey of creativity. Put your thoughts to paper with tools that inspire your imagination.',
-      products: [
-        {
-          id: '-NcmGpz-S7rCqGTDOMTx',
-          name: 'Ombré 10000mAh Power Bank',
-          description:
-            'Stay charged in style with our Ombré 10000mAh Power Bank. Marrying high-capacity performance with a stunning ombré design, this power bank is both a tech essential and a fashion statement.',
-          imagePath:
-            'https://cdn.media.amplience.net/i/primark/991060546935_01?w=2048&fmt=auto',
-          unit: 'unit',
-          unitsInStock: 5,
-          pricingId: '-NcmGqjMa5jrvuYZoPEf',
-          sellingPrice: '16',
-          discount: '4',
-          discountUnit: 'percentage',
-          attributes: [],
-          variants: [],
-        },
-      ],
-    },
     {
       categoryId: 'pB0ZywgBJCBF7ralBcHT',
       categoryName: 'Bedroom essentials',
@@ -660,6 +509,62 @@ const catP = {
       ],
     },
     {
+      categoryId: '-NcmJy2eHFPikd7qla83',
+      categoryName: 'Food Essentials',
+      categoryDescription:
+        'Embarking on a new academic journey in the UK? Our curated collection of Food Essentials ensures that students from around the globe feel right at home. From familiar flavors to must-try British staples, this range is designed to cater to the diverse palates of international students.',
+      products: [
+        {
+          id: '-NcmKP8D1egM8G2wlAFc',
+          name: 'Pot Noodle Bombay Bad Boy 90g x12',
+          description:
+            "Spice up your quick meal game with our pack of 12 Pot Noodle Bombay Bad Boy. Infused with the fiery flavors of the East, this instant noodle pot offers a tantalizing taste adventure that's both convenient and delicious.",
+          imagePath:
+            'https://firebasestorage.googleapis.com/v0/b/kickstarters-5a5d4.appspot.com/o/noodles.png.jpeg?alt=media&token=6d2cc651-8f1f-4349-82cd-2e434e9311ee',
+          unit: 'packet',
+          unitsInStock: 5,
+          pricingId: '-NcmKPK-5mkrQfNmiJ6_',
+          sellingPrice: '16',
+          discount: '8',
+          discountUnit: 'percentage',
+          attributes: [],
+          variants: [],
+        },
+        {
+          id: '-NcmLUDLofenOMulkErm',
+          name: 'Oat Burst Instant Porridge Snack Original Oats 57g x8 packets',
+          description:
+            'Embrace the wholesome goodness of oats with our Oat Burst Instant Porridge Snack in Original Oats flavor. Packed in convenient portions, this porridge offers a heartwarming and nutritious start to your day, no matter how busy your morning might be.',
+          imagePath:
+            'https://firebasestorage.googleapis.com/v0/b/kickstarters-5a5d4.appspot.com/o/oats.png.jpeg?alt=media&token=484b59f6-32a1-433c-bc40-89e08ecb1dc6',
+          unit: 'packet',
+          unitsInStock: 5,
+          pricingId: '-NcmLUkgVBJ4n2HxuNET',
+          sellingPrice: '6',
+          discount: '8',
+          discountUnit: 'percentage',
+          attributes: [],
+          variants: [],
+        },
+        {
+          id: '-NcmMXTMpHOo7zbLjbzM',
+          name: 'Basmati Rice Microwavable Packet 250g x12',
+          description:
+            'Discover the unparalleled convenience and authentic taste with our ce Basmati Rice Microwavable Packets. Each box contains 12 individual packets, ensuring you have a ready-to-go, aromatic serving of Basmati rice at your fingertips.',
+          imagePath:
+            'https://firebasestorage.googleapis.com/v0/b/kickstarters-5a5d4.appspot.com/o/basmati-rice.png.jpeg?alt=media&token=08658df0-9a9c-44fc-80d8-f2d6fd691bcf',
+          unit: 'packet',
+          unitsInStock: 5,
+          pricingId: '-NcmMY8Fm7Bbcx8T_bZq',
+          sellingPrice: '11',
+          discount: '3',
+          discountUnit: 'percentage',
+          attributes: [],
+          variants: [],
+        },
+      ],
+    },
+    {
       categoryId: 'uXV6AvPdUJVgV13ZBZLY',
       categoryName: 'Laundry Essentials',
       categoryDescription:
@@ -733,6 +638,101 @@ const catP = {
           pricingId: '-NcmF1B2so4s36paswb-',
           sellingPrice: '6',
           discount: '3',
+          discountUnit: 'percentage',
+          attributes: [],
+          variants: [],
+        },
+      ],
+    },
+    {
+      categoryId: '-NcmH6GJuuOkLIlXHT8s',
+      categoryName: 'Bathroom Essentials',
+      categoryDescription:
+        'Transform your bathroom into a sanctuary of comfort and functionality with our curated Bathroom Essentials Collection. From daily necessities to luxurious additions, this collection ensures every moment in your bathroom is both practical and pampering.',
+      products: [
+        {
+          id: '-NcmHS0KT4EdAidl0WuV',
+          name: 'Bath Towel',
+          description:
+            "Drape yourself in the opulence of our Blue Luxury Bath Towel. Crafted with meticulous care, this towel not only offers exceptional absorbency but also elevates your bathroom's aesthetic with its rich blue hue.",
+          imagePath:
+            'https://firebasestorage.googleapis.com/v0/b/kickstarters-5a5d4.appspot.com/o/bath-towel.png.jpeg?alt=media&token=9b2489bd-148a-4607-b5f3-3ba44ee8bc98',
+          unit: 'unit',
+          unitsInStock: 5,
+          pricingId: '-NcmHSCtSt9zXg6NVsvr',
+          sellingPrice: '11',
+          discount: '3',
+          discountUnit: 'percentage',
+          attributes: [],
+          variants: [],
+        },
+        {
+          id: '-NcmIf0UUrfdaFuiOJD4',
+          name: 'Home Collections 100% Cotton Terry Bath Mat',
+          description:
+            'Step onto the plush comfort of our Home Collections 100% Cotton Terry Bath Mat. Expertly crafted to provide a soft landing for your feet, this bath mat combines the best of luxury and functionality for your bathroom.',
+          imagePath:
+            'https://firebasestorage.googleapis.com/v0/b/kickstarters-5a5d4.appspot.com/o/bath-mat.png.jpeg?alt=media&token=133043c6-9159-4309-b0d9-2115d999084e',
+          unit: 'unit',
+          unitsInStock: 5,
+          pricingId: '-NcmIfeHS0KqPJsusdIB',
+          sellingPrice: '7',
+          discount: '3',
+          discountUnit: 'percentage',
+          attributes: [],
+          variants: [],
+        },
+      ],
+    },
+    {
+      categoryId: '3XqbFjbiY2xl0f9Dsijb',
+      categoryName: 'Electronics',
+      categoryDescription:
+        "Experience the future with our curated range of cutting-edge electronics. Whether you're in search of the latest smartphones that seamlessly integrate technology, or innovative gadgets that simplify your life, our collection offers you a glimpse into the forefront of innovation. Explore the fusion of modern technology and convenience in every device.",
+      products: [],
+    },
+    {
+      categoryId: 'JoPQ3AF7DVojkJBGweV9',
+      categoryName: 'Kitchen Essentials',
+      categoryDescription:
+        'Enhance your culinary skills with our array of kitchen essentials, designed to make your cooking journey delightful and efficient. From classic utensils that stand the test of time to modern cookware that caters to contemporary needs, our collection celebrates the art of cooking. Discover a world of flavors and cultures through carefully chosen kitchen tools.',
+      products: [
+        {
+          id: '-NcmAz4ETUcP0oQnNWkX',
+          name: '2pk Printed Lunchboxes',
+          description:
+            'Add a touch of style to your lunchtime routine with our 2pk Printed Lunchboxes. Designed with vibrant prints and crafted for functionality, these lunchboxes are perfect for school, work, or any on-the-go meal.',
+          imagePath:
+            'https://cdn.media.amplience.net/i/primark/991067396980_01?w=2048&fmt=auto',
+          unit: 'unit',
+          unitsInStock: 5,
+          pricingId: '-NcmAzGmI1EObftPhKTp',
+          sellingPrice: '6',
+          discount: '2',
+          discountUnit: 'percentage',
+          attributes: [],
+          variants: [],
+        },
+      ],
+    },
+    {
+      categoryId: 'afhQQvcmarAem9K1FYya',
+      categoryName: 'Stationery',
+      categoryDescription:
+        'Elevate your writing experience with our assortment of stationery that blends functionality with artistic expression. From handcrafted journals with intricate details to sustainable writing instruments, our stationery collection encourages you to embark on a journey of creativity. Put your thoughts to paper with tools that inspire your imagination.',
+      products: [
+        {
+          id: '-NcmGpz-S7rCqGTDOMTx',
+          name: 'Ombré 10000mAh Power Bank',
+          description:
+            'Stay charged in style with our Ombré 10000mAh Power Bank. Marrying high-capacity performance with a stunning ombré design, this power bank is both a tech essential and a fashion statement.',
+          imagePath:
+            'https://cdn.media.amplience.net/i/primark/991060546935_01?w=2048&fmt=auto',
+          unit: 'unit',
+          unitsInStock: 5,
+          pricingId: '-NcmGqjMa5jrvuYZoPEf',
+          sellingPrice: '16',
+          discount: '4',
           discountUnit: 'percentage',
           attributes: [],
           variants: [],

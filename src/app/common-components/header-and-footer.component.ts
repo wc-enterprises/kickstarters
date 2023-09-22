@@ -343,6 +343,7 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
 })
 export class HeaderAndFooterComponent {
   isCartOpen = false;
+  isBackgroundBlurred = false;
 
   cartCount: number = 0;
 
@@ -356,9 +357,11 @@ export class HeaderAndFooterComponent {
 
   openCart() {
     this.isCartOpen = true;
+    this.isBackgroundBlurred = true;
   }
 
   closeCart() {
     this.isCartOpen = false;
+    this.isBackgroundBlurred = false;
   }
 }

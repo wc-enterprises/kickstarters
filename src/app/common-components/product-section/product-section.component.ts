@@ -106,6 +106,7 @@ if(context === 'cardColumn')
   }
 
   isCartOpen = false;
+  
 
   openCart() {
     this.isCartOpen = !this.isCartOpen;

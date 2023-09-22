@@ -13,12 +13,13 @@ import { Observable } from 'rxjs';
         height: 100vh;
         position: fixed;
         box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.5);
-        transition: right 0.3s ease-in-out;
+        transition: right 0.5s ease-in-out;
         right: -1px;
         z-index: 20;
         padding: 30px;
         box-sizing: border-box;
       }
+
 
       .fill-base {
         width: 100%;
@@ -42,7 +43,7 @@ import { Observable } from 'rxjs';
         content: '';
         position: absolute;
         right: 0;
-        top: 80px;
+        top: 75px;
         width: 100%; /* Extend the width to 100% */
         height: 1px; /* Adjust the border thickness as needed */
         background-color: #e3e3e3;
@@ -58,6 +59,10 @@ import { Observable } from 'rxjs';
         overflow-y: auto;
         overflow-x: hidden;
       }
+      ::-webkit-scrollbar {
+  width: 0; /* Remove the scrollbar width */
+}
+
 
       .footer {
         width: 100%;
@@ -136,7 +141,7 @@ import { Observable } from 'rxjs';
 })
 export class CartComponent {
   @Input() isCartOpen: boolean = false;
-  @Output() closeCart: EventEmitter<void> = new EventEmitter<void>();
+   @Output() closeCart: EventEmitter<void> = new EventEmitter<void>();
   cartCount!: number;
   finalPrice$: any;
 

@@ -52,11 +52,12 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
                 <a routerLink="/support" id="list-features">FAQ</a>
                 <a id="list-features">Returns policy</a>
               </div>
-              <div style="display:flex;flex-direction: column;gap:3vh;">
+              <div style="display:flex;flex-direction: column;">
                 <a style="font-weight: 600;font-size: 16px;">Follow</a>
-                <a id="list-features">Twitter</a>
-                <a id="list-features">Instagram</a>
-                <a id="list-features">Facebook</a>
+                <a id="list-features"><img src="./assets/twitter1.svg"><p>Twitter<p></a>
+                <a id="list-features"><img src="./assets/instagram1.svg">  <p>Instagram</p></a>
+                <a id="list-features"><img src="./assets/facebook 1.svg"><p>Facebook<p></a>
+                <a id="list-features"><img src="./assets/youtube1.svg">  <p>YouTube</p></a>
               </div>
             </div>
             <div class="mid-right">
@@ -210,6 +211,12 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
         padding-top: 75px;
         padding-left: 35px;
       }
+      #list-features{
+     
+        width:100%;
+        height:auto;
+        display:flex;
+      }
       .mid-right {
         width: 25%;
         color: #000;
@@ -307,7 +314,7 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
           padding-left: 16px;
         }
         .mid-left {
-          gap: 18px;
+          gap: 10px;
           width: 100%;
           padding-left: 5px;
         }

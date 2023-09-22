@@ -2,7 +2,6 @@
   height: auto;
   width: 100%;
   background-color: white;
-
 }
 .card-title {
   padding-left: 30px;
@@ -37,32 +36,31 @@
 }
 
 /* Studentskits-section css */
-.studentkits-section{
+.studentkits-section {
   padding-left: 30px;
   margin-top: 50px;
-  
 }
-.studentkits-container{
-  width:270px;
-  height:600px;
-  padding:10px;
-  margin-left:30px;
+.studentkits-container {
+  width: 270px;
+  height: 600px;
+  padding: 10px;
+  margin-left: 30px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border: 1px solid #ddd;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
-  gap:8px;
+  gap: 8px;
 }
-.studentkits-image{
-  width:100%;
-  height:48%;
+.studentkits-image {
+  width: 100%;
+  height: 48%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.studentkits-name{
-  width:100%;
+.studentkits-name {
+  width: 100%;
   height: 11%;
   display: flex;
   align-items: center;
@@ -72,26 +70,27 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   line-height: 1.7;
- 
+  font-family: "Inter";
 }
-.studentkits-description{
-  width:100%;
+.studentkits-description {
+  width: 100%;
   height: 27%;
   display: flex;
   align-items: center;
-  font-weight:400;
+  font-weight: 400;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  overflow-y:auto;
+  overflow-y: auto;
   line-height: 1.7;
   cursor: all-scroll;
+  font-family: "Inter";
 }
 .studentkits-description::-webkit-scrollbar {
   width: 3px;
 }
 .studentkits-description::-webkit-scrollbar-thumb {
-  background-color: #888; 
-  border-radius: 3px; 
+  background-color: #888;
+  border-radius: 3px;
 }
 
 /* .studentkits-productlist{
@@ -107,48 +106,46 @@
   line-height: 1.7;
   
 } */
-.studentkits-price{
-  width:100%;
-  height:7%;
+.studentkits-price {
+  width: 100%;
+  height: 7%;
   display: flex;
   align-items: center;
   font-size: large;
   font-weight: bold;
-  
+  font-family: "Inter";
 }
-.studentkits-button{
-  width:100%;
-  height:7%;
- 
+.studentkits-button {
+  width: 100%;
+  height: 7%;
 }
 /* productcategory section */
-.productcard-container{
-  width:270px;
-  height:580px;
-  margin-left:30px;
+.productcard-container {
+  width: 270px;
+  height: 580px;
+  margin-left: 30px;
   padding: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border: 1px solid #ddd;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
-  gap:8px;
+  gap: 8px;
 }
-.image-container{
-  width:100%;
-  height:48%;
- display: flex;
+.image-container {
+  width: 100%;
+  height: 48%;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
-#img{
+#img {
   max-width: 250px;
   max-height: 250px;
-  
 }
-.product-name{
-  width:100%;
-  height:14%;
+.product-name {
+  width: 100%;
+  height: 14%;
   display: flex;
   align-items: center;
   font-weight: bold;
@@ -157,50 +154,48 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   line-height: 1.7;
-
+  font-family: "Inter";
 }
-.description{
-  width:100%;
-  height:20%;
+.description {
+  width: 100%;
+  height: 20%;
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
   line-height: 1.7;
   font-size: 16px;
-  
+  font-family: "Inter";
 }
-.price{
-  width:100%;
-  height:9%;
+.price {
+  width: 100%;
+  height: 9%;
   font-size: large;
   font-weight: bold;
   display: flex;
   align-items: center;
-
+  font-family: "Inter";
 }
-.cartbutton{
-  width:100%;
-  height:9%;
-  
+.cartbutton {
+  width: 100%;
+  height: 9%;
 }
 
 @media (max-width: 640px) {
-  .studentkits-container{
-    width:150px;
+  .studentkits-container {
+    width: 150px;
     height: 480px;
   }
-  .studentkits-section{
+  .studentkits-section {
     padding-left: 5px;
   }
-  .productcard-container{
-    width:150px;
+  .productcard-container {
+    width: 150px;
     height: 480px;
   }
-  #img{
+  #img {
     max-width: 150px;
     max-height: 150px;
-   
   }
   .card-title {
     padding-left: 5px;

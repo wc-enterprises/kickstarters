@@ -1,15 +1,32 @@
 .background {
   display: flex;
   justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+}
+
+.title {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding-left: 30px;
+  padding-top: 200px;
+  z-index: 1;
 }
 
 .hero-image {
-  width: 100vw;
-  height: 100vh;
-  background-image: url("./kickheroimage.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+
+#actual-hero-img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: -1px;
 }
 
 .background-mobile {
@@ -22,14 +39,6 @@
   font-weight: 600;
   line-height: 79.2px;
   color: black;
-}
-.title {
-  display: flex;
-  flex-direction: column;
-  color: white;
-  padding-left: 30px;
-  padding-top: 200px;
-  z-index: 1;
 }
 
 #sub-title2 {
@@ -60,7 +69,7 @@
   }
   .title-mobile {
     display: inline-flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: flex-start;
     padding-left: 30px;
 
@@ -84,7 +93,6 @@
     bottom: 25px;
   }
 }
-
 
 /* newproductcard-section */
 

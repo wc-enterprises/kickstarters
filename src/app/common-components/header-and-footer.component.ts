@@ -323,7 +323,7 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
       }
       @media (max-width: 580px) {
         .bag {
-         padding-left:90px;
+         padding-left:100px;
         }
       }
       @media (max-width: 425px) {

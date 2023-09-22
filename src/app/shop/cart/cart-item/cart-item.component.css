@@ -1,4 +1,4 @@
-.cartitem {
+/* .cartitem {
   width: auto;
   display: flex;
   gap: 15px;
@@ -10,6 +10,7 @@
   display: flex;
   justify-content: space-between;
   padding-bottom: 30px;
+
 }
 
 .item-image {
@@ -22,8 +23,8 @@
 }
 
 #img {
-  max-width: 100%; /* Ensure the image doesn't exceed the width of the container */
-  max-height: 100%; /* Ensure the image doesn't exceed the height of the container */
+  max-width: 100%; 
+  max-height: 100%; 
 }
 
 .item-details {
@@ -124,12 +125,12 @@
   width: 80px;
   height: 35px;
   background-color: white;
-  border: 1px solid #ccc; /* Add a border for a clear visual separation */
-  border-radius: 4px; /* Add rounded corners for a better look */
-  font-size: 14px; /* Adjust font size as needed */
-  color: #333; /* Set text color */
-  padding: 5px; /* Add padding for better spacing */
-  outline: none; /* Remove default focus outline */
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  font-size: 14px;
+  color: #333; 
+  padding: 5px; 
+  outline: none; 
 }
 
 .item-price-box {
@@ -147,10 +148,6 @@
   overflow: hidden;
   overflow-wrap: break-word;
 }
-/* 
-  .item-price {
-    background-color: #e3e3e3;
-  } */
 
 #rate {
   margin-left: 40px;
@@ -164,7 +161,7 @@
   font-size: 15px;
   font-style: normal;
   font-weight: 600;
-  line-height: 21px; /* 140% */
+  line-height: 21px;
 }
 
 .increment-button,
@@ -172,7 +169,7 @@
 .delete-basket-icon,
 .quantity-number {
   width: 35px;
-  height: 35px;
+  height: 35px; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -188,7 +185,7 @@
     width:100px;
     height: 100px;
   } 
-}
+} */
 
 /* @media (max-width: 640px) {
   #img {
@@ -236,3 +233,222 @@
     padding: 40px 0 0 15px;
   }
 } */
+
+
+
+/* new css */
+/* Default styles for cart items */
+.cartitem {
+  width: auto;
+  display: flex;
+  gap: 15px;
+  padding: 40px 0 0 55px;
+}
+
+.cartitem-d {
+  width: 100%;
+  height: auto; /* Allow the height to adjust to content */
+  display: flex;
+  flex-direction: row; /* Display items in a row */
+  align-items: center; /* Center items vertically */
+  padding-bottom: 30px;
+}
+
+.item-image {
+  width: 200px; /* Allow the width to adjust to content */
+  height: 200px; /* Allow the height to adjust to content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#img {
+  max-width: 100%; /* Ensure the image doesn't exceed the width of the container */
+  max-height: 100%; /* Ensure the image doesn't exceed the height of the container */
+}
+
+.item-details {
+  flex-grow: 1; /* Allow the details section to grow and take available space */
+  height: auto; /* Allow the height to adjust to content */
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.item-details-actual-area {
+  width: 100%;
+  height: auto; /* Allow the height to adjust to content */
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  width: 100%;
+  height: auto; /* Allow the height to adjust to content */
+  overflow: hidden;
+}
+
+.name-container {
+  width: 100%;
+  height: auto; /* Allow the height to adjust to content */
+  color: #000;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 21px;
+
+  display: -webkit-box;
+  max-width: 99%;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.color-container {
+  width: 100%;
+  height: auto; /* Allow the height to adjust to content */
+  display: flex;
+  flex-direction: column;
+}
+
+.colors {
+  display: flex;
+}
+
+.color {
+  height: 50px;
+  width: 50px;
+  box-sizing: border-box;
+  padding: 2px;
+  margin-right: 10px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.highlighted-color {
+  border: 1px solid #000;
+}
+
+.quantity-and-size {
+  width: 100%;
+  height: auto; /* Allow the height to adjust to content */
+  display: flex;
+  flex-wrap: wrap; /* Allow elements to wrap if needed */
+}
+
+.quantity {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 120px;
+  height: auto; /* Allow the height to adjust to content */
+}
+
+.quantity-selector {
+  display: flex;
+  align-items: center;
+}
+
+.size {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 120px;
+  height: auto; /* Allow the height to adjust to content */
+}
+
+.size-drop-down {
+  width: 80px;
+  height: 35px;
+  background-color: white;
+  border: 1px solid #ccc; /* Add a border for a clear visual separation */
+  border-radius: 4px; /* Add rounded corners for a better look */
+  font-size: 14px; /* Adjust font size as needed */
+  color: #333; /* Set text color */
+  padding: 5px; /* Add padding for better spacing */
+  outline: none; /* Remove default focus outline */
+}
+
+.item-price-box {
+  box-sizing: border-box;
+  padding-top: 10px;
+  width: 100%; /* Take up the full width on smaller screens */
+  height: auto; /* Allow the height to adjust to content */
+  text-align: right;
+  color: #000;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 21px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+}
+
+/* Additional styles for the increment, decrement, and delete buttons */
+.increment-button,
+.decrement-button,
+.delete-basket-icon,
+.quantity-number {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+/* Adjustments for smaller screens (e.g., mobile) */
+@media (max-width: 640px) {
+  /* Reduce font sizes, padding, and spacing for mobile screens */
+  .cartitem {
+    padding: 0 0 0 30px; /* Adjust padding for mobile */
+    gap: 10px; /* Reduce gap between items for mobile */
+  }
+  .cartitem-d {
+    width:90%;
+    height: auto;
+  }
+
+  .item-image {
+    width:100%;
+    height: auto;
+   /* Reduce image h
+   eight for mobile */
+  }
+
+  .item-details {
+    padding: 10px; /* Adjust padding for mobile */
+  }
+
+  .name-container {
+    font-size: 16px; /* Reduce font size for name on mobile */
+    -webkit-line-clamp: 1; /* Display only one line for name on mobile */
+  }
+
+  .color-container {
+    height: 50px; /* Reduce the height of the color container for mobile */
+  }
+
+  /* Reduce the size of color divs for mobile screens */
+  .color {
+    height: 30px; /* Reduce the height of individual color divs for mobile */
+    width: 30px; /* Reduce the width of individual color divs for mobile */
+    margin-right: 5px; /* Adjust margin between color divs for mobile */
+  }
+
+  /* Add other size adjustments for mobile screens here */
+
+  /* Additional adjustments for specific elements if needed */
+  .size-drop-down {
+    width: 60px; /* Reduce width of the size drop-down for mobile */
+    height: 30px; /* Reduce height of the size drop-down for mobile */
+    font-size: 12px; /* Reduce font size for the size drop-down on mobile */
+  }
+}
+
+
+
+

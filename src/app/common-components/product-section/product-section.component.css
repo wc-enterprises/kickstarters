@@ -29,9 +29,9 @@
   height:auto;
   display: flex;
   flex-direction: row;
-  overflow-x: scroll;
+  overflow-x:auto;
  
-}
+ }
 
 ::-webkit-scrollbar {
   overflow: hidden;

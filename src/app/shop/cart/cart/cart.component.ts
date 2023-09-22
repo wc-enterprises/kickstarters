@@ -43,7 +43,7 @@ import { Observable } from 'rxjs';
         content: '';
         position: absolute;
         right: 0;
-        top: 80px;
+        top: 75px;
         width: 100%; /* Extend the width to 100% */
         height: 1px; /* Adjust the border thickness as needed */
         background-color: #e3e3e3;
@@ -59,6 +59,10 @@ import { Observable } from 'rxjs';
         overflow-y: auto;
         overflow-x: hidden;
       }
+      ::-webkit-scrollbar {
+  width: 0; /* Remove the scrollbar width */
+}
+
 
       .footer {
         width: 100%;

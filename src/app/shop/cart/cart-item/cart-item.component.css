@@ -253,9 +253,10 @@
   flex-direction: row; /* Display items in a row */
   align-items: center; /* Center items vertically */
   padding-bottom: 30px;
-
+  
 
 }
+
 
 .item-image {
   width: 200px; /* Allow the width to adjust to content */

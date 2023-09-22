@@ -21,6 +21,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('../support/support.module').then((m) => m.SupportModule),
   },
+  {
+    path: 'blog',
+    loadChildren: () =>
+      import('../blog-page/blog-page.module').then((m) => m.BlogPageModule),
+  },
 
 
 ];

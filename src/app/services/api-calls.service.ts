@@ -56,6 +56,11 @@ const kits = {
             'Superior 12pc Utensil Set',
             'Premium Bedding & Linens',
             'Hand & Bath Towels',
+            'Deluxe Premium Pan Set ',
+            '2 x Person Porcelain Dining Set(Induction hob friendly)',
+            'Superior 12pc Utensil Set',
+            'Premium Bedding & Linens',
+            'Hand & Bath Towels',
             'Deluxe Premium Pan Set (Induction hob friendly)',
           ],
           imagePath:

@@ -6,7 +6,7 @@
 .hero-image {
   width: 100vw;
   height: 100vh;
-  background-image: url("./hero-image.jpg");
+  background-image: url("./kickheroimage.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -47,7 +47,7 @@
   }
 
   .background-mobile {
-    background-image: url("./hero-image.jpg");
+    background-image: url("./kickheroimage.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;

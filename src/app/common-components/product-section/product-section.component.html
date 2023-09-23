@@ -2,33 +2,58 @@
   <body>
     <div class="list">
       <!-- StudentKits section -->
-      <div *ngFor="let student of studentKits; let j= index" class="studentkits-section">
-        <div style=" width: 100; height: auto;display: flex;justify-content: space-between;">
+      <div
+        *ngFor="let student of studentKits; let j = index"
+        class="studentkits-section"
+      >
+        <div
+          style="
+            width: 100;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+          "
+        >
           <p id="sub-title3">{{ student.categoryName }}</p>
           <div id="arrow-button">
-            <img id="left-arrow" (click)="scrollLeft(j, 'cardColumnKits')" src="./assets/arrowleft.svg" />
-            <img id="right-arrow" (click)="scrollRight(j, 'cardColumnKits')" src="./assets/arrowright.svg" />
+            <img
+              id="left-arrow"
+              (click)="scrollLeft(j, 'cardColumnKits')"
+              src="./assets/arrowleft.svg"
+            />
+            <img
+              id="right-arrow"
+              (click)="scrollRight(j, 'cardColumnKits')"
+              src="./assets/arrowright.svg"
+            />
           </div>
         </div>
         <div class="total-cards" #cardColumnKits>
-          <div class="studentkits-container" *ngFor="let product of student.products; let i = index">
+          <div
+            class="studentkits-container"
+            *ngFor="let product of student.products; let i = index"
+          >
             <div class="studentkits-image">
-              <img id="img" [src]="product.imagePath">
+              <img id="img" [src]="product.imagePath" loading="lazy" />
             </div>
-            <div class="studentkits-name">{{product.name}}</div>
-            <div class="studentkits-description">{{product.description}}
+            <div class="studentkits-name">{{ product.name }}</div>
+            <div class="studentkits-description">
+              {{ product.description }}
               <ul>
-                <li *ngFor="let item of product.productList; let j=index">{{product.productList[j]}}</li>
+                <li *ngFor="let item of product.productList; let j = index">
+                  {{ product.productList[j] }}
+                </li>
               </ul>
             </div>
-      
-            <div class="studentkits-price">£ {{product.sellingPrice}}</div>
-            <div class="studentkits-button"> <app-button [product]="product"></app-button></div>
+
+            <div class="studentkits-price">£ {{ product.sellingPrice }}</div>
+            <div class="studentkits-button">
+              <app-button [product]="product"></app-button>
+            </div>
           </div>
         </div>
       </div>
-      
-      
+
       <!-- productcategory section -->
       <div
         *ngFor="let category of categorizedProducts; let j = index"
@@ -58,26 +83,26 @@
         </div>
 
         <div class="total-cards" #cardColumn>
-        <div class="productcard-container" *ngFor="let product of category.products; let i = index">
-          <div class="image-container">
-            <img id="img" [src]="product.imagePath">
-              </div>
-              <div class="product-name">
-                {{product.name}}
-              </div>
-              <div class="description">
-                {{product.description}}
-              </div>
-              <div class="price">
-                £ {{product.sellingPrice}}
-              </div>
-              <div class="cartbutton">
-                <app-button [product]="product"></app-button>
-              </div>
-              </div>
-              </div>
-              </div>
-              </div>
-              
+          <div
+            class="productcard-container"
+            *ngFor="let product of category.products; let i = index"
+          >
+            <div class="image-container">
+              <img id="img" [src]="product.imagePath" loading="lazy" />
+            </div>
+            <div class="product-name">
+              {{ product.name }}
+            </div>
+            <div class="description">
+              {{ product.description }}
+            </div>
+            <div class="price">£ {{ product.sellingPrice }}</div>
+            <div class="cartbutton">
+              <app-button [product]="product"></app-button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

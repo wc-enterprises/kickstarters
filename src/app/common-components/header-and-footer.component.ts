@@ -131,8 +131,7 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
         text-align: center;
         line-height: 18px;
         margin: -15px -8px 23px;
-
-        border: 1px solid black;
+        font-family: 'Inter';
       }
 
       a {
@@ -193,6 +192,7 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
         line-height: 21px;
         padding-right: 20px;
       }
+
       #contact {
         color: #000;
         font-family: 'Inter';
@@ -200,7 +200,6 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
         font-style: normal;
         font-weight: 600;
         line-height: 21px;
-        padding-right: 20px;
       }
       .footer {
         width: 100%;
@@ -253,7 +252,12 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
         gap: 15px;
         display: flex;
       }
-      //    Mobile screen css
+
+      .bag {
+        margin-left: 20px;
+        cursor: pointer;
+      }
+
       @media (max-width: 640px) {
         .header {
           align-items: center;

@@ -44,7 +44,6 @@
   width: 270px;
   height: 600px;
   padding: 10px;
-  margin-left: 30px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border: 1px solid #ddd;
   border-radius: 12px;
@@ -123,7 +122,6 @@
 .productcard-container {
   width: 270px;
   height: 580px;
-  margin-left: 30px;
   padding: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border: 1px solid #ddd;
@@ -131,6 +129,7 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  box-sizing: border-box;
 }
 .image-container {
   width: 100%;
@@ -140,8 +139,8 @@
   justify-content: center;
 }
 #img {
-  max-width: 250px;
-  max-height: 250px;
+  width: 250px;
+  height: 250px;
 }
 .product-name {
   width: 100%;

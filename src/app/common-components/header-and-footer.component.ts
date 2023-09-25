@@ -54,10 +54,24 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
               </div>
               <div style="display:flex;flex-direction: column;">
                 <a style="font-weight: 600;font-size: 16px;">Follow</a>
-                <a id="list-features"><img src="./assets/twitter1.svg"><p>Twitter<p></a>
-                <a id="list-features"><img src="./assets/instagram1.svg">  <p>Instagram</p></a>
-                <a id="list-features"><img src="./assets/facebook 1.svg"><p>Facebook<p></a>
-                <a id="list-features"><img src="./assets/youtube1.svg">  <p>YouTube</p></a>
+                <a id="list-features"
+                  ><img src="./assets/twitter1.svg" />
+                  <p style="margin-left: 1px;">Twitter</p>
+                  <p></p
+                ></a>
+                <a id="list-features"
+                  ><img src="./assets/instagram1.svg" />
+                  <p style="margin-left: 1px;">Instagram</p></a
+                >
+                <a id="list-features"
+                  ><img src="./assets/facebook 1.svg" />
+                  <p style="margin-left: 1px;">Facebook</p>
+                  <p></p
+                ></a>
+                <a id="list-features"
+                  ><img src="./assets/youtube1.svg" />
+                  <p style="margin-left: 1px;">YouTube</p></a
+                >
               </div>
             </div>
             <div class="mid-right">
@@ -117,8 +131,7 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
         text-align: center;
         line-height: 18px;
         margin: -15px -8px 23px;
-
-        border: 1px solid black;
+        font-family: 'Inter';
       }
 
       a {
@@ -179,6 +192,7 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
         line-height: 21px;
         padding-right: 20px;
       }
+
       #contact {
         color: #000;
         font-family: 'Inter';
@@ -186,7 +200,6 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
         font-style: normal;
         font-weight: 600;
         line-height: 21px;
-        padding-right: 20px;
       }
       .footer {
         width: 100%;
@@ -211,11 +224,10 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
         padding-top: 75px;
         padding-left: 35px;
       }
-      #list-features{
-     
-        width:100%;
-        height:auto;
-        display:flex;
+      #list-features {
+        width: 100%;
+        height: auto;
+        display: flex;
       }
       .mid-right {
         width: 25%;
@@ -240,7 +252,12 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
         gap: 15px;
         display: flex;
       }
-      //    Mobile screen css
+
+      .bag {
+        margin-left: 20px;
+        cursor: pointer;
+      }
+
       @media (max-width: 640px) {
         .header {
           align-items: center;
@@ -258,7 +275,6 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
         }
         .bag {
           margin-left: 15px;
-         
         }
         .right {
           width: 35%;
@@ -330,21 +346,19 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
       }
       @media (max-width: 580px) {
         .bag {
-         padding-left:100px;
+          padding-left: 100px;
         }
       }
       @media (max-width: 425px) {
         .bag {
-          padding-left:80px;
+          padding-left: 80px;
         }
       }
       @media (max-width: 375px) {
         .bag {
-          padding-left:60px;
+          padding-left: 60px;
         }
       }
-    
-      
     `,
   ],
 })

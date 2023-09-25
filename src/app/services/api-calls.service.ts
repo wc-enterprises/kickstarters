@@ -635,7 +635,7 @@ const catP = {
           id: '-NcmF0fBbGZK35I7k1jW',
           name: 'Checked Slipper Socks',
           description:
-            'ntroducing our Checked Slipper Socks, where the coziness of slippers meets the snug fit of socks. Adorned with a classic checked pattern, these slipper socks are the perfect blend of style, warmth, and comfort.Crafted with premium materials, these slipper socks envelop your feet in warmth, ensuring comfort on even the chilliest days.',
+            'Introducing our Checked Slipper Socks, where the coziness of slippers meets the snug fit of socks. Adorned with a classic checked pattern, these slipper socks are the perfect blend of style, warmth, and comfort.Crafted with premium materials, these slipper socks envelop your feet in warmth, ensuring comfort on even the chilliest days.',
           imagePath:
             'https://cdn.media.amplience.net/i/primark/991041987505_01?w=2048&fmt=auto',
           unit: 'unit',

@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 @Component({
-    selector:'app-blogsection',
-    templateUrl:'./blog-section.component.html',
-    styleUrls: [`./blog-section.component.css`],
+  selector: 'app-blogsection',
+  templateUrl: './blog-section.component.html',
+  styleUrls: [`./blog-section.component.css`],
 })
 export class blogsection{
   constructor(private router: Router) {}

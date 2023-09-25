@@ -1,15 +1,29 @@
-.blog-container{
-    width:100%;
-    height:auto;
+
+body {
+    font-family: Arial, sans-serif;
 }
 
-.blog-image{
-    width: 100%;
-    height: 600px;
-    overflow: hidden; 
+.blog-content {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
-#img{
+
+.blog-image img {
     max-width: 100%;
-    height: auto; /* Automatically adjust the height based on the aspect ratio */
-    object-fit: cover;
+    height: auto;
+}
+
+.blog-text {
+    margin-top: 20px;
+}
+
+.blog-text h1 {
+    font-size: 24px;
+}
+
+.blog-text p {
+    font-size: 16px;
 }

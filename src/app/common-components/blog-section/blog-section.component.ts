@@ -1,10 +1,17 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 @Component({
     selector:'app-blogsection',
     templateUrl:'./blog-section.component.html',
     styleUrls: [`./blog-section.component.css`],
 })
 export class blogsection{
+  constructor(private router: Router) {}
+
+  onImageClick(blogId: number) {
+      // Navigate to the blogpage component with the selected blog's ID as a route parameter
+      this.router.navigate(['/blogpage', blogId]);
+  }
     blogs = [
         {
           

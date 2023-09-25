@@ -186,18 +186,20 @@
     height: 480px;
   }
   .studentkits-section {
-    padding-left: 5px;
+    padding-left: 15px;
   }
+  
   .productcard-container {
-    width: 150px;
+    width: 160px;
     height: 480px;
+   
   }
   #img {
-    max-width: 150px;
-    max-height: 150px;
+    width: 150px;
+    height: 150px;
   }
   .card-title {
-    padding-left: 5px;
+    padding-left: 15px;
   }
   .img {
     height: 120px;

@@ -1,24 +1,26 @@
 <html>
-  <body>
+
+<body>
     <div class="blogsection">
-      <div class="blogtitle">See Our Popular Blogs</div>
-      <div class="card-container">
-        <div class="blogsection-cards" *ngFor="let blog of blogs">
-          <div class="image">
-            <img id="img" [src]="blog.Image" alt="Blog Image" loading="lazy" />
-          </div>
-          <div class="blogdateandtime">
-            <span class="date">{{ blog.Date }} | </span>
-            <span class="author">{{ blog.Author }}</span>
-          </div>
-          <div class="blog-name">
-            {{ blog.Title }}
-          </div>
-          <div class="blog-description">
-            {{ blog.Description }}
-          </div>
-        </div>
-      </div>
+        <div class="blogtitle">See Our Popular Blogs</div>
+        <div class="card-container">
+            <div class="blogsection-cards" *ngFor="let blog of blogs">
+                <div class="image">
+                    <img id="img" [src]="blog.Image" alt="Blog Image">
+                    </div>
+                    <div class="blogdateandtime">
+                        <span class="date">{{ blog.Date }} | </span>
+                    <span class="time">{{ blog.Author }}</span>
+                    </div>
+                    <div class="blog-name">
+                        {{ blog.Title }}
+                    </div>
+                    <div class="blog-description">
+                        {{ blog.Description }}
+                    </div>
+                    </div>
+                    </div>
     </div>
-  </body>
+</body>
+
 </html>

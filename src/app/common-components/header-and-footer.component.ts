@@ -55,7 +55,7 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
               <div style="display:flex;flex-direction: column;">
                 <a style="font-weight: 600;font-size: 16px;">Follow</a>
                 <a id="list-features"
-                  ><img src="./assets/twitter1.svg" />
+                  ><img class="svg-img"  src="./assets/twitter1.svg" />
                   <p style="margin-left: 1px;">Twitter</p>
                   <p></p
                 ></a>
@@ -257,6 +257,10 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
         margin-left: 20px;
         cursor: pointer;
       }
+      .svg-img {
+    filter: grayscale(100%);
+   
+}
 
       @media (max-width: 640px) {
         .header {

@@ -55,21 +55,21 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
               <div style="display:flex;flex-direction: column;">
                 <a style="font-weight: 600;font-size: 16px;">Follow</a>
                 <a id="list-features"
-                  ><img class="svg-img"  src="./assets/twitter1.svg" />
+                  ><img class="svg-img"  src="./assets/twit.svg" />
                   <p style="margin-left: 1px;">Twitter</p>
                   <p></p
                 ></a>
                 <a id="list-features"
-                  ><img src="./assets/instagram1.svg" />
+                  ><img src="./assets/insta.svg" />
                   <p style="margin-left: 1px;">Instagram</p></a
                 >
                 <a id="list-features"
-                  ><img src="./assets/facebook 1.svg" />
+                  ><img src="./assets/fb.svg" />
                   <p style="margin-left: 1px;">Facebook</p>
                   <p></p
                 ></a>
                 <a id="list-features"
-                  ><img src="./assets/youtube1.svg" />
+                  ><img src="./assets/you-tube.svg" />
                   <p style="margin-left: 1px;">YouTube</p></a
                 >
               </div>
@@ -228,6 +228,7 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
         width: 100%;
         height: auto;
         display: flex;
+        gap:5px;
       }
       .mid-right {
         width: 25%;
@@ -257,10 +258,9 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
         margin-left: 20px;
         cursor: pointer;
       }
-      .svg-img {
-    filter: grayscale(100%);
+      
    
-}
+
 
       @media (max-width: 640px) {
         .header {

@@ -191,7 +191,6 @@
   }
   
   .productcard-container {
-<<<<<<< HEAD
     width: 160px;
     height: 480px;
    
@@ -199,15 +198,6 @@
   #img {
     width: 150px;
     height: 150px;
-=======
-    width: 200px;
-    height: 480px;
-    box-sizing: border-box;
-  }
-  #img {
-    width: 190px;
-    height: 190px;
->>>>>>> a49265a69f7f2d0c67eb448037a26fcd07e13a8c
   }
   .card-title {
     padding-left: 15px;
@@ -223,6 +213,7 @@
   #arrow-button {
     align-items: center;
     justify-content: center;
+    padding-right: 12px;
   }
   #left-arrow {
     width: 20px;

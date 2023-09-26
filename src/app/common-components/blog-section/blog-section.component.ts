@@ -19,7 +19,7 @@ export class blogsection{
           Title: "Navigating Student Accommodation in the UK: A Comprehensive Guide",
           Description:"Finding the perfect student accommodation in the UK can be a daunting task, but with the right resources, it becomes a breeze. Dive into our latest blog post where we explore top accommodation websites like Gumtree, Rightmove, Zoopla, and SpareRoom. Learn how to effectively search and secure your ideal place. Plus, we've provided direct links to these platforms to make your search even more convenient Start your UK housing journey with confidence!",
           Date:"12 July 2023",
-          Author : "Govindkumarasaamy"
+          Author : "Govind"
         },
         {
           Image :'https://plus.unsplash.com/premium_photo-1673830186246-0d63496daecb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80',

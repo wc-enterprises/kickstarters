@@ -284,12 +284,14 @@
   height: auto; /* Allow the height to adjust to content */
   display: flex;
   flex-direction: column;
+  gap:3px;
 }
 
 .name {
   width: 100%;
   height: auto; /* Allow the height to adjust to content */
   overflow: hidden;
+
 }
 
 .name-container {
@@ -297,11 +299,10 @@
   height: auto; /* Allow the height to adjust to content */
   color: #000;
   font-family: Inter;
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: 21px;
-
   display: -webkit-box;
   max-width: 99%;
   -webkit-line-clamp: 2;
@@ -345,6 +346,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap:3px;
   width: 120px;
   height: auto; /* Allow the height to adjust to content */
 }
@@ -450,6 +452,9 @@
     width: 60px; /* Reduce width of the size drop-down for mobile */
     height: 30px; /* Reduce height of the size drop-down for mobile */
     font-size: 12px; /* Reduce font size for the size drop-down on mobile */
+  }
+  .item-price-box{
+    font-size:medium;
   }
 }
 

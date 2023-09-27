@@ -105,7 +105,9 @@ import { Observable } from 'rxjs';
         cursor: pointer;
         border: none;
       }
-
+#total-rate{
+font-size:18px;
+}
       @media (max-width: 640px) {
         .header{
           
@@ -125,6 +127,7 @@ import { Observable } from 'rxjs';
         }
         #total-rate {
           margin-right: 25px;
+          font-size:16px;
         }
         .header {
           padding-left: 5px;

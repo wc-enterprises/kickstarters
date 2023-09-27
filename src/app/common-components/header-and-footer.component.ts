@@ -130,8 +130,12 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
         border-radius: 50%;
         text-align: center;
         line-height: 18px;
-        margin: -15px -8px 23px;
         font-family: 'Inter';
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-120%, 100%);
+        z-index: 1;
       }
 
       a {
@@ -257,6 +261,8 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
       .bag {
         margin-left: 20px;
         cursor: pointer;
+        position: relative;
+        z-index: 0; 
       }
       
    
@@ -265,29 +271,29 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
       @media (max-width: 640px) {
         .header {
           align-items: center;
+          padding-right:10px;
         }
         .logo-title {
-          width: 65%;
+          width: 100%;
           padding-left: 10px;
         }
         .cart-count {
           border: 1px solid black;
-          margin: 0px -20px 23px;
           width: 15px;
           height: 15px;
           line-height: 15px;
-        }
-        .bag {
-          margin-left: 15px;
-        }
+          position: absolute;
+          top: 0;
+          right: 0;
+          transform: translate(-65%, 50%);
+          z-index: 1;
+         }
+        
+       
         .right {
-          width: 35%;
-
           align-items: center;
-
-          padding: 0;
+          padding-right:12px;
           padding-top: 5px;
-
           gap: 15px;
         }
 
@@ -348,21 +354,7 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
           background-color: #e9ecef;
         }
       }
-      @media (max-width: 580px) {
-        .bag {
-          padding-left: 100px;
-        }
-      }
-      @media (max-width: 425px) {
-        .bag {
-          padding-left: 80px;
-        }
-      }
-      @media (max-width: 375px) {
-        .bag {
-          padding-left: 60px;
-        }
-      }
+    
     `,
   ],
 })

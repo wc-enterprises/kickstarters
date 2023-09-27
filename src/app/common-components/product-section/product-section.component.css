@@ -152,7 +152,7 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  line-height: 1.7;
+  line-height: 2;
   font-family: "Inter";
 }
 .description {
@@ -185,6 +185,7 @@
     width: 200px;
     height: 480px;
     box-sizing: border-box;
+    
   }
   .studentkits-section {
     padding-left: 15px;
@@ -199,8 +200,12 @@
     width: 150px;
     height: 150px;
   }
+  .price{
+    font-size: medium;
+  }
   .card-title {
     padding-left: 15px;
+    font-size: 14px;
   }
   .img {
     height: 120px;
@@ -225,10 +230,14 @@
     height: 20px;
     padding-left: 0px;
   }
+
+  .studentkits-name,.studentkits-description,.studentkits-price{
+    font-size: 14px;
+  }
 }
 
 /* delete later */
-.project-area {
+/* .project-area {
   background: #cfdbd5;
   width: 100%;
   height: 100%;
@@ -509,4 +518,4 @@
   flex-direction: row;
   justify-content: space-between;
   padding-top: 1vw;
-}
+} */

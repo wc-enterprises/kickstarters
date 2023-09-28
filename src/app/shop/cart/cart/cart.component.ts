@@ -13,7 +13,7 @@ import { Observable } from 'rxjs';
         height: 100vh;
         position: fixed;
         box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.5);
-        transition: 0.5s;
+        transition:filter 0.5s ease;
         right: -1px;
         z-index: 20;
         padding: 30px;

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
+import { Component, EventEmitter, HostListener, Output, ViewChild } from '@angular/core';
 import { CartService } from '../services/cart.service';
 import { CartComponent } from '../shop/cart/cart/cart.component';
 @Component({
@@ -7,12 +7,12 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
     <body>
       <div [ngClass]="{ blur: isCartOpen }" class="main-box">
         <!-- header html -->
-        <div class="header">
+        <div [ngClass]="{ 'visible': showHeader }" class="header">
           <span routerLink="/" class="logo-title">
             <img id="logo" src="./assets/kicklogo.svg" />
 
             <p id="p1">KICKSTARTERS</p>
-            <p id="p1-mobile">KICKSTARTERS</p>
+            <p id="p1-mobile">KICKSTARTERS</p> 
           </span>
           <span class="right">
             <a routerLink="/support" id="FAQs">FAQs</a>
@@ -31,10 +31,11 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
         <app-cart
           [isCartOpen]="isCartOpen"
           (closeCart)="closeCart()"
+          
         ></app-cart>
         <!-- content html -->
 
-        <ng-content></ng-content>
+        <ng-content ></ng-content>
 
         <!-- footer html -->
         <div class="footer">
@@ -147,6 +148,10 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
       .main-box {
         width: 100%;
         height: auto;
+        position: relative;
+  margin-top: 0; /* Adjust as needed to accommodate the header */
+  overflow-y: auto; /* Allow content to scroll */
+
       }
       .header {
         width: 100%;
@@ -157,7 +162,13 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
         align-items: flex-start;
         position: fixed;
         z-index: 2;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Optional: Add shadow to the header */
+  transform: translateY(-100%); /* Initially hidden above the viewport */
+  transition: transform 1s ease;
       }
+      .header.visible {
+  transform: translateY(0); /* Visible position */
+}
       .logo-title {
         display: flex;
         padding-left: 25px;
@@ -264,7 +275,9 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
         position: relative;
         z-index: 0; 
       }
-      
+      /* .blur {
+        filter: blur(5px); 
+      } */
    
 
 
@@ -360,7 +373,7 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
 })
 export class HeaderAndFooterComponent {
   isCartOpen = false;
-  isBackgroundBlurred = false;
+
 
   cartCount: number = 0;
 
@@ -374,11 +387,27 @@ export class HeaderAndFooterComponent {
 
   openCart() {
     this.isCartOpen = true;
-    this.isBackgroundBlurred = true;
+    
   }
 
   closeCart() {
     this.isCartOpen = false;
-    this.isBackgroundBlurred = false;
+    
+  }
+  showHeader = false;
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll() {
+    const scrollY = window.scrollY;
+    
+    // You can adjust this threshold value as needed
+    if (scrollY > 100) {
+      // Show the header after a brief delay (1 second)
+      setTimeout(() => {
+        this.showHeader = true;
+      }, 1000);
+    } else {
+      this.showHeader = false;
+    }
   }
 }

@@ -10,6 +10,9 @@ import {
   providedIn: 'root',
 })
 export class ApiCallsService {
+  getProductById(productId: string | null) {
+      throw new Error('Method not implemented.');
+  }
   constructor(private http: HttpClient) {}
 
   getCategorizedProducts(): Observable<

@@ -1,0 +1,156 @@
+.productdetail-container{
+    width:100%;
+    height: auto;
+    padding:0px 25px 0px 25px;
+    box-sizing: border-box;
+}
+.productdetail-box1{
+    width:100%;
+    height:540px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+   }
+.productdetail-header{
+    width: 100%;
+    height:20px;
+color: #343A40;
+font-family: 'Inter';
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 21px
+}
+.productdetails{
+    width: 100%;
+    height:500px;
+   display: flex;
+   gap:15px;
+}
+.productlist-image{
+    width:130px;
+    height: 500px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+   box-sizing: border-box;
+}
+
+.productview-image{
+    width:50%;
+    height: 100%;
+    box-sizing: border-box;
+    background-image: url('./woolen cap1.svg');
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center;
+    
+}
+.total-productdetail{
+    width:50%;
+    height: 500px;
+  
+}
+.product-image{
+    width:100%;
+    height:100%;
+    display: flex;
+    box-sizing: border-box;
+   
+}
+#img{
+    width:120px;
+    height:120px;
+    border-radius: 10px;
+border: 1px solid #343A40;
+padding: 8px 8px 8px 8px;
+box-sizing: border-box;
+}
+.heading{
+    color: #000;
+font-family: 'Inter';
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 21px;
+}
+h2{
+    padding-bottom: 30px;
+    color: #000;
+    font-family: 'Inter';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+}
+hr {
+    border: 1px solid black;
+    margin: 10px 0; 
+  }
+.description{
+    color: #000;
+    font-family: 'Inter';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    padding-bottom: 30px;
+}
+.color,.quantity{
+    color: #000;
+    font-family: 'Inter';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21px;
+    
+}
+.color-circle {
+    width: 25px; 
+    height: 25px; 
+    border-radius: 50%; 
+    display: inline-block;
+     
+}
+
+.black {
+    background-color:black;
+}
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    padding-bottom: 30px;
+  }
+  .increment-button,
+.decrement-button,
+.delete-basket-icon,
+.quantity-number {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+.rateandcart{
+    width: 100%;
+    height: auto;
+    display: flex;
+   
+    align-items: center;
+    justify-content:space-between;
+    box-sizing: border-box;
+}
+.rate{
+    color: #343A40;
+font-family: 'Inter';
+font-size: 26px;
+font-style: normal;
+font-weight: 700;
+line-height: 21px;
+}
+.productcart-button{
+    width: 70%;
+    height: 7%;
+}
+  

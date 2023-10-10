@@ -61,7 +61,7 @@ line-height: 21px
     box-sizing: border-box;
    
 }
-#img{
+#img1{
     width:100px;
     height:100px;
     border-radius: 10px;
@@ -90,7 +90,7 @@ h2{
     background-color: #343A40;
     margin: 10px 0; 
   }
-.description{
+.productdetail-description{
     color: #000;
     font-family: 'Inter';
     font-size: 16px;
@@ -322,3 +322,187 @@ line-height:28px;
     cursor: pointer; 
   }
 
+
+/* student kits css */
+
+.list {
+  height: auto;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+.card-title {
+  padding-left: 30px;
+  margin-top: 50px;
+}
+#arrow-button {
+  width: auto;
+  height: auto;
+  display: flex;
+  gap: 10px;
+  padding-right: 30px;
+}
+#sub-title3 {
+  color: #000;
+  font-family: "Inter";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 33.6px; /* 140% */
+  letter-spacing: -0.5px;
+  width: 90%;
+}
+.total-cards {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  gap: 15px;
+}
+
+::-webkit-scrollbar {
+  overflow: hidden;
+}
+.studentkits-section {
+  padding-left: 30px;
+  margin-top: 50px;
+}
+.studentkits-container {
+  width: 270px;
+  height: 600px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.studentkits-image {
+  width: 100%;
+  height: 48%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.studentkits-name {
+  width: 100%;
+  height: 11%;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.7;
+  font-family: "Inter";
+}
+.studentkits-description {
+  width: 100%;
+  height: 27%;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow-y: auto;
+  line-height: 1.7;
+  cursor: all-scroll;
+  font-family: "Inter";
+}
+.studentkits-description::-webkit-scrollbar {
+  width: 3px;
+}
+.studentkits-description::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 3px;
+}
+
+/* .studentkits-productlist{
+  width:100%;
+  height:0%;
+  display: flex;
+  align-items: center;
+  font-weight:400;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.7;
+  
+} */
+.studentkits-price {
+  width: 100%;
+  height: 7%;
+  display: flex;
+  align-items: center;
+  font-size: large;
+  font-weight: bold;
+  font-family: "Inter";
+}
+.studentkits-button {
+  width: 100%;
+  height: 7%;
+}
+/* productcategory section */
+.productcard-container {
+  width: 270px;
+  height: 580px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-sizing: border-box;
+}
+.image-container {
+  width: 100%;
+  height: 48%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#img {
+  width: 250px;
+  height: 250px;
+}
+.product-name {
+  width: 100%;
+  height: 14%;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.7;
+  font-family: "Inter";
+}
+.description {
+  width: 100%;
+  height: 20%;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.7;
+  font-size: 16px;
+  font-family: "Inter";
+}
+.price {
+  width: 100%;
+  height: 9%;
+  font-size: large;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  font-family: "Inter";
+}
+.cartbutton {
+  width: 100%;
+  height: 9%;
+}

@@ -27,7 +27,7 @@ const routes: Routes = [
       import('../blog-page/blog-page.module').then((m) => m.BlogPageModule),
   },
   {
-    path: 'productdetail',
+    path: 'productdetail/:id',
     loadChildren: () =>
       import('../product-details/product-detail.module').then((m) => m.productdetailModule),
   },

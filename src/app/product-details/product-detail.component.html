@@ -13,7 +13,7 @@
                 
                 <div class="productlist-image">
                     <div class="product-image">
-                        <img id="img" src="../../assets/woolencap.svg">
+                        <img id="img1" src="../../assets/woolencap.svg">
                     </div>
                 </div>
                 <div class="productview-image">
@@ -23,7 +23,7 @@
                     <div class="heading">New Arrivals</div>
                     <h2 class="name">woolen cap</h2>
                     <div class="horizontal-line"></div>
-                    <p class="description ">Woollen cap for winter</p>
+                    <p class="productdetail-description">Woollen cap for winter</p>
                     <p class='color'>Color</p>
 
                     <span class="color-circle black"></span>
@@ -159,7 +159,78 @@
                         </div>
                     </div>
                 </div>
-                <app-productsection></app-productsection>
+<!-- product section -->
+<!-- recommendation product -->
+<div class="list">
+    <div *ngFor="let recommendation of recommendationrec; let j = index" class="studentkits-section">
+        <div style="width: 100; height: auto;display: flex; justify-content: space-between;">
+            <p id="sub-title3">{{ recommendation.categoryName }}</p>
+            <div id="arrow-button">
+                <img id="left-arrow" (click)="scrollLeft(j, 'cardColumnKits')" src="./assets/arrowleft.svg" />
+                <img id="right-arrow" (click)="scrollRight(j, 'cardColumnKits')" src="./assets/arrowright.svg" />
+            </div>
+        </div>
+        <div class="total-cards" #cardColumnKits>
+            <div class="studentkits-container" *ngFor="let product of recommendation.products; let i = index">
+                <div class="studentkits-image">
+                    <img id="img" [src]="product.imagePath" loading="lazy" />
+                </div>
+                <div class="studentkits-name">{{ product.name }}</div>
+                <div class="studentkits-description">
+                    {{ product.description }}
+                    <ul>
+                        <li *ngFor="let item of product.productList; let j = index">
+                            {{ product.productList[j] }}
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="studentkits-price">£ {{ product.sellingPrice }}</div>
+                <div class="studentkits-button">
+                    <app-button [product]="product"></app-button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- student kits -->
+<div class="list">
+
+    <div *ngFor="let student of studentKits; let j = index" class="studentkits-section">
+        <div style="  width: 100;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+          ">
+            <p id="sub-title3">{{ student.categoryName }}</p>
+            <div id="arrow-button">
+                <img id="left-arrow" (click)="scrollLeft(j, 'cardColumnKits')" src="./assets/arrowleft.svg" />
+                <img id="right-arrow" (click)="scrollRight(j, 'cardColumnKits')" src="./assets/arrowright.svg" />
+            </div>
+        </div>
+        <div class="total-cards" #cardColumnKits>
+            <div class="studentkits-container" *ngFor="let product of student.products; let i = index">
+                <div class="studentkits-image">
+                    <img id="img" [src]="product.imagePath" loading="lazy" />
+                </div>
+                <div class="studentkits-name">{{ product.name }}</div>
+                <div class="studentkits-description">
+                    {{ product.description }}
+                    <ul>
+                        <li *ngFor="let item of product.productList; let j = index">
+                            {{ product.productList[j] }}
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="studentkits-price">£ {{ product.sellingPrice }}</div>
+                <div class="studentkits-button">
+                    <app-button [product]="product"></app-button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
                 </div>
                 </app-headerandfooter>
 </body>

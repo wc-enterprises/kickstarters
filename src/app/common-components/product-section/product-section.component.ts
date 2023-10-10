@@ -115,4 +115,7 @@ if(context === 'cardColumn')
   addProductToCart(product: any) {
     console.log('product', product);
   }
+  navigateToProductDetail(productId: number) {
+    this.router.navigate(['/product',productId]);
+  }
 }

@@ -12,6 +12,8 @@ import { ActivatedRoute } from '@angular/router';
 export class ProductDetailComponent implements OnInit{
   @ViewChildren('cardColumn') cardColumn!: QueryList<ElementRef>;
   @ViewChildren('cardColumnKits') cardColumnKits!: QueryList<ElementRef>;
+ 
+
   
 
 constructor(  private route: ActivatedRoute, private apiCallsService: ApiCallsService){}
@@ -29,8 +31,9 @@ constructor(  private route: ActivatedRoute, private apiCallsService: ApiCallsSe
   async ngOnInit() {
   
     this.route.paramMap.subscribe((params)=>{
-    this.productId=params.get('id');
+    this.productId=params.get('id')
   })
+  
 
 console.log(this.productId);
 
@@ -121,4 +124,8 @@ this.apiCallsService.getStudentKits().subscribe(
     // Update this.codAvailable and this.deliveryDate accordingly.
   }
   
+}
+
+function getProductById(productId: string): any {
+  throw new Error('Function not implemented.');
 }

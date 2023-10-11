@@ -10,8 +10,29 @@ import {
   providedIn: 'root',
 })
 export class ApiCallsService {
-  getProductById(productId: string | null) {
-    throw new Error('Method not implemented.');
+  getProductById(productId:string) {
+   return{
+    id: '-NePeIs7IU7lj9jDly4S',
+    categoryName: 'New Arrivals',
+          name: 'Woollen cap',
+          description: 'Woollen cap for winter',
+          imagePath:
+            'https://m.media-amazon.com/images/I/71YN5XFWdVL._AC_UL640_FMwebp_QL65_.jpg',
+          unit: 'unit',
+          unitsInStock: 100,
+          pricingId: '-NePeJ2U-GlJeOv7U9lv',
+          sellingPrice: '9',
+          discount: '10',
+          discountUnit: 'percentage',
+          attributes: [
+            {
+              key: 'color',
+              value: 'black',
+              asset: '#000000',
+            },
+          ],
+          variants: [],
+   }
   }
 
   constructor(private http: HttpClient) {}
@@ -40,7 +61,7 @@ export class ApiCallsService {
   }
 
 
-  getRecommendation(productId:any): Observable<
+  getRecommendation(_productId:any): Observable<
   StandardResponse<ICategorizedProductsWithAttributesAndVariants[]>
 > {
     return of (rec)as Observable<

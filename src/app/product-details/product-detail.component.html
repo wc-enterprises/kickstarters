@@ -2,12 +2,12 @@
 
 <body>
 <app-headerandfooter>
-    <div class="productdetail-container">
+    <div *ngIf="productId" class="productdetail-container">
 
         <div class="productdetail-box1">
             <div class="productdetail-header">
                 <a>Home</a>&nbsp;&nbsp;
-                <a>> New Arrivals</a>
+                <a>> {{productId.categoryName}}</a>
             </div>
             <div class="productdetails">
                 

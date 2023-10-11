@@ -34,7 +34,7 @@
             *ngFor="let product of student.products; let i = index"
           >
             <div class="studentkits-image">
-              <img id="img" [routerLink]="['/productdetail/',product.productId]" [src]="product.imagePath" loading="lazy" />
+              <img id="img" [routerLink]="['/productdetail/',product.id]" [src]="product.imagePath" loading="lazy" />
             </div>
             <div class="studentkits-name">{{ product.name }}</div>
             <div class="studentkits-description">
@@ -88,7 +88,7 @@
             *ngFor="let product of category.products; let i = index"
           >
             <div class="image-container">
-              <img id="img" [src]="product.imagePath" loading="lazy" />
+              <img id="img" [routerLink]="['/productdetail/',product.id]" [src]="product.imagePath" loading="lazy" />
             </div>
             <div class="product-name">
               {{ product.name }}

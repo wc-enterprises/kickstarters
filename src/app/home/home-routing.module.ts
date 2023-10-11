@@ -26,6 +26,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('../blog-page/blog-page.module').then((m) => m.BlogPageModule),
   },
+  {
+    path: 'blogdetail',
+    loadChildren: () =>
+      import('../blogdetail-page/blogdetail.module').then((m) => m.BlogDetailModule),
+  },
 
 
 ];

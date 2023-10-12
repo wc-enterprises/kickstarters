@@ -37,20 +37,26 @@ line-height: 21px
     align-items: center;
    box-sizing: border-box;
 }
+.viewimage-session{
+  width:50%;
+  height:500px;
+  box-sizing: border-box;
+  
+}
 
 .productview-image{
-    width:50%;
-    height: 100%;
-    box-sizing: border-box;
-    background-image: url('./woolen cap1.svg');
-    background-size: cover;
-    background-repeat:no-repeat;
-    background-position: center;
-    
+ 
+  width: 650px;
+  height: 500px;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; 
 }
 .total-productdetail{
+    
     width:50%;
-    height:auto;
+    height:100%;
     box-sizing: border-box;
   
 }

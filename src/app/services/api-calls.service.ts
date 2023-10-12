@@ -11,6 +11,7 @@ import {
 })
 export class ApiCallsService {
   getProductById(productId:string) {
+  
    return{
     id: '-NePeIs7IU7lj9jDly4S',
     categoryName: 'New Arrivals',

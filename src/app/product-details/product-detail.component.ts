@@ -12,6 +12,10 @@ import { ActivatedRoute } from '@angular/router';
 export class ProductDetailComponent implements OnInit{
   @ViewChildren('cardColumn') cardColumn!: QueryList<ElementRef>;
   @ViewChildren('cardColumnKits') cardColumnKits!: QueryList<ElementRef>;
+  
+  product!: { id: string; categoryName: string; name: string; description: string; imagePath: string; unit: string; unitsInStock: number; pricingId: string; sellingPrice: string; discount: string; discountUnit: string; attributes: { key: string; value: string; asset: string; }[]; variants: never[]; };
+
+
  
 
   
@@ -22,6 +26,7 @@ constructor(  private route: ActivatedRoute, private apiCallsService: ApiCallsSe
   studentKits:any[]=[];
   recommendationrec: any[]=[];
   productId:any;
+  
   productData: any; 
  postalCode: string = '';
   deliveryDate: string = '';
@@ -32,11 +37,17 @@ constructor(  private route: ActivatedRoute, private apiCallsService: ApiCallsSe
   
     this.route.paramMap.subscribe((params)=>{
     this.productId=params.get('id')
+    const product= this.apiCallsService.getProductById(this.productId) 
+    this.loadProductDetails();
   })
-  
+
+
 
 console.log(this.productId);
 
+ 
+
+  
 
 this.apiCallsService.getStudentKits().subscribe( 
       (data:any) =>{
@@ -49,8 +60,10 @@ this.apiCallsService.getStudentKits().subscribe(
       (error)=>{
         console.log('Error fetching student Kits:',error);
       }
+      
     );
     const productId = 'yourProductId';
+  
     this.apiCallsService.getRecommendation(productId).subscribe( 
       (data:any) =>{
         data.data.forEach((item:any,index:number)=>{
@@ -66,6 +79,19 @@ this.apiCallsService.getStudentKits().subscribe(
     
   }
 
+  
+  
+  
+     
+ 
+  
+  // product(product: any) {
+  //   throw new Error('Method not implemented.');
+  // }
+  loadProductDetails() {
+    this.product = this.apiCallsService.getProductById(this.productId);
+    console.log(this.product); // Now you can access the product data
+  }
   scrollLeft(catIndex: number, context: 'cardColumn' | 'cardColumnKits') {
 
     if(context === 'cardColumn')

@@ -7,13 +7,23 @@ import { blogsection } from "../common-components/blog-section/blog-section.comp
   styleUrls: [`./blogdetail-page.component.css`],
 })
 export class BlogDetailComponent{
-  id: number | undefined;
+  id: string| undefined;
+  blogId: string | undefined;
+  blog: { id: number; Image: string; Title: string; description: string; Date: string; Author: string; content: { subTitle: string; para: string; }[]; } | undefined;
 
   constructor(private route: ActivatedRoute, private blogSection:blogsection) { }
 
   ngOnInit() {
-    this.route.params.subscribe(params => {
-      this.id = +params['id']; 
+    this.route.paramMap.subscribe((params)=>{
+      this.blogId=params.get('id')
+      const blog= this.blogSection.getBlogById(this.blogId) 
+      this.loadBlogDetails();
+  
     });
+  }
+  
+  loadBlogDetails() {
+    this.blog = this.blogSection.getBlogById(this.blogId);
+    console.log(this.blog); // Now you can access the product data
   }
 }

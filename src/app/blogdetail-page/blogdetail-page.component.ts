@@ -8,7 +8,7 @@ import { blogsection } from "../common-components/blog-section/blog-section.comp
 })
 export class BlogDetailComponent{
   id: string| undefined;
-  blogId: string | undefined;
+  blogId: any;
   blog: { id: number; Image: string; Title: string; description: string; Date: string; Author: string; content: { subTitle: string; para: string; }[]; } | undefined;
 
   constructor(private route: ActivatedRoute, private blogSection:blogsection) { }

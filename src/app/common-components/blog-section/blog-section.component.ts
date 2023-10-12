@@ -137,7 +137,7 @@ export class blogsection {
       
     
   }
-  navigateToBlogDetail(blogId:string) {
+  navigateToBlogDetail(blogId:number) {
     this.router.navigate(['/blog',blogId]);
   }
 

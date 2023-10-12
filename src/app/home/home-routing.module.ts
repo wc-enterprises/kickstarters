@@ -22,7 +22,7 @@ const routes: Routes = [
       import('../support/support.module').then((m) => m.SupportModule),
   },
   {
-    path: 'blog/:id',
+    path: 'blog/id',
     loadChildren: () =>
       import('../blog-page/blog-page.module').then((m) => m.BlogPageModule),
   },

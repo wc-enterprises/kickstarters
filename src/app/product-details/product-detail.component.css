@@ -23,6 +23,9 @@ font-style: normal;
 font-weight: 500;
 line-height: 21px
 }
+#categorytitle{
+  font-size:large;
+}
 .productdetails{
     width: 100%;
     height:500px;
@@ -46,12 +49,12 @@ line-height: 21px
 
 .productview-image{
  
-  width: 650px;
+  width:100%;
   height: 500px;
   box-sizing: border-box;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover; 
+  object-fit:  cover; 
 }
 .total-productdetail{
     

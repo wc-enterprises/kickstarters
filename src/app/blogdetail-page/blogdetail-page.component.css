@@ -9,6 +9,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    gap:10px;
    
 }
 .blogview-image{
@@ -21,7 +22,42 @@
 }
 .blogdetail-title{
     width:65%;
+    color: #000;
+font-family: 'Inter';
+font-size: 32px;
+font-style: normal;
+font-weight: 600;
+line-height: 44px;
 }
 .blogdetail-description{
     width:65%;
+    color: #000;
+font-family: 'Inter';
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 35px;
+}
+.blogdetail-para{
+    width:65%;
+   
+}
+.sub-title{
+    width:100%;
+    color: #000;
+  
+    font-family: 'Inter';
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+}
+.para{
+    width:100%;
+    color: #000;
+
+font-family: 'Inter';
+font-size: 16px;
+font-style: normal;
+font-weight: 300;
+line-height: 25px;
 }

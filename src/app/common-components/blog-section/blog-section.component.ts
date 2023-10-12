@@ -137,9 +137,9 @@ export class blogsection {
       
     
   }
-  navigateToBlogDetail(blogId:number) {
-    this.router.navigate(['/blog',blogId]);
-  }
+  // navigateToBlogDetail(blogId:number) {
+  //   this.router.navigate(['/blog',blogId]);
+  // }
 
   
 }

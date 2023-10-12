@@ -22,12 +22,12 @@ const routes: Routes = [
       import('../support/support.module').then((m) => m.SupportModule),
   },
   {
-    path: 'blog/id',
+    path: 'blog',
     loadChildren: () =>
       import('../blog-page/blog-page.module').then((m) => m.BlogPageModule),
   },
   {
-    path: 'blogdetail',
+    path: 'blogdetail/:id',
     loadChildren: () =>
       import('../blogdetail-page/blogdetail.module').then((m) => m.BlogDetailModule),
   },

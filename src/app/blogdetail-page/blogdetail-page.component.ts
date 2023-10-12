@@ -7,9 +7,9 @@ import { blogsection } from "../common-components/blog-section/blog-section.comp
   styleUrls: [`./blogdetail-page.component.css`],
 })
 export class BlogDetailComponent{
-  id: string| undefined;
-  blogId: any;
-  blog: { id: number; Image: string; Title: string; description: string; Date: string; Author: string; content: { subTitle: string; para: string; }[]; } | undefined;
+
+  blogId:any;
+  blog!: { id: number; Image: string; Title: string; description: string; Date: string; Author: string; content: { subTitle: string; para: string; }[]; };
 
   constructor(private route: ActivatedRoute, private blogSection:blogsection) { }
 

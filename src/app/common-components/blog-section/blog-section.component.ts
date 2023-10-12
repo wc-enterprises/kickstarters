@@ -112,7 +112,7 @@ export class blogsection {
       ]
     },
   ];
-  getBlogById(productId:string){
+  getBlogById(blogId:any){
     return{
       id:1,
       Image:

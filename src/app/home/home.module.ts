@@ -17,7 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from '../app.component';
-import { blogsection } from '../common-components/blog-section/blog-section.component';
+import { BlogSection } from '../common-components/blog-section/blog-section.component';
 import { BlogPage } from '../blog-page/blog-page.component';
 import { BlogDetailComponent } from '../blogdetail-page/blogdetail-page.component';
 @NgModule({
@@ -31,7 +31,7 @@ import { BlogDetailComponent } from '../blogdetail-page/blogdetail-page.componen
     CartItemComponent,
     PaymentsComponent,
     FAQComponent,
-    blogsection,
+    BlogSection,
     BlogPage,
     BlogDetailComponent
   ],

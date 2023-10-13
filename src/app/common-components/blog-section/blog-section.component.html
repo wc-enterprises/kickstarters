@@ -5,14 +5,14 @@
       <div class="card-container">
         <div class="blogsection-cards" *ngFor="let blog of blogs">
           <div class="image">
-            <img id="img" [src]="blog.Image" alt="Blog Image" loading="lazy" />
+            <img id="img" [src]="blog.image" alt="Blog Image" [routerLink]="['/blogdetail/',blog.id]" loading="lazy" />
           </div>
           <div class="blogdateandtime">
-            <span class="date">{{ blog.Date }} | </span>
-            <span class="author">{{ blog.Author }}</span>
+            <span class="date">{{ blog.date }} | </span>
+            <span class="author">{{ blog.author }}</span>
           </div>
           <div class="blog-name">
-            {{ blog.Title }}
+            {{ blog.title }}
           </div>
         <button>Read more -></button>
         </div>

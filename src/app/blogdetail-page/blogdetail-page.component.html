@@ -1,7 +1,7 @@
 <html>
 
 <body>
-    
+    <app-headerandfooter>
     <div class="blogdetail-container">
         <div class="blogdetail-content">
             <div class="blogdetail-title">
@@ -38,16 +38,29 @@
                     <div class="left-foot">
                         <div class="date">22 August 2023</div>
                         <div class="bloger-details">
-                            <img>
-                            <p></p>
+                            <img id="blogerimg" src="../../assets/blogwriterimg.svg">
+                            <div class="bloger">
+                                <span id="bloger-name">Govind</span>
+                                <span id="writer">Content Writer</span>
+                        </div>
                         </div>
                     </div>
-                    <div class="right-foot"></div>
+                    <div class="right-foot">
+                        <p id="share">Share With</p>
+                        <img id="socialmediaicon" src="../../assets/updateinstaicon.svg">
+                        <img id="socialmediaicon" src="../../assets/updatetwiticon.svg">
+                        <img id="socialmediaicon" src="../../assets/updatefbicon.svg">
+                    </div>
                 
                 </div>
+                <div>
+                    <button id="backbutton">
+                        <- Back to blog's</button>
+                </div>
+                <app-blogsection></app-blogsection>
 </div>
 </div>
-
+</app-headerandfooter>
 </body>
 
 </html>

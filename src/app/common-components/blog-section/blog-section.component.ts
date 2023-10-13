@@ -5,18 +5,18 @@ import { Router } from '@angular/router';
   templateUrl: './blog-section.component.html',
   styleUrls: [`./blog-section.component.css`],
 })
-export class blogsection {
+export class BlogSection {
   constructor(private router: Router) {}
   blogs = [
     {
       id:1,
-      Image:
+      image:
         '../../assets/blogimg1.svg',
-      Title:
+      title:
         'Navigating Student Accommodation in the UK: A Comprehensive Guide ',
       description: "Description for Blog Entry 1",
-      Date: '12 July 2023',
-      Author: 'Govind',
+      date: '12 July 2023',
+      author: 'Govind',
       content: [
         {
           subTitle: "Understanding the Landscape",
@@ -31,12 +31,12 @@ export class blogsection {
     },
     { 
       id:2,
-      Image:
+      image:
         '../../assets/blogimg2.svg',
-      Title: "Securing Part-Time Jobs in the UK: A Student's Essential Guide",
+      title: "Securing Part-Time Jobs in the UK: A Student's Essential Guide",
       description:'',
-      Date: '22 August 2023',
-      Author: 'Govind',
+      date: '22 August 2023',
+      author: 'Govind',
       content: [
         {
           subTitle: "Understanding the Landscape",
@@ -51,12 +51,12 @@ export class blogsection {
     },
     { 
       id:3,
-      Image:
+      image:
         '../../assets/blogimg3.svg',
-      Title: "Securing Part-Time Jobs in the UK: A Student's Essential Guide",
+      title: "Securing Part-Time Jobs in the UK: A Student's Essential Guide",
       description:'',
-      Date: '22 August 2023',
-      Author: 'Govind',
+      date: '22 August 2023',
+      author: 'Govind',
       content: [
         {
           subTitle: "Understanding the Landscape",
@@ -71,13 +71,13 @@ export class blogsection {
     },
     {
       id:4,
-      Image:
+      image:
         '../../assets/blogimg2.svg',
-      Title: "Securing Part-Time Jobs in the UK: A Student's Essential Guide",
+      title: "Securing Part-Time Jobs in the UK: A Student's Essential Guide",
    
       description:'',
-      Date: '22 August 2023',
-      Author: 'Govind',
+      date: '22 August 2023',
+      author: 'Govind',
       content: [
         {
           subTitle: "Understanding the Landscape",
@@ -92,13 +92,13 @@ export class blogsection {
     },
     {
       id:5,
-      Image:
+      image:
         '../../assets/blogimg1.svg',
-      Title: "Securing Part-Time Jobs in the UK: A Student's Essential Guide",
+      title: "Securing Part-Time Jobs in the UK: A Student's Essential Guide",
    
       description:'',
-      Date: '22 August 2023',
-      Author: 'Govind',
+      date: '22 August 2023',
+      author: 'Govind',
       content: [
         {
           subTitle: "Understanding the Landscape",
@@ -115,13 +115,13 @@ export class blogsection {
   getBlogById(blogId:any){
     return{
       id:1,
-      Image:
+      image:
         '../../assets/blogimg1.svg',
-      Title:
+      title:
         'Navigating Student Accommodation in the UK: A Comprehensive Guide ',
       description: "Description for Blog Entry 1",
-      Date: '12 July 2023',
-      Author: 'Govind',
+      date: '12 July 2023',
+      author: 'Govind',
       content: [
         {
           subTitle: "Understanding the Landscape",

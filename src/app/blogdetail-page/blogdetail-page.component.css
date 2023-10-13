@@ -1,7 +1,8 @@
 .blogdetail-container{
     width:100%;
     height:auto;
-    
+    padding-top: 100px;
+   
 }
 .blogdetail-content{
     width:100%;
@@ -63,4 +64,84 @@ line-height: 25px;
 }
 .bloger-details{
     display: flex;
+    width:auto;
+    height: 50px;
+    align-items: center;
+    gap:6px;
+}
+.left-foot{
+   
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+  
+}
+.right-foot{
+    width:auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding:30px 20px 0px 0px;
+}
+.blogcontent-footer{
+    display: flex;
+    width:65%;
+    height: 116px;
+    justify-content: space-between;
+}
+.bloger{
+   display: flex;
+   flex-direction: column;
+}
+#blogerimg{
+width:50px;
+height: 50px;
+}
+#bloger-name{
+    color: #000;
+    font-family: 'Inter';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 21px; 
+
+}
+#writer{
+    color: #3E3A3A;
+
+font-family: 'Inter';
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 21px;
+}
+#share{
+    color: #3E3A3A;
+
+font-family: 'Inter';
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 13px;
+}
+#socialmediaicon{
+    width:30px;
+    height:30px;
+}
+#backbutton{
+    display: flex;
+padding: 11px 30px;
+align-items: center;
+gap: 10px;
+border-radius: 7px;
+background: #000;
+color:white;
+color: #FFF;
+border:none;
+font-family: 'Inter';
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 21px;
 }

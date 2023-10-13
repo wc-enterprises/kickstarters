@@ -1,0 +1,37 @@
+<html>
+
+<body>
+    <div id="mySidenav" class="sidenav" [ngStyle]="{'width': sidebarWidth}">
+        <div class="nav-header">
+            <span id="account">
+                <img id="man" src="../../assets/manicon.svg">
+                <p id="login">LOGIN</p>
+            </span>
+            <div href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</div>
+        </div>
+        <a>New arrivals</a>
+        <a>Student kits</a>
+        <a (click)="toggleEssentialsDropdown()" href="javascript:void(0)">Essentials
+            <span *ngIf="!showEssentialsDropdown" style="padding-left:100px;font-size: 26px;">&#9662;</span>
+            <span *ngIf="showEssentialsDropdown" style="padding-left:100px;font-size: 26px;">&#9652;</span></a>
+        <div class="dropdown-content" *ngIf="showEssentialsDropdown">
+            <a (click)="toggleEssentialsDropdown()">Bedroom essentials
+                <img src="../../assets/downarrow.svg" *ngIf="!showEssentialsDropdown"
+                    style="padding-left:100px;font-size: 26px;">
+                <img src="../../assets/downarrow.svg" *ngIf="showEssentialsDropdown"
+                    style="padding-left:100px;font-size: 26px;">
+            </a>
+
+            <div class="dropdown-content" *ngIf="showEssentialsDropdown">
+                <a>Bathroom essentials</a>
+            </div>
+            <a href="">Category 2</a>
+            <a href="">Category 3</a>
+        </div>
+        <a>Return & exchange</a>
+        <a>Customer support</a>
+    </div>
+    <span style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776;</span>
+</body>
+
+</html>

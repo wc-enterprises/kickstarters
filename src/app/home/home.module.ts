@@ -19,7 +19,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from '../app.component';
 import { blogsection } from '../common-components/blog-section/blog-section.component';
 import { BlogPage } from '../blog-page/blog-page.component';
-
+import { SideBar } from '../sidebar/sidebar.component';
 @NgModule({
   declarations: [
     HomepageComponent,
@@ -32,7 +32,10 @@ import { BlogPage } from '../blog-page/blog-page.component';
     PaymentsComponent,
     FAQComponent,
     blogsection,
-    BlogPage
+    BlogPage,
+    SideBar
+ 
+  
   ],
   imports: [
     BrowserModule,

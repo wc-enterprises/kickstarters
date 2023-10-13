@@ -26,7 +26,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('../blog-page/blog-page.module').then((m) => m.BlogPageModule),
   },
-
+  {
+    path: 'sidebar',
+    loadChildren: () =>
+      import('../sidebar/sidebar.module').then((m) => m.SideBarModule),
+  },
 
 ];
 

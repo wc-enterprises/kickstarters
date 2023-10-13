@@ -1,5 +1,7 @@
 import { Component } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
+import { ApiCallsService } from "../services/api-calls.service";
+import { IBlog } from "../utils/interface";
 
 @Component({
     selector: 'app-blogdetail',
@@ -7,23 +9,28 @@ import { ActivatedRoute } from "@angular/router";
   styleUrls: [`./blogdetail-page.component.css`],
 })
 export class BlogDetailComponent{
-
+  blog: IBlog | undefined;
   blogId:any;
-  blog!: { id: number; Image: string; Title: string; description: string; Date: string; Author: string; content: { subTitle: string; para: string; }[]; };
+  router: any;
+  
 
-  constructor(private route: ActivatedRoute, ) { }
+  constructor(private route: ActivatedRoute,private apicallservice:ApiCallsService ) { }
 
   ngOnInit() {
-    // this.route.paramMap.subscribe((params)=>{
-    //   this.blogId=params.get('id')
-    //   const blog= this.blogsection.getBlogById(this.blogId) 
-    //   this.loadBlogDetails();
-  
-    // });
+    const blogId = this.route.snapshot.paramMap.get('id');
+    
+    if (blogId) { // Check if blogId is not null
+      this.apicallservice.getBlogById(blogId).subscribe((data: IBlog) => {
+        this.blog = data;
+      });
+    }
+  }
+  navigateToBlogPage() {
+    this.router.navigate(['/blog']); 
+  }
   }
   
   // loadBlogDetails() {
   //   this.blog = this.blogsection.getBlogById(this.blogId);
   //   console.log(this.blog);
   // }
-}

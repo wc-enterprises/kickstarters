@@ -38,9 +38,9 @@ export class ApiCallsService {
   getBlogs(): Observable<IBlogs[]> {
     return of(blogs);
   }
- getBlogById(blogId: string):Observable<IBlog[]>{
+ getBlogById(blogId: string):Observable<IBlog>{
   const blog = blogs.find(b => b.id === blogId);
-  return of(blog);
+  return of(blog as IBlog);
  }
   
 }

@@ -107,10 +107,16 @@ export interface IBlogs{
   description:string;
   date:string;
   author:string;
- 
-}
-export interface IBlog extends IBlogs{
 
-  subTitle:string;
-  para:string;
+}
+export interface IBlog{
+  id:string;
+  image:string;
+  title:string;
+  description:string;
+  date:string;
+  author:string;
+  content:{  subTitle:string;
+    para:string;}[]
+
 }

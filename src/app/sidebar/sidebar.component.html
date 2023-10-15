@@ -12,21 +12,73 @@
         <a>New arrivals</a>
         <a>Student kits</a>
         <a (click)="toggleEssentialsDropdown()" href="javascript:void(0)">Essentials
-            <span *ngIf="!showEssentialsDropdown" style="padding-left:100px;font-size: 26px;">&#9662;</span>
-            <span *ngIf="showEssentialsDropdown" style="padding-left:100px;font-size: 26px;">&#9652;</span></a>
-        <div class="dropdown-content" *ngIf="showEssentialsDropdown">
-            <a (click)="toggleEssentialsDropdown()">Bedroom essentials
-                <img src="../../assets/downarrow.svg" *ngIf="!showEssentialsDropdown"
-                    style="padding-left:100px;font-size: 26px;">
-                <img src="../../assets/downarrow.svg" *ngIf="showEssentialsDropdown"
-                    style="padding-left:100px;font-size: 26px;">
-            </a>
+        <span style="font-size:12px;padding-left:100px;color: gray;">
+            <ng-container *ngIf="!showEssentialsDropdown">&#9660;</ng-container>
+        
+            <ng-container *ngIf="showEssentialsDropdown">&#9650;</ng-container> </span><!-- Down arrow -->
+        
+        </a>
 
-            <div class="dropdown-content" *ngIf="showEssentialsDropdown">
-                <a>Bathroom essentials</a>
+        <div class="dropdown-content" *ngIf="showEssentialsDropdown">
+            <div class="sub-dropdown" (click)="toggleBedroomDropdown()">Bedroom essentials
+                <span style="padding:10px;color: gray;">
+                    <img src="../../assets/dropdownarrow.svg" *ngIf="!showBedroomDropdown">
+                    <img src="../../assets/dropdownarrow2.svg" *ngIf="showBedroomDropdown">
+                </span>
             </div>
-            <a href="">Category 2</a>
-            <a href="">Category 3</a>
+            
+            <div class="dropdown-content" *ngIf="showBedroomDropdown">
+                <div class="sub-dropdown">Bathroom essentials</div>
+            </div>
+            
+            <!-- food essentials -->
+            <div class="sub-dropdown" (click)="toggleFoodDropdown()" href="">Food essentials
+                <span style="padding:10px;color: gray;">
+                    <img src="../../assets/dropdownarrow.svg" *ngIf="!showFoodDropdown">
+                    <img src="../../assets/dropdownarrow2.svg" *ngIf="showFoodDropdown">
+                </span>
+            </div>
+            <div class="dropdown-content" *ngIf="showFoodDropdown">
+                <div class="sub-dropdown">Noodles</div>
+            </div>
+            <div class="dropdown-content" *ngIf="showFoodDropdown">
+                <div class="sub-dropdown">Oats</div>
+            </div>
+            <div class="dropdown-content" *ngIf="showFoodDropdown">
+                <div class="sub-dropdown">Rice</div>
+            </div>
+            
+            
+            <div class="sub-dropdown" (click)="toggleLaundryDropdown()" href="">Laundry essentials
+                <span style="padding:10px;color: gray;">
+                    <img src="../../assets/dropdownarrow.svg" *ngIf="!showLaundryDropdown">
+                    <img src="../../assets/dropdownarrow2.svg" *ngIf="showLaundryDropdown">
+                </span>
+            </div>
+            <div class="dropdown-content" *ngIf="showLaundryDropdown">
+                <div class="sub-dropdown"></div>
+            </div>
+            <div class="dropdown-content" *ngIf="showLaundryDropdown">
+                <div class="sub-dropdown"></div>
+            </div>
+            <div class="dropdown-content" *ngIf="showLaundryDropdown">
+                <div class="sub-dropdown"></div>
+            </div>
+            <!--  fashion -->
+            <div class="sub-dropdown" (click)="toggleFashionDropdown()" href="">Fashion essentials
+                <span style="padding:10px;color: gray;">
+                    <img src="../../assets/dropdownarrow.svg" *ngIf="!showFashionDropdown">
+                    <img src="../../assets/dropdownarrow2.svg" *ngIf="showFashionDropdown">
+                </span>
+            </div>
+            <div class="dropdown-content" *ngIf="showFashionDropdown">
+                <div class="sub-dropdown"></div>
+            </div>
+            <div class="dropdown-content" *ngIf="showFashionDropdown">
+                <div class="sub-dropdown"></div>
+            </div>
+<div class="sub-dropdown" href="">Kitchen essentials</div>
+<div class="sub-dropdown" href="">Stationary essentials</div>
         </div>
         <a>Return & exchange</a>
         <a>Customer support</a>

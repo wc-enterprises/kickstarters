@@ -6,7 +6,7 @@
 
         <div class="productdetail-box1">
             <div class="productdetail-header">
-                <a>Home</a>&nbsp;&nbsp;
+                <a id="linktohome">Home</a>&nbsp;&nbsp;
                 <a id="categorytitle">> {{product.categoryName}}</a>
             </div>
             <div class="productdetails">
@@ -57,12 +57,12 @@
 
 <!-- product info section -->
 <div class="productdetails-box2">
-    <div let="item of panelItems" class="expansion-panel" (click)="togglePanel()">
-        <div class="panel-header">
+    <div let="item of panelItems" class="expansion-panel">
+        <div (click)="togglePanel()" class="panel-header">
             <span class="heading">Product Info</span>
-            <span class="toggle-icon">{{ isExpanded ? '▼' : '▲' }}</span>
+            <span class="toggle-icon">{{ isExpanded1 ? '▼' : '▲' }}</span>
         </div>
-        <div class="panel-content" [ngClass]="{ 'expanded': isExpanded }">
+        <div class="panel-content" [ngClass]="{ 'expanded': isExpanded1 }">
             <div>
 
                 <div class="instruction">
@@ -124,12 +124,12 @@
                 
                 <!-- delivery section -->
                 <div class="productdetails-box2">
-                    <div class="expansion-panel" (click)="togglePanel()">
-                        <div class="panel-header">
+                    <div class="expansion-panel">
+                        <div (click)="toggledeliveryPanel()" class="panel-header">
                             <span class="heading">Delivery</span>
-                            <span class="toggle-icon">{{ isExpanded ? '▼' : '▲' }}</span>
+                            <span class="toggle-icon">{{ isExpanded2 ? '▼' : '▲' }}</span>
                         </div>
-                        <div class="panel-content" [ngClass]="{ 'expanded': isExpanded }">
+                        <div class="panel-content" [ngClass]="{ 'expanded': isExpanded2 }">
                             <div class="deliverychecker">
                                 <p id="deliveryheading">Delivered by and COD Checker</p>
                                 <div class="form">
@@ -147,12 +147,12 @@
                 
                 <!-- return policy -->
                 <div class="productdetails-box2">
-                    <div class="expansion-panel" (click)="togglePanel()">
-                        <div class="panel-header">
+                    <div class="expansion-panel">
+                        <div (click)=" togglereturnPanel()" class="panel-header">
                             <span class="heading">Return Policy</span>
-                            <span class="toggle-icon">{{ isExpanded ? '▼' : '▲' }}</span>
+                            <span class="toggle-icon">{{ isExpanded3 ? '▼' : '▲' }}</span>
                         </div>
-                        <div class="panel-content" [ngClass]="{ 'expanded': isExpanded }">
+                        <div class="panel-content" [ngClass]="{ 'expanded': isExpanded3 }">
                             <div class="return-policy">
                                 <p class="para">
                                     For more details on our Returns Policies, please<br>

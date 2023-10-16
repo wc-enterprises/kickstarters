@@ -22,7 +22,9 @@ export class ProductDetailComponent implements OnInit{
 
 constructor(  private route: ActivatedRoute, private apiCallsService: ApiCallsService){}
     @Input() panelTitle: string = '';
-  isExpanded: boolean = false;
+  isExpanded1: boolean = false;
+  isExpanded2: boolean = false;
+  isExpanded3:boolean = false;
   studentKits:any[]=[];
   recommendationrec: any[]=[];
   productId:any;
@@ -142,7 +144,13 @@ this.apiCallsService.getStudentKits().subscribe(
       }
 
   togglePanel() {
-    this.isExpanded = !this.isExpanded;
+    this.isExpanded1 = !this.isExpanded1;
+  }
+  toggledeliveryPanel() {
+    this.isExpanded2 = !this.isExpanded2;
+  }
+  togglereturnPanel() {
+    this.isExpanded3 = !this.isExpanded3;
   }
   checkDelivery() {
     // Implement the logic to check delivery availability and estimate delivery date

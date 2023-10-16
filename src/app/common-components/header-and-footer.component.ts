@@ -9,6 +9,7 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
         <!-- header html -->
         <div class="header">
           <span routerLink="/" class="logo-title">
+            
             <img id="logo" src="./assets/kicklogo.svg" />
 
             <p id="p1">KICKSTARTERS</p>

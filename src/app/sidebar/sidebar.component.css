@@ -13,6 +13,7 @@
   }
   .inner-nav{
     padding:5px;
+    
   }
   .sidenav::-webkit-scrollbar {
     display: none;
@@ -23,16 +24,17 @@
     text-decoration: none;
     font-size: 25px;
   display: block;
-    transition: 0.3s;
+  transition: 0.3s;
     color: #343A40;
+    width:180px;
 font-family: 'Average Sans';
 font-size: 16px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
 letter-spacing: 1px;
-border-top: 0.2px solid #343A40;
 cursor: pointer;
+
 
   }
   .sub-dropdown{
@@ -40,6 +42,7 @@ cursor: pointer;
     text-decoration: none;
     font-size: 25px;
   display: block;
+  width:180px;
     transition: 0.3s;
     color: #343A40;
 font-family: 'Average Sans';
@@ -48,7 +51,6 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 letter-spacing: 1px;
-
 cursor: pointer;
   }
   .sidenav a:hover {
@@ -109,11 +111,11 @@ background: #E5E5E5;
 .icon-box {
   display: flex; 
   padding:15px;
-  border-top: 0.1px solid #343A40;
+  border-top: 0.1px solid#ADB5BD;;
 }
 
 .box {
-  border: 0.1px solid #343A40;
+  border: 0.1px solid #ADB5BD;;
   padding: 3px;
   text-align: center; 
   width:106px;

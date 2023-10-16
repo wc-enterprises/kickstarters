@@ -10,36 +10,49 @@
             </span>
             <div href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</div>
         </div>
+<!-- new arrivals -->
+<div style="display: flex; align-items:center;cursor: pointer;border-top: 0.2px solid #ADB5BD;">
         <a>New arrivals</a>
+        </div>
+        <!-- student kits -->
+        <div style="display: flex; align-items:center;cursor: pointer;border-top: 0.2px solid #ADB5BD;">
         <a>Student kits</a>
-        <a (click)="toggleEssentialsDropdown()" href="javascript:void(0)">Essentials
-        <span style="font-size:12px;padding-left:100px;color: gray;">
-            <ng-container *ngIf="!showEssentialsDropdown">&#9660;</ng-container>
-        
-            <ng-container *ngIf="showEssentialsDropdown">&#9650;</ng-container> </span><!-- Down arrow -->
-        
-        </a>
-
+        </div>
+        <!-- essentials        -->
+        <div (click)="toggleEssentialsDropdown()"
+            style="display: flex; align-items:center;cursor: pointer;border-top: 0.2px solid #ADB5BD;">
+            <a href="javascript:void(0)">Essentials </a>
+            <div style="">
+                <img src="../../assets/maindropdown.svg" *ngIf="!showEssentialsDropdown">
+                <img src="../../assets/maindropup.svg" *ngIf="showEssentialsDropdown">
+            </div><!-- Down arrow -->
+        </div>
         <div class="dropdown-content" *ngIf="showEssentialsDropdown">
-            <div class="sub-dropdown" (click)="toggleBedroomDropdown()">Bedroom essentials
-                <span style="padding:10px;color: gray; width:22px;height:22px">
+        <div (click)="toggleBedroomDropdown()"
+            style="display: flex; align-items:center;cursor: pointer;border-top: 0.2px solid #ADB5BD;">
+            <div class="sub-dropdown">Bedroom essentials</div>
+            <span style="color: gray;">
                     <img src="../../assets/dropdownarrow.svg" *ngIf="!showBedroomDropdown">
                     <img src="../../assets/dropdownarrow2.svg" *ngIf="showBedroomDropdown">
                 </span>
-            </div>
+            
+        </div>
             
             <div class="dropdown-content" *ngIf="showBedroomDropdown">
                 <div class="sub-dropdown">Bathroom essentials</div>
             </div>
             
             <!-- food essentials -->
-            <div class="sub-dropdown" (click)="toggleFoodDropdown()" href="">Food essentials
-                <span style="padding:10px;color: gray;">
+            <div (click)="toggleFoodDropdown()"
+                style="display: flex; align-items:center;cursor: pointer;border-top: 0.2px solid #ADB5BD;">
+                <div class="sub-dropdown" href="">Food essentials</div>
+                <span style="">
                     <img src="../../assets/dropdownarrow.svg" *ngIf="!showFoodDropdown">
                     <img src="../../assets/dropdownarrow2.svg" *ngIf="showFoodDropdown">
                 </span>
             </div>
             <div class="dropdown-content" *ngIf="showFoodDropdown">
+                
                 <div class="sub-dropdown">Noodles</div>
             </div>
             <div class="dropdown-content" *ngIf="showFoodDropdown">
@@ -49,9 +62,10 @@
                 <div class="sub-dropdown">Rice</div>
             </div>
             
-            
-            <div class="sub-dropdown" (click)="toggleLaundryDropdown()" href="">Laundry essentials
-                <span style="padding:10px;color: gray;">
+            <div (click)="toggleLaundryDropdown()"
+                style="display: flex; align-items:center;cursor: pointer;border-top: 0.2px solid #ADB5BD;">
+                <div class="sub-dropdown" href="">Laundry essentials</div>
+                <span style="">
                     <img src="../../assets/dropdownarrow.svg" *ngIf="!showLaundryDropdown">
                     <img src="../../assets/dropdownarrow2.svg" *ngIf="showLaundryDropdown">
                 </span>
@@ -66,8 +80,10 @@
                 <div class="sub-dropdown"></div>
             </div>
             <!--  fashion -->
-            <div class="sub-dropdown" (click)="toggleFashionDropdown()" href="">Fashion essentials
-                <span style="padding:10px;color: gray;">
+            <div (click)="toggleFashionDropdown()"
+                style="display: flex; align-items:center;cursor: pointer;border-top: 0.2px solid #ADB5BD;">
+                <div class="sub-dropdown" href="">Fashion essentials</div>
+                <span style="">
                     <img src="../../assets/dropdownarrow.svg" *ngIf="!showFashionDropdown">
                     <img src="../../assets/dropdownarrow2.svg" *ngIf="showFashionDropdown">
                 </span>
@@ -78,11 +94,22 @@
             <div class="dropdown-content" *ngIf="showFashionDropdown">
                 <div class="sub-dropdown"></div>
             </div>
-    <div class="sub-dropdown" href="">Kitchen essentials</div>
-    <div class="sub-dropdown" href="">Stationary essentials</div>
+            <!-- kitchen -->
+            <div style="display: flex; align-items:center;cursor: pointer;border-top: 0.2px solid #ADB5BD;">
+                    <div class="sub-dropdown" href="">Kitchen essentials</div>
+            </div>
+            
+            <!-- Stationary -->
+            <div style="display: flex; align-items:center;cursor: pointer;border-top: 0.2px solid #ADB5BD;">
+                <div class="sub-dropdown" href="">Stationary essentials</div>
+            </div>
         </div>
+        <div style="display: flex; align-items:center;cursor: pointer;border-top: 0.2px solid #ADB5BD;">
         <a>Return & exchange</a>
+    </div>
+    <div style="display: flex; align-items:center;cursor: pointer;border-top: 0.2px solid #ADB5BD;">
         <a>Customer support</a>
+    </div>
         <div class="icon-box">
             <div class="box">
                 <img src="../../assets/instaicon.svg" alt="Instagram">

@@ -149,7 +149,6 @@ h2{
     width: 100%;
     height: auto;
     display: flex;
-   
     align-items: center;
     justify-content:space-between;
     box-sizing: border-box;
@@ -161,10 +160,13 @@ font-size: 26px;
 font-style: normal;
 font-weight: 700;
 line-height: 21px;
+width:25%;
 }
 .productcart-button{
-    width: 70%;
+    width: 60%;
     height: 7%;
+    
+    
 }
 .productdetails-box2{
     width: 100%;

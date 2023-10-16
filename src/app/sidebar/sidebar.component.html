@@ -2,6 +2,7 @@
 
 <body>
     <div id="mySidenav" class="sidenav" [ngStyle]="{'width': sidebarWidth}">
+        <div class="inner-nav">
         <div class="nav-header">
             <span id="account">
                 <img id="man" src="../../assets/manicon.svg">
@@ -21,7 +22,7 @@
 
         <div class="dropdown-content" *ngIf="showEssentialsDropdown">
             <div class="sub-dropdown" (click)="toggleBedroomDropdown()">Bedroom essentials
-                <span style="padding:10px;color: gray;">
+                <span style="padding:10px;color: gray; width:22px;height:22px">
                     <img src="../../assets/dropdownarrow.svg" *ngIf="!showBedroomDropdown">
                     <img src="../../assets/dropdownarrow2.svg" *ngIf="showBedroomDropdown">
                 </span>
@@ -77,18 +78,23 @@
             <div class="dropdown-content" *ngIf="showFashionDropdown">
                 <div class="sub-dropdown"></div>
             </div>
-<div class="sub-dropdown" href="">Kitchen essentials</div>
-<div class="sub-dropdown" href="">Stationary essentials</div>
+    <div class="sub-dropdown" href="">Kitchen essentials</div>
+    <div class="sub-dropdown" href="">Stationary essentials</div>
         </div>
         <a>Return & exchange</a>
         <a>Customer support</a>
-        <table>
-            <tr>
-                <td><a href="#"><img src="instagram-icon.png" alt="Instagram"></a></td>
-                <td><a href="#"><img src="facebook-icon.png" alt="Facebook"></a></td>
-                <td><a href="#"><img src="twitter-icon.png" alt="Twitter"></a></td>
-            </tr>
-        </table>
+        <div class="icon-box">
+            <div class="box">
+                <img src="../../assets/instaicon.svg" alt="Instagram">
+            </div>
+            <div class="box">
+                <img src="../../assets/fbicon.svg" alt="Facebook">
+            </div>
+            <div class="box">
+                <img src="../../assets/twiticon.svg" alt="Twitter">
+            </div>
+        </div>
+        </div>
     </div>
     <span style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776;</span>
 

@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 
 import { ApiCallsService } from '../../services/api-calls.service';
 import { CartService } from '../../services/cart.service';
+import { IProduct } from 'src/app/utils/interface';
 @Component({
   selector: 'app-productsection',
   templateUrl: './product-section.component.html',
@@ -118,4 +119,5 @@ if(context === 'cardColumn')
   navigateToProductDetail(productId: number) {
     this.router.navigate(['/product',productId]);
   }
+
 }

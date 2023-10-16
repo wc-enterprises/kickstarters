@@ -1,7 +1,8 @@
 import { Component, ElementRef, Input, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { ApiCallsService } from '../services/api-calls.service';
 import { ActivatedRoute } from '@angular/router';
-
+import { CartService } from '../services/cart.service';
+import { IProduct } from '../utils/interface';
 @Component({
   selector: 'app-productdetail',
   templateUrl: `product-detail.component.html`,
@@ -20,7 +21,7 @@ export class ProductDetailComponent implements OnInit{
 
   
 
-constructor(  private route: ActivatedRoute, private apiCallsService: ApiCallsService){}
+constructor(  private route: ActivatedRoute, private apiCallsService: ApiCallsService,private cartService:CartService){}
     @Input() panelTitle: string = '';
   isExpanded1: boolean = false;
   isExpanded2: boolean = false;
@@ -156,6 +157,17 @@ this.apiCallsService.getStudentKits().subscribe(
     // Implement the logic to check delivery availability and estimate delivery date
     // You can make an API call here to fetch the information based on the postalCode.
     // Update this.codAvailable and this.deliveryDate accordingly.
+  }
+
+  
+  incrementQuantity(product: IProduct) {
+    this.cartService.incrementQuantityBy1(product.id);
+    console.log(this.incrementQuantity);
+  }
+
+  decrementQuantity(product: IProduct) {
+    this.cartService.decrementQuantityOrDeleteProductFromCart(product.id);
+    console.log(this.decrementQuantity);
   }
   
 }

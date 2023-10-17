@@ -22,6 +22,7 @@ import { BlogPage } from '../blog-page/blog-page.component';
  import { Login } from '../login-page/login.component';
  import {MatInputModule} from '@angular/material/input';
  import {MatFormFieldModule} from '@angular/material/form-field';
+ import { RegisterForm } from '../register-form/register.component';
 @NgModule({
   declarations: [
     HomepageComponent,
@@ -35,7 +36,8 @@ import { BlogPage } from '../blog-page/blog-page.component';
     FAQComponent,
     blogsection,
     BlogPage,
-    Login
+    Login,
+    RegisterForm
   ],
   imports: [
     BrowserModule,

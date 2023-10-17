@@ -28,6 +28,9 @@
     flex-direction: column;
 
 }
+.dropdown-head{
+    display: flex;  
+}
 .dropdown-list{
     display: flex;
     

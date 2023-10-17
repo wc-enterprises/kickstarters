@@ -5,9 +5,12 @@ import{Component}from '@angular/core';
     styleUrls: [`./productfilter.component.css`],
   })
   export class ProductFilter{
+showCollectionDropdown:boolean=false;
 
     toggleCollectionDropdown(){
+      this.showCollectionDropdown = !this.showCollectionDropdown;
+    }
+    toggleEssentialsDropdown() {
       
     }
-
   }

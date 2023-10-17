@@ -2,27 +2,142 @@
 
 <body>
     <div class="main-container">
-        <div class="sub-container">
-            <div class="filter-box">
-                <div class="dropdown-container">
-                    <div (click)="toggleCollectionDropdown()" class="dropdown-head">
-                        <img *ngIf="!showCollectionDropdown" src="../../assets/rightsidearrowicon.svg">
-                        <p>Collections</p>
+<div class="sub-container">
+<!-- collection -->
+        <div class="filter-box">
+
+        <div class="dropdown-container">
+            <div (click)="toggleCollectionDropdown()" class="dropdown-head">
+                <img *ngIf="!showCollectionDropdown" src="../../assets/rightsidearrowicon.svg">
+                <img *ngIf="showCollectionDropdown" src="../../assets/downarrowicon1.svg">
+                <p>Collections</p>
+                </div>
+                <div *ngIf="showCollectionDropdown" class="dropdown-list">
+                    <input type="checkbox">
+                    <p id="productname">Jackets</p>
+                    <p>(1)</p>
                     </div>
                     <div *ngIf="showCollectionDropdown" class="dropdown-list">
                         <input type="checkbox">
-                        <p>Jackets</p>
+                        <p id="productname">T-shirt</p>
                         <p>(1)</p>
                     </div>
                     </div>
-                
+                    
+                    <!-- sizes -->
+                    
+                    <div class="dropdown-container">
+                        <div (click)="toggleSizeDropdown()" class="dropdown-head">
+                            <img *ngIf="!showSizeDropdown" src="../../assets/rightsidearrowicon.svg">
+                            <img *ngIf="showSizeDropdown" src="../../assets/downarrowicon1.svg">
+                            <p>Size</p>
+                        </div>
+                        <div *ngIf="showSizeDropdown" class="dropdown-list">
+                            <input type="checkbox">
+                            <p id="productname">S</p>
+                            <p>(1)</p>
+                        </div>
+                        <div *ngIf="showSizeDropdown" class="dropdown-list">
+                            <input type="checkbox">
+                            <p id="productname">M</p>
+                            <p>(1)</p>
+                        </div>
+                        <div *ngIf="showSizeDropdown" class="dropdown-list">
+                            <input type="checkbox">
+                            <p id="productname">L</p>
+                            <p>(1)</p>
+                        </div>
+                        <div *ngIf="showSizeDropdown" class="dropdown-list">
+                            <input type="checkbox">
+                            <p id="productname">XL</p>
+                            <p>(1)</p>
+                        </div>
+                        </div>
+                        <!-- colors    -->
+                        <div class="dropdown-container">
+                            <div (click)="toggleColorsDropdown()" class="dropdown-head">
+                                <img *ngIf="!showColorsDropdown" src="../../assets/rightsidearrowicon.svg">
+                                <img *ngIf="showColorsDropdown" src="../../assets/downarrowicon1.svg">
+                                <p>Colors</p>
+                            </div>
+                            <div *ngIf="showColorsDropdown" class="dropdown-list">
+                                <input type="checkbox">
+                                <p id="productname">Brown</p>
+                                <p>(1)</p>
+                            </div>
+                            <div *ngIf="showColorsDropdown" class="dropdown-list">
+                                <input type="checkbox">
+                                <p id="productname">Black</p>
+                                <p>(1)</p>
+                            </div>
+                        </div>
+                        <!-- Occassion -->
+                        <div class="dropdown-container">
+                            <div (click)="toggleOccassionDropdown()" class="dropdown-head">
+                                <img *ngIf="!showOccassionDropdown" src="../../assets/rightsidearrowicon.svg">
+                                <img *ngIf="showOccassionDropdown" src="../../assets/downarrowicon1.svg">
+                                <p>Occassion</p>
+                            </div>
+                            <div *ngIf="showOccassionDropdown" class="dropdown-list">
+                                <input type="checkbox">
+                                <p id="productname">Casual wear</p>
+                                <p>(1)</p>
+                            </div>
+                            <div *ngIf="showOccassionDropdown" class="dropdown-list">
+                                <input type="checkbox">
+                                <p id="productname">Holiday wear</p>
+                                <p>(1)</p>
+                            </div>
+                        </div>
+                        <!-- price -->
+                        <div class="dropdown-container">
+                            <div (click)="togglePriceDropdown()" class="dropdown-head">
+                                <img *ngIf="!showPriceDropdown" src="../../assets/rightsidearrowicon.svg">
+                                <img *ngIf="showPriceDropdown" src="../../assets/downarrowicon1.svg">
+                                <p>Price (£)</p>
+                            </div>
+                            <div *ngIf="showPriceDropdown" class="dropdown-list">
+                                <input type="checkbox">
+                                <p id="productname">£ 11 - £ 18</p>
+                                <p>(1)</p>
+                            </div>
+                            <div *ngIf="showPriceDropdown" class="dropdown-list">
+                                <input type="checkbox">
+                                <p id="productname">Above £ 11</p>
+                                <p>(1)</p>
+                            </div>
+                        </div>
+                        <!-- sleeves     -->
+                        <div class="dropdown-container">
+                            <div (click)="toggleSleevesDropdown()" class="dropdown-head">
+                                <img *ngIf="!showSleevesDropdown" src="../../assets/rightsidearrowicon.svg">
+                                <img *ngIf="showSleevesDropdown" src="../../assets/downarrowicon1.svg">
+                                <p>Sleeves</p>
+                            </div>
+                            <div *ngIf="showSleevesDropdown" class="dropdown-list">
+                                <input type="checkbox">
+                                <p id="productname">Full Sleeves</p>
+                                <p>(2)</p>
+                            </div>
+                            <div *ngIf="showSleevesDropdown" class="dropdown-list">
+                                <input type="checkbox">
+                                <p id="productname">T-shirt</p>
+                                <p>(1)</p>
+                            </div>
+                        </div>
+                        </div>
+
+    <div class="searchbar-content">
+        <div class="search-container">
+            <div class="search-input">
+                <input type="search" placeholder="Search">
+                <img src="../../assets/searchicon.svg" alt="Search Icon" class="search-icon">
             </div>
-            <div class="content">
-        
-            </div>
+            <app-productsection></app-productsection>
         </div>
-
-
+    
+    </div>
+    </div>
     </div>
 </body>
 

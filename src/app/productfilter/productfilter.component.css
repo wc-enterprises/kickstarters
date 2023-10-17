@@ -21,3 +21,14 @@
     box-sizing: border-box;
     background-color: aquamarine;
 }
+.dropdown-container{
+    width:100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+}
+.dropdown-list{
+    display: flex;
+    
+}

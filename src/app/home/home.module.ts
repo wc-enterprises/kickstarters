@@ -19,7 +19,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from '../app.component';
 import { blogsection } from '../common-components/blog-section/blog-section.component';
 import { BlogPage } from '../blog-page/blog-page.component';
-
+ import { Login } from '../login-page/login.component';
+ import {MatInputModule} from '@angular/material/input';
+ import {MatFormFieldModule} from '@angular/material/form-field';
 @NgModule({
   declarations: [
     HomepageComponent,
@@ -32,7 +34,8 @@ import { BlogPage } from '../blog-page/blog-page.component';
     PaymentsComponent,
     FAQComponent,
     blogsection,
-    BlogPage
+    BlogPage,
+    Login
   ],
   imports: [
     BrowserModule,
@@ -42,6 +45,8 @@ import { BlogPage } from '../blog-page/blog-page.component';
     MatDialogModule,
     HttpClientModule,
     ReactiveFormsModule,
+    MatInputModule,
+    MatFormFieldModule
   ],
   providers: [CartService],
   bootstrap: [AppComponent],

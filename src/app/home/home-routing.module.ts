@@ -26,6 +26,17 @@ const routes: Routes = [
     loadChildren: () =>
       import('../blog-page/blog-page.module').then((m) => m.BlogPageModule),
   },
+  {
+    path: 'profile',
+    loadChildren: () =>
+      import('../accountpages/profilepage/profile.module').then((m) => m.ProfileModule),
+  },
+ 
+  {
+    path: 'profilenav',
+    loadChildren: () =>
+      import('../profilenav/profilenav.module').then((m) => m.ProfileNavModule),
+  },
 
 
 ];

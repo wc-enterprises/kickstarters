@@ -56,8 +56,8 @@ font-weight: 600;
   
   .line {
     flex: 1;
-    border-top: 1px solid #000; /* Adjust the color and line style as needed */
-    margin: 0 10px; /* Adjust the margin to control spacing */
+    border-top: 1px solid #000; 
+    margin: 0 10px; 
   }
   
   .text {
@@ -102,8 +102,35 @@ font-weight: 400;
 letter-spacing: 7px;
 font-family: 'Average Sans';
 }
+:ng-deep .mdc-text-field--outlined.mdc-text-field:not(.mdc-text-field--disabled) .mdc-notched-outline__leading,
+::ng-deep .mdc-text-field--outlined.mdc-text-field:not(.mdc-text-field--disabled) .mdc-notched-outline__notch,
+::ng-deep .mdc-text-field--outlined.mdc-text-field:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing{
+    border-color: rgb(255, 0, 0) !important;
+}
+ input.mat-mdc-input-element{
+  border-color: red !important;
+}
+.mat-form-field-appearance-outline .mat-form-field-outline {
+    color: red !important;
+  }
+  mat-form-field mat-label{
+    color: #262626;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
 
-/* media query */
+ 
+}
+mat-form-field{
+    width: 100%;
+    display: flex;
+    border-color: blue !important;
+}
+
+
+
 
 @media (max-width: 768px) {
   

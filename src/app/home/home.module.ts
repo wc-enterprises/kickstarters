@@ -22,7 +22,9 @@ import { BlogPage } from '../blog-page/blog-page.component';
  import { Login } from '../login-page/login.component';
  import {MatInputModule} from '@angular/material/input';
  import {MatFormFieldModule} from '@angular/material/form-field';
+ 
  import { RegisterForm } from '../register-form/register.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     HomepageComponent,
@@ -48,7 +50,8 @@ import { BlogPage } from '../blog-page/blog-page.component';
     HttpClientModule,
     ReactiveFormsModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    BrowserAnimationsModule
   ],
   providers: [CartService],
   bootstrap: [AppComponent],

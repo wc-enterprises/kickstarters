@@ -27,17 +27,12 @@ const routes: Routes = [
       import('../blog-page/blog-page.module').then((m) => m.BlogPageModule),
   },
   {
-    path: 'profile',
+    path: 'account',
     loadChildren: () =>
-      import('../accountpages/profilepage/profile.module').then((m) => m.ProfileModule),
+      import('../Accountpage/accountpage.module').then((m) => m.AccountPageModule),
   },
  
-  {
-    path: 'profilenav',
-    loadChildren: () =>
-      import('../profilenav/profilenav.module').then((m) => m.ProfileNavModule),
-  },
-
+ 
 
 ];
 

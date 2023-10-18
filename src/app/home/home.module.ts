@@ -19,8 +19,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from '../app.component';
 import { blogsection } from '../common-components/blog-section/blog-section.component';
 import { BlogPage } from '../blog-page/blog-page.component';
-import { Profile } from '../accountpages/profilepage/profile.component';
-import { ProfileNav } from '../profilenav/profilenav.component';
+import { AccountPageModule } from '../Accountpage/accountpage.module';
+
 @NgModule({
   declarations: [
     HomepageComponent,
@@ -34,8 +34,8 @@ import { ProfileNav } from '../profilenav/profilenav.component';
     FAQComponent,
     blogsection,
     BlogPage,
-    Profile,
-    ProfileNav
+
+   
   ],
   imports: [
     BrowserModule,
@@ -45,6 +45,8 @@ import { ProfileNav } from '../profilenav/profilenav.component';
     MatDialogModule,
     HttpClientModule,
     ReactiveFormsModule,
+    AccountPageModule,
+ 
   ],
   providers: [CartService],
   bootstrap: [AppComponent],

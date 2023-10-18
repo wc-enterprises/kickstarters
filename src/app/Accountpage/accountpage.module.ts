@@ -5,12 +5,13 @@ import { ProfileNavComponent } from './profile-nav/profile-nav.component';
 import { MyProfileComponent } from './my-profile/my-profile.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-
 import { FormsModule } from '@angular/forms';
+import { AddresspageComponent } from './addresspage/addresspage.component';
 @NgModule({
   declarations: [
     ProfileNavComponent,
-    MyProfileComponent
+    MyProfileComponent,
+    AddresspageComponent
   ],
 
   imports: [CommonModule,  AccountPageRoutingModule,MatFormFieldModule,MatInputModule, FormsModule],

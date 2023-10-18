@@ -20,6 +20,7 @@ import { AppComponent } from '../app.component';
 import { blogsection } from '../common-components/blog-section/blog-section.component';
 import { BlogPage } from '../blog-page/blog-page.component';
 import { AccountPageModule } from '../Accountpage/accountpage.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { AccountPageModule } from '../Accountpage/accountpage.module';
     HttpClientModule,
     ReactiveFormsModule,
     AccountPageModule,
+    BrowserAnimationsModule,
  
   ],
   providers: [CartService],

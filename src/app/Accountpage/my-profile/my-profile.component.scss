@@ -2,7 +2,6 @@
     width:1000px;
     height:80vh;
     box-sizing:border-box;
-    background-color: bisque;
     float: right;
     display: flex;
     flex-direction: column;
@@ -11,7 +10,7 @@
     padding-top: 50px;}
 .myprofile-form{
     width:945px;
-    height: 440px;
+    height: auto;
     box-sizing: border-box;
     display: flex;
     padding: 30px 30px 75px 30px;
@@ -24,12 +23,66 @@ box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.25);
 margin: auto;
 }
 #welcome-para{
-   
-    background-color: aqua;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 400;
+
 }
 .form{
     width:100%;
     height: 100%;
+    box-sizing: border-box;
     padding:10px;
-    background-color: aqua;
+
+}
+.align-form{
+    display: flex;
+    width:100%;
+    box-sizing: border-box;
+    justify-content: space-between ;
+     gap:10px;
+     background-color: #413E3E;
+     padding:15px;
+} 
+.input{
+    width:100%;
+   
+}
+//  ::ng-deep .mdc-text-field--outlined.mdc-text-field:not(.mdc-text-field--disabled) .mdc-notched-outline--leading,
+//  ::ng-deep .mdc-text-field--outlined.mdc-text-field:not(.mdc-text-field--disabled) .mdc-notched-outline--notch,
+//  ::ng-deep .mdc-text-field--outlined.mdc-text-field:not(.mdc-text-field--disabled) .mdc-notched-outline--trailing{
+//    border-color: rgb(255, 0, 0) !important;
+//   border-width: 2px !important;
+//  }
+//  input.mat-mdc-input-element{
+//     border-color: red !important;
+// }
+//  .mat-form-field-appearance-outline .mat-form-field-outline {
+//     color: red !important;
+//   }
+//   mat-form-field mat-label{
+//     color: #262626;
+//     font-family: 'Inter', sans-serif;
+//     font-size: 16px;
+//     font-style: normal;
+//     font-weight: 400;
+//     line-height: 20px; /* 125% */
+// }
+mat-form-field{
+    width: 100%;
+    display: flex;
+    border: #413E3E !important;
+    color:black;
+}
+#submit{
+   
+    display: flex;
+padding: 15px 50px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 8px;
+background: #1F2123;
+color:white;
+margin:auto;
 }

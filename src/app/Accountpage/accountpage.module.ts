@@ -7,11 +7,13 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { AddresspageComponent } from './addresspage/addresspage.component';
+import { RecentlyViewpageComponent } from './recently-viewpage/recently-viewpage.component';
 @NgModule({
   declarations: [
     ProfileNavComponent,
     MyProfileComponent,
-    AddresspageComponent
+    AddresspageComponent,
+    RecentlyViewpageComponent
   ],
 
   imports: [CommonModule,  AccountPageRoutingModule,MatFormFieldModule,MatInputModule, FormsModule],

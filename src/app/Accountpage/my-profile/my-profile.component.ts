@@ -15,12 +15,14 @@ export class MyProfileComponent {
   formValid: boolean = false;
 
   profileData: any = {
-    username: 'Arunkumar',
+    username: 'arunkumar',
     email: 'aruncopz@gmail.com',
     contactNumber: '9874563210',
     gender: 'male',
     birthdate: '25-07-1999'
   };
+
+  
 
   editProfile() {
     // Check if all fields are filled

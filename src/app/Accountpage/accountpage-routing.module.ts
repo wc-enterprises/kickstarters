@@ -4,6 +4,7 @@ import { NgModule } from "@angular/core";
 import { ProfileNavComponent } from "./profile-nav/profile-nav.component";
 import { MyProfileComponent } from "./my-profile/my-profile.component";
 import { AddresspageComponent } from "./addresspage/addresspage.component";
+import { RecentlyViewpageComponent } from "./recently-viewpage/recently-viewpage.component";
 const routes: Routes = [
     {
       path: 'profilenav',
@@ -16,6 +17,10 @@ const routes: Routes = [
     {
       path: 'address',
       component:AddresspageComponent,
+    },
+    {
+      path: 'recently',
+      component:RecentlyViewpageComponent,
     },
   ];
   

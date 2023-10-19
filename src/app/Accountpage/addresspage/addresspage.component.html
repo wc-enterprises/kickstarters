@@ -5,19 +5,99 @@
     <div class="address-container">
         <p id="welcome-para">Welcome back!</p>
         <div class="address-section">
-            <div class="cards">
-                <div class="add-address">
-                    <img src="../../../assets/addresslocation-icon.svg">
-                    <button id="add-address-button">Add new address</button>
-                </div>
-                <div class="add-address">
-                    <img src="">
-                    
-                </div>
-               
-        
+          <div class="cards">
+            <div class="add-address" *ngIf="showEmptyCard">
+              <img src="../../../assets/addresslocation-icon.svg">
+              <button (click)="openForm()" id="add-address-button">Add new address</button>
             </div>
+            <div class="add-address" *ngIf="showEmptyCard">
+                <div class="card-head">
+                   <button id="default">
+                      Default address
+                   </button>
+                   <img src="../../../assets/editicon.svg">
+                </div>
+              <!-- Display submitted data here -->
+              <p *ngIf="submittedData">Username: {{ submittedData.userName }}</p>
+              <p *ngIf="submittedData">contactNumber: {{ submittedData.contactNumber }}</p>
+              <p *ngIf="submittedData">Address Line1: {{ submittedData.addressLine1}}</p>
+              <p *ngIf="submittedData">Address Line2: {{ submittedData.addressLine2}}</p>
+              <p *ngIf="submittedData">Company: {{ submittedData.company}}</p>
+              <p *ngIf="submittedData">Postal/zipcode: {{ submittedData.postalZipcode}}</p>
+              <p *ngIf="submittedData">City: {{ submittedData.city}}</p>
+              <p *ngIf="submittedData">Country: {{ submittedData.country}}</p>
+            </div>
+            
+            <!-- Form -->
+            <div class="form" *ngIf="showForm">
+               
+              <div class="align-form">
+                <div class="input">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Username</mat-label>
+                    <input matInput placeholder="Placeholder" [(ngModel)]="profileData.userName">
+                  </mat-form-field>
+                </div>
+                <div class="input">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Contact number</mat-label>
+                    <input matInput placeholder="Placeholder" [(ngModel)]="profileData.contactNumber">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="align-form">
+                <div class="input">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Address line1</mat-label>
+                    <input matInput placeholder="Placeholder" [(ngModel)]="profileData.addressLine1">
+                  </mat-form-field>
+                </div>
+                <div class="input">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Address line2</mat-label>
+                    <input matInput placeholder="Placeholder" [(ngModel)]="profileData.addressLine2">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="align-form">
+                <div class="input">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Company</mat-label>
+                    <input matInput placeholder="Placeholder" [(ngModel)]="profileData.company">
+                  </mat-form-field>
+                </div>
+                <div class="input">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Postal /zipcode</mat-label>
+                    <input matInput placeholder="Placeholder" [(ngModel)]="profileData.postalZipcode">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="align-form">
+                <div class="input">
+                  <mat-form-field appearance="outline">
+                    <mat-label>City</mat-label>
+                    <input matInput placeholder="Placeholder" [(ngModel)]="profileData.city">
+                  </mat-form-field>
+                </div>
+                <div class="input">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Country</mat-label>
+                    <input matInput placeholder="Placeholder" [(ngModel)]="profileData.country">
+                  </mat-form-field>
+                </div>
+              </div>
+              <button (click)="submitForm()">Submit</button>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
+      
+      
 </body>
 </html>
+
+
+
+
+

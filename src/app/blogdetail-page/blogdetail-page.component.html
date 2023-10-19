@@ -1,0 +1,48 @@
+<html>
+
+<body>
+    <app-headerandfooter>
+    <div *ngIf="blog" class="blogdetail-container">
+        <div class="blogdetail-content">
+            <div class="blogdetail-title">
+            {{blog.title}}
+            </div>
+            <div [style.background-image]="'url(' + blog.image + ')'" class="blogview-image">
+            </div>
+            <div class="blogdetail-description">
+            {{blog.description}}
+                </div>
+                <div *ngFor="let item of blog.content" class="blogdetail-para">
+                    <p class="sub-title">{{item.subTitle}}</p>
+                    <p class="para">{{item.para}}</p>
+                </div>
+                <div class="blogcontent-footer">
+                    <div class="left-foot">
+                        <div class="date">{{blog.date}}</div>
+                        <div class="bloger-details">
+                            <img id="blogerimg" src="../../assets/blogwriterimg.svg">
+                            <div class="bloger">
+                                <span id="bloger-name">{{blog.author}}</span>
+                                <span id="writer">Content Writer</span>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="right-foot">
+                        <p id="share">Share With</p>
+                        <img id="socialmediaicon" src="../../assets/updateinstaicon.svg">
+                        <img id="socialmediaicon" src="../../assets/updatetwiticon.svg">
+                        <img id="socialmediaicon" src="../../assets/updatefbicon.svg">
+                    </div>
+                
+                </div>
+                <div>
+                    <a href="/blog" id="backbutton">
+                        <- Back to blog's</a>
+                </div>
+                <app-blogsection [heading]="'Keep Reading'"></app-blogsection>
+</div>
+</div>
+</app-headerandfooter>
+</body>
+
+</html>

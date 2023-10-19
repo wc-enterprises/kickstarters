@@ -1,0 +1,523 @@
+.productdetail-container{
+    width:100%;
+    height: auto;
+    padding:80px 25px 0px 25px;
+    box-sizing: border-box;
+    
+}
+.productdetail-box1{
+    width:100%;
+    height:auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+   }
+.productdetail-header{
+    width: 100%;
+    height:20px;
+  
+color: #343A40;
+font-family: 'Inter';
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 21px
+}
+#categorytitle{
+  font-size:small;
+}
+#linktohome{
+  font-size: small;
+}
+.productdetails{
+    width: 100%;
+    height:500px;
+   display: flex;
+   gap:15px;
+}
+.productlist-image{
+    width:100px;
+    height:auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+   box-sizing: border-box;
+}
+.viewimage-session{
+  width:50%;
+  height:500px;
+  box-sizing: border-box;
+  
+}
+
+.productview-image{
+ 
+  width:100%;
+  height: 500px;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit:  cover; 
+}
+.total-productdetail{
+    
+    width:50%;
+    height:100%;
+    box-sizing: border-box;
+  
+}
+.product-image{
+    width:100%;
+    height:100%;
+    display: flex;
+    box-sizing: border-box;
+   
+}
+#img1{
+    width:100px;
+    height:100px;
+    border-radius: 10px;
+border: 1px solid #343A40;
+padding: 8px 8px 8px 8px;
+box-sizing: border-box;
+}
+.heading{
+    color: #000;
+font-family: 'Inter';
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 21px;
+}
+h2{
+    padding-bottom: 30px;
+    color: #000;
+    font-family: 'Inter';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+}
+.horizontal-line{
+    height: 1px; 
+    background-color: #343A40;
+    margin: 10px 0; 
+  }
+.productdetail-description{
+    color: #000;
+    font-family: 'Inter';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    padding-bottom: 30px;
+}
+.color,.quantity{
+    color: #000;
+    font-family: 'Inter';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21px;
+    
+}
+.color-circle {
+    width: 25px; 
+    height: 25px; 
+    border-radius: 50%; 
+    display: inline-block;
+     
+}
+
+.black {
+    background-color:black;
+}
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    padding-bottom: 30px;
+  }
+  .increment-button,
+.decrement-button,
+.delete-basket-icon,
+.quantity-number {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+.rateandcart{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    box-sizing: border-box;
+}
+.rate{
+    color: #343A40;
+font-family: 'Inter';
+font-size: 26px;
+font-style: normal;
+font-weight: 700;
+line-height: 21px;
+width:25%;
+}
+.productcart-button{
+    width: 60%;
+    height: 7%;
+    
+    
+}
+.productdetails-box2{
+    width: 100%;
+    height: auto;
+    padding-top:20px;
+    box-sizing: border-box;
+}
+.expansion-panel {
+    
+    border-radius: 4px;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+  
+  .panel-header {
+    height:30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px 5px 0px 0px;
+    border: 2px solid #ccc;
+background: #E9ECEF;
+box-sizing: border-box;
+    
+  }
+  
+  .heading{
+    color: #343A40;
+    font-family: 'Inter';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21px; /* 116.667% */
+  }
+  .toggle-icon {
+    font-size:10px;
+  }
+  
+  .panel-content {
+  
+    display: none;
+    padding: 10px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-top: 0px;
+    box-sizing: border-box;
+   
+  }
+  
+  .expanded {
+    display: block;
+  }
+  .instruction{
+    width:100%;
+    height:auto;
+    display: flex;
+    padding: 12px 40px 12px 55px;
+    box-sizing: border-box;
+    align-items: flex-start;
+    gap: 13px;
+    align-self: stretch;
+  }
+  .instruction-name{
+   width:20%;
+    
+    color: #343A40;
+    font-family: 'Inter';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21px;
+    box-sizing: border-box;
+  }
+  .instruction-description{
+    width:80%;
+    color: #343A40;
+font-family: 'Inter';
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 21px;
+box-sizing: border-box;
+  }
+
+  .deliverychecker{
+    display: flex;
+padding: 12px 40px 12px 55px;
+flex-direction: column;
+align-items: flex-start;
+gap:10px;
+align-self: stretch;
+  }
+  .form{
+    display: flex;
+    gap:10px;
+    width:100%;
+    box-sizing: border-box;
+  }
+  #input{
+    background: #EDEDE9;
+    border:none;
+    display: flex;
+width: 450px;
+padding: 10px;
+align-items: center;
+gap: 10px;
+  }
+  #checker{
+    width:88px;
+    background: #000;
+    display: flex;
+padding: 10px 16px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+color:white;
+border:none;
+  }
+  #cashondelivery{
+    color: #52B788;
+font-family: 'Inter';
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 26px; 
+
+  }
+  #estimate{
+    color: #000;
+font-family: 'Inter';
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px; 
+
+  }
+#deliveryheading{
+    color: #343A40;
+font-family: 'Inter';
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 26px;
+}
+.return-policy{
+    display: flex;
+padding: 12px 40px 12px 55px;
+flex-direction: column;
+align-items: flex-start;
+gap: 15px;
+align-self: stretch;
+color: #343A40;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height:28px;
+}
+.link {
+    text-decoration: underline;
+    color: blue; 
+    cursor: pointer; 
+  }
+
+
+/* student kits css */
+
+.list {
+  height: auto;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+.card-title {
+  padding-left: 30px;
+  margin-top: 50px;
+}
+#arrow-button {
+  width: auto;
+  height: auto;
+  display: flex;
+  gap: 10px;
+  padding-right: 30px;
+}
+#sub-title3 {
+  color: #000;
+  font-family: "Inter";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 33.6px; /* 140% */
+  letter-spacing: -0.5px;
+  width: 90%;
+}
+.total-cards {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  gap: 15px;
+}
+
+::-webkit-scrollbar {
+  overflow: hidden;
+}
+.studentkits-section {
+  padding-left: 30px;
+  margin-top: 50px;
+}
+.studentkits-container {
+  width: 270px;
+  height: 600px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.studentkits-image {
+  width: 100%;
+  height: 48%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.studentkits-name {
+  width: 100%;
+  height: 11%;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.7;
+  font-family: "Inter";
+}
+.studentkits-description {
+  width: 100%;
+  height: 27%;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow-y: auto;
+  line-height: 1.7;
+  cursor: all-scroll;
+  font-family: "Inter";
+}
+.studentkits-description::-webkit-scrollbar {
+  width: 3px;
+}
+.studentkits-description::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 3px;
+}
+
+/* .studentkits-productlist{
+  width:100%;
+  height:0%;
+  display: flex;
+  align-items: center;
+  font-weight:400;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.7;
+  
+} */
+.studentkits-price {
+  width: 100%;
+  height: 7%;
+  display: flex;
+  align-items: center;
+  font-size: large;
+  font-weight: bold;
+  font-family: "Inter";
+}
+.studentkits-button {
+  width: 100%;
+  height: 7%;
+}
+/* productcategory section */
+.productcard-container {
+  width: 270px;
+  height: 580px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-sizing: border-box;
+}
+.image-container {
+  width: 100%;
+  height: 48%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#img {
+  width: 250px;
+  height: 250px;
+}
+.product-name {
+  width: 100%;
+  height: 14%;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.7;
+  font-family: "Inter";
+}
+.description {
+  width: 100%;
+  height: 20%;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.7;
+  font-size: 16px;
+  font-family: "Inter";
+}
+.price {
+  width: 100%;
+  height: 9%;
+  font-size: large;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  font-family: "Inter";
+}
+.cartbutton {
+  width: 100%;
+  height: 9%;
+}

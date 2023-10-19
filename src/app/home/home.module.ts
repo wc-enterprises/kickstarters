@@ -20,6 +20,9 @@ import { AppComponent } from '../app.component';
 import { BlogSection } from '../common-components/blog-section/blog-section.component';
 import { BlogPage } from '../blog-page/blog-page.component';
 import { BlogDetailComponent } from '../blogdetail-page/blogdetail-page.component';
+import { ProductDetailComponent } from '../product-details/product-detail.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+
 @NgModule({
   declarations: [
     HomepageComponent,
@@ -33,7 +36,10 @@ import { BlogDetailComponent } from '../blogdetail-page/blogdetail-page.componen
     FAQComponent,
     BlogSection,
     BlogPage,
-    BlogDetailComponent
+    BlogDetailComponent,
+    ProductDetailComponent,
+    
+    
   ],
   imports: [
     BrowserModule,
@@ -43,6 +49,8 @@ import { BlogDetailComponent } from '../blogdetail-page/blogdetail-page.componen
     MatDialogModule,
     HttpClientModule,
     ReactiveFormsModule,
+    MatExpansionModule,
+    
   ],
   providers: [CartService],
   bootstrap: [AppComponent],

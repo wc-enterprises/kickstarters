@@ -2,15 +2,16 @@ body{
     font-family: 'Average Sans';
 }
 .address-container{
-    width:1000px;
-    height:80vh;
+    width:945px;
+    height:100%;
     box-sizing:border-box;
     float: right;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 50px;
+    padding-top:50px;
+   
 }
 #welcome-para{
     font-size: 34px;
@@ -19,26 +20,39 @@ body{
 
 }
 .address-section{
-    width:945px;
-    height: auto;
+    width:100%;
+    height:80vh;
     box-sizing: border-box;
     display: flex;
-    padding: 30px 30px 75px 30px;
+  padding: 30px 30px 75px 30px;
     gap: 30px;
     border-radius: 20px;
 border: 0.4px solid #413E3E;
 box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.25);
 margin: auto;
+overflow-y:  scroll;
+}
+.add-new{
+    display: flex;
+     width:250px;
+     height:250px;
+     box-sizing: border-box;
+ flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   align-self: stretch;
+    border-radius: 15px;
+    border: 0.4px solid #66696C;
+    background: #FFF;
+    box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.25);   
 }
 .add-address{
-  
+    width:250px;
+    height:250px;
     display: flex;
-   
-
+  box-sizing: border-box;
 flex-direction: column;
-align-items: center;
-
-flex: 1 0 0;
+padding-left:10px;
 align-self: stretch;
 border-radius: 15px;
 border: 0.4px solid #66696C;
@@ -59,32 +73,25 @@ line-height: 24px; /* 133.333% */
 .cards {
     width:100%;
     display: flex;
-    flex-wrap: wrap;
+   flex-wrap: wrap;
     gap:5px;
   
 }
-    .add-address {
-        width:100%;
-        height: 250px;
-      flex: 0 0 calc(33.3333% - 10px); 
-      margin-bottom: 10px;
-  
-    }
+   
     .form{
         width:100%;
-        height: 100%;
+        height: auto;
         box-sizing: border-box;
         padding:10px;
-    
+        
     }
     .align-form{
         display: flex;
         width:100%;
         box-sizing: border-box;
         justify-content: space-between ;
-         gap:10px;
-         background-color: #413E3E;
          padding:15px;
+         gap:10px;
     } 
     .input{
         width:100%;
@@ -110,3 +117,42 @@ border:none;
 border-radius: 5px;
 background: rgba(50, 74, 95, 0.70);
     }
+    mat-form-field{
+        width: 100%;
+        display: flex;
+        border: #413E3E !important;
+        color:black;
+    }
+    #savebutton{
+        display: flex;
+padding: 15px 50px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 8px;
+background: #1F2123;
+margin: auto;
+color:#FFF;
+    }
+ #display-address{
+   width:auto;
+   height:140px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    padding: 15px;
+    border-radius: 20px;
+ }   
+ #display-address::-webkit-scrollbar {
+    width: 3px;
+  }
+  #display-address::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 3px;
+  }
+  .address-section::-webkit-scrollbar {
+    width: 3px;
+  }
+  .address-section::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 3px;
+  }

@@ -6,7 +6,7 @@
         <p id="welcome-para">Welcome back!</p>
         <div class="address-section">
           <div class="cards">
-            <div class="add-address" *ngIf="showEmptyCard">
+            <div class="add-new" *ngIf="showEmptyCard">
               <img src="../../../assets/addresslocation-icon.svg">
               <button (click)="openForm()" id="add-address-button">Add new address</button>
             </div>
@@ -15,22 +15,25 @@
                    <button id="default">
                       Default address
                    </button>
-                   <img src="../../../assets/editicon.svg">
+                <img   src="../../../assets/editicon.svg">
                 </div>
-              <!-- Display submitted data here -->
-              <p *ngIf="submittedData">Username: {{ submittedData.userName }}</p>
-              <p *ngIf="submittedData">contactNumber: {{ submittedData.contactNumber }}</p>
-              <p *ngIf="submittedData">Address Line1: {{ submittedData.addressLine1}}</p>
-              <p *ngIf="submittedData">Address Line2: {{ submittedData.addressLine2}}</p>
-              <p *ngIf="submittedData">Company: {{ submittedData.company}}</p>
-              <p *ngIf="submittedData">Postal/zipcode: {{ submittedData.postalZipcode}}</p>
-              <p *ngIf="submittedData">City: {{ submittedData.city}}</p>
-              <p *ngIf="submittedData">Country: {{ submittedData.country}}</p>
-            </div>
+                <div id="display-address">
+                    <p *ngIf="submittedData">Username: {{ submittedData.userName }}</p>
+                    <p *ngIf="submittedData">contactNumber: {{ submittedData.contactNumber }}</p>
+                    <p *ngIf="submittedData">Address Line1: {{ submittedData.addressLine1}}</p>
+                    <p *ngIf="submittedData">Address Line2: {{ submittedData.addressLine2}}</p>
+                    <p *ngIf="submittedData">Company: {{ submittedData.company}}</p>
+                    <p *ngIf="submittedData">Postal/zipcode: {{ submittedData.postalZipcode}}</p>
+                    <p *ngIf="submittedData">City: {{ submittedData.city}}</p>
+                    <p *ngIf="submittedData">Country: {{ submittedData.country}}</p>
+                </div>
+            <!-- Display submitted data here -->
             
+            </div>
             <!-- Form -->
             <div class="form" *ngIf="showForm">
-               
+                <div style="margin:auto;display: flex;padding: 15px 50px;justify-content: center;align-items: center;font-size: 22px;
+                                font-style: normal;font-weight: 400;">Add New Address</div>
               <div class="align-form">
                 <div class="input">
                   <mat-form-field appearance="outline">
@@ -87,7 +90,7 @@
                   </mat-form-field>
                 </div>
               </div>
-              <button (click)="submitForm()">Submit</button>
+            <button id="savebutton" (click)="submitForm()">Save</button>
             </div>
           </div>
         </div>

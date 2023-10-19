@@ -52,10 +52,10 @@
                 </div>
                 </div>
                 
-            <div style="width:100%;padding-top: 25px;" *ngIf="editMode">
-                <button id="submit" (click)="saveProfile()" [disabled]="!formValid">Submit details</button>
+           
+                <button *ngIf="editMode" id="submit" (click)="saveProfile()" [disabled]="!formValid">Submit details</button>
               
-              </div>
+        
             </div>
 
 

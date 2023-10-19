@@ -1,16 +1,18 @@
 .myprofile-container{
-    width:1000px;
-    height:80vh;
+    width:945px;
+    height:100%;
     box-sizing:border-box;
     float: right;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 50px;}
+    padding-top:50px;
+
+}
 .myprofile-form{
-    width:945px;
-    height: auto;
+    width:100%;
+    height:80vh;
     box-sizing: border-box;
     display: flex;
     padding: 30px 30px 75px 30px;
@@ -30,7 +32,6 @@ margin: auto;
 }
 .form{
     width:100%;
-    height: 100%;
     box-sizing: border-box;
     padding:10px;
 
@@ -41,8 +42,7 @@ margin: auto;
     box-sizing: border-box;
     justify-content: space-between ;
      gap:10px;
-     background-color: #413E3E;
-     padding:15px;
+   padding:15px;
 } 
 .input{
     width:100%;
@@ -76,7 +76,7 @@ mat-form-field{
 }
 #submit{
    
-    display: flex;
+display: flex;
 padding: 15px 50px;
 justify-content: center;
 align-items: center;

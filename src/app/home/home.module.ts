@@ -17,7 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from '../app.component';
-import { blogsection } from '../common-components/blog-section/blog-section.component';
+import { BlogSection } from '../common-components/blog-section/blog-section.component';
 import { BlogPage } from '../blog-page/blog-page.component';
  import { Login } from '../login-page/login.component';
  import {MatInputModule} from '@angular/material/input';
@@ -25,6 +25,10 @@ import { BlogPage } from '../blog-page/blog-page.component';
  
  import { RegisterForm } from '../register-form/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BlogDetailComponent } from '../blogdetail-page/blogdetail-page.component';
+import { ProductDetailComponent } from '../product-details/product-detail.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+
 @NgModule({
   declarations: [
     HomepageComponent,
@@ -36,10 +40,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CartItemComponent,
     PaymentsComponent,
     FAQComponent,
-    blogsection,
-    BlogPage,
     Login,
-    RegisterForm
+    RegisterForm,
+    BlogSection,
+    BlogPage,
+    BlogDetailComponent,
+    ProductDetailComponent,
+    
+    
   ],
   imports: [
     BrowserModule,
@@ -51,7 +59,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ReactiveFormsModule,
     MatInputModule,
     MatFormFieldModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatExpansionModule,
+    
   ],
   providers: [CartService],
   bootstrap: [AppComponent],

@@ -36,6 +36,17 @@ const routes: Routes = [
     loadChildren: () =>
       import('../register-form/register.module').then((m) => m.RegisterFormModule),
   },
+  {
+    path: 'productdetail/:id',
+    loadChildren: () =>
+      import('../product-details/product-detail.module').then((m) => m.productdetailModule),
+  },
+
+  {
+    path: 'blogdetail/:id',
+    loadChildren: () =>
+      import('../blogdetail-page/blogdetail.module').then((m) => m.BlogDetailModule),
+  },
 
 
 ];

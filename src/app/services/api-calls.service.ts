@@ -3,19 +3,45 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import {
   StandardResponse,
-  ICategorizedProductsWithAttributesAndVariants,
-} from '../utils/interface';
+  ICategorizedProductsWithAttributesAndVariants} from '../utils/interface';
+import { IBlogs,IBlog } from '../utils/interface';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ApiCallsService {
+  getProductById(productId:string) {
+  
+   return{
+    id: '-NePeIs7IU7lj9jDly4S',
+    categoryName: 'New Arrivals',
+          name: 'Woollen cap',
+          description: 'Woollen cap for winter',
+          imagePath:
+            'https://m.media-amazon.com/images/I/71YN5XFWdVL._AC_UL640_FMwebp_QL65_.jpg',
+          unit: 'unit',
+          unitsInStock: 100,
+          pricingId: '-NePeJ2U-GlJeOv7U9lv',
+          sellingPrice: '9',
+          discount: '10',
+          discountUnit: 'percentage',
+          attributes: [
+            {
+              key: 'color',
+              value: 'black',
+              asset: '#000000',
+            },
+          ],
+          variants: [],
+   }
+  }
+
   constructor(private http: HttpClient) {}
 
   getCategorizedProducts(): Observable<
     StandardResponse<ICategorizedProductsWithAttributesAndVariants[]>
   > {
-    return of(catP) as Observable<
+    return of(catP) as Observable< 
       StandardResponse<ICategorizedProductsWithAttributesAndVariants[]>
     >;
     // const url = `${BASE_URL}/get-categorized-products-with-attributes-and-variants`;
@@ -34,7 +60,107 @@ export class ApiCallsService {
       StandardResponse<ICategorizedProductsWithAttributesAndVariants[]>
     >;
   }
+
+  getBlogs(): Observable<IBlogs[]> {
+    return of(blogs);
+  }
+ getBlogById(blogId: string):Observable<IBlog>{
+  const blog = blogs.find(b => b.id === blogId);
+  return of(blog as IBlog);
+ }
+  
+
+  getRecommendation(_productId:any): Observable<
+  StandardResponse<ICategorizedProductsWithAttributesAndVariants[]>
+> {
+    return of (rec)as Observable<
+    StandardResponse<ICategorizedProductsWithAttributesAndVariants[]>
+  >;
+  }
+
+
 }
+
+const rec = {
+  status: 'SUCCESS',
+  message: 'Categorized products fetched successfully',
+  data: [
+    {
+      categoryId: '-Ne_5wXnjBDXRcx5ysyw',
+      categoryName: "Recommendation's for you",
+      categoryDescription:
+        'Kits that make you feel home the moment you arrive UK.',
+      products: [
+        {
+          id: '-Ne_8Ak_4hqV2PnTBpzk',
+          name: 'Premium Kit',
+          description: `Ultimate Deluxe Kit.`,
+          imagePath:
+            'https://www.unikitout.com/cdn/shop/files/MicrosoftTeams-image_21_32598250-834e-4f6c-bdd2-0fc26b3757eb_1836x1836.jpg?v=1694175395',
+          unit: 'unit',
+          unitsInStock: 100,
+          pricingId: '-Ne_8Arwx0kZ6XZLJUsi',
+          sellingPrice: '240',
+          discount: '10',
+          discountUnit: 'percentage',
+          attributes: [],
+          variants: [],
+        },
+        {
+          id: '-Ne_6O7n_O8NXVisSOUn',
+          name: 'Bedding Kit - Deluxe (Linen, Duvet & Pillow)',
+          description: 'Ultimate bedding kit.',
+         
+          imagePath:
+            'https://www.unikitout.com/cdn/shop/files/COZE_Double_200tc_White_a_37d91818-2e0c-488c-bc9d-45535555a0f2_1836x1836.jpg?v=1691766403',
+          unit: 'unit',
+          unitsInStock: 100,
+          pricingId: '-Ne_6OE1D9R1ZbgS7H9M',
+          sellingPrice: '65',
+          discount: '10',
+          discountUnit: 'percentage',
+          attributes: [],
+          variants: [],
+        },
+
+        {
+          id: '-Ne_6sClKDX9Op5IirIG',
+          name: 'Standard Kitchen Kit',
+          description: 'Standard Kitchen Kit for your kitchens.',
+        
+          imagePath:
+            'https://cdn.shopify.com/s/files/1/1233/0208/files/UKO_Kitchen-Kit_Gold_Salmon-Back_WEB_4623f84c-ba16-440c-a149-5552ca753a50.jpg?v=1691499187',
+          unit: 'unit',
+          unitsInStock: 100,
+          pricingId: '-Ne_6sHeFjOTARt1k26w',
+          sellingPrice: '65',
+          discount: '10',
+          discountUnit: 'percentage',
+          attributes: [],
+          variants: [],
+        },
+        {
+          id: '-Ne_77ue1suDC4LrNMxe',
+          name: 'Bathroom Kit',
+          description: 'All you need for your bathroom.',
+          imagePath:
+            'https://www.unikitout.com/cdn/shop/files/UKO-BATHROOM-Kit-SILVER-PINK-TOWELS_SALMON-BACK_a3fe3d79-a668-4f23-b749-a79dfc692413_1836x1836.jpg?v=1691628441',
+          unit: 'unit',
+          unitsInStock: 100,
+          pricingId: '-Ne_7837RSmvCrQVMpZg',
+          sellingPrice: '65',
+          discount: '10',
+          discountUnit: 'percentage',
+          attributes: [],
+          variants: [],
+        },
+      ],
+    },
+  ],
+};
+
+
+
 
 const kits = {
   status: 'SUCCESS',
@@ -140,6 +266,7 @@ const kits = {
           attributes: [],
           variants: [],
         },
+        
       ],
     },
   ],
@@ -746,3 +873,111 @@ const catP = {
     },
   ],
 };
+
+
+// blog data
+const blogs = [
+  {
+    id:'1',
+    image:
+      '../../assets/blogimg1.svg',
+    title:
+      'Navigating Student Accommodation in the UK: A Comprehensive Guide ',
+    description: "Description for Blog Entry 1",
+    date: '12 July 2023',
+    author: 'Govind',
+    content: [
+      {
+        subTitle: "Understanding the Landscape",
+        para: "Start by discussing the importance of part-time jobs for international students. Mention statistics about Indian students working part-time in the UK. Highlight how part-time work can enhance your resume and provide valuable experience."
+      },
+      {
+        subTitle: "Legal Requirements and Eligibility",
+        para: "Explain the legal aspects of working in the UK as a student, including visa regulations. Mention the maximum number of hours you're allowed to work during term time and holidays. Provide links to official resources for detailed information."
+      },
+     
+    ]
+  },
+  { 
+    id:'2',
+    image:
+      '../../assets/blogimg2.svg',
+    title: "Securing Part-Time Jobs in the UK: A Student's Essential Guide",
+    description:'',
+    date: '22 August 2023',
+    author: 'Govind',
+    content: [
+      {
+        subTitle: "Understanding the Landscape",
+        para: "Start by discussing the importance of part-time jobs for international students. Mention statistics about Indian students working part-time in the UK. Highlight how part-time work can enhance your resume and provide valuable experience."
+      },
+      {
+        subTitle: "Legal Requirements and Eligibility",
+        para: "Explain the legal aspects of working in the UK as a student, including visa regulations. Mention the maximum number of hours you're allowed to work during term time and holidays. Provide links to official resources for detailed information."
+      },
+     
+    ]
+  },
+  { 
+    id:'3',
+    image:
+      '../../assets/blogimg3.svg',
+    title: "Securing Part-Time Jobs in the UK: A Student's Essential Guide",
+    description:'',
+    date: '22 August 2023',
+    author: 'Govind',
+    content: [
+      {
+        subTitle: "Understanding the Landscape",
+        para: "Start by discussing the importance of part-time jobs for international students. Mention statistics about Indian students working part-time in the UK. Highlight how part-time work can enhance your resume and provide valuable experience."
+      },
+      {
+        subTitle: "Legal Requirements and Eligibility",
+        para: "Explain the legal aspects of working in the UK as a student, including visa regulations. Mention the maximum number of hours you're allowed to work during term time and holidays. Provide links to official resources for detailed information."
+      },
+     
+    ]
+  },
+  {
+    id:'4',
+    image:
+      '../../assets/blogimg2.svg',
+    title: "Securing Part-Time Jobs in the UK: A Student's Essential Guide",
+ 
+    description:'',
+    date: '22 August 2023',
+    author: 'Govind',
+    content: [
+      {
+        subTitle: "Understanding the Landscape",
+        para: "Start by discussing the importance of part-time jobs for international students. Mention statistics about Indian students working part-time in the UK. Highlight how part-time work can enhance your resume and provide valuable experience."
+      },
+      {
+        subTitle: "Legal Requirements and Eligibility",
+        para: "Explain the legal aspects of working in the UK as a student, including visa regulations. Mention the maximum number of hours you're allowed to work during term time and holidays. Provide links to official resources for detailed information."
+      },
+     
+    ]
+  },
+  {
+    id:'5',
+    image:
+      '../../assets/blogimg1.svg',
+    title: "Securing Part-Time Jobs in the UK: A Student's Essential Guide",
+ 
+    description:'',
+    date: '22 August 2023',
+    author: 'Govind',
+    content: [
+      {
+        subTitle: "Understanding the Landscape",
+        para: "Start by discussing the importance of part-time jobs for international students. Mention statistics about Indian students working part-time in the UK. Highlight how part-time work can enhance your resume and provide valuable experience."
+      },
+      {
+        subTitle: "Legal Requirements and Eligibility",
+        para: "Explain the legal aspects of working in the UK as a student, including visa regulations. Mention the maximum number of hours you're allowed to work during term time and holidays. Provide links to official resources for detailed information."
+      },
+     
+    ]
+  },
+];

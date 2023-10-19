@@ -13,7 +13,7 @@ import { Observable } from 'rxjs';
         height: 100vh;
         position: fixed;
         box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.5);
-        transition: right 0.5s ease-in-out;
+        transition: 0.5s;
         right: -1px;
         z-index: 20;
         padding: 30px;
@@ -105,7 +105,9 @@ import { Observable } from 'rxjs';
         cursor: pointer;
         border: none;
       }
-
+#total-rate{
+font-size:18px;
+}
       @media (max-width: 640px) {
         .header{
           
@@ -114,24 +116,23 @@ import { Observable } from 'rxjs';
         }
         .header::after {top:60px;}
         .cart {
-          right: -25px;
+          
           width: 100%;
           padding:5px;
         }
         #cancel {
-          margin-right:32px;
+          margin-right:12px;
           width:28px;
           height:28px;
         }
         #total-rate {
           margin-right: 25px;
+          font-size:16px;
         }
         .header {
           padding-left: 5px;
         }
-        button {
-          width: 85%;
-        }
+      
         #items {
           padding-left: 8px;
         }

@@ -31,8 +31,12 @@ const routes: Routes = [
     loadChildren: () =>
       import('../Accountpage/accountpage.module').then((m) => m.AccountPageModule),
   },
- 
- 
+ {
+    path: 'productdetail/:id',
+    loadChildren: () =>
+      import('../product-details/product-detail.module').then((m) => m.productdetailModule),
+  },
+
 
 ];
 

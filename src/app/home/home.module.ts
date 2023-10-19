@@ -21,6 +21,8 @@ import { blogsection } from '../common-components/blog-section/blog-section.comp
 import { BlogPage } from '../blog-page/blog-page.component';
 import { AccountPageModule } from '../Accountpage/accountpage.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProductDetailComponent } from '../product-details/product-detail.component';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -35,8 +37,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FAQComponent,
     blogsection,
     BlogPage,
-
-   
+    ProductDetailComponent,
+    
+    
   ],
   imports: [
     BrowserModule,
@@ -49,6 +52,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AccountPageModule,
     BrowserAnimationsModule,
  
+    MatExpansionModule,
+    
   ],
   providers: [CartService],
   bootstrap: [AppComponent],

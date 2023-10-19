@@ -1,0 +1,244 @@
+<html>
+
+<body>
+<app-headerandfooter>
+    <div class="productdetail-container">
+
+        <div class="productdetail-box1">
+            <div class="productdetail-header">
+                <a id="linktohome">Home</a>&nbsp;&nbsp;
+                <a id="categorytitle">> {{product.categoryName}}</a>
+            </div>
+            <div class="productdetails">
+                
+                <div class="productlist-image">
+                    <div class="product-image">
+                        <img id="img1" [src]="product.imagePath">
+                    </div>
+                </div>
+                <div class="viewimage-session">
+                    <div class="productview-image" [style.background-image]="'url(' + product.imagePath + ')'"></div>
+                </div>
+                <div class="total-productdetail">
+                    <div class="heading">{{product.categoryName}}</div>
+                    <h2 class="name">{{product.name}}</h2>
+                    <div class="horizontal-line"></div>
+                    <p class="productdetail-description">{{product.description}}</p>
+                    <p class='color'>Color</p>
+
+                    <span class="color-circle black"></span>
+                    <p class="quantity"> Quantity</p>
+                    <div class="quantity-selector">
+                        <button style="border-radius: 3.333px 0px 0px 3.333px" class="decrement-button">
+                            -
+                        </button>
+                        <button class="delete-basket-icon">
+                            <img style="opacity: 0.5" src="./assets/delete1.svg" />
+                        </button>
+                        <button class="quantity-number">0</button>
+                        <button class="increment-button" style="border-radius: 0px 3.333px 3.333px 0px">
+                            +
+                        </button>
+                    </div>
+                    <div class="horizontal-line"></div>
+                    <div class="rateandcart">
+                        <p class="rate"> £ {{product.sellingPrice}}</p>
+                        <div class="productcart-button">
+                            <app-button></app-button>
+                        
+                        </div>
+                        <div style="border-radius: 8px;border: 1px solid #212529;padding:5px 8px 5px 8px;"><img
+                                src="../../assets/hearticon.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- product info section -->
+<div class="productdetails-box2">
+    <div let="item of panelItems" class="expansion-panel">
+        <div (click)="togglePanel()" class="panel-header">
+            <span class="heading">Product Info</span>
+            <span class="toggle-icon">{{ isExpanded1 ? '▼' : '▲' }}</span>
+        </div>
+        <div class="panel-content" [ngClass]="{ 'expanded': isExpanded1 }">
+            <div>
+
+                <div class="instruction">
+                    <span class="instruction-name">Care Instructions</span>
+                    <span class="instruction-description">Hand Wash Only</span>
+                </div>
+                <div class="instruction">
+                    <span class="instruction-name">Fit Type</span>
+                    <span class="instruction-description">Stretch</span>
+                </div>
+                <div class="instruction">
+                    <span class="instruction-name">Keep warm</span>
+                    <span class="instruction-description">You can wear the knitted cap to keep warm in winter or
+                        autumn.</span>
+                </div>
+                <div class="instruction">
+                    <span class="instruction-name">Fashionable</span>
+                    <span class="instruction-description">The winter cap is fashionable and comfortable to wear, helping
+                        you
+                        spend cold winter.</span>
+                </div>
+                <div class="instruction">
+                    <span class="instruction-name">Material</span>
+                    <span class="instruction-description">The beanie cap is made of high quality wool, comfortable to
+                        wear.</span>
+                </div>
+                <div class="instruction">
+                    <span class="instruction-name">Style/Version</span>
+                    <span class="instruction-description">Oversized Slouchy Cuffed Design</span>
+                </div>
+                <div class="instruction">
+                    <span class="instruction-name">Designed For</span>
+                    <span class="instruction-description">Casual Outdoor Activities during Colder Months like Walking,
+                        Running, Hiking,
+                        Skiing etc. This item is not designed for extreme cold weather.</span>
+                </div>
+                <div class="instruction">
+                    <span class="instruction-name">Features</span>
+                    <span class="instruction-description">Cable Knit Pattern with Soft and Thick Yarn Material + Slouchy
+                        Fit</span>
+                </div>
+                <div class="instruction">
+                    <span class="instruction-name">Color</span>
+                    <span class="instruction-description">1 Colors</span>
+                </div>
+                <div class="instruction">
+                    <span class="instruction-name">Product Dimensions</span>
+                    <span class="instruction-description">12 x 4 x 3 cm;</span>
+                </div>
+                <div class="instruction">
+                    <span class="instruction-name"> Item Weight</span>
+                    <span class="instruction-description">80 kg</span>
+                </div>
+                
+                </div>
+                </div>
+                </div>
+                </div>
+                
+                <!-- delivery section -->
+                <div class="productdetails-box2">
+                    <div class="expansion-panel">
+                        <div (click)="toggledeliveryPanel()" class="panel-header">
+                            <span class="heading">Delivery</span>
+                            <span class="toggle-icon">{{ isExpanded2 ? '▼' : '▲' }}</span>
+                        </div>
+                        <div class="panel-content" [ngClass]="{ 'expanded': isExpanded2 }">
+                            <div class="deliverychecker">
+                                <p id="deliveryheading">Delivered by and COD Checker</p>
+                                <div class="form">
+                                    <input type="text" id="input" [(ngModel)]="postalCode" placeholder="Post Code">
+                                    <button id="checker" (click)="checkDelivery()">Checker</button>
+                                </div>
+                                <div>
+                                    <p id="estimate">Estimated delivery by {{ deliveryDate }}</p>
+                                    <p id="cashondelivery">Cash on Delivery: {{ codAvailable ? 'Available' : 'Not Available' }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- return policy -->
+                <div class="productdetails-box2">
+                    <div class="expansion-panel">
+                        <div (click)=" togglereturnPanel()" class="panel-header">
+                            <span class="heading">Return Policy</span>
+                            <span class="toggle-icon">{{ isExpanded3 ? '▼' : '▲' }}</span>
+                        </div>
+                        <div class="panel-content" [ngClass]="{ 'expanded': isExpanded3 }">
+                            <div class="return-policy">
+                                <p class="para">
+                                    For more details on our Returns Policies, please<br>
+                                    Defective Products, Wrong Products or Damaged Products issue should be raised within 24 hrs of
+                                    delivery<br>
+                                    All Orders wherein FREE Products included are not eligible for Return<br>
+                                    For more details on our Returns Policies, please <a href="#" class="link">click here․</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<!-- product section -->
+<!-- recommendation product -->
+<div class="list">
+    <div *ngFor="let recommendation of recommendationrec; let j = index" class="studentkits-section">
+        <div style="width: 100; height: auto;display: flex; justify-content: space-between;">
+            <p id="sub-title3">{{ recommendation.categoryName }}</p>
+            <div id="arrow-button">
+                <img id="left-arrow" (click)="scrollLeft(j, 'cardColumnKits')" src="./assets/arrowleft.svg" />
+                <img id="right-arrow" (click)="scrollRight(j, 'cardColumnKits')" src="./assets/arrowright.svg" />
+            </div>
+        </div>
+        <div class="total-cards" #cardColumnKits>
+            <div class="studentkits-container" *ngFor="let product of recommendation.products; let i = index">
+                <div class="studentkits-image">
+                    <img id="img" [src]="product.imagePath" loading="lazy" />
+                </div>
+                <div class="studentkits-name">{{ product.name }}</div>
+                <div class="studentkits-description">
+                    {{ product.description }}
+                    <ul>
+                        <li *ngFor="let item of product.productList; let j = index">
+                            {{ product.productList[j] }}
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="studentkits-price">£ {{ product.sellingPrice }}</div>
+                <div class="studentkits-button">
+                    <app-button [product]="product"></app-button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- student kits -->
+<div class="list">
+
+    <div *ngFor="let student of studentKits; let j = index" class="studentkits-section">
+        <div style="  width: 100;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+          ">
+            <p id="sub-title3">{{ student.categoryName }}</p>
+            <div id="arrow-button">
+                <img id="left-arrow" (click)="scrollLeft(j, 'cardColumnKits')" src="./assets/arrowleft.svg" />
+                <img id="right-arrow" (click)="scrollRight(j, 'cardColumnKits')" src="./assets/arrowright.svg" />
+            </div>
+        </div>
+        <div class="total-cards" #cardColumnKits>
+            <div class="studentkits-container" *ngFor="let product of student.products; let i = index">
+                <div class="studentkits-image">
+                    <img id="img" [src]="product.imagePath" loading="lazy" />
+                </div>
+                <div class="studentkits-name">{{ product.name }}</div>
+                <div class="studentkits-description">
+                    {{ product.description }}
+                    <ul>
+                        <li *ngFor="let item of product.productList; let j = index">
+                            {{ product.productList[j] }}
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="studentkits-price">£ {{ product.sellingPrice }}</div>
+                <div class="studentkits-button">
+                    <app-button [product]="product"></app-button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                </div>
+                </app-headerandfooter>
+</body>
+
+</html>

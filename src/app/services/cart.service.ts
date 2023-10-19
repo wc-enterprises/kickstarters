@@ -7,6 +7,12 @@ import { IProduct, IProductForCart } from '../utils/interface';
   providedIn: 'root',
 })
 export class CartService {
+  checkCODAvailability(postalCode: string) {
+      throw new Error('Method not implemented.');
+  }
+  checkDeliveryAvailability(postalCode: string) {
+      throw new Error('Method not implemented.');
+  }
   private cartCountSubject = new BehaviorSubject<number>(0);
   cartCount$ = this.cartCountSubject.asObservable();
 
@@ -95,4 +101,5 @@ export class CartService {
   closeCart() {
     this.cartSubject.next(false);
   }
+  
 }

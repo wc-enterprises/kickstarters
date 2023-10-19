@@ -1,6 +1,18 @@
-<div class="blog-container">
-  <div class="blog-image">
-    <img id="img" src="../../assets/blog.jpg" />
-  </div>
-  <div class="blog-content"></div>
-</div>
+
+<html>
+<body>
+    <app-headerandfooter>
+<div *ngFor="let blog of blogs" class="blog-content">
+    <div class="blog-image">
+            <img id="img" [src]="blog.Image" alt="Blog Image">
+            </div>
+
+        <div class="blog-text">
+            <h1>{{blog.Title}}</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...</p>
+            </div>
+        </div>
+    </app-headerandfooter>
+</body>
+
+</html>

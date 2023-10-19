@@ -15,7 +15,7 @@ export class ApiCallsService {
   getCategorizedProducts(): Observable<
     StandardResponse<ICategorizedProductsWithAttributesAndVariants[]>
   > {
-    return of(catP) as Observable<
+    return of(catP) as Observable< 
       StandardResponse<ICategorizedProductsWithAttributesAndVariants[]>
     >;
     // const url = `${BASE_URL}/get-categorized-products-with-attributes-and-variants`;
@@ -140,6 +140,7 @@ const kits = {
           attributes: [],
           variants: [],
         },
+        
       ],
     },
   ],

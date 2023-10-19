@@ -27,6 +27,16 @@ const routes: Routes = [
       import('../blog-page/blog-page.module').then((m) => m.BlogPageModule),
   },
   {
+    path: 'login',
+    loadChildren: () =>
+      import('../login-page/login.module').then((m) => m.LoginModule),
+  },
+  {
+    path: 'registerform',
+    loadChildren: () =>
+      import('../register-form/register.module').then((m) => m.RegisterFormModule),
+  },
+  {
     path: 'productdetail/:id',
     loadChildren: () =>
       import('../product-details/product-detail.module').then((m) => m.productdetailModule),

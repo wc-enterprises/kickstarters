@@ -1,18 +1,25 @@
-
 <html>
-<body>
-    <app-headerandfooter>
-<div *ngFor="let blog of blogs" class="blog-content">
-    <div class="blog-image">
-            <img id="img" [src]="blog.Image" alt="Blog Image">
-            </div>
 
-        <div class="blog-text">
-            <h1>{{blog.Title}}</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...</p>
-            </div>
+<body>
+  <app-headerandfooter>
+    <div class="blog-maincontainer">
+      <div class="blog-subcontainer1">
+        <div id="title">
+
+          <span id="large-title">Our<br>
+            Blogs.</span>
+          <span id="medium-title">Making Student<br>
+            Life Easy. </span>
+          <span id="small-title">Top Products for Indian Students in the UK.</span>
+
         </div>
-    </app-headerandfooter>
+        <div id="blog-image">
+
+        </div>
+      </div>
+    </div>
+    <app-blogsection [heading]="'See our popular blogs'"></app-blogsection>
+  </app-headerandfooter>
 </body>
 
 </html>

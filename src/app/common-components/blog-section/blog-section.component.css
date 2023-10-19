@@ -1,9 +1,10 @@
 .blogsection {
   width: 100%;
   height: auto;
-  border-top: 1px solid #e3e3e3;
-  padding: 30px 0 0 30px;
+ padding: 30px 0 0 150px;
   margin-top: 40px;
+ 
+
 }
 
 .author {
@@ -16,35 +17,38 @@
 }
 
 .blogtitle {
-  width: 100%;
+
+  width: 76%;
   height: 40px;
   color: #000;
   font-family: "Inter";
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
-  line-height: 33.6px; /* 140% */
+  line-height: 33.6px; 
   letter-spacing: -0.5px;
 }
 .card-container {
+  width:77%;
   display: flex;
   overflow-x: scroll;
-  gap: 15px;
+  gap: 17px;
   padding-right: 60px;
+ 
 }
 ::-webkit-scrollbar {
   overflow: hidden;
 }
 
 .blogsection-cards {
-  width: 220px;
+  width: 250px;
   height: 400px;
   margin-top: 18px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border: 1px solid #ddd;
   border-radius: 12px;
-  padding: 10px;
-}
+  padding: 0px 20px 0px 20px;
+  }
 .image {
   width: 100%;
   height: 200px;
@@ -53,7 +57,7 @@
   justify-content: center;
 }
 #img {
-  width: 200px;
+  width: 230px;
   height: 200px;
   border-radius: 5px;
 }
@@ -64,11 +68,12 @@
   align-items: center;
   opacity: 0.5;
   white-space: nowrap;
-  font-family: "Inter";
+  font-family: 'Inter';
 }
+
 .blog-name {
   width: 100%;
-  height: 75px;
+  height: 100px;
   line-height: 1.5;
   font-weight: bold;
   display: -webkit-box;
@@ -77,15 +82,25 @@
   overflow: hidden;
   font-family: "Inter";
 }
-.blog-description {
+
+button {
+  border: none;
   width: 100%;
-  height: 75px;
-  line-height: 1.5;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  font-family: "Inter";
+  color: #fff;
+  font-family: 'Inter';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 21px;
+  display: flex;
+  cursor: pointer;
+  padding:10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 10px;
+  background: #000;
 }
 
 /* media query */

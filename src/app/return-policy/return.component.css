@@ -1,0 +1,19 @@
+.return-container{
+    width:100%;
+    height:100%;
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.box1{
+    width:770px;
+    height:660px;
+    box-sizing: border-box;
+    line-height: 30px;
+    
+}
+h3{  
+    text-align: center;
+    width:100%;
+}

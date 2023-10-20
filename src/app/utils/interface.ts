@@ -99,3 +99,24 @@ export interface ICreateAttribute {
   asset: string;
 }
 export interface IAttribute extends ICreateAttribute {}
+
+export interface IBlogs{
+  id:string;
+  image:string;
+  title:string;
+  description:string;
+  date:string;
+  author:string;
+
+}
+export interface IBlog{
+  id:string;
+  image:string;
+  title:string;
+  description:string;
+  date:string;
+  author:string;
+  content:{  subTitle:string;
+    para:string;}[]
+
+}

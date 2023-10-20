@@ -17,11 +17,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from '../app.component';
-import { blogsection } from '../common-components/blog-section/blog-section.component';
+import { BlogSection } from '../common-components/blog-section/blog-section.component';
 import { BlogPage } from '../blog-page/blog-page.component';
 import { ProductFilter } from '../productfilter/productfilter.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
+ import { Login } from '../login-page/login.component';
+ import {MatInputModule} from '@angular/material/input';
+import { RegisterForm } from '../register-form/register.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BlogDetailComponent } from '../blogdetail-page/blogdetail-page.component';
+import { ProductDetailComponent } from '../product-details/product-detail.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+
 @NgModule({
   declarations: [
     HomepageComponent,
@@ -33,9 +41,16 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
     CartItemComponent,
     PaymentsComponent,
     FAQComponent,
-    blogsection,
     BlogPage,
-    ProductFilter
+    ProductFilter,
+    Login,
+    RegisterForm,
+    BlogSection,
+    BlogPage,
+    BlogDetailComponent,
+    ProductDetailComponent,
+    
+    
   ],
   imports: [
     BrowserModule,
@@ -46,7 +61,11 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
     HttpClientModule,
     ReactiveFormsModule,
     MatFormFieldModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatInputModule,
+    MatFormFieldModule,
+    BrowserAnimationsModule,
+    MatExpansionModule,
     
   ],
   providers: [CartService],

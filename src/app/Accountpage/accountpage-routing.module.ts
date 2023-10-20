@@ -5,6 +5,10 @@ import { ProfileNavComponent } from "./profile-nav/profile-nav.component";
 import { MyProfileComponent } from "./my-profile/my-profile.component";
 import { AddresspageComponent } from "./addresspage/addresspage.component";
 import { RecentlyViewpageComponent } from "./recently-viewpage/recently-viewpage.component";
+import { UpdatePasswordComponent } from "./update-password/update-password.component";
+import { WishlistpageComponent } from "./wishlistpage/wishlistpage.component";
+import { EmptyOrderpageComponent } from "./empty-orderpage/empty-orderpage.component";
+import { OrderPageComponent } from "./order-page/order-page.component";
 const routes: Routes = [
     {
       path: 'profilenav',
@@ -22,6 +26,22 @@ const routes: Routes = [
       path: 'recently',
       component:RecentlyViewpageComponent,
     },
+    {
+      path: 'password',
+      component:UpdatePasswordComponent,
+    },
+    {
+      path: 'wishlist',
+      component:WishlistpageComponent,
+    },
+    {
+      path: 'emptyorder',
+      component:EmptyOrderpageComponent,
+    },
+    {
+      path: 'order',
+      component:OrderPageComponent,
+    }
   ];
   
   @NgModule({

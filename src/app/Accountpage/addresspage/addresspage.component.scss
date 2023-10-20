@@ -2,7 +2,7 @@ body{
     font-family: 'Average Sans';
 }
 .address-container{
-    width:945px;
+    width:70%;
     height:100%;
     box-sizing:border-box;
     float: right;
@@ -11,6 +11,7 @@ body{
     align-items: center;
     justify-content: center;
     padding-top:50px;
+    padding-right:50px;
    
 }
 #welcome-para{
@@ -133,6 +134,7 @@ border-radius: 8px;
 background: #1F2123;
 margin: auto;
 color:#FFF;
+border:none;
     }
  #display-address{
    width:auto;

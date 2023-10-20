@@ -1,5 +1,5 @@
 .myprofile-container{
-    width:945px;
+    width:70%;
     height:100%;
     box-sizing:border-box;
     float: right;
@@ -8,6 +8,7 @@
     align-items: center;
     justify-content: center;
     padding-top:50px;
+    padding-right:50px;
 
 }
 .myprofile-form{
@@ -40,7 +41,7 @@ margin: auto;
     display: flex;
     width:100%;
     box-sizing: border-box;
-    justify-content: space-between ;
+    justify-content: space-between;
      gap:10px;
    padding:15px;
 } 

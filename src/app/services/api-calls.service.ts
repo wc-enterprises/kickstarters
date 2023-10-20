@@ -10,6 +10,23 @@ import { IBlogs,IBlog } from '../utils/interface';
   providedIn: 'root',
 })
 export class ApiCallsService {
+
+  addressData = {
+    userName: '',
+    contactNumber: '',
+    addressLine1: '',
+    addressLine2: '',
+    company: '',
+    postalZipcode: '',
+    city: '',
+    country: '',
+  };
+  public getProfileData(): Observable<any> {
+    return of(this.addressData); 
+  }
+ 
+ 
+
   getProductById(productId:string) {
   
    return{
@@ -981,3 +998,5 @@ const blogs = [
     ]
   },
 ];
+
+

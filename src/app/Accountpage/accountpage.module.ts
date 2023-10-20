@@ -8,12 +8,20 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { AddresspageComponent } from './addresspage/addresspage.component';
 import { RecentlyViewpageComponent } from './recently-viewpage/recently-viewpage.component';
+import { UpdatePasswordComponent } from './update-password/update-password.component';
+import { WishlistpageComponent } from './wishlistpage/wishlistpage.component';
+import { EmptyOrderpageComponent } from './empty-orderpage/empty-orderpage.component';
+import { OrderPageComponent } from './order-page/order-page.component';
 @NgModule({
   declarations: [
     ProfileNavComponent,
     MyProfileComponent,
     AddresspageComponent,
-    RecentlyViewpageComponent
+    RecentlyViewpageComponent,
+    UpdatePasswordComponent,
+    WishlistpageComponent,
+    EmptyOrderpageComponent,
+    OrderPageComponent
   ],
 
   imports: [CommonModule,  AccountPageRoutingModule,MatFormFieldModule,MatInputModule, FormsModule],

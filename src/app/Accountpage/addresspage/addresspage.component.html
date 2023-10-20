@@ -5,7 +5,7 @@
     <div class="address-container">
         <p id="welcome-para">Welcome back!</p>
         <div class="address-section">
-          <div class="cards">
+          <div  class="cards">
             <div class="add-new" *ngIf="showEmptyCard">
               <img src="../../../assets/addresslocation-icon.svg">
               <button (click)="openForm()" id="add-address-button">Add new address</button>
@@ -15,7 +15,7 @@
                    <button id="default">
                       Default address
                    </button>
-                <img   src="../../../assets/editicon.svg">
+                <img   (click)="openEditForm()" src="../../../assets/editicon.svg">
                 </div>
                 <div id="display-address">
                     <p *ngIf="submittedData">Username: {{ submittedData.userName }}</p>
@@ -31,20 +31,20 @@
             
             </div>
             <!-- Form -->
-            <div class="form" *ngIf="showForm">
+            <div  class="form" *ngIf="showForm">
                 <div style="margin:auto;display: flex;padding: 15px 50px;justify-content: center;align-items: center;font-size: 22px;
                                 font-style: normal;font-weight: 400;">Add New Address</div>
               <div class="align-form">
                 <div class="input">
                   <mat-form-field appearance="outline">
                     <mat-label>Username</mat-label>
-                    <input matInput placeholder="Placeholder" [(ngModel)]="profileData.userName">
+                    <input matInput placeholder="Username" [(ngModel)]="addressData.userName">
                   </mat-form-field>
                 </div>
                 <div class="input">
                   <mat-form-field appearance="outline">
                     <mat-label>Contact number</mat-label>
-                    <input matInput placeholder="Placeholder" [(ngModel)]="profileData.contactNumber">
+                    <input matInput placeholder="Contact number" [(ngModel)]="addressData.contactNumber">
                   </mat-form-field>
                 </div>
               </div>
@@ -52,13 +52,13 @@
                 <div class="input">
                   <mat-form-field appearance="outline">
                     <mat-label>Address line1</mat-label>
-                    <input matInput placeholder="Placeholder" [(ngModel)]="profileData.addressLine1">
+                    <input matInput placeholder="Address line1" [(ngModel)]="addressData.addressLine1">
                   </mat-form-field>
                 </div>
                 <div class="input">
                   <mat-form-field appearance="outline">
                     <mat-label>Address line2</mat-label>
-                    <input matInput placeholder="Placeholder" [(ngModel)]="profileData.addressLine2">
+                    <input matInput placeholder="Address line2" [(ngModel)]="addressData.addressLine2">
                   </mat-form-field>
                 </div>
               </div>
@@ -66,13 +66,13 @@
                 <div class="input">
                   <mat-form-field appearance="outline">
                     <mat-label>Company</mat-label>
-                    <input matInput placeholder="Placeholder" [(ngModel)]="profileData.company">
+                    <input matInput placeholder="Company" [(ngModel)]="addressData.company">
                   </mat-form-field>
                 </div>
                 <div class="input">
                   <mat-form-field appearance="outline">
                     <mat-label>Postal /zipcode</mat-label>
-                    <input matInput placeholder="Placeholder" [(ngModel)]="profileData.postalZipcode">
+                    <input matInput placeholder="Postal /zipcode" [(ngModel)]="addressData.postalZipcode">
                   </mat-form-field>
                 </div>
               </div>
@@ -80,21 +80,91 @@
                 <div class="input">
                   <mat-form-field appearance="outline">
                     <mat-label>City</mat-label>
-                    <input matInput placeholder="Placeholder" [(ngModel)]="profileData.city">
+                    <input matInput placeholder="City" [(ngModel)]="addressData.city">
                   </mat-form-field>
                 </div>
                 <div class="input">
                   <mat-form-field appearance="outline">
                     <mat-label>Country</mat-label>
-                    <input matInput placeholder="Placeholder" [(ngModel)]="profileData.country">
+                    <input matInput placeholder="Country" [(ngModel)]="addressData.country">
                   </mat-form-field>
                 </div>
               </div>
             <button id="savebutton" (click)="submitForm()">Save</button>
             </div>
           </div>
+
+
+          <!-- editform  -->
+
+          <div class="edit-address" *ngIf="showEditForm"> <!-- Use a different class for styling -->
+            <div style="margin:auto;display: flex;padding: 15px 50px;justify-content: space-between;align-items: center;font-size: 22px;
+                        font-style: normal;font-weight: 400;">
+                Edit Address
+                <!-- Add a Cancel button with X icon -->
+                    <img   (click)="cancelEdit()" src="../../../assets/cancel1.svg"> <!-- Replace with your actual cancel icon image -->
+           
+            </div>
+            <div class="align-form">
+                <div class="input">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Username</mat-label>
+                    <input matInput placeholder="Username" [(ngModel)]="addressData.userName">
+                  </mat-form-field>
+                </div>
+                <div class="input">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Contact number</mat-label>
+                    <input matInput placeholder="Contact number" [(ngModel)]="addressData.contactNumber">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="align-form">
+                <div class="input">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Address line1</mat-label>
+                    <input matInput placeholder="Address line1" [(ngModel)]="addressData.addressLine1">
+                  </mat-form-field>
+                </div>
+                <div class="input">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Address line2</mat-label>
+                    <input matInput placeholder="Address line2" [(ngModel)]="addressData.addressLine2">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="align-form">
+                <div class="input">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Company</mat-label>
+                    <input matInput placeholder="Company" [(ngModel)]="addressData.company">
+                  </mat-form-field>
+                </div>
+                <div class="input">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Postal /zipcode</mat-label>
+                    <input matInput placeholder="Postal /zipcode" [(ngModel)]="addressData.postalZipcode">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="align-form">
+                <div class="input">
+                  <mat-form-field appearance="outline">
+                    <mat-label>City</mat-label>
+                    <input matInput placeholder="City" [(ngModel)]="addressData.city">
+                  </mat-form-field>
+                </div>
+                <div class="input">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Country</mat-label>
+                    <input matInput placeholder="Country" [(ngModel)]="addressData.country">
+                  </mat-form-field>
+                </div>
+              </div>
+            <button id="savebutton" (click)="submitForm()">Save</button>
         </div>
-      </div>
+        </div>
+ </div>
       
       
 </body>

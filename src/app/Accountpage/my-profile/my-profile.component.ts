@@ -1,7 +1,7 @@
 
 
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { ApiCallsService } from 'src/app/services/api-calls.service';
 
 
 @Component({
@@ -10,20 +10,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./my-profile.component.scss']
   
 })
-export class MyProfileComponent {
+export class MyProfileComponent implements  OnInit {
   editMode: boolean = false;
   formValid: boolean = false;
 
-  profileData: any = {
-    username: 'arunkumar',
-    email: 'aruncopz@gmail.com',
-    contactNumber: '9874563210',
-    gender: 'male',
-    birthdate: '25-07-1999'
-  };
+  profileData: any;
 
-  
+  constructor(private apicallsservice: ApiCallsService) {}
 
+  ngOnInit(): void {
+    this.apicallsservice.getProfileInfo().subscribe((data) => {
+      this.profileData = data;
+      // Handle the retrieved data as needed
+    });
+  }
   editProfile() {
     // Check if all fields are filled
     if (this.profileData.username && this.profileData.email && this.profileData.contactNumber && this.profileData.gender && this.profileData.birthdate) {
@@ -48,3 +48,5 @@ export class MyProfileComponent {
     this.editMode = false;
   }
 }
+ 
+

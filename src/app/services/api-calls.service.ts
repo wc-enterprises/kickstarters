@@ -24,6 +24,18 @@ export class ApiCallsService {
   public getProfileData(): Observable<any> {
     return of(this.addressData); 
   }
+
+  profileData: any = {
+    username: 'arunkumar',
+    email: 'aruncopz@gmail.com',
+    contactNumber: '9874563210',
+    gender: 'male',
+    birthdate: '25-07-1999',
+  };
+
+  getProfileInfo(): Observable<any> {
+    return of(this.profileData);
+  }
  
  
 

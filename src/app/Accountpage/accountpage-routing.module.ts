@@ -9,6 +9,7 @@ import { UpdatePasswordComponent } from "./update-password/update-password.compo
 import { WishlistpageComponent } from "./wishlistpage/wishlistpage.component";
 import { EmptyOrderpageComponent } from "./empty-orderpage/empty-orderpage.component";
 import { OrderPageComponent } from "./order-page/order-page.component";
+import { MainAccountpageComponent } from "./main-accountpage/main-accountpage.component";
 const routes: Routes = [
     {
       path: 'profilenav',
@@ -41,6 +42,10 @@ const routes: Routes = [
     {
       path: 'order',
       component:OrderPageComponent,
+    },
+    {
+      path: 'mainaccount',
+      component:MainAccountpageComponent,
     }
   ];
   

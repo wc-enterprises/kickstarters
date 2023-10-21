@@ -12,6 +12,7 @@ import { UpdatePasswordComponent } from './update-password/update-password.compo
 import { WishlistpageComponent } from './wishlistpage/wishlistpage.component';
 import { EmptyOrderpageComponent } from './empty-orderpage/empty-orderpage.component';
 import { OrderPageComponent } from './order-page/order-page.component';
+import { MainAccountpageComponent } from './main-accountpage/main-accountpage.component';
 @NgModule({
   declarations: [
     ProfileNavComponent,
@@ -21,7 +22,8 @@ import { OrderPageComponent } from './order-page/order-page.component';
     UpdatePasswordComponent,
     WishlistpageComponent,
     EmptyOrderpageComponent,
-    OrderPageComponent
+    OrderPageComponent,
+    MainAccountpageComponent
   ],
 
   imports: [CommonModule,  AccountPageRoutingModule,MatFormFieldModule,MatInputModule, FormsModule],

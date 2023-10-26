@@ -1,21 +1,47 @@
 <html>
     <body>
+        <app-headerandfooter>
         <div class="container">
             <div class="inner-container">
                  <div class="content">
-                    <h3>RETURN/EXCHANGE</h3>
+                    <h3 id="heading-1">RETURN/EXCHANGE</h3>
                     <p>Return/Exchange your product in just a few clicks. Please enter your order number and email / mobile number to continue.</p>
                     <p>Please read our return and exchange policies before proceeding.</p>
                  </div>
                 <div class="form">
-                   
-                    <h4>RETURN FORM</h4>
-                   <input id="forminput" type="text" placeholder="Order ID">
-                   <input id="forminput" type="text" placeholder="Product name">
-                  
+                    <div class="form-list">
+                    <h4 id="heading-2">RETURN FORM</h4>
+                    
+                        <div id="form-input">
+                     <input id="form-input1" type="" placeholder="Order ID">
+                     <input id="form-input1" type="" placeholder="Product name">
+                     <select id="return-mode">
+                        <option id="custom-mode">Return mode</option>
+                        <option value="Refund">Refund</option>
+                        <option value="Echange">Exchange</option>
+                      
+                      </select>
+                      <select id="return-mode">
+                        <option id="custom-mode">Return reason</option>
+                        <option value="Refund">Received the wrong item</option>
+                        <option value="Echange">Item damaged during delivery</option>
+                        <option value="Echange">Wrong size</option>
+                        <option value="Echange">Item doesn't match the description</option>
+                        <option value="Echange">Unsatisfied with the quality</option>
+                        <option value="Echange">Item doesn't match the online image</option>
+                      <option value="Echange">Item arrived with a scratch</option>
+                      <option value="Echange">Received the wrong color</option>
+                      <option value="Echange">Others</option>
+                     
+                      
+                      </select>
+                      <button >Submit</button>
+                    </div>
+                </div> 
                 </div>
             </div>
 
         </div>
+    </app-headerandfooter>
     </body>
 </html>

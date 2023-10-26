@@ -1,5 +1,5 @@
 body{
-
+    font-family: 'Average Sans';
 }
 .container{
    width: 100%;
@@ -8,11 +8,12 @@ body{
    align-items: center;
    display: flex;
    justify-content: center;
+   padding-top:80px;
 }
 .inner-container{
     width:70%;
     height:654px;
-    background-color: aqua;
+
     display: flex;
    
     
@@ -21,44 +22,104 @@ body{
     width:548px;
     display: flex;
     flex-direction: column;
-    background-color:antiquewhite;
-    justify-content: center;
  
+    justify-content: center;
+    box-sizing: border-box;
 }
 .form{
     width:548px;
-    height:654px;
+    height:auto;
     display: flex;
     flex-direction: column;
-    background-color: aquamarine;
+   
    align-items: center;
    gap:20px;
-
+   box-sizing: border-box;
+   justify-content: center;
 }
 
-mat-form-field{
-    width: 100%;
+
+.form-list{
+    width:500px;
+    height:auto;
+    box-sizing: border-box;
+    padding:25px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+border: 0.4px solid #343A40;
+box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.35);
+}
+#heading-1{
+    color: #000;
+
+font-family: Average Sans;
+font-size: 36px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-transform: capitalize;
 }
 
-#forminput{
-width:50%;    
-display: flex;
-padding: 25px 30px;
-align-items: center;
-border-radius: 8px;
-border: 1px solid #413F48;
-background: #FFF;
+#heading-2{
+    color: #000;
+
+text-align: center;
+font-family: 'Average Sans';
+font-size: 36px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-transform: capitalize;
 }
+#form-input{
+
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  gap:15px;
+  height: 100%;
+   
+}
+#form-input1{
+
+    width:100%;
+    border-radius: 8px;
+border: 1px solid #413F48;
+padding:25px 0px 25px 0px;
+background: #FFF;
+     
+  }
+  #form-input1::placeholder {padding-left: 25px;}
+
 #return-mode{
-    width:61%;
-    padding: 25px 30px;
+   
+  padding:25px 0px 25px 21px;
     align-items: center;
     display: flex;
 border-radius: 8px;
 border: 1px solid #413F48;
 background: #FFF;
 }
-option{
-    border-radius: 8px;
-}
+
+#forminput, #return-mode {
+            width: 100%;
+        }
+ button{
+    display: flex;
+padding: 18px 50px;
+justify-content: center;
+align-items: center;
+align-self: stretch;
+border-radius: 8px;
+background: #262626;
+color:white;
+cursor: pointer;
+ }
+ #custom-mode{
+    color: rgba(38, 38, 38, 0.50);
+
+font-family: Inter;
+font-size: 20px;
+ }

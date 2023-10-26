@@ -27,6 +27,11 @@ const routes: Routes = [
       import('../blog-page/blog-page.module').then((m) => m.BlogPageModule),
   },
   {
+    path: 'account',
+    loadChildren: () =>
+      import('../Accountpage/accountpage.module').then((m) => m.AccountPageModule),
+  },
+ {
     path: 'login',
     loadChildren: () =>
       import('../login-page/login.module').then((m) => m.LoginModule),

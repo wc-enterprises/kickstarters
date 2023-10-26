@@ -52,6 +52,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('../return/policy-exchange/return-exchange.module').then((m) => m.ReturnExachangeModule),
   },
+  {
+    path: 'return',
+    loadChildren: () =>
+      import('../return-policy/return.module').then((m) => m.ReturnModule),
+  },
+
+
 
 ];
 

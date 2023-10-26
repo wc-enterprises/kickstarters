@@ -47,6 +47,12 @@ const routes: Routes = [
     loadChildren: () =>
       import('../blogdetail-page/blogdetail.module').then((m) => m.BlogDetailModule),
   },
+  {
+    path: 'return',
+    loadChildren: () =>
+      import('../return-policy/return.module').then((m) => m.ReturnModule),
+  },
+
 
 
 ];

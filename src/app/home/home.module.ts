@@ -22,7 +22,7 @@ import { BlogPage } from '../blog-page/blog-page.component';
  import { Login } from '../login-page/login.component';
  import {MatInputModule} from '@angular/material/input';
  import {MatFormFieldModule} from '@angular/material/form-field';
- 
+ import { ReturnComponent } from '../return-policy/retrun.component';
  import { RegisterForm } from '../register-form/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BlogDetailComponent } from '../blogdetail-page/blogdetail-page.component';
@@ -46,7 +46,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
     BlogPage,
     BlogDetailComponent,
     ProductDetailComponent,
-    
+    ReturnComponent
     
   ],
   imports: [

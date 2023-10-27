@@ -47,6 +47,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('../blogdetail-page/blogdetail.module').then((m) => m.BlogDetailModule),
   },
+  {
+    path: 'contactus',
+    loadChildren: () =>
+      import('../contactus/contactus.module').then((m) => m.ContactUsModule),
+  },
 
 
 ];

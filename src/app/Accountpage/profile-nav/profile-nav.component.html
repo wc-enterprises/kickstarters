@@ -1,0 +1,84 @@
+<html>
+
+<body>
+    
+  <div class="profilenav-container">
+        <div class="profilenav-list">
+            <div class="profilenav-header">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="75" height="75" viewBox="0 0 75 75" fill="none ">
+                    <circle cx="37.5" cy="37.5" r="37.5" fill="#D9D9D9" />
+                    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="black"
+                        font-size="16">Ak</text>
+                </svg>
+                <p id="accountname">Arun Kumar</p>
+            </div>
+            <div class="navoption-container">
+                <div class="profilenav-option" >
+                    <img src="../../../assets/accounticon.svg">
+                    <a (click)="setActiveMenuItem('myprofile')" [ngClass]="{ active: isActiveMenuItem('myprofile') }" [class.active]="isActiveMenuItem('myprofile')">My Profile</a>
+                </div>
+            </div>
+            <div class="navoption-container">
+                <div class="profilenav-option">
+                    <img src="../../../assets/locationicon.svg">
+                    <a (click)="setActiveMenuItem('address')" [ngClass]="{ active: isActiveMenuItem('address') }" [class.active]="isActiveMenuItem('address')">Delivery address</a>
+                </div>
+            </div>
+            <div class="navoption-container">
+                <div class="profilenav-option">
+                    <img src="../../../assets/ordericon.svg">
+                    <a (click)="setActiveMenuItem('order')" [ngClass]="{ active: isActiveMenuItem('order') }" [class.active]="isActiveMenuItem('order')">My orders</a>
+                </div>
+            </div>
+            <div class="navoption-container">
+                <div class="profilenav-option">
+                    <img src="../../../assets/wishlisticon.svg">
+                    <a (click)="setActiveMenuItem('wishlist')" [ngClass]="{ active: isActiveMenuItem('wishlist') }" [class.active]="isActiveMenuItem('wishlist')">My wishlist</a>
+                </div>
+            </div>
+            <div class="navoption-container">
+                <div class="profilenav-option">
+                    <img src="../../../assets/recentlyicon.svg">
+                    <a (click)="setActiveMenuItem('recently')" [ngClass]="{ active: isActiveMenuItem('recently') }" [class.active]="isActiveMenuItem('recently')">Recently viewed</a>
+                </div>
+            </div>
+            <div class="navoption-container">
+                <div class="profilenav-option">
+                    <img src="../../../assets/changepasswordicon.svg">
+                    <a (click)="setActiveMenuItem('password')" [ngClass]="{ active: isActiveMenuItem('password') }" [class.active]="isActiveMenuItem('password')">Change password</a>
+                </div>
+            </div>
+            <hr>
+            <div class="navoption-container">
+                <div class="profilenav-option">
+                    <img src="../../../assets/logouticon.svg">
+                    <a>Logout</a>
+                </div>
+            </div>
+        </div>
+        <div class="nav-content">
+            <div *ngIf="isActiveMenuItem('myprofile')">
+                <app-my-profile></app-my-profile>
+            </div>
+            <div *ngIf="isActiveMenuItem('address')">
+                <app-addresspage></app-addresspage>
+            </div>
+            <div *ngIf="isActiveMenuItem('order')">
+                <app-order-page></app-order-page>
+            </div>
+            <div *ngIf="isActiveMenuItem('wishlist')">
+                <app-wishlistpage></app-wishlistpage>
+            </div>
+            <div *ngIf="isActiveMenuItem('recently')">
+                <app-recently-viewpage></app-recently-viewpage>
+            </div>
+            <div *ngIf="isActiveMenuItem('password')">
+                <app-update-password></app-update-password>
+            </div>
+    </div>
+    </div>
+
+ 
+</body>
+
+</html>

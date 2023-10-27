@@ -1,0 +1,69 @@
+<html>
+
+<body>
+   
+    <div class="myprofile-container">
+        <p id="welcome-para">Welcome back!</p>
+        <div class="myprofile-form">
+            <div style="width:100%;display:flex;">
+                <div style="width:830px;"></div>
+                <ng-container *ngIf="!editMode; else cancelIcon">
+                    <img [class.disabled]="!formValid" (click)="editProfile()" src="../../../assets/editicon.svg">
+                  </ng-container>
+                  <ng-template #cancelIcon>
+                   <img  (click)="cancelEdit()" src="../../../assets/cancel1.svg">
+                  </ng-template>
+            </div>
+            <div class="form">
+                <div class="align-form">
+                    <div  class="input"> <mat-form-field appearance="outline">
+                            <mat-label>Username</mat-label>
+                            <input matInput placeholder="Placeholder"   [(ngModel)]="profileData.username">
+                        </mat-form-field>
+                    </div>
+                    <div class="input">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Email</mat-label>
+                            <input matInput placeholder="Placeholder"  [(ngModel)]="profileData.email">
+                        </mat-form-field>
+                    </div>
+                    </div>
+                    <div  class="align-form">
+                        <div   class="input"> <mat-form-field appearance="outline">
+                                <mat-label>Contact number</mat-label>
+                                <input matInput placeholder="Placeholder"  [(ngModel)]="profileData.contactNumber">
+                            </mat-form-field>
+                        </div>
+                        <div  class="input">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Gender</mat-label>
+                                <input matInput placeholder="Placeholder"  [(ngModel)]="profileData.gender">
+                        </mat-form-field>
+                    </div>
+                    
+                </div>
+                <div class="align-form">
+                    <div class="input"> <mat-form-field appearance="outline">
+                            <mat-label>Birthdate</mat-label>
+                            <input matInput placeholder="Placeholder"  [(ngModel)]="profileData.birthdate">
+                        </mat-form-field>
+                    </div>
+                    <div class="input">
+                       
+                </div>
+                </div>
+                
+           
+                <button *ngIf="editMode" id="submit" (click)="saveProfile()" [disabled]="!formValid">Submit details</button>
+              
+        
+            </div>
+
+
+              
+        </div>
+    </div>
+
+</body>
+
+</html>

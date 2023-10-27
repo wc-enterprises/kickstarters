@@ -27,6 +27,11 @@ const routes: Routes = [
       import('../blog-page/blog-page.module').then((m) => m.BlogPageModule),
   },
   {
+    path: 'account',
+    loadChildren: () =>
+      import('../Accountpage/accountpage.module').then((m) => m.AccountPageModule),
+  },
+ {
     path: 'login',
     loadChildren: () =>
       import('../login-page/login.module').then((m) => m.LoginModule),
@@ -52,6 +57,17 @@ const routes: Routes = [
     loadChildren: () =>
       import('../contactus/contactus.module').then((m) => m.ContactUsModule),
   },
+{
+    path: 'return/exchange',
+    loadChildren: () =>
+      import('../return/policy-exchange/return-exchange.module').then((m) => m.ReturnExachangeModule),
+  },
+  {
+    path: 'return',
+    loadChildren: () =>
+      import('../return-policy/return.module').then((m) => m.ReturnModule),
+  },
+
 
 
 ];

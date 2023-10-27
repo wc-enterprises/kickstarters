@@ -19,16 +19,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from '../app.component';
 import { BlogSection } from '../common-components/blog-section/blog-section.component';
 import { BlogPage } from '../blog-page/blog-page.component';
+import { AccountPageModule } from '../Accountpage/accountpage.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
  import { Login } from '../login-page/login.component';
  import {MatInputModule} from '@angular/material/input';
  import {MatFormFieldModule} from '@angular/material/form-field';
  import { ContactUsComponent } from '../contactus/contactus.component';
+ import { ReturnComponent } from '../return-policy/retrun.component';
  import { RegisterForm } from '../register-form/register.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { BlogDetailComponent } from '../blogdetail-page/blogdetail-page.component';
 import { ProductDetailComponent } from '../product-details/product-detail.component';
 import {MatExpansionModule} from '@angular/material/expansion';
-
+import { ReturnExchangeComponent } from '../return/policy-exchange/return-exchange.component';
 @NgModule({
   declarations: [
     HomepageComponent,
@@ -46,7 +49,9 @@ import {MatExpansionModule} from '@angular/material/expansion';
     BlogPage,
     BlogDetailComponent,
     ProductDetailComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    ReturnExchangeComponent,
+    ReturnComponent
     
   ],
   imports: [
@@ -57,10 +62,14 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatDialogModule,
     HttpClientModule,
     ReactiveFormsModule,
+    AccountPageModule,
+    BrowserAnimationsModule,
+ 
     MatInputModule,
     MatFormFieldModule,
     BrowserAnimationsModule,
     MatExpansionModule,
+   
     
   ],
   providers: [CartService],

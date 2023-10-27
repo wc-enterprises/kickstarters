@@ -53,6 +53,11 @@ const routes: Routes = [
       import('../blogdetail-page/blogdetail.module').then((m) => m.BlogDetailModule),
   },
   {
+    path: 'return/exchange',
+    loadChildren: () =>
+      import('../return/policy-exchange/return-exchange.module').then((m) => m.ReturnExachangeModule),
+  },
+  {
     path: 'return',
     loadChildren: () =>
       import('../return-policy/return.module').then((m) => m.ReturnModule),

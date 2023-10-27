@@ -10,6 +10,35 @@ import { IBlogs,IBlog } from '../utils/interface';
   providedIn: 'root',
 })
 export class ApiCallsService {
+
+  addressData = {
+    userName: '',
+    contactNumber: '',
+    addressLine1: '',
+    addressLine2: '',
+    company: '',
+    postalZipcode: '',
+    city: '',
+    country: '',
+  };
+  public getProfileData(): Observable<any> {
+    return of(this.addressData); 
+  }
+
+  profileData: any = {
+    username: 'arunkumar',
+    email: 'aruncopz@gmail.com',
+    contactNumber: '9874563210',
+    gender: 'male',
+    birthdate: '25-07-1999',
+  };
+
+  getProfileInfo(): Observable<any> {
+    return of(this.profileData);
+  }
+ 
+ 
+
   getProductById(productId:string) {
   
    return{
@@ -981,3 +1010,5 @@ const blogs = [
     ]
   },
 ];
+
+

@@ -53,6 +53,11 @@ const routes: Routes = [
       import('../blogdetail-page/blogdetail.module').then((m) => m.BlogDetailModule),
   },
   {
+    path: 'contactus',
+    loadChildren: () =>
+      import('../contactus/contactus.module').then((m) => m.ContactUsModule),
+  },
+{
     path: 'return/exchange',
     loadChildren: () =>
       import('../return/policy-exchange/return-exchange.module').then((m) => m.ReturnExachangeModule),

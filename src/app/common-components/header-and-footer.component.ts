@@ -8,20 +8,22 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
       <div [ngClass]="{ blur: isCartOpen }" class="main-box">
         <!-- header html -->
         <div class="header">
-          <span routerLink="/" class="logo-title">
+          <span id="sidebar"></span>
+         <span routerLink="/" class="logo-title">
             <img id="logo" src="./assets/kicklogo.svg" />
-
             <p id="p1">KICKSTARTERS</p>
             <p id="p1-mobile">KICKSTARTERS</p>
           </span>
           <span class="right">
-            <a routerLink="/support" id="FAQs">FAQs</a>
+          <img id="menuicon"  routerLink="/profilenav"  src="./assets/accounticon1.svg"/>
 
-            <a routerLink="" id="contact">Contact Us</a>
+            <img id="menuicon"  routerLink="" src="./assets/searchicon.svg">
+
+            <img id="menuicon"  routerLink="" src="./assets/hearticon1.svg">
 
             <ng-container *ngIf="!isCartOpen">
               <div class="bag" (click)="openCart()">
-                <img src="./assets/bag.svg" />
+                <img src="./assets/carticon.svg" />
               </div>
             </ng-container>
 
@@ -154,19 +156,20 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
         background-color: #ffffff;
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items:center;
         position: fixed;
         z-index: 2;
-      }
+        
+       
+       }
       .logo-title {
         display: flex;
-        padding-left: 25px;
         gap: 8px;
         cursor: pointer;
       }
       #p1 {
         color: #000;
-        font-family: Average Sans;
+        font-family: 'Average Sans';
         font-size: 24px;
         font-style: normal;
         font-weight: 400;
@@ -183,9 +186,17 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
       }
 
       .right {
+        width:235px;
+        align-items:center;
         display: flex;
-
-        padding: 30px 35px 0 0;
+        gap:24px;
+      }
+      #menuicon{
+        cursor:pointer;
+      }
+      #sidebar{
+        width:250px;
+        background-color:blue;
       }
       #FAQs {
         color: #000;
@@ -259,7 +270,7 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
       }
 
       .bag {
-        margin-left: 20px;
+    
         cursor: pointer;
         position: relative;
         z-index: 0; 

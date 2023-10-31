@@ -71,10 +71,10 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
          </div>
               <div style="display:flex;flex-direction: column;gap:3vh;padding-top:27px;">
                 <a style="font-weight: 600;font-size: 16px;">Help</a>
-                <a id="list-features">Contact us</a>
+                <a routerLink="/contactus" id="list-features">Contact us</a>
                 <a routerLink="/support" id="list-features">FAQ</a>
-                <a id="list-features">Blogs</a>
-                <a id="list-features">Returns policy</a>
+                <a routerLink="/blog" id="list-features">Blogs</a>
+                <a routerLink="/return" id="list-features">Returns policy</a>
               </div>
              
              
@@ -211,6 +211,7 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
         align-items:center;
         display: flex;
         gap:24px;
+        cursor:pointer;
        
       }
       #menuicon{

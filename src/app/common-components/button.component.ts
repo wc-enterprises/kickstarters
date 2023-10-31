@@ -27,7 +27,7 @@ import { parseProductForCart } from '../utils/util';
         font-size: 15px;
         font-style: normal;
         font-weight: 600;
-        line-height: 21px;
+      
         display: flex;
         cursor: pointer;
         padding: 10px;

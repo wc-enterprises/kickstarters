@@ -23,7 +23,7 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
 
             <ng-container *ngIf="!isCartOpen">
               <div class="bag" (click)="openCart()">
-                <img src="./assets/carticon.svg" />
+                <img id="bag" src="./assets/carticon.svg" />
               </div>
             </ng-container>
 
@@ -51,10 +51,11 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
         <div class="inner-mid-left">
               <span routerLink="/" class="logo-title">
             <img  id="logo" src="./assets/kicklogo.svg" />
+            <p id="p1-mobile">KICKSTARTERS</p>
             <p id="p1">KICKSTARTERS</p>
           </span>
           <p>
-                Discover Everyday Essentials Delivered Right to Your<br />
+                Discover Everyday Essentials Delivered Right to <br/>Your
                 Doorstep
               </p>
               <div style="display:flex;">
@@ -83,18 +84,21 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
                 Discover Everyday Essentials Delivered Right to Your<br />
                 Doorstep
               </p> -->
-              <div style="display:flex;">
-              
+              <div style="gap:25px;display:flex; flex-direction:column;">
+              <div id="right-box">CUSTOMER CARE</div>
               <a id="list-features1">
-                <p>10 AM - 6.00 PM</p>
-                <img class="svg-img"  src="" />
+                <div>10 AM - 6.00 PM</div>
+                <img class="svg-img"  src="./assets/clock.svg" />
               </a>
-               
-         
-             
-             
-            
-            </div>
+              <a id="list-features1">
+                <div>+91 9874563210</div>
+                <img class="svg-img"  src="./assets/phone.svg" />
+              </a>
+              <a id="list-features1">
+                <div>support@kickstarters.co.in</div>
+                <img class="svg-img"  src="./assets/mail.svg" />
+              </a>
+          </div>
             </div>
           </div>
           <div class="end-foot">
@@ -270,8 +274,9 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
         width: 100%;
         height: auto;
         display: flex;
-      
-        gap:20px;
+        justify-content: flex-end;
+        gap:8px;
+    
       }
       .mid-right {
         width: 25%;
@@ -280,7 +285,7 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
         font-style: normal;
         font-weight: 400;
         line-height: 25.2px;
-        padding-top: 75px;
+        padding-top: 30px;
         
       }
       .end-foot {
@@ -307,17 +312,23 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
            flex-direction:column;
            gap:10px;      
           }
-   
+          #right-box{
+            text-align: right;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            padding-top:30px;
+          }
 
 
       @media (max-width: 640px) {
         .header {
           align-items: center;
-          padding-right:10px;
+  
         }
         .logo-title {
           width: 100%;
-          padding-left: 10px;
+          
         }
         .cart-count {
           border: 1px solid black;
@@ -327,7 +338,7 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
           position: absolute;
           top: 0;
           right: 0;
-          transform: translate(-65%, 50%);
+          transform: translate(-20%, 50%);
           z-index: 1;
          }
         #menuicon1,#menuicon3{
@@ -335,10 +346,12 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
         }
        
         .right {
+          width:250px;
           align-items: center;
           padding-right:12px;
           padding-top: 5px;
-          gap: 15px;
+          gap:8px;
+         justify-content:flex-end;
         }
 
         #FAQs,
@@ -369,8 +382,8 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
           padding-left: 15px;
         }
         .end-foot {
-          flex-direction: column-reverse;
-          padding-left: 25px;
+          flex-direction: column;
+          padding-left:15px;
           margin-top: 0px;
         }
         .mid-right {
@@ -381,21 +394,36 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
           font-size: 10px;
           font-weight: 600;
           margin-top: 0px;
-          padding-left: 16px;
+        
         }
         .mid-left {
           gap: 10px;
           width: 100%;
           padding-left: 5px;
+          display: flex;
+          flex-direction: column;
         }
         .payment {
           margin-top: 0px;
+          gap:5px;
         }
         #list-features {
           font-size: 14px;
         }
+        #right-box{
+          text-align:left;
+        }
+        #list-features1{
+          display:flex;
+          flex-direction: row-reverse;
+  }
         .footer {
           background-color: #e9ecef;
+         
+        }
+        #bag,#menuicon2{
+          width:22px;
+          height:22px;
         }
       }
     

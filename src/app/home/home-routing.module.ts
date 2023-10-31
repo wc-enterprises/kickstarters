@@ -30,7 +30,49 @@ const routes: Routes = [
     path: 'sidebar',
     loadChildren: () =>
       import('../sidebar/sidebar.module').then((m) => m.SideBarModule),
+  },{
+    path: 'account',
+    loadChildren: () =>
+      import('../Accountpage/accountpage.module').then((m) => m.AccountPageModule),
   },
+ {
+    path: 'login',
+    loadChildren: () =>
+      import('../login-page/login.module').then((m) => m.LoginModule),
+  },
+  {
+    path: 'registerform',
+    loadChildren: () =>
+      import('../register-form/register.module').then((m) => m.RegisterFormModule),
+  },
+  {
+    path: 'productdetail/:id',
+    loadChildren: () =>
+      import('../product-details/product-detail.module').then((m) => m.productdetailModule),
+  },
+
+  {
+    path: 'blogdetail/:id',
+    loadChildren: () =>
+      import('../blogdetail-page/blogdetail.module').then((m) => m.BlogDetailModule),
+  },
+  {
+    path: 'contactus',
+    loadChildren: () =>
+      import('../contactus/contactus.module').then((m) => m.ContactUsModule),
+  },
+{
+    path: 'return/exchange',
+    loadChildren: () =>
+      import('../return/policy-exchange/return-exchange.module').then((m) => m.ReturnExachangeModule),
+  },
+  {
+    path: 'return',
+    loadChildren: () =>
+      import('../return-policy/return.module').then((m) => m.ReturnModule),
+  },
+
+
 
 ];
 

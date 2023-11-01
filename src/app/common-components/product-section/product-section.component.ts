@@ -4,10 +4,14 @@ import { Router } from '@angular/router';
 import { ApiCallsService } from '../../services/api-calls.service';
 import { CartService } from '../../services/cart.service';
 import { IProduct } from 'src/app/utils/interface';
+import { MatDialog } from '@angular/material/dialog';
+import { ProductDetailComponent } from 'src/app/product-details/product-detail.component';
+import { QuickViewDialogComponent } from 'src/app/quick-view-dialog/quick-view-dialog.component';
 @Component({
   selector: 'app-productsection',
   templateUrl: './product-section.component.html',
   styleUrls: [`./product-section.component.css`],
+  
 })
 export class ProductSectionComponent {
   @ViewChildren('cardColumn') cardColumn!: QueryList<ElementRef>;
@@ -18,9 +22,23 @@ export class ProductSectionComponent {
   constructor(
     private router: Router,
     private apiCallsService: ApiCallsService,
-    private cartService: CartService
+    private cartService: CartService,public dialog: MatDialog
   ) {}
 
+  openQuickViewDialog(): void {
+    const dialogRef = this.dialog.open(QuickViewDialogComponent,{
+      // maxWidth: '100vw',
+      // maxHeight: 'calc(100vh - 114px)',
+      height: '600px',
+      width: '1200px',
+      autoFocus:false,
+      
+    });
+    dialogRef.afterClosed().subscribe(() => {
+      // Handle any actions after the popup is closed,
+      panelClass: 'custom-mat-dialog'
+    });
+  }
   async ngOnInit() {
     this.apiCallsService.getCategorizedProducts().subscribe(
       (data: any) => {

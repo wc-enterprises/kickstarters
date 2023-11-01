@@ -31,6 +31,7 @@ import { BlogDetailComponent } from '../blogdetail-page/blogdetail-page.componen
 import { ProductDetailComponent } from '../product-details/product-detail.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { ReturnExchangeComponent } from '../return/policy-exchange/return-exchange.component';
+import { QuickViewDialogComponent } from '../quick-view-dialog/quick-view-dialog.component';
 @NgModule({
   declarations: [
     HomepageComponent,
@@ -50,7 +51,8 @@ import { ReturnExchangeComponent } from '../return/policy-exchange/return-exchan
     ProductDetailComponent,
     ContactUsComponent,
     ReturnExchangeComponent,
-    ReturnComponent
+    ReturnComponent,
+    QuickViewDialogComponent
     
   ],
   imports: [

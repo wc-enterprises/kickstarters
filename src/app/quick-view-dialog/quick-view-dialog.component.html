@@ -1,0 +1,51 @@
+<div class="productdetails">
+                
+    <div class="productlist-image">
+        <div class="product-image">
+            <img id="img1" [src]="product.imagePath">
+        </div>
+    </div>
+    <div class="viewimage-session">
+        <div class="productview-image" [style.background-image]="'url(' + product.imagePath + ')'"></div>
+    </div>
+    <div class="total-productdetail">
+        <div style="display:flex;align-items: center;justify-content: space-between;">
+        <div class="heading">{{product.categoryName}}</div>
+        <img style="cursor: pointer;" (click)=" onNoClick()" src="../../assets/cancel1.svg"> 
+    </div>
+        <h2 class="name">{{product.name}}</h2>
+        <div class="horizontal-line"></div>
+        <p class="productdetail-description">{{product.description}}</p>
+        <p class='color'>Color</p>
+
+        <span class="color-circle black"></span>
+        <p class="quantity"> Quantity</p>
+        <div class="quantity-selector">
+            <button style="border-radius: 3.333px 0px 0px 3.333px" class="decrement-button">
+                -
+            </button>
+            <button class="delete-basket-icon">
+                <img style="opacity: 0.5" src="./assets/delete1.svg" />
+            </button>
+            <button class="quantity-number">0</button>
+            <button class="increment-button" style="border-radius: 0px 3.333px 3.333px 0px">
+                +
+            </button>
+        </div>
+        <div class="horizontal-line"></div>
+        <div class="rateandcart">
+            <p class="rate"> £ {{product.sellingPrice}}</p>
+            <div class="productcart-button">
+                <app-button></app-button>
+            
+            </div>
+            <div style="border-radius: 8px;border: 1px solid #212529;padding:5px 8px 5px 8px;"><img
+                    src="../../assets/hearticon.svg">
+            </div>
+        </div>
+        <div style="display: flex;align-items: center;gap:5px;">
+        <a style="color:black;color: #343A40; font-family:'Inter'; font-size: 16px; font-style: normal; font-weight: 600;"  (click)=" onNoClick()" routerLink="/productdetail/:id" >View full details</a>
+        <img style="cursor: pointer;" src="../../assets/rightarrow1.svg">
+    </div>
+    </div>
+</div>

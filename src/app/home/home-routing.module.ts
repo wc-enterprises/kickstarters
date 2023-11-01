@@ -67,6 +67,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('../return-policy/return.module').then((m) => m.ReturnModule),
   },
+  {
+    path: 'quickview',
+    loadChildren: () =>
+      import('../quick-view-dialog/quick-view-dialog.module').then((m) => m.QuickViewDialogModule),
+  },
 
 
 

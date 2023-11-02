@@ -6,13 +6,14 @@
         <p id="welcome-para">Welcome back!</p>
         <div class="myprofile-form">
             <div style="width:100%;display:flex;">
-                <div style="width:830px;"></div>
+                <div id="icons" style="width:100%;text-align: right;">
                 <ng-container *ngIf="!editMode; else cancelIcon">
                     <img [class.disabled]="!formValid" (click)="editProfile()" src="../../../assets/editicon.svg">
                   </ng-container>
                   <ng-template #cancelIcon>
                    <img  (click)="cancelEdit()" src="../../../assets/cancel1.svg">
                   </ng-template>
+                </div>
             </div>
             <div class="form">
                 <div class="align-form">

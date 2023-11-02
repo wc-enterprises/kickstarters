@@ -52,3 +52,29 @@ background: #1F2123;
 color:white;
 border:none;
 }
+
+// media-query
+
+@media (max-width:640px) {
+    body{
+        font-size:22px;
+    }
+    .wishlist-container{
+        width: 100%;
+        padding: 0%;
+    }
+    .wishlist-section{
+        width: 100%;
+        padding: 5%;
+    }
+    .head{
+        width:100%;
+      text-align: center;
+    }
+    #welcome-para{
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+    
+    }
+}

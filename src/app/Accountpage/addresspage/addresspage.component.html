@@ -33,8 +33,7 @@
             </div>
             <!-- Form -->
             <div  class="form" *ngIf="showForm">
-                <div style="margin:auto;display: flex;padding: 15px 50px;justify-content: center;align-items: center;font-size: 22px;
-                                font-style: normal;font-weight: 400;">Add New Address</div>
+                <div id="form-title">Add New Address</div>
               <div class="align-form">
                 <div class="input">
                   <mat-form-field appearance="outline">
@@ -99,8 +98,7 @@
           <!-- editform  -->
 
           <div class="edit-address" *ngIf="showEditForm"> <!-- Use a different class for styling -->
-            <div style="margin:auto;display: flex;padding: 15px 50px;justify-content: space-between;align-items: center;font-size: 22px;
-                        font-style: normal;font-weight: 400;">
+            <div id="editform-title">
                 Edit Address
                 <!-- Add a Cancel button with X icon -->
                     <img   (click)="cancelEdit()" src="../../../assets/cancel1.svg"> <!-- Replace with your actual cancel icon image -->
@@ -162,7 +160,7 @@
                   </mat-form-field>
                 </div>
               </div>
-            <button id="savebutton" (click)="submitForm()">Save</button>
+            <button id="savebutton"  (click)="cancelEdit()" (click)="submitForm()">Save</button>
         </div>
         </div>
  </div>

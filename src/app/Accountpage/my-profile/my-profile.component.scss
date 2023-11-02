@@ -13,7 +13,7 @@
 }
 .myprofile-form{
     width:100%;
-    height:80vh;
+    height:auto;
     box-sizing: border-box;
     display: flex;
     padding: 30px 30px 75px 30px;
@@ -73,7 +73,7 @@ mat-form-field{
     width: 100%;
     display: flex;
     border: #413E3E !important;
-    color:black;
+    color:black !important;
 }
 #submit{
    
@@ -87,4 +87,29 @@ background: #1F2123;
 border:none;
 color:white;
 margin:auto;
+}
+
+// media query
+
+@media (max-width:640px) {
+ 
+.align-form{
+    display: flex;
+    flex-direction: column;
+}
+.myprofile-form{
+    padding: 0%;
+}
+.myprofile-container{
+    padding: 0%;
+}
+#icons{
+    padding:10px;
+}
+#welcome-para{
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+
+}
 }

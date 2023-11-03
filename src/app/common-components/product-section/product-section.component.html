@@ -35,7 +35,11 @@
           >
             <div class="studentkits-image">
               <img id="img" [routerLink]="['/productdetail/',product.id]" [src]="product.imagePath" loading="lazy" />
+              <div class="quick-button">
+                <button (click)="openQuickViewDialog()" [routerLink]="['']">Quick View</button>
+              </div>
             </div>
+          
             <div class="studentkits-name">{{ product.name }}</div>
             <div class="studentkits-description">
               {{ product.description }}
@@ -89,6 +93,9 @@
           >
             <div class="image-container">
               <img id="img" [routerLink]="['/productdetail/',product.id]" [src]="product.imagePath" loading="lazy" />
+              <div class="quick-button">
+                <button (click)="openQuickViewDialog()" [routerLink]="['']">Quick View</button>
+              </div>
             </div>
             <div class="product-name">
               {{ product.name }}

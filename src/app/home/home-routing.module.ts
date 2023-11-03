@@ -31,7 +31,14 @@ const routes: Routes = [
     loadChildren: () =>
       import('../productfilter/productfilter.module').then((m) => m.ProductFilterModule),
   },
-   { path: 'login',
+  
+   {
+     path: 'account',
+    loadChildren: () =>
+      import('../Accountpage/accountpage.module').then((m) => m.AccountPageModule),
+  },
+ {
+    path: 'login',
     loadChildren: () =>
       import('../login-page/login.module').then((m) => m.LoginModule),
   },
@@ -51,6 +58,27 @@ const routes: Routes = [
     loadChildren: () =>
       import('../blogdetail-page/blogdetail.module').then((m) => m.BlogDetailModule),
   },
+  {
+    path: 'contactus',
+    loadChildren: () =>
+      import('../contactus/contactus.module').then((m) => m.ContactUsModule),
+  },
+{
+    path: 'return/exchange',
+    loadChildren: () =>
+      import('../return/policy-exchange/return-exchange.module').then((m) => m.ReturnExachangeModule),
+  },
+  {
+    path: 'return',
+    loadChildren: () =>
+      import('../return-policy/return.module').then((m) => m.ReturnModule),
+  },
+  {
+    path: 'quickview',
+    loadChildren: () =>
+      import('../quick-view-dialog/quick-view-dialog.module').then((m) => m.QuickViewDialogModule),
+  },
+
 
 
 ];

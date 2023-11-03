@@ -26,10 +26,14 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
  import {MatInputModule} from '@angular/material/input';
 import { RegisterForm } from '../register-form/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AccountPageModule } from '../Accountpage/accountpage.module';
+import { ContactUsComponent } from '../contactus/contactus.component';
+import { ReturnComponent } from '../return-policy/retrun.component';
 import { BlogDetailComponent } from '../blogdetail-page/blogdetail-page.component';
 import { ProductDetailComponent } from '../product-details/product-detail.component';
 import {MatExpansionModule} from '@angular/material/expansion';
-
+import { ReturnExchangeComponent } from '../return/policy-exchange/return-exchange.component';
+import { QuickViewDialogComponent } from '../quick-view-dialog/quick-view-dialog.component';
 @NgModule({
   declarations: [
     HomepageComponent,
@@ -49,7 +53,10 @@ import {MatExpansionModule} from '@angular/material/expansion';
     BlogPage,
     BlogDetailComponent,
     ProductDetailComponent,
-    
+    ContactUsComponent,
+    ReturnExchangeComponent,
+    ReturnComponent,
+    QuickViewDialogComponent
     
   ],
   imports: [
@@ -62,11 +69,12 @@ import {MatExpansionModule} from '@angular/material/expansion';
     ReactiveFormsModule,
     MatFormFieldModule,
     MatAutocompleteModule,
+    AccountPageModule,
+    BrowserAnimationsModule,
     MatInputModule,
     MatFormFieldModule,
     BrowserAnimationsModule,
     MatExpansionModule,
-    
   ],
   providers: [CartService],
   bootstrap: [AppComponent],

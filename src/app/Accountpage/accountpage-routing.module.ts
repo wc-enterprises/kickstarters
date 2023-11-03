@@ -1,5 +1,4 @@
 import { RouterModule, Routes } from "@angular/router";
-
 import { NgModule } from "@angular/core";
 import { ProfileNavComponent } from "./profile-nav/profile-nav.component";
 import { MyProfileComponent } from "./my-profile/my-profile.component";
@@ -10,12 +9,9 @@ import { WishlistpageComponent } from "./wishlistpage/wishlistpage.component";
 import { EmptyOrderpageComponent } from "./empty-orderpage/empty-orderpage.component";
 import { OrderPageComponent } from "./order-page/order-page.component";
 import { MainAccountpageComponent } from "./main-accountpage/main-accountpage.component";
-import { AccountPageComponent } from "./accountpage.component";
+
 const routes: Routes = [
-  {
-    path: 'account',
-    component: AccountPageComponent,
-  },
+
     {
       path: 'profilenav',
       component: ProfileNavComponent,

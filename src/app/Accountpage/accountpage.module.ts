@@ -24,9 +24,9 @@ import { MainAccountpageComponent } from './main-accountpage/main-accountpage.co
     WishlistpageComponent,
     EmptyOrderpageComponent,
     OrderPageComponent,
-    MainAccountpageComponent,
-    ],
+    MainAccountpageComponent
+  ],
 
-  imports: [CommonModule,AccountPageRoutingModule,MatFormFieldModule,MatInputModule, FormsModule],
+  imports: [CommonModule,  AccountPageRoutingModule,MatFormFieldModule,MatInputModule, FormsModule],
 })
 export class AccountPageModule {}

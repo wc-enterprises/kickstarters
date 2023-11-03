@@ -181,10 +181,11 @@ border:none;
 
 //   media query
 
-  @media (max-width:640px) {
+  @media (max-width:768px) {
     body{
         
 font-family: 'Average Sans';
+font-size: 14px;
     }
     .address-section{
     width:100%;

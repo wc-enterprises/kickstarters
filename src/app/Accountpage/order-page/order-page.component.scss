@@ -80,14 +80,14 @@ color:#4B82EE;
 
 // media query
 
-@media (max-width:640px) {
+@media (max-width:768px) {
     .order-container{
         width:100%;
         padding: 0%;
     }  
     .order-section{
         padding: 2%;
-      
+      border:none;
     }
     .suborder-section{
         width:100%;

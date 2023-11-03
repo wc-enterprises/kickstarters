@@ -32,7 +32,7 @@ import { ProductDetailComponent } from '../product-details/product-detail.compon
 import {MatExpansionModule} from '@angular/material/expansion';
 import { ReturnExchangeComponent } from '../return/policy-exchange/return-exchange.component';
 import { QuickViewDialogComponent } from '../quick-view-dialog/quick-view-dialog.component';
-import { AccountPageComponent } from '../Accountpage/accountpage.component';
+
 @NgModule({
   declarations: [
     HomepageComponent,
@@ -54,7 +54,7 @@ import { AccountPageComponent } from '../Accountpage/accountpage.component';
     ReturnExchangeComponent,
     ReturnComponent,
     QuickViewDialogComponent,
-    AccountPageComponent
+  
   ],
   imports: [
     BrowserModule,
@@ -64,12 +64,12 @@ import { AccountPageComponent } from '../Accountpage/accountpage.component';
     MatDialogModule,
     HttpClientModule,
     ReactiveFormsModule,
-    AccountPageModule,
-    BrowserAnimationsModule,
+   BrowserAnimationsModule,
     MatInputModule,
     MatFormFieldModule,
     BrowserAnimationsModule,
     MatExpansionModule,
+    AccountPageModule
   ],
   providers: [CartService],
   bootstrap: [AppComponent],

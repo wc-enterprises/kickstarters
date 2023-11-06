@@ -27,6 +27,14 @@ const routes: Routes = [
       import('../blog-page/blog-page.module').then((m) => m.BlogPageModule),
   },
   {
+    path: 'productfilter',
+    loadChildren: () =>
+      import('../productfilter/productfilter.module').then(
+        (m) => m.ProductFilterModule
+      ),
+  },
+
+  {
     path: 'sidebar',
     loadChildren: () =>
       import('../sidebar/sidebar.module').then((m) => m.SideBarModule),

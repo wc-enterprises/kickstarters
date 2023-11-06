@@ -54,7 +54,7 @@ hr {
 }
 
 .toggle-icon {
-  position: absolute;
+  
   right:25vw;
   font-size: 18px;
   cursor: pointer;
@@ -62,13 +62,14 @@ hr {
 
 .question {
 
-  font-family: Inter;
+  font-family: 'Inter';
 font-size: 18px;
 font-style: normal;
 font-weight: 700;
 line-height: 120%;
 padding:0 0 15px 0;
-
+display:flex;
+justify-content:space-between;
 }
 
 .answer {

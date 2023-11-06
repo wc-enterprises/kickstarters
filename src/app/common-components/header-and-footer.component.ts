@@ -8,6 +8,7 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
       <div [ngClass]="{ blur: isCartOpen }" class="main-box">
         <!-- header html -->
         <div class="header">
+          <span style="display:flex;align-items:center;width:250px;padding-left:25px;"><app-sidebar></app-sidebar></span>
          <span routerLink="/" class="logo-title">
             <img id="logo" src="./assets/kicklogo.svg" />
             <p id="p1">KICKSTARTERS</p>
@@ -179,13 +180,15 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
         align-items:center;
         position: fixed;
         z-index: 2;
-        
+        background-color:aqua;
+
        
        }
       .logo-title {
         display: flex;
         gap: 8px;
         cursor: pointer;
+       
       }
       #p1 {
         color: #000;

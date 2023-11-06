@@ -1,0 +1,130 @@
+<html>
+
+<body>
+    <div id="mySidenav" class="sidenav" [ngStyle]="{'width': sidebarWidth}">
+        <div class="inner-nav">
+        <div class="nav-header">
+            <span id="account">
+                <img id="man" src="../../assets/manicon.svg">
+                <p id="login">LOGIN</p>
+            </span>
+            <div href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</div>
+        </div>
+<!-- new arrivals -->
+<div style="display: flex; align-items:center;cursor: pointer;border-top: 0.2px solid #ADB5BD;">
+        <a>New arrivals</a>
+        </div>
+        <!-- student kits -->
+        <div style="display: flex; align-items:center;cursor: pointer;border-top: 0.2px solid #ADB5BD;">
+        <a>Student kits</a>
+        </div>
+        <!-- essentials        -->
+        <div (click)="toggleEssentialsDropdown()"
+            style="display: flex; align-items:center;cursor: pointer;border-top: 0.2px solid #ADB5BD;">
+            <a href="javascript:void(0)">Essentials </a>
+            <div style="">
+                <img src="../../assets/maindropdown.svg" *ngIf="!showEssentialsDropdown">
+                <img src="../../assets/maindropup.svg" *ngIf="showEssentialsDropdown">
+            </div><!-- Down arrow -->
+        </div>
+        <div class="dropdown-content" *ngIf="showEssentialsDropdown">
+        <div (click)="toggleBedroomDropdown()"
+            style="display: flex; align-items:center;cursor: pointer;border-top: 0.2px solid #ADB5BD;">
+            <div class="sub-dropdown">Bedroom essentials</div>
+            <span style="color: gray;">
+                    <img src="../../assets/dropdownarrow.svg" *ngIf="!showBedroomDropdown">
+                    <img src="../../assets/dropdownarrow2.svg" *ngIf="showBedroomDropdown">
+                </span>
+            
+        </div>
+            
+            <div class="dropdown-content" *ngIf="showBedroomDropdown">
+                <div class="sub-dropdown">Bathroom essentials</div>
+            </div>
+            
+            <!-- food essentials -->
+            <div (click)="toggleFoodDropdown()"
+                style="display: flex; align-items:center;cursor: pointer;border-top: 0.2px solid #ADB5BD;">
+                <div class="sub-dropdown" href="">Food essentials</div>
+                <span style="">
+                    <img src="../../assets/dropdownarrow.svg" *ngIf="!showFoodDropdown">
+                    <img src="../../assets/dropdownarrow2.svg" *ngIf="showFoodDropdown">
+                </span>
+            </div>
+            <div class="dropdown-content" *ngIf="showFoodDropdown">
+                
+                <div class="sub-dropdown">Noodles</div>
+            </div>
+            <div class="dropdown-content" *ngIf="showFoodDropdown">
+                <div class="sub-dropdown">Oats</div>
+            </div>
+            <div class="dropdown-content" *ngIf="showFoodDropdown">
+                <div class="sub-dropdown">Rice</div>
+            </div>
+            
+            <div (click)="toggleLaundryDropdown()"
+                style="display: flex; align-items:center;cursor: pointer;border-top: 0.2px solid #ADB5BD;">
+                <div class="sub-dropdown" href="">Laundry essentials</div>
+                <span style="">
+                    <img src="../../assets/dropdownarrow.svg" *ngIf="!showLaundryDropdown">
+                    <img src="../../assets/dropdownarrow2.svg" *ngIf="showLaundryDropdown">
+                </span>
+            </div>
+            <div class="dropdown-content" *ngIf="showLaundryDropdown">
+                <div class="sub-dropdown"></div>
+            </div>
+            <div class="dropdown-content" *ngIf="showLaundryDropdown">
+                <div class="sub-dropdown"></div>
+            </div>
+            <div class="dropdown-content" *ngIf="showLaundryDropdown">
+                <div class="sub-dropdown"></div>
+            </div>
+            <!--  fashion -->
+            <div (click)="toggleFashionDropdown()"
+                style="display: flex; align-items:center;cursor: pointer;border-top: 0.2px solid #ADB5BD;">
+                <div class="sub-dropdown" href="">Fashion essentials</div>
+                <span style="">
+                    <img src="../../assets/dropdownarrow.svg" *ngIf="!showFashionDropdown">
+                    <img src="../../assets/dropdownarrow2.svg" *ngIf="showFashionDropdown">
+                </span>
+            </div>
+            <div class="dropdown-content" *ngIf="showFashionDropdown">
+                <div class="sub-dropdown"></div>
+            </div>
+            <div class="dropdown-content" *ngIf="showFashionDropdown">
+                <div class="sub-dropdown"></div>
+            </div>
+            <!-- kitchen -->
+            <div style="display: flex; align-items:center;cursor: pointer;border-top: 0.2px solid #ADB5BD;">
+                    <div class="sub-dropdown" href="">Kitchen essentials</div>
+            </div>
+            
+            <!-- Stationary -->
+            <div style="display: flex; align-items:center;cursor: pointer;border-top: 0.2px solid #ADB5BD;">
+                <div class="sub-dropdown" href="">Stationary essentials</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items:center;cursor: pointer;border-top: 0.2px solid #ADB5BD;">
+        <a>Return & exchange</a>
+    </div>
+    <div style="display: flex; align-items:center;cursor: pointer;border-top: 0.2px solid #ADB5BD;">
+        <a>Customer support</a>
+    </div>
+        <div class="icon-box">
+            <div class="box">
+                <img src="../../assets/instaicon.svg" alt="Instagram">
+            </div>
+            <div class="box">
+                <img src="../../assets/fbicon.svg" alt="Facebook">
+            </div>
+            <div class="box">
+                <img src="../../assets/twiticon.svg" alt="Twitter">
+            </div>
+        </div>
+        </div>
+    </div>
+    <span style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776;</span>
+
+</body>
+
+</html>

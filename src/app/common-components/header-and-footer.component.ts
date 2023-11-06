@@ -8,7 +8,6 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
       <div [ngClass]="{ blur: isCartOpen }" class="main-box">
         <!-- header html -->
         <div class="header">
-          <span id="sidebar"></span>
          <span routerLink="/" class="logo-title">
             <img id="logo" src="./assets/kicklogo.svg" />
             <p id="p1">KICKSTARTERS</p>
@@ -29,7 +28,7 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
 
             <a *ngIf="cartCount > 0" class="cart-count">{{ cartCount }}</a>
           </span>
-        </div>
+         </div>
         <app-cart
           [isCartOpen]="isCartOpen"
           (closeCart)="closeCart()"

@@ -27,6 +27,10 @@ const routes: Routes = [
       import('../blog-page/blog-page.module').then((m) => m.BlogPageModule),
   },
   {
+    path: 'sidebar',
+    loadChildren: () =>
+      import('../sidebar/sidebar.module').then((m) => m.SideBarModule),
+  },{
     path: 'account',
     loadChildren: () =>
       import('../Accountpage/accountpage.module').then((m) => m.AccountPageModule),
@@ -66,6 +70,11 @@ const routes: Routes = [
     path: 'return',
     loadChildren: () =>
       import('../return-policy/return.module').then((m) => m.ReturnModule),
+  },
+  {
+    path: 'quickview',
+    loadChildren: () =>
+      import('../quick-view-dialog/quick-view-dialog.module').then((m) => m.QuickViewDialogModule),
   },
 
 

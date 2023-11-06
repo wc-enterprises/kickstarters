@@ -180,7 +180,7 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
         align-items:center;
         position: fixed;
         z-index: 2;
-        background-color:aqua;
+        
 
        
        }

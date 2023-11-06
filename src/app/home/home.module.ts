@@ -19,6 +19,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from '../app.component';
 import { BlogSection } from '../common-components/blog-section/blog-section.component';
 import { BlogPage } from '../blog-page/blog-page.component';
+import { SideBar } from '../sidebar/sidebar.component';
 import { AccountPageModule } from '../Accountpage/accountpage.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
  import { Login } from '../login-page/login.component';
@@ -43,6 +44,9 @@ import { QuickViewDialogComponent } from '../quick-view-dialog/quick-view-dialog
     CartItemComponent,
     PaymentsComponent,
     FAQComponent,
+    BlogSection,
+    BlogPage,
+    SideBar,
     Login,
     RegisterForm,
     BlogSection,

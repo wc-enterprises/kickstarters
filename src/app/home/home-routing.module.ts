@@ -27,6 +27,10 @@ const routes: Routes = [
       import('../blog-page/blog-page.module').then((m) => m.BlogPageModule),
   },
   {
+    path: 'sidebar',
+    loadChildren: () =>
+      import('../sidebar/sidebar.module').then((m) => m.SideBarModule),
+  },{
     path: 'account',
     loadChildren: () =>
       import('../Accountpage/accountpage.module').then((m) => m.AccountPageModule),

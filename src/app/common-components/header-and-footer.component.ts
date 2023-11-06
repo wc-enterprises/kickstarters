@@ -8,7 +8,7 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
       <div [ngClass]="{ blur: isCartOpen }" class="main-box">
         <!-- header html -->
         <div class="header">
-          <span style="display:flex;align-items:center;width:250px;padding-left:25px;"><app-sidebar></app-sidebar></span>
+          <span id="sidebar-icon"><app-sidebar></app-sidebar></span>
          <span routerLink="/" class="logo-title">
             <img id="logo" src="./assets/kicklogo.svg" />
             <p id="p1">KICKSTARTERS</p>
@@ -17,7 +17,7 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
           <span class="right">
           <img id="menuicon1"  routerLink="/profilenav"  src="./assets/accounticon1.svg"/>
 
-            <img id="menuicon2"  routerLink="" src="./assets/searchicon.svg">
+            <img id="menuicon2"  routerLink="" src="./assets/searchicon1.svg">
 
             <img id="menuicon3"  routerLink="" src="./assets/hearticon.svg">
 
@@ -71,10 +71,10 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
          </div>
               <div style="display:flex;flex-direction: column;gap:3vh;padding-top:27px;">
                 <a style="font-weight: 600;font-size: 16px;">Help</a>
-                <a id="list-features">Contact us</a>
+                <a routerLink="/contactus" id="list-features">Contact us</a>
                 <a routerLink="/support" id="list-features">FAQ</a>
-                <a id="list-features">Blogs</a>
-                <a id="list-features">Returns policy</a>
+                <a  routerLink="/blog" id="list-features">Blogs</a>
+                <a routerLink="/return" id="list-features">Returns policy</a>
               </div>
              
              
@@ -183,6 +183,13 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
         
 
        
+       }
+       #sidebar-icon{
+        display:flex;
+        align-items:center;
+        width:250px;
+        padding-left:25px;
+        padding-bottom:5px;
        }
       .logo-title {
         display: flex;
@@ -327,6 +334,9 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
         .header {
           align-items: center;
   
+        }
+        #sidebar-icon{
+          padding-left:15px;
         }
         .logo-title {
           width: 100%;

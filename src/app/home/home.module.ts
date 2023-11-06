@@ -35,6 +35,7 @@ import { ProductDetailComponent } from '../product-details/product-detail.compon
 import { MatExpansionModule } from '@angular/material/expansion';
 import { ReturnExchangeComponent } from '../return/policy-exchange/return-exchange.component';
 import { QuickViewDialogComponent } from '../quick-view-dialog/quick-view-dialog.component';
+
 @NgModule({
   declarations: [
     HomepageComponent,
@@ -70,14 +71,14 @@ import { QuickViewDialogComponent } from '../quick-view-dialog/quick-view-dialog
     MatDialogModule,
     HttpClientModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
     MatFormFieldModule,
     MatAutocompleteModule,
     AccountPageModule,
-    BrowserAnimationsModule,
     MatInputModule,
     MatFormFieldModule,
-    BrowserAnimationsModule,
     MatExpansionModule,
+    AccountPageModule,
   ],
   providers: [CartService],
   bootstrap: [AppComponent],

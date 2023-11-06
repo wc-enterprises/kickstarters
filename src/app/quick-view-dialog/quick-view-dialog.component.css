@@ -28,7 +28,7 @@
   box-sizing: border-box;
   background-repeat: no-repeat;
   background-position: center;
-  object-fit:  cover; 
+  object-fit: cover; 
 }
 .total-productdetail{
     
@@ -108,7 +108,7 @@ h2{
     align-items: center;
     padding-bottom: 30px;
   }
-  .increment-button,
+.increment-button,
 .decrement-button,
 .delete-basket-icon,
 .quantity-number {

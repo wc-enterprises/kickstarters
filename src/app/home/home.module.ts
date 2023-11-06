@@ -20,10 +20,11 @@ import { AppComponent } from '../app.component';
 import { BlogSection } from '../common-components/blog-section/blog-section.component';
 import { BlogPage } from '../blog-page/blog-page.component';
 import { ProductFilter } from '../productfilter/productfilter.component';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatAutocompleteModule} from '@angular/material/autocomplete';
- import { Login } from '../login-page/login.component';
- import {MatInputModule} from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { SideBar } from '../sidebar/sidebar.component';
+import { Login } from '../login-page/login.component';
+import { MatInputModule } from '@angular/material/input';
 import { RegisterForm } from '../register-form/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AccountPageModule } from '../Accountpage/accountpage.module';
@@ -31,7 +32,7 @@ import { ContactUsComponent } from '../contactus/contactus.component';
 import { ReturnComponent } from '../return-policy/retrun.component';
 import { BlogDetailComponent } from '../blogdetail-page/blogdetail-page.component';
 import { ProductDetailComponent } from '../product-details/product-detail.component';
-import {MatExpansionModule} from '@angular/material/expansion';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { ReturnExchangeComponent } from '../return/policy-exchange/return-exchange.component';
 import { QuickViewDialogComponent } from '../quick-view-dialog/quick-view-dialog.component';
 @NgModule({
@@ -47,6 +48,9 @@ import { QuickViewDialogComponent } from '../quick-view-dialog/quick-view-dialog
     FAQComponent,
     BlogPage,
     ProductFilter,
+    BlogSection,
+    BlogPage,
+    SideBar,
     Login,
     RegisterForm,
     BlogSection,
@@ -56,8 +60,7 @@ import { QuickViewDialogComponent } from '../quick-view-dialog/quick-view-dialog
     ContactUsComponent,
     ReturnExchangeComponent,
     ReturnComponent,
-    QuickViewDialogComponent
-    
+    QuickViewDialogComponent,
   ],
   imports: [
     BrowserModule,

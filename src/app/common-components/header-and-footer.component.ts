@@ -23,7 +23,7 @@ import { CartComponent } from '../shop/cart/cart/cart.component';
 
             <ng-container *ngIf="!isCartOpen">
               <div class="bag" (click)="openCart()">
-                <img id="bag" src="./assets/carticon.svg" />
+                <img id="bag" src="./assets/carticon.svg"/>
               </div>
             </ng-container>
 
